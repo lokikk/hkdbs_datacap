@@ -1,0 +1,79 @@
+<?xml-stylesheet type="text/xsl" href="..\..\ProgramSet\set.xsl"?><S>
+	<P n="BatchProcessing" tip="General Batch Processing Settings" title="Batch Processing">
+		<!--
+		<V n="CreateDoc" label="Create Document Node" tip="Specifies to create doc node for the scan task" type="checkbox">0</V>
+		<V n="CreateDir" label="Create Batch Directory" tip="Specifies to assume batch creation mode and create batch directory" type="checkbox">1</V> -->
+		<V label="Output DCO File" n="TaskDCOFile" tip="Specifies name for the output dco file for the task" type="text">taskname.xml</V>
+		<V label="Allow Hold" n="Hold" tip="Allows placing batches on hold to continue later" type="checkbox">1</V>
+		<P n="Navigation" tip="Settings that determine batch navigation" title="Navigation">
+			<V label="Validation Statuses" n="DOF" tip="Comma-separated list of Done,Override,Fail statuses assigned after validation, according to results." type="text">0,2,1</V>
+		</P>
+	</P>
+	<P n="Rulerunner" tip="Settings that enable RRS rules execution" title="Rulerunner Service">
+		<V label="Show Start Batch Panel" n="StartPanel" tip="Enables start batch panel with data validations" type="checkbox">0</V>
+		<V label="Main Task Profile(s)" n="TProfile" tip="Main task profile to run on Submit" type="text"/>
+		<V label="Alternative Task Profile(s)" n="AltTProfile" tip="Alternative task profile setting creates extra buttons for special data handling cases" type="text"/>
+		<V label="Preparation Task Profile" n="PreTProfile" tip="Task profile to prepare date before display" type="text"/>
+	</P>
+	<P n="StaticWebSet" tip="Settings for static task panels" title="Custom Web Panels">
+		<V label="Enable Custom Panels" n="Static" tip="Setting to use pre-made custom data entry panels" type="checkbox">0</V>
+		<G n="Web-Panels" tip="Key-Value pairs to associate DCO Type to Panel class" title="Bind Panel to DCO Type">
+<V label="" n="webPage_TYPE" tip="Association of DCO Type to Panel class name" type="text">Panel.ascx</V>
+</G>
+	</P>
+	<P n="Scan" tip="Setting for scan process" title="Scan">
+		<!--<V n="ScanDir" label="Local Scan Directory" tip="Temporary scan directory to place images into + \batchid\" type="text">c:\datacap\scan</V>-->
+		<!--<V n="LocalProc" label="Local Processing" tip="Enables uploadless process, to place IMAGEFILEs into ScanDir=RootBatchDir" type="checkbox">0</V>-->
+		<V label="Upload Immediately" n="Upload" tip="Combines Scan+Upload tasks in one, - when enabled initiates upload when Done is pressed" type="checkbox">0</V>
+		<!--<V n="PageID" label="Enable Page ID" tip="Allows to ID images based on Setup DCO types" type="checkbox">0</V>-->
+    <P n="UpSet" tip="Settings for upload process" title="Upload">
+			<V label="Upload Pause" n="Delay" tip="Delay between uploading images or groups of images for UI refresh purpose" type="text">100</V>
+			<V label="Max Upload Size" n="MaxUploadSizeKb" tip="Combine images into groups of max size for upload speed-up" type="text">0</V>
+		</P>
+		<V label="File Extension" n="FileExt" tip="Specify file extension - which files to filter and grab from source folder during vscan process" type="text">tif;pdf;jpg;doc;</V>
+		<!--<V n="FileType" label="File Compression" tip="Specify file compression (Snowbound Lib. constant) how to write image file after rotate/change operation on the image" type="text">10</V>-->
+        <P n="ScannerSet" tip="Basic scanner settings for the task" title="Scanner Setup">
+			<V label="Pixel Type" n="PixelType" tip="Specify pixel type for scanning (0-BnW, 1-Grayscale, 2-RGB)" type="text">0</V>
+			<V label="Bit Depth" n="Bits" tip="Specify bitdepth for above image type" type="text">1</V>
+			<V label="Image Resolution DPI" n="Resolution" tip="Specify image resolution (X and Y resolution assumed the same) DPI" type="text">200</V>
+			<V label="Use Duplex Mode" n="Duplex" tip="When enabled - scans both sides of the image - duplex mode" type="checkbox">0</V>
+			<!--  
+			<V n="Autofeed" label="Enable Autofeeder" tip="Controls scanner source - manual vs. autofeeder option" type="checkbox">1</V>
+			-->
+		</P>
+		<P n="OutImages" tip="Target image file parameters" title="Output Images">
+			<!-- 
+			<V n="Extension" label="File Extension" tip="Specify extension for the scanned images: tif, jpg, pic, bmp" type="text">tif</V>-->
+			<V label="B/W Compression" n="Compression" tip="Specify compression (only!) for B/W images (0-uncompressed, 1-CCITT RLE, 2-CCITT Group 3 fax, 3-CCITT Group 3-2D fax, 4-CCITT Group 4 fax)" type="text">4</V>
+			<!-- 
+			<V n="ResaveType" label="Resave File Type" tip="If grayscale or color image has to be compressed using other than JPEG file format - specify file type here: -1 - no recompression; 40 - TIFF JPEG; refer to snowbound manulal for other possible values" type="text">-1</V>
+			<V n="ResaveExt" label="Resave File Extension" tip="Specify extension for images, compressed with ResaveType from above if ResaveType is not -1" type="text">-1</V>
+			 -->
+		</P>
+		
+		<P n="TreeWebSet" tip="Settings for BatchView in web tasks" title="DCO Tree View">
+			<V label="Read Only View" n="TreeReadOnly" tip="Setting to allow modification to batch structure" type="checkbox">0</V>
+			<P n="OperationEnabled" tip="Setting to allow operation to batch structure." title="Actions">
+				<V label="Split Document" n="split" tip="Split documents in batch structure" type="checkbox">0</V>	
+				<V label="Join Document" n="join" tip="Join documents in batch structure" type="checkbox">0</V>	
+				<V label="Copy Page" n="copy" tip="Copy page in batch structure" type="checkbox">0</V>	
+				<V label="Mark for Deleted Status" n="markForDeleted" tip="Mark page or document for deleted status in batch structure" type="checkbox">0</V>	
+				<V label="Mark for Rescan Status" n="markForRescan" tip="Mark page for rescan status in batch structure" type="checkbox">1</V>	
+				<V label="Mark for Review Status" n="markForReview" tip="Mark page or document for review status in batch structure" type="checkbox">1</V>		
+				<V label="Remove Page" n="removePage" tip="Remove pages in batch structure" type="checkbox">1</V>
+				<V label="Move" n="move" tip="Move up or down pages or documents in batch structure" type="checkbox">1</V>
+				<V label="Disassemble Documents" n="disassembleDocs" tip="Disassemble all documents in batch structure" type="checkbox">0</V>
+				<V label="Check Integrity" n="checkIntegrity" tip="Run rule to check integrity" type="checkbox">0</V>
+				<V label="Undo" n="undo" tip="Undo the batch structure actions" type="checkbox">1</V>
+				<V label="Drag and Drop" n="dragAndDrop" tip="Drag and Drop pages or documents in batch structure" type="checkbox">1</V>
+			</P>	
+			<V label="Highlighted Types" n="HiTypes" tip="Comma-separated list of page types to highlight for better visual separation" type="text"/>
+			<G n="TreeVars" tip="Key-Value pairs to determine what to show in DCO View" title="Display Variables">
+<V label="Props for var" n="TYPE" tip="Comma-separated AllowEdit,VarDropDown" type="text">0</V>
+</G>
+	</P>
+	</P>
+	<P n="NCLayout" tip="Defines run-time layout." title="Navigator Layout">
+		<V label="Layout" n="Layout" tip="Defines the run-time layout" type="text"/>
+	</P>
+</S>

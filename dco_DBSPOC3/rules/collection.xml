@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rsapp name="DBSPOC3">
+	<rsc>
+		<ruleset id="ImportFiles.Rul.dll" name.dll="ImportFiles"/>
+		<ruleset id="2" name="Import Files - All"/>
+		<ruleset name.dll="Image_Convert" id="Image_Convert"/>
+		<ruleset id="1" name="My Image Convert"/>
+		<ruleset name.dll="ImageEnhancement" id="ImageEnhancement"/>
+		<ruleset id="3" name="My Image Enhancement"/>
+		<ruleset name.dll="IdentifyPages" id="IdentifyPages"/>
+		<ruleset id="4" name="My Identify Pages"/>
+		<ruleset id="15" name="Ruleset1"/>
+		<ruleset name.dll="CreateDocuments" id="CreateDocuments"/>
+		<ruleset name="Document Integrity" id="11"/>
+		<ruleset name.dll="RecognizePagesAndFields" id="RecognizePagesAndFields"/>
+		<ruleset id="13" name="My Recognize Pages and Fields"/>
+		<ruleset name.dll="ValidateFields" id="ValidateFields"/>
+		<ruleset name="Routing" id="10"/>
+		<ruleset name="Export" id="7"/>
+		<ruleset name="FingerprintAdd" id="8"/>
+		<ruleset name="Export Statistics" id="Export Statistics"/>
+		<ruleset name="Profile Statistics" id="Profile Statistics"/>
+		<ruleset id="5" name="Locate"/>
+		<ruleset id="16" name="UpdateFields"/>
+		<ruleset id="12" name="Create PDF"/>
+		<ruleset id="ImageCreate.Rul.dll" name.dll="ImageCreate"/>
+		<ruleset id="9" name="Export2PDF"/>
+		<ruleset id="6" name="Export2XML"/>
+		<ruleset id="ExportToCSV.Rul.dll" name.dll="ExportToCSV"/>
+		<ruleset id="14" name="Export2CSV"/>
+	</rsc>
+	<tps>
+		<tprofile name="ScanFromDisk_MultiFormat">
+			<ruleset id="2"/>
+		</tprofile>
+		<tprofile name="PageID">
+			<ruleset id="1"/>
+			<ruleset id="3"/>
+			<ruleset id="4"/>
+			<ruleset id="CreateDocuments"/>
+			<ruleset id="11"/>
+		</tprofile>
+		<tprofile name="Profiler">
+			<ruleset id="5"/>
+			<ruleset id="13"/>
+			<ruleset id="ValidateFields"/>
+			<ruleset id="10"/>
+			<ruleset id="Profile Statistics"/>
+		</tprofile>
+		<tprofile name="Verify">
+			<ruleset id="ValidateFields"/>
+		</tprofile>
+		<tprofile name="Export">
+			<ruleset id="16"/>
+			<ruleset id="12"/>
+			<ruleset id="9"/>
+			<ruleset id="6"/>
+			<ruleset id="Export Statistics"/>
+			<ruleset id="ExportToCSV.Rul.dll"/>
+		</tprofile>
+		<tprofile name="FingerprintAdd">
+			<ruleset id="ImageEnhancement"/>
+			<ruleset id="8"/>
+		</tprofile>
+		<tprofile name="ScanFromDisk_SingleTIFFs">
+			<ruleset id="ImportFiles.Rul.dll"/>
+		</tprofile>
+		<tprofile name="FixUp"/>
+		<tprofile name="iVScan"/>
+		<tprofile name="Convert">
+			<ruleset id="Image_Convert"/>
+		</tprofile>
+	</tps>
+</rsapp>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ruleset id="3" name="My Image Enhancement" ver="4" modder="admin.1" qi="" dt="05/12/17 14:49:57.673 ">
+	<rule name="Other Image Enhancement Rule" id="1" dcomap.open="P:Other,P=Other" dcomap.close="" qi="">
+		<func name="Enhance Image Function" disabled="false" qi="">
+			<a ns="rrunner" name="rrSet" qi="">
+				<p name="varSource" v="[OperationCollection name=|default|][Operation name=|Remove Lines| enabled=|True| operationType=|RemoveLines| MaximumCharacterRepairSize=|20| MaximumGap=|1| MinimumAspectRatio=|10| MinimumLength=|70| MaximumThickness=|7| /][/OperationCollection]"/>
+				<p name="varTarget" v="@P.processingSettings"/>
+			</a>
+			<a name="ImageEnhance" ns="ImageFix" disabled="false" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="" name="StrParam"/>
+			</a>
+		</func>
+	</rule>
+</ruleset>
