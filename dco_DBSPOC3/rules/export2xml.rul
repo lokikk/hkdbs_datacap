@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ruleset id="6" name="Export2XML" ver="48" modder="admin.1" dt="06/02/17 12:00:29.35 " qi="">
+<ruleset id="6" name="Export2XML" ver="50" modder="admin.1" dt="06/12/17 10:44:11.147 " qi="">
 	<rule name="ExportXML Open XML File" id="1">
 		<func name="Open XML">
 			<a ns="ExportXML" name="xml_SetExportPath">
@@ -1987,19 +1987,19 @@
 				<p name="Parameter1" v="DocumentFullText"/>
 			</a>
 			<a ns="ExportXML" name="xml_SetNodeValue">
-				<p type="bInter"/>
-				<p type="bDebug"/>
-				<p type="strParam" v="DocId,@P\Minutes_DocId"/>
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="DocId,@P\Minutes_DocId" name="StrParam"/>
 			</a>
 			<a ns="ExportXML" name="xml_SetNodeValue">
-				<p type="bInter"/>
-				<p type="bDebug"/>
-				<p type="strParam" v="EntityName,@P\Minutes_EntityName"/>
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="EntityName,@P\Minutes_EntityName" name="StrParam"/>
 			</a>
 			<a ns="ExportXML" name="xml_SetNodeValue">
-				<p type="bInter"/>
-				<p type="bDebug"/>
-				<p type="strParam" v="Date,@P\Minutes_Date"/>
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Date,@P\Minutes_Date" name="StrParam"/>
 			</a>
 			<a ns="ExportXML" name="xml_SetNodeValue" disabled="y">
 				<p type="bInter" name="bInter"/>
@@ -2012,9 +2012,9 @@
 				<p type="strParam" v="!\s,@P\NN6_Remarks" name="strParam"/>
 			</a>
 			<a ns="ExportXML" name="xml_SetNodeValue">
-				<p type="bInter"/>
-				<p type="bDebug"/>
-				<p type="strParam" v="Remarks,@P\Minutes_Remarks"/>
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Remarks,@P\Minutes_Remarks" name="StrParam"/>
 			</a>
 			<a ns="ExportXML" name="xml_SetNodeValue" disabled="y">
 				<p type="bInter" name="bInter"/>
@@ -2113,9 +2113,9 @@
 				<p type="strParam" v="CompanyNumber,@P\NN6_Company_Number" name="StrParam"/>
 			</a>
 			<a ns="ExportXML" name="xml_SetNodeValue" qi="">
-				<p type="bInter"/>
-				<p type="bDebug"/>
-				<p type="strParam" v="Trail_Remarks,@P\Minutes_Trail_Remarks"/>
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Trail_Remarks,@P\Minutes_Trail_Remarks" name="StrParam"/>
 			</a>
 		</func>
 	</rule>
@@ -2383,6 +2383,11 @@
 				<p type="strParam" v="TINNo,Fields" name="Strparam"/>
 			</a>
 			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter"/>
+				<p type="bDebug"/>
+				<p type="strParam" v="Sequence,Fields"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="Remarks,Fields" name="Strparam"/>
@@ -2417,7 +2422,7 @@
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="GroupName,@D.SAM_Document_Group_Name" name="StrParam"/>
 			</a>
-			<a ns="ExportXML" name="xml_SetNodeValue" disabled="y">
+			<a ns="ExportXML" name="xml_SetNodeValue" disabled="y" qi="">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="BorrowerName,@P\SAM_Borrower_Name" name="StrParam"/>
@@ -2436,6 +2441,11 @@
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="TINNo,@D.SAM_Document_TIN_No" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Sequence,@D.SAM_Document_Sequence" name="StrParam"/>
 			</a>
 			<a ns="ExportXML" name="xml_SetNodeValue" qi="" disabled="y">
 				<p type="bInter" name="bInter"/>

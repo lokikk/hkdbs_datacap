@@ -70222,4 +70222,4735 @@
 			</func>
 		</rule>
 	</ruleset>
+	<ruleset id="4" name="My Identify Pages" ver="90" modder="admin.1" qi="" dt="06/09/17 10:27:51.153 ">
+		<rule name="Batch Level (Open)" id="1" qi="" dcomap.open="B">
+			<func name="Function1: General Fingerprint Settings" qi="">
+				<a name="SetFingerprintDir" ns="autodoc" qi="Read-only">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="@APPPATH(fingerprint)" name="StrParam"/>
+				</a>
+				<a ns="autodoc" name="SetFingerprintSearchArea" qi="">
+					<p name="matchStart" v="0.4"/>
+					<p name="matchEnd" v=""/>
+				</a>
+				<a ns="autodoc" name="SetProblemValue" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="0.8" name="StrParam"/>
+				</a>
+				<a name="SetMaxOffset" ns="autodoc" qi="" disabled="True">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="6" name="StrParam"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function2: Fingerprint Service Settings" disabled="True" qi="">
+				<a name="SetFingerprintWebServiceURL" ns="autodoc">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="" name="StrParam"/>
+				</a>
+				<a name="SetApplicationID" ns="autodoc" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Forms" name="StrParam"/>
+				</a>
+				<a name="SetFingerprintFailureThreshold" ns="autodoc" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="100" name="StrParam"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi=""/>
+			</func>
+			<func name="Function3: Content Classification" disabled="True" qi="">
+				<a name="SetListenerURLCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions">
+					<p name="URL" type="string" v="" qi="The URL of the CC Listener that will be used for classification. Smart parameters are supported."/>
+				</a>
+				<a name="SetLanguageCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" qi="">
+					<p name="LanguageName" type="string" v="English" qi="The name of the language used in the specified Knowledge Base"/>
+				</a>
+				<a name="SetKnowledgeBaseCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions">
+					<p name="KnowledgeBaseName" type="string" v="" qi="Knowledge Base name.  Smart parameters are supported."/>
+				</a>
+				<a name="SetProblemValueCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" qi="">
+					<p name="MinScore" type="double" v="0.7" qi="Minimum score for fingerprint matching. Valid values are fractional values between zero and one (for example: 0.0 and 1.0) "/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Page Level (Open)" id="2" qi="" dcomap.open="P=Other;P:Page">
+			<func name="Function1: Blank Page" qi="" disabled="True">
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@TYPE"/>
+					<p name="varTarget" v="@P.PageTypeOriginal"/>
+				</a>
+				<a name="BlankPagesIDBySize" ns="autodoc">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="1500,Other,0" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrCompareNot" qi="">
+					<p name="object1" v="@TYPE"/>
+					<p name="object2" v="@P.PageTypeOriginal"/>
+				</a>
+			</func>
+			<func name="Function2a: ScanSrcPath - Check Jobs" qi="" disabled="True">
+				<a ns="rrunner" name="rrCompareNot" qi="">
+					<p name="object1" v="@JOBNAME"/>
+					<p name="object2" v="Main Job"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="No"/>
+					<p name="varTarget" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function2b: ScanSrcPath - Convert Trailing Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ParentImage"/>
+				</a>
+				<a name="rrCompare" ns="rrunner">
+					<p name="object1" v="@B.LastParentImage"/>
+					<p name="object2" v="@P.ParentImage"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function2c: ScanSrcPath - Convert Main Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ParentImage"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@P.ParentImage"/>
+					<p name="varTarget" v="@B.LastParentImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@EMPTY"/>
+					<p name="varTarget" v="@B.LastScanSrcPath"/>
+				</a>
+			</func>
+			<func name="Function2d: ScanSrcPath - Trailing Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner" qi="">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ScanSrcPath"/>
+				</a>
+				<a name="rrCompare" ns="rrunner" qi="">
+					<p name="object1" v="@B.LastScanSrcPath"/>
+					<p name="object2" v="@P.ScanSrcPath"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function2e: ScanSrcPath - Main Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner" qi="">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ScanSrcPath"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@P.ScanSrcPath"/>
+					<p name="varTarget" v="@B.LastScanSrcPath"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@EMPTY"/>
+					<p name="varTarget" v="@B.LastParentImage"/>
+				</a>
+			</func>
+			<func name="Function3: Barcode" disabled="True">
+				<a name="rrSet" ns="rrunner">
+					<p name="varSource" v="0"/>
+					<p name="varTarget" v="@P.bp_tp"/>
+				</a>
+				<a name="rrSet" ns="rrunner" disabled="True">
+					<p name="varSource" v="0"/>
+					<p name="varTarget" v="@P.bp_or"/>
+				</a>
+				<a name="SetMinimumConfidenceBP" ns="Barcode_P" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="7" name="StrParam"/>
+				</a>
+				<a ns="Barcode_P" name="IdentifyByBarcodesBP" qi="">
+					<p name="barcodePageMappings" type="string" v=""/>
+					<p name="mappingsDelim" type="string" v=","/>
+					<p name="keyValueSep" type="string" v="="/>
+					<p name="caseSensitive" type="bool" v="False"/>
+				</a>
+				<a name="rrSet" ns="rrunner" disabled="True">
+					<p name="varSource" v="True"/>
+					<p name="varTarget" v="@B.SeparatorEncountered"/>
+				</a>
+			</func>
+			<func name="Function4a: Recog Full Setup" qi="" disabled="True">
+				<a name="SetFullPageRecogArea" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="1"/>
+				</a>
+				<a name="rrSet" ns="rrunner">
+					<p name="varSource" v="OCR/A"/>
+					<p name="varTarget" v="@P.OCR_Engine"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@VAR(hr_locale)"/>
+					<p name="object2" v="ja-JP"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@VAR(hr_locale)"/>
+					<p name="object2" v="he-IL"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@VAR(hr_locale)"/>
+					<p name="object2" v="nl-BE"/>
+				</a>
+				<a name="rrSet" ns="rrunner">
+					<p name="varSource" v="OCR/SR"/>
+					<p name="varTarget" v="@P.OCR_Engine"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function4b: Recog Execution - Rotate" disabled="True">
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RotateImageOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions=Datacap.Libraries.ScansoftR.Actions" qi=""/>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function5a: Fingerprint - AnalyzeImage" qi="" disabled="y">
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a name="AnalyzeImage" ns="Recog_Shared">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi=""/>
+			</func>
+			<func name="Function5b: Recog Execution - OCR/SR" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner">
+					<p name="object1" v="OCR/SR"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizePageOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions=Datacap.Libraries.ScansoftR.Actions" qi=""/>
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="@P.RecogStatus"/>
+					<p name="object2" v="0"/>
+				</a>
+				<a name="NormalizeCCO" ns="Cco2cco.rrx">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function5d: Recog Execution - OCR/A" qi="">
+				<a name="rrCompare" ns="rrunner" qi="" disabled="y">
+					<p name="object1" v="OCR/A"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChinesePRC+@CHR(43)+English,ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a name="RecognizePageOCR_A" ns="ocr_a" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="CreateTextFile" ns="Recog_Shared.dll" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi=""/>
+			</func>
+			<func name="Function6a: Recog Execution - OCR/SR" disabled="True" qi="">
+				<a name="rrCompare" ns="rrunner">
+					<p name="object1" v="OCR/SR"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizePageOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions=Datacap.Libraries.ScansoftR.Actions" qi=""/>
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="@P.RecogStatus"/>
+					<p name="object2" v="0"/>
+				</a>
+				<a name="NormalizeCCO" ns="Cco2cco.rrx">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function6c: Recog Execution - OCR/A" qi="">
+				<a name="rrCompare" ns="rrunner" qi="" disabled="y">
+					<p name="object1" v="OCR/A"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a name="Recognize" ns="ocr_a.dll">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="AnalyzeLayout" ns="net:DocumentAnalytics.Actions"/>
+				<a name="CreateHTML" ns="net:DocumentAnalytics.Actions" qi=""/>
+				<a name="CreateCcoFromLayout" ns="net:SharedRecognitionTools.Actions" qi=""/>
+				<a name="CreateTextFile" ns="Recog_Shared.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a ns="net:DocumentAnalytics.Actions" name="ExtractTextLogEnable" qi="">
+					<p name="Target" type="string" qi="Smart parameter of the path and file name to log to." v="c:\datacap\extract.log"/>
+				</a>
+				<a ns="net:DocumentAnalytics.Actions" name="ExtractText" qi="">
+					<p name="extractors" type="string" qi="Smart parameter for a comma separated list of extractors to process." v="Date.Dates"/>
+				</a>
+				<a ns="net:DocumentAnalytics.Actions" name="FindExtractedText" qi="">
+					<p name="Target" type="string" qi="Smart parameter for the target object to save the value to.  If used on a field use '@F' to update the current field." v="@P.Date"/>
+					<p name="Scope" type="string" qi="Smart parameter first|Last|All - Populates the target using the match(es) using the specified entity type, search field and search expression.  If First is specified the first match is used.  If Last is specified the last match is used.  If All is specified a sub field will be created for all matches.  All is only supported when the target is DCO object and is not supported for variable." v="first"/>
+					<p name="Entity" type="string" qi="Smart parameter name of the entity to match.  For example: Address.Address for a result from the ExtractText action, or Person for a result from the ExtractTextAlchemyLanguage action.  The format of the entity name is Module.OutputView for the ExtractText action. The entity name can be at any level of the ExtractTextAlchemyLanguage action results." v="Date"/>
+					<p name="Source" type="string" qi="Smart parameter entity Name|Field Name - If the entity name is specified sub fields used on the target for each field in the entity.  If an entity field name is sepcified the entity field will be used to update the target." v="Dates"/>
+					<p name="SearchField" type="string" qi="Optional.  Smart parameter name of the entity field to match.  For example city. If specified matching will be limited to the specified field.  If the Entity parameter is set to Field this field's value will be used to update the target." v=""/>
+					<p name="SearchRegex" type="string" qi="Optional.  Smart parameter regular expression to search for.  To search for a word use '(SearchWord)'." v=""/>
+				</a>
+				<a name="RecognizePageOCR_A" ns="ocr_a" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function7: Locate" qi="" disabled="true">
+				<a name="AddKeyList" ns="Locate" qi="">
+					<p name="KeyName" v=""/>
+					<p name="KeyWord_01" v=""/>
+					<p name="KeyWord_02" v=""/>
+					<p name="KeyWord_03" v=""/>
+					<p name="KeyWord_04" v=""/>
+					<p name="KeyWord_05" v=""/>
+					<p name="KeyWord_06" v=""/>
+					<p name="KeyWord_07" v=""/>
+					<p name="KeyWord_08" v=""/>
+					<p name="KeyWord_09" v=""/>
+					<p name="KeyWord_10" v=""/>
+					<p name="KeyWord_11" v=""/>
+					<p name="KeyWord_12" v=""/>
+					<p name="KeyWord_13" v=""/>
+					<p name="KeyWord_14" v=""/>
+					<p name="KeyWord_15" v=""/>
+					<p name="KeyWord_16" v=""/>
+					<p name="KeyWord_17" v=""/>
+					<p name="KeyWord_18" v=""/>
+					<p name="KeyWord_19" v=""/>
+					<p name="KeyWord_20" v=""/>
+					<p name="KeyWord_21" v=""/>
+					<p name="KeyWord_22" v=""/>
+					<p name="KeyWord_23" v=""/>
+					<p name="KeyWord_24" v=""/>
+					<p name="KeyWord_25" v=""/>
+				</a>
+				<a name="FindKeyList" ns="Locate" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="" name="StrParam"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="MainPage" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function8: Content Classification" qi="" disabled="True">
+				<a name="FindFingerprintCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" qi=""/>
+				<a name="UpdateKnowledgeBaseCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" disabled="True"/>
+			</func>
+			<func name="Function9: First Page" qi="" disabled="True">
+				<a name="IsFirstPageInBatch" ns="DCO"/>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function9: Default Until Separator" qi="" disabled="True">
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="True"/>
+					<p name="object2" v="@B.SeparatorEncountered"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Form Cover Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Form Cover Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="Unstructured Document Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Barcode Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Front Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Barcode Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Checklist Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter"/>
+					<p type="bDebug"/>
+					<p type="strParam" v="Account Checklist Front Page"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Account Checklist Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter"/>
+					<p type="bDebug"/>
+					<p type="strParam" v="SAM Acc Chk Front Page"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Review Form Front Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="%Account Review Form Front Page%" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Account Review Form Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="SAM Acc Rev Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Unstructured Documents" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Unstructured" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Unstructured Document Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Barcode Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Page by Cover Page" qi="">
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Front Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="Resolution Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Trail Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="resolutions_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\-\s*([2-9])\s*\-" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Trail Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="resolutions_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Page" name="StrParam"/>
+				</a>
+				<a name="GoFirstWord" ns="Locate.dll" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+			</func>
+			<func name="Function: Minutes Trail Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="minutes_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\-\s*([2-9])\s*\-" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Minutes Trail Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Minutes Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="minutes_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Minutes Page" name="StrParam"/>
+				</a>
+				<a name="GoFirstWord" ns="Locate.dll" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Checklist Page" qi="">
+				<a ns="rrunner" name="rrCompare" qi="">
+					<p name="object1" v="Account Checklist Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Account Checklist Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Review Form Page" qi="">
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="Account Review Form Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Account Review Form Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Unstructured Document Page" qi="">
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Front Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrCompare" qi="">
+					<p name="object1" v="Unstructured Document Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Unstructured Document Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Return of Change of Company Secretary and Director" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Second Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Use Continuation Sheet B if more than 1 natural person is appointed as" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*2" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Second Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Third Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Appointment of Company Secretary\/Director \(Body Corporate\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Third Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Continuation Sheet A Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Cessation to Act as Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Section 2\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Continuation Sheet A Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Continuation Sheet B Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Appointment of Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\) \(Section 3\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Continuation Sheet B Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Continuation Sheet C Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="([A]{1})([a-z]{10})+\sof\s([C]{1})([a-z]{6})\s([S]{1})([a-z]{8})" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\Director \(Body Corporate\) \(Section 4\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Continuation Sheet C Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Return of Change in Particulars of" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Companies Registry Company Secretary and Director of" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Second Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\) \(cont d\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*2" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*2" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Second Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Third Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Change in Particulars of Company Secretary\/Director \(Body Corporate\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Third Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Continuation Sheet A Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="([C]{1})([a-z]{5})+\sin\s([P]{1})([a-z]{10})+\sof Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\) \(Section 2\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Continuation Sheet A Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Continuation Sheet B Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Change in Particulars of Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Body Corporate\) \(Section 3\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Continuation Sheet B Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Append Document Page" qi="" disabled="y">
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\Director \(Body Corporate\) \(Section 4\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Other"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Append Document Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: ND2A Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Notice of Change of Company Secretary and" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="director or alternate director continue" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Form ND2A Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function5e: Find Fingerprint" qi="">
+				<a name="rrSet" ns="rrunner" qi="" disabled="True">
+					<p name="varSource" v="@TYPE"/>
+					<p name="varTarget" v="@P.PageTypeOriginal"/>
+				</a>
+				<a ns="autodoc" name="FindFingerprint" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="False" name="StrParam"/>
+				</a>
+				<a ns="autodoc" name="FindBlackFingerprint" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="False" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Fingerprint"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="" disabled="True">
+					<p name="varSource" v="@P.PageTypeOriginal"/>
+					<p name="varTarget" v="@P.TYPE"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="" disabled="True">
+					<p name="varSource" v="@P.PageTypeOriginal"/>
+					<p name="varTarget" v="@P.TYPE"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi="" disabled="y"/>
+			</func>
+		</rule>
+		<rule name="Batch Level (Close)" id="3" dcomap.close="B" disabled="true" qi="">
+			<func name="Function2: Release OCR/A Engine" disabled="True">
+				<a name="ReleaseEngineOCR_A" ns="ocr_a" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="4" name="My Identify Pages" ver="91" modder="admin.1" qi="" dt="06/12/17 10:08:12.783 ">
+		<rule name="Batch Level (Open)" id="1" qi="" dcomap.open="B">
+			<func name="Function1: General Fingerprint Settings" qi="">
+				<a name="SetFingerprintDir" ns="autodoc" qi="Read-only">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="@APPPATH(fingerprint)" name="StrParam"/>
+				</a>
+				<a ns="autodoc" name="SetFingerprintSearchArea" qi="">
+					<p name="matchStart" v="0.4"/>
+					<p name="matchEnd" v=""/>
+				</a>
+				<a ns="autodoc" name="SetProblemValue" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="0.8" name="StrParam"/>
+				</a>
+				<a name="SetMaxOffset" ns="autodoc" qi="" disabled="True">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="6" name="StrParam"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function2: Fingerprint Service Settings" disabled="True" qi="">
+				<a name="SetFingerprintWebServiceURL" ns="autodoc">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="" name="StrParam"/>
+				</a>
+				<a name="SetApplicationID" ns="autodoc" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Forms" name="StrParam"/>
+				</a>
+				<a name="SetFingerprintFailureThreshold" ns="autodoc" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="100" name="StrParam"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi=""/>
+			</func>
+			<func name="Function3: Content Classification" disabled="True" qi="">
+				<a name="SetListenerURLCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions">
+					<p name="URL" type="string" v="" qi="The URL of the CC Listener that will be used for classification. Smart parameters are supported."/>
+				</a>
+				<a name="SetLanguageCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" qi="">
+					<p name="LanguageName" type="string" v="English" qi="The name of the language used in the specified Knowledge Base"/>
+				</a>
+				<a name="SetKnowledgeBaseCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions">
+					<p name="KnowledgeBaseName" type="string" v="" qi="Knowledge Base name.  Smart parameters are supported."/>
+				</a>
+				<a name="SetProblemValueCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" qi="">
+					<p name="MinScore" type="double" v="0.7" qi="Minimum score for fingerprint matching. Valid values are fractional values between zero and one (for example: 0.0 and 1.0) "/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Page Level (Open)" id="2" qi="" dcomap.open="P=Other;P:Page">
+			<func name="Function1: Blank Page" qi="" disabled="True">
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@TYPE"/>
+					<p name="varTarget" v="@P.PageTypeOriginal"/>
+				</a>
+				<a name="BlankPagesIDBySize" ns="autodoc">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="1500,Other,0" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrCompareNot" qi="">
+					<p name="object1" v="@TYPE"/>
+					<p name="object2" v="@P.PageTypeOriginal"/>
+				</a>
+			</func>
+			<func name="Function2a: ScanSrcPath - Check Jobs" qi="" disabled="True">
+				<a ns="rrunner" name="rrCompareNot" qi="">
+					<p name="object1" v="@JOBNAME"/>
+					<p name="object2" v="Main Job"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="No"/>
+					<p name="varTarget" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function2b: ScanSrcPath - Convert Trailing Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ParentImage"/>
+				</a>
+				<a name="rrCompare" ns="rrunner">
+					<p name="object1" v="@B.LastParentImage"/>
+					<p name="object2" v="@P.ParentImage"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function2c: ScanSrcPath - Convert Main Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ParentImage"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@P.ParentImage"/>
+					<p name="varTarget" v="@B.LastParentImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@EMPTY"/>
+					<p name="varTarget" v="@B.LastScanSrcPath"/>
+				</a>
+			</func>
+			<func name="Function2d: ScanSrcPath - Trailing Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner" qi="">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ScanSrcPath"/>
+				</a>
+				<a name="rrCompare" ns="rrunner" qi="">
+					<p name="object1" v="@B.LastScanSrcPath"/>
+					<p name="object2" v="@P.ScanSrcPath"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function2e: ScanSrcPath - Main Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner" qi="">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ScanSrcPath"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@P.ScanSrcPath"/>
+					<p name="varTarget" v="@B.LastScanSrcPath"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@EMPTY"/>
+					<p name="varTarget" v="@B.LastParentImage"/>
+				</a>
+			</func>
+			<func name="Function3: Barcode" disabled="True">
+				<a name="rrSet" ns="rrunner">
+					<p name="varSource" v="0"/>
+					<p name="varTarget" v="@P.bp_tp"/>
+				</a>
+				<a name="rrSet" ns="rrunner" disabled="True">
+					<p name="varSource" v="0"/>
+					<p name="varTarget" v="@P.bp_or"/>
+				</a>
+				<a name="SetMinimumConfidenceBP" ns="Barcode_P" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="7" name="StrParam"/>
+				</a>
+				<a ns="Barcode_P" name="IdentifyByBarcodesBP" qi="">
+					<p name="barcodePageMappings" type="string" v=""/>
+					<p name="mappingsDelim" type="string" v=","/>
+					<p name="keyValueSep" type="string" v="="/>
+					<p name="caseSensitive" type="bool" v="False"/>
+				</a>
+				<a name="rrSet" ns="rrunner" disabled="True">
+					<p name="varSource" v="True"/>
+					<p name="varTarget" v="@B.SeparatorEncountered"/>
+				</a>
+			</func>
+			<func name="Function4a: Recog Full Setup" qi="" disabled="True">
+				<a name="SetFullPageRecogArea" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="1"/>
+				</a>
+				<a name="rrSet" ns="rrunner">
+					<p name="varSource" v="OCR/A"/>
+					<p name="varTarget" v="@P.OCR_Engine"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@VAR(hr_locale)"/>
+					<p name="object2" v="ja-JP"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@VAR(hr_locale)"/>
+					<p name="object2" v="he-IL"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@VAR(hr_locale)"/>
+					<p name="object2" v="nl-BE"/>
+				</a>
+				<a name="rrSet" ns="rrunner">
+					<p name="varSource" v="OCR/SR"/>
+					<p name="varTarget" v="@P.OCR_Engine"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function4b: Recog Execution - Rotate" disabled="True">
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RotateImageOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions=Datacap.Libraries.ScansoftR.Actions" qi=""/>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function5a: Fingerprint - AnalyzeImage" qi="" disabled="y">
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a name="AnalyzeImage" ns="Recog_Shared">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi=""/>
+			</func>
+			<func name="Function5b: Recog Execution - OCR/SR" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner">
+					<p name="object1" v="OCR/SR"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizePageOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions=Datacap.Libraries.ScansoftR.Actions" qi=""/>
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="@P.RecogStatus"/>
+					<p name="object2" v="0"/>
+				</a>
+				<a name="NormalizeCCO" ns="Cco2cco.rrx">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function5d: Recog Execution - OCR/A" qi="">
+				<a name="rrCompare" ns="rrunner" qi="" disabled="y">
+					<p name="object1" v="OCR/A"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChinesePRC+@CHR(43)+English,ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a name="RecognizePageOCR_A" ns="ocr_a" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="CreateTextFile" ns="Recog_Shared.dll" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi=""/>
+			</func>
+			<func name="Function6a: Recog Execution - OCR/SR" disabled="True" qi="">
+				<a name="rrCompare" ns="rrunner">
+					<p name="object1" v="OCR/SR"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizePageOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions=Datacap.Libraries.ScansoftR.Actions" qi=""/>
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="@P.RecogStatus"/>
+					<p name="object2" v="0"/>
+				</a>
+				<a name="NormalizeCCO" ns="Cco2cco.rrx">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function6c: Recog Execution - OCR/A" qi="">
+				<a name="rrCompare" ns="rrunner" qi="" disabled="y">
+					<p name="object1" v="OCR/A"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a name="Recognize" ns="ocr_a.dll">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="AnalyzeLayout" ns="net:DocumentAnalytics.Actions"/>
+				<a name="CreateHTML" ns="net:DocumentAnalytics.Actions" qi=""/>
+				<a name="CreateCcoFromLayout" ns="net:SharedRecognitionTools.Actions" qi=""/>
+				<a name="CreateTextFile" ns="Recog_Shared.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a ns="net:DocumentAnalytics.Actions" name="ExtractTextLogEnable" qi="">
+					<p name="Target" type="string" qi="Smart parameter of the path and file name to log to." v="c:\datacap\extract.log"/>
+				</a>
+				<a ns="net:DocumentAnalytics.Actions" name="ExtractText" qi="">
+					<p name="extractors" type="string" qi="Smart parameter for a comma separated list of extractors to process." v="Date.Dates"/>
+				</a>
+				<a ns="net:DocumentAnalytics.Actions" name="FindExtractedText" qi="">
+					<p name="Target" type="string" qi="Smart parameter for the target object to save the value to.  If used on a field use '@F' to update the current field." v="@P.Date"/>
+					<p name="Scope" type="string" qi="Smart parameter first|Last|All - Populates the target using the match(es) using the specified entity type, search field and search expression.  If First is specified the first match is used.  If Last is specified the last match is used.  If All is specified a sub field will be created for all matches.  All is only supported when the target is DCO object and is not supported for variable." v="first"/>
+					<p name="Entity" type="string" qi="Smart parameter name of the entity to match.  For example: Address.Address for a result from the ExtractText action, or Person for a result from the ExtractTextAlchemyLanguage action.  The format of the entity name is Module.OutputView for the ExtractText action. The entity name can be at any level of the ExtractTextAlchemyLanguage action results." v="Date"/>
+					<p name="Source" type="string" qi="Smart parameter entity Name|Field Name - If the entity name is specified sub fields used on the target for each field in the entity.  If an entity field name is sepcified the entity field will be used to update the target." v="Dates"/>
+					<p name="SearchField" type="string" qi="Optional.  Smart parameter name of the entity field to match.  For example city. If specified matching will be limited to the specified field.  If the Entity parameter is set to Field this field's value will be used to update the target." v=""/>
+					<p name="SearchRegex" type="string" qi="Optional.  Smart parameter regular expression to search for.  To search for a word use '(SearchWord)'." v=""/>
+				</a>
+				<a name="RecognizePageOCR_A" ns="ocr_a" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function7: Locate" qi="" disabled="true">
+				<a name="AddKeyList" ns="Locate" qi="">
+					<p name="KeyName" v=""/>
+					<p name="KeyWord_01" v=""/>
+					<p name="KeyWord_02" v=""/>
+					<p name="KeyWord_03" v=""/>
+					<p name="KeyWord_04" v=""/>
+					<p name="KeyWord_05" v=""/>
+					<p name="KeyWord_06" v=""/>
+					<p name="KeyWord_07" v=""/>
+					<p name="KeyWord_08" v=""/>
+					<p name="KeyWord_09" v=""/>
+					<p name="KeyWord_10" v=""/>
+					<p name="KeyWord_11" v=""/>
+					<p name="KeyWord_12" v=""/>
+					<p name="KeyWord_13" v=""/>
+					<p name="KeyWord_14" v=""/>
+					<p name="KeyWord_15" v=""/>
+					<p name="KeyWord_16" v=""/>
+					<p name="KeyWord_17" v=""/>
+					<p name="KeyWord_18" v=""/>
+					<p name="KeyWord_19" v=""/>
+					<p name="KeyWord_20" v=""/>
+					<p name="KeyWord_21" v=""/>
+					<p name="KeyWord_22" v=""/>
+					<p name="KeyWord_23" v=""/>
+					<p name="KeyWord_24" v=""/>
+					<p name="KeyWord_25" v=""/>
+				</a>
+				<a name="FindKeyList" ns="Locate" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="" name="StrParam"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="MainPage" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function8: Content Classification" qi="" disabled="True">
+				<a name="FindFingerprintCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" qi=""/>
+				<a name="UpdateKnowledgeBaseCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" disabled="True"/>
+			</func>
+			<func name="Function9: First Page" qi="" disabled="True">
+				<a name="IsFirstPageInBatch" ns="DCO"/>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function9: Default Until Separator" qi="" disabled="True">
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="True"/>
+					<p name="object2" v="@B.SeparatorEncountered"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Form Cover Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Form Cover Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="Unstructured Document Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Barcode Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Front Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Barcode Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Index Fields Cover Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter"/>
+					<p type="bDebug"/>
+					<p type="strParam" v="SAM Index Cover Page"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Account Checklist Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter"/>
+					<p type="bDebug"/>
+					<p type="strParam" v="SAM Index Fields Page"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Checklist Cover Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Account Checklist Front Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Account Checklist Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="SAM Acc Chk Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Review Form Cover Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter"/>
+					<p type="bDebug"/>
+					<p type="strParam" v="Account Review Form Front Page"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Account Review Form Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="SAM Acc Rev Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Unstructured Documents" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Unstructured" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Unstructured Document Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Barcode Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Page by Cover Page" qi="">
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Front Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="Resolution Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Trail Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="resolutions_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\-\s*([2-9])\s*\-" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Trail Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="resolutions_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Page" name="StrParam"/>
+				</a>
+				<a name="GoFirstWord" ns="Locate.dll" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+			</func>
+			<func name="Function: Minutes Trail Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="minutes_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\-\s*([2-9])\s*\-" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Minutes Trail Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Minutes Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="minutes_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Minutes Page" name="StrParam"/>
+				</a>
+				<a name="GoFirstWord" ns="Locate.dll" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Checklist Page" qi="">
+				<a ns="rrunner" name="rrCompare" qi="">
+					<p name="object1" v="Account Checklist Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Account Checklist Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Review Form Page" qi="">
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="Account Review Form Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Account Review Form Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Unstructured Document Page" qi="">
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Front Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrCompare" qi="">
+					<p name="object1" v="Unstructured Document Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Unstructured Document Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Return of Change of Company Secretary and Director" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Second Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Use Continuation Sheet B if more than 1 natural person is appointed as" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*2" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Second Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Third Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Appointment of Company Secretary\/Director \(Body Corporate\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Third Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Continuation Sheet A Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Cessation to Act as Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Section 2\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Continuation Sheet A Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Continuation Sheet B Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Appointment of Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\) \(Section 3\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Continuation Sheet B Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Continuation Sheet C Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="([A]{1})([a-z]{10})+\sof\s([C]{1})([a-z]{6})\s([S]{1})([a-z]{8})" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\Director \(Body Corporate\) \(Section 4\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Continuation Sheet C Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Return of Change in Particulars of" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Companies Registry Company Secretary and Director of" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Second Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\) \(cont d\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*2" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*2" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Second Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Third Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Change in Particulars of Company Secretary\/Director \(Body Corporate\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Third Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Continuation Sheet A Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="([C]{1})([a-z]{5})+\sin\s([P]{1})([a-z]{10})+\sof Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\) \(Section 2\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Continuation Sheet A Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Continuation Sheet B Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Change in Particulars of Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Body Corporate\) \(Section 3\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Continuation Sheet B Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Append Document Page" qi="" disabled="y">
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\Director \(Body Corporate\) \(Section 4\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Other"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Append Document Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: ND2A Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Notice of Change of Company Secretary and" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="director or alternate director continue" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Form ND2A Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function5e: Find Fingerprint" qi="">
+				<a name="rrSet" ns="rrunner" qi="" disabled="True">
+					<p name="varSource" v="@TYPE"/>
+					<p name="varTarget" v="@P.PageTypeOriginal"/>
+				</a>
+				<a ns="autodoc" name="FindFingerprint" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="False" name="StrParam"/>
+				</a>
+				<a ns="autodoc" name="FindBlackFingerprint" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="False" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Fingerprint"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="" disabled="True">
+					<p name="varSource" v="@P.PageTypeOriginal"/>
+					<p name="varTarget" v="@P.TYPE"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="" disabled="True">
+					<p name="varSource" v="@P.PageTypeOriginal"/>
+					<p name="varTarget" v="@P.TYPE"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi="" disabled="y"/>
+			</func>
+		</rule>
+		<rule name="Batch Level (Close)" id="3" dcomap.close="B" disabled="true" qi="">
+			<func name="Function2: Release OCR/A Engine" disabled="True">
+				<a name="ReleaseEngineOCR_A" ns="ocr_a" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="4" name="My Identify Pages" ver="92" modder="admin.1" qi="" dt="06/12/17 10:24:58.499 ">
+		<rule name="Batch Level (Open)" id="1" qi="" dcomap.open="B">
+			<func name="Function1: General Fingerprint Settings" qi="">
+				<a name="SetFingerprintDir" ns="autodoc" qi="Read-only">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="@APPPATH(fingerprint)" name="StrParam"/>
+				</a>
+				<a ns="autodoc" name="SetFingerprintSearchArea" qi="">
+					<p name="matchStart" v="0.4"/>
+					<p name="matchEnd" v=""/>
+				</a>
+				<a ns="autodoc" name="SetProblemValue" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="0.8" name="StrParam"/>
+				</a>
+				<a name="SetMaxOffset" ns="autodoc" qi="" disabled="True">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="6" name="StrParam"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function2: Fingerprint Service Settings" disabled="True" qi="">
+				<a name="SetFingerprintWebServiceURL" ns="autodoc">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="" name="StrParam"/>
+				</a>
+				<a name="SetApplicationID" ns="autodoc" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Forms" name="StrParam"/>
+				</a>
+				<a name="SetFingerprintFailureThreshold" ns="autodoc" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="100" name="StrParam"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi=""/>
+			</func>
+			<func name="Function3: Content Classification" disabled="True" qi="">
+				<a name="SetListenerURLCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions">
+					<p name="URL" type="string" v="" qi="The URL of the CC Listener that will be used for classification. Smart parameters are supported."/>
+				</a>
+				<a name="SetLanguageCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" qi="">
+					<p name="LanguageName" type="string" v="English" qi="The name of the language used in the specified Knowledge Base"/>
+				</a>
+				<a name="SetKnowledgeBaseCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions">
+					<p name="KnowledgeBaseName" type="string" v="" qi="Knowledge Base name.  Smart parameters are supported."/>
+				</a>
+				<a name="SetProblemValueCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" qi="">
+					<p name="MinScore" type="double" v="0.7" qi="Minimum score for fingerprint matching. Valid values are fractional values between zero and one (for example: 0.0 and 1.0) "/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Page Level (Open)" id="2" qi="" dcomap.open="P=Other;P:Page">
+			<func name="Function1: Blank Page" qi="" disabled="True">
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@TYPE"/>
+					<p name="varTarget" v="@P.PageTypeOriginal"/>
+				</a>
+				<a name="BlankPagesIDBySize" ns="autodoc">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="1500,Other,0" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrCompareNot" qi="">
+					<p name="object1" v="@TYPE"/>
+					<p name="object2" v="@P.PageTypeOriginal"/>
+				</a>
+			</func>
+			<func name="Function2a: ScanSrcPath - Check Jobs" qi="" disabled="True">
+				<a ns="rrunner" name="rrCompareNot" qi="">
+					<p name="object1" v="@JOBNAME"/>
+					<p name="object2" v="Main Job"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="No"/>
+					<p name="varTarget" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function2b: ScanSrcPath - Convert Trailing Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ParentImage"/>
+				</a>
+				<a name="rrCompare" ns="rrunner">
+					<p name="object1" v="@B.LastParentImage"/>
+					<p name="object2" v="@P.ParentImage"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function2c: ScanSrcPath - Convert Main Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ParentImage"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@P.ParentImage"/>
+					<p name="varTarget" v="@B.LastParentImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@EMPTY"/>
+					<p name="varTarget" v="@B.LastScanSrcPath"/>
+				</a>
+			</func>
+			<func name="Function2d: ScanSrcPath - Trailing Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner" qi="">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ScanSrcPath"/>
+				</a>
+				<a name="rrCompare" ns="rrunner" qi="">
+					<p name="object1" v="@B.LastScanSrcPath"/>
+					<p name="object2" v="@P.ScanSrcPath"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function2e: ScanSrcPath - Main Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner" qi="">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ScanSrcPath"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@P.ScanSrcPath"/>
+					<p name="varTarget" v="@B.LastScanSrcPath"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@EMPTY"/>
+					<p name="varTarget" v="@B.LastParentImage"/>
+				</a>
+			</func>
+			<func name="Function3: Barcode" disabled="True">
+				<a name="rrSet" ns="rrunner">
+					<p name="varSource" v="0"/>
+					<p name="varTarget" v="@P.bp_tp"/>
+				</a>
+				<a name="rrSet" ns="rrunner" disabled="True">
+					<p name="varSource" v="0"/>
+					<p name="varTarget" v="@P.bp_or"/>
+				</a>
+				<a name="SetMinimumConfidenceBP" ns="Barcode_P" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="7" name="StrParam"/>
+				</a>
+				<a ns="Barcode_P" name="IdentifyByBarcodesBP" qi="">
+					<p name="barcodePageMappings" type="string" v=""/>
+					<p name="mappingsDelim" type="string" v=","/>
+					<p name="keyValueSep" type="string" v="="/>
+					<p name="caseSensitive" type="bool" v="False"/>
+				</a>
+				<a name="rrSet" ns="rrunner" disabled="True">
+					<p name="varSource" v="True"/>
+					<p name="varTarget" v="@B.SeparatorEncountered"/>
+				</a>
+			</func>
+			<func name="Function4a: Recog Full Setup" qi="" disabled="True">
+				<a name="SetFullPageRecogArea" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="1"/>
+				</a>
+				<a name="rrSet" ns="rrunner">
+					<p name="varSource" v="OCR/A"/>
+					<p name="varTarget" v="@P.OCR_Engine"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@VAR(hr_locale)"/>
+					<p name="object2" v="ja-JP"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@VAR(hr_locale)"/>
+					<p name="object2" v="he-IL"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@VAR(hr_locale)"/>
+					<p name="object2" v="nl-BE"/>
+				</a>
+				<a name="rrSet" ns="rrunner">
+					<p name="varSource" v="OCR/SR"/>
+					<p name="varTarget" v="@P.OCR_Engine"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function4b: Recog Execution - Rotate" disabled="True">
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RotateImageOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions=Datacap.Libraries.ScansoftR.Actions" qi=""/>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function5a: Fingerprint - AnalyzeImage" qi="" disabled="y">
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a name="AnalyzeImage" ns="Recog_Shared">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi=""/>
+			</func>
+			<func name="Function5b: Recog Execution - OCR/SR" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner">
+					<p name="object1" v="OCR/SR"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizePageOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions=Datacap.Libraries.ScansoftR.Actions" qi=""/>
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="@P.RecogStatus"/>
+					<p name="object2" v="0"/>
+				</a>
+				<a name="NormalizeCCO" ns="Cco2cco.rrx">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function5d: Recog Execution - OCR/A" qi="">
+				<a name="rrCompare" ns="rrunner" qi="" disabled="y">
+					<p name="object1" v="OCR/A"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChinesePRC+@CHR(43)+English,ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a name="RecognizePageOCR_A" ns="ocr_a" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="CreateTextFile" ns="Recog_Shared.dll" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi=""/>
+			</func>
+			<func name="Function6a: Recog Execution - OCR/SR" disabled="True" qi="">
+				<a name="rrCompare" ns="rrunner">
+					<p name="object1" v="OCR/SR"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizePageOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions=Datacap.Libraries.ScansoftR.Actions" qi=""/>
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="@P.RecogStatus"/>
+					<p name="object2" v="0"/>
+				</a>
+				<a name="NormalizeCCO" ns="Cco2cco.rrx">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function6c: Recog Execution - OCR/A" qi="">
+				<a name="rrCompare" ns="rrunner" qi="" disabled="y">
+					<p name="object1" v="OCR/A"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a name="Recognize" ns="ocr_a.dll">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="AnalyzeLayout" ns="net:DocumentAnalytics.Actions"/>
+				<a name="CreateHTML" ns="net:DocumentAnalytics.Actions" qi=""/>
+				<a name="CreateCcoFromLayout" ns="net:SharedRecognitionTools.Actions" qi=""/>
+				<a name="CreateTextFile" ns="Recog_Shared.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a ns="net:DocumentAnalytics.Actions" name="ExtractTextLogEnable" qi="">
+					<p name="Target" type="string" qi="Smart parameter of the path and file name to log to." v="c:\datacap\extract.log"/>
+				</a>
+				<a ns="net:DocumentAnalytics.Actions" name="ExtractText" qi="">
+					<p name="extractors" type="string" qi="Smart parameter for a comma separated list of extractors to process." v="Date.Dates"/>
+				</a>
+				<a ns="net:DocumentAnalytics.Actions" name="FindExtractedText" qi="">
+					<p name="Target" type="string" qi="Smart parameter for the target object to save the value to.  If used on a field use '@F' to update the current field." v="@P.Date"/>
+					<p name="Scope" type="string" qi="Smart parameter first|Last|All - Populates the target using the match(es) using the specified entity type, search field and search expression.  If First is specified the first match is used.  If Last is specified the last match is used.  If All is specified a sub field will be created for all matches.  All is only supported when the target is DCO object and is not supported for variable." v="first"/>
+					<p name="Entity" type="string" qi="Smart parameter name of the entity to match.  For example: Address.Address for a result from the ExtractText action, or Person for a result from the ExtractTextAlchemyLanguage action.  The format of the entity name is Module.OutputView for the ExtractText action. The entity name can be at any level of the ExtractTextAlchemyLanguage action results." v="Date"/>
+					<p name="Source" type="string" qi="Smart parameter entity Name|Field Name - If the entity name is specified sub fields used on the target for each field in the entity.  If an entity field name is sepcified the entity field will be used to update the target." v="Dates"/>
+					<p name="SearchField" type="string" qi="Optional.  Smart parameter name of the entity field to match.  For example city. If specified matching will be limited to the specified field.  If the Entity parameter is set to Field this field's value will be used to update the target." v=""/>
+					<p name="SearchRegex" type="string" qi="Optional.  Smart parameter regular expression to search for.  To search for a word use '(SearchWord)'." v=""/>
+				</a>
+				<a name="RecognizePageOCR_A" ns="ocr_a" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function7: Locate" qi="" disabled="true">
+				<a name="AddKeyList" ns="Locate" qi="">
+					<p name="KeyName" v=""/>
+					<p name="KeyWord_01" v=""/>
+					<p name="KeyWord_02" v=""/>
+					<p name="KeyWord_03" v=""/>
+					<p name="KeyWord_04" v=""/>
+					<p name="KeyWord_05" v=""/>
+					<p name="KeyWord_06" v=""/>
+					<p name="KeyWord_07" v=""/>
+					<p name="KeyWord_08" v=""/>
+					<p name="KeyWord_09" v=""/>
+					<p name="KeyWord_10" v=""/>
+					<p name="KeyWord_11" v=""/>
+					<p name="KeyWord_12" v=""/>
+					<p name="KeyWord_13" v=""/>
+					<p name="KeyWord_14" v=""/>
+					<p name="KeyWord_15" v=""/>
+					<p name="KeyWord_16" v=""/>
+					<p name="KeyWord_17" v=""/>
+					<p name="KeyWord_18" v=""/>
+					<p name="KeyWord_19" v=""/>
+					<p name="KeyWord_20" v=""/>
+					<p name="KeyWord_21" v=""/>
+					<p name="KeyWord_22" v=""/>
+					<p name="KeyWord_23" v=""/>
+					<p name="KeyWord_24" v=""/>
+					<p name="KeyWord_25" v=""/>
+				</a>
+				<a name="FindKeyList" ns="Locate" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="" name="StrParam"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="MainPage" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function8: Content Classification" qi="" disabled="True">
+				<a name="FindFingerprintCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" qi=""/>
+				<a name="UpdateKnowledgeBaseCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" disabled="True"/>
+			</func>
+			<func name="Function9: First Page" qi="" disabled="True">
+				<a name="IsFirstPageInBatch" ns="DCO"/>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function9: Default Until Separator" qi="" disabled="True">
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="True"/>
+					<p name="object2" v="@B.SeparatorEncountered"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Form Cover Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Form Cover Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="Unstructured Document Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Barcode Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Front Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Barcode Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Index Fields Cover Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="SAM Index Cover Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Account Checklist Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="SAM Index Fields Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Checklist Cover Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter"/>
+					<p type="bDebug"/>
+					<p type="strParam" v="Account Checklist Page"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Account Checklist Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter"/>
+					<p type="bDebug"/>
+					<p type="strParam" v="SAM Doc Type Page"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Review Form Cover Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter"/>
+					<p type="bDebug"/>
+					<p type="strParam" v="Account Review Form Page"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Account Review Form Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter"/>
+					<p type="bDebug"/>
+					<p type="strParam" v="SAM Doc Type Page"/>
+				</a>
+			</func>
+			<func name="Function: Unstructured Documents" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Unstructured" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Unstructured Document Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Barcode Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Page by Cover Page" qi="">
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Front Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="Resolution Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Trail Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="resolutions_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\-\s*([2-9])\s*\-" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Trail Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="resolutions_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Page" name="StrParam"/>
+				</a>
+				<a name="GoFirstWord" ns="Locate.dll" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+			</func>
+			<func name="Function: Minutes Trail Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="minutes_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\-\s*([2-9])\s*\-" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Minutes Trail Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Minutes Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="minutes_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Minutes Page" name="StrParam"/>
+				</a>
+				<a name="GoFirstWord" ns="Locate.dll" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Checklist Page" qi="">
+				<a ns="rrunner" name="rrCompare" qi="">
+					<p name="object1" v="Account Checklist Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Account Checklist Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Review Form Page" qi="">
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="Account Review Form Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Account Review Form Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Unstructured Document Page" qi="">
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Front Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrCompare" qi="">
+					<p name="object1" v="Unstructured Document Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Unstructured Document Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Return of Change of Company Secretary and Director" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Second Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Use Continuation Sheet B if more than 1 natural person is appointed as" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*2" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Second Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Third Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Appointment of Company Secretary\/Director \(Body Corporate\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Third Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Continuation Sheet A Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Cessation to Act as Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Section 2\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Continuation Sheet A Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Continuation Sheet B Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Appointment of Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\) \(Section 3\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Continuation Sheet B Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Continuation Sheet C Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="([A]{1})([a-z]{10})+\sof\s([C]{1})([a-z]{6})\s([S]{1})([a-z]{8})" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\Director \(Body Corporate\) \(Section 4\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Continuation Sheet C Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Return of Change in Particulars of" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Companies Registry Company Secretary and Director of" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Second Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\) \(cont d\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*2" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*2" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Second Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Third Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Change in Particulars of Company Secretary\/Director \(Body Corporate\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Third Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Continuation Sheet A Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="([C]{1})([a-z]{5})+\sin\s([P]{1})([a-z]{10})+\sof Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\) \(Section 2\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Continuation Sheet A Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Continuation Sheet B Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Change in Particulars of Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Body Corporate\) \(Section 3\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Continuation Sheet B Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Append Document Page" qi="" disabled="y">
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\Director \(Body Corporate\) \(Section 4\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Other"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Append Document Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: ND2A Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Notice of Change of Company Secretary and" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="director or alternate director continue" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Form ND2A Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function5e: Find Fingerprint" qi="">
+				<a name="rrSet" ns="rrunner" qi="" disabled="True">
+					<p name="varSource" v="@TYPE"/>
+					<p name="varTarget" v="@P.PageTypeOriginal"/>
+				</a>
+				<a ns="autodoc" name="FindFingerprint" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="False" name="StrParam"/>
+				</a>
+				<a ns="autodoc" name="FindBlackFingerprint" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="False" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Fingerprint"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="" disabled="True">
+					<p name="varSource" v="@P.PageTypeOriginal"/>
+					<p name="varTarget" v="@P.TYPE"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="" disabled="True">
+					<p name="varSource" v="@P.PageTypeOriginal"/>
+					<p name="varTarget" v="@P.TYPE"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi="" disabled="y"/>
+			</func>
+		</rule>
+		<rule name="Batch Level (Close)" id="3" dcomap.close="B" disabled="true" qi="">
+			<func name="Function2: Release OCR/A Engine" disabled="True">
+				<a name="ReleaseEngineOCR_A" ns="ocr_a" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="4" name="My Identify Pages" ver="93" modder="admin.1" qi="" dt="06/12/17 11:05:58.282 ">
+		<rule name="Batch Level (Open)" id="1" qi="" dcomap.open="B">
+			<func name="Function1: General Fingerprint Settings" qi="">
+				<a name="SetFingerprintDir" ns="autodoc" qi="Read-only">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="@APPPATH(fingerprint)" name="StrParam"/>
+				</a>
+				<a ns="autodoc" name="SetFingerprintSearchArea" qi="">
+					<p name="matchStart" v="0.4"/>
+					<p name="matchEnd" v=""/>
+				</a>
+				<a ns="autodoc" name="SetProblemValue" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="0.8" name="StrParam"/>
+				</a>
+				<a name="SetMaxOffset" ns="autodoc" qi="" disabled="True">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="6" name="StrParam"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function2: Fingerprint Service Settings" disabled="True" qi="">
+				<a name="SetFingerprintWebServiceURL" ns="autodoc">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="" name="StrParam"/>
+				</a>
+				<a name="SetApplicationID" ns="autodoc" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Forms" name="StrParam"/>
+				</a>
+				<a name="SetFingerprintFailureThreshold" ns="autodoc" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="100" name="StrParam"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi=""/>
+			</func>
+			<func name="Function3: Content Classification" disabled="True" qi="">
+				<a name="SetListenerURLCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions">
+					<p name="URL" type="string" v="" qi="The URL of the CC Listener that will be used for classification. Smart parameters are supported."/>
+				</a>
+				<a name="SetLanguageCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" qi="">
+					<p name="LanguageName" type="string" v="English" qi="The name of the language used in the specified Knowledge Base"/>
+				</a>
+				<a name="SetKnowledgeBaseCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions">
+					<p name="KnowledgeBaseName" type="string" v="" qi="Knowledge Base name.  Smart parameters are supported."/>
+				</a>
+				<a name="SetProblemValueCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" qi="">
+					<p name="MinScore" type="double" v="0.7" qi="Minimum score for fingerprint matching. Valid values are fractional values between zero and one (for example: 0.0 and 1.0) "/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Page Level (Open)" id="2" qi="" dcomap.open="P=Other;P:Page">
+			<func name="Function1: Blank Page" qi="" disabled="True">
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@TYPE"/>
+					<p name="varTarget" v="@P.PageTypeOriginal"/>
+				</a>
+				<a name="BlankPagesIDBySize" ns="autodoc">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="1500,Other,0" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrCompareNot" qi="">
+					<p name="object1" v="@TYPE"/>
+					<p name="object2" v="@P.PageTypeOriginal"/>
+				</a>
+			</func>
+			<func name="Function2a: ScanSrcPath - Check Jobs" qi="" disabled="True">
+				<a ns="rrunner" name="rrCompareNot" qi="">
+					<p name="object1" v="@JOBNAME"/>
+					<p name="object2" v="Main Job"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="No"/>
+					<p name="varTarget" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function2b: ScanSrcPath - Convert Trailing Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ParentImage"/>
+				</a>
+				<a name="rrCompare" ns="rrunner">
+					<p name="object1" v="@B.LastParentImage"/>
+					<p name="object2" v="@P.ParentImage"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function2c: ScanSrcPath - Convert Main Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ParentImage"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@P.ParentImage"/>
+					<p name="varTarget" v="@B.LastParentImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@EMPTY"/>
+					<p name="varTarget" v="@B.LastScanSrcPath"/>
+				</a>
+			</func>
+			<func name="Function2d: ScanSrcPath - Trailing Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner" qi="">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ScanSrcPath"/>
+				</a>
+				<a name="rrCompare" ns="rrunner" qi="">
+					<p name="object1" v="@B.LastScanSrcPath"/>
+					<p name="object2" v="@P.ScanSrcPath"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function2e: ScanSrcPath - Main Page" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner" disabled="True">
+					<p name="object1" v="No"/>
+					<p name="object2" v="@P.SkipScanSrcPath"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner" qi="">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.ScanSrcPath"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@P.ScanSrcPath"/>
+					<p name="varTarget" v="@B.LastScanSrcPath"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="">
+					<p name="varSource" v="@EMPTY"/>
+					<p name="varTarget" v="@B.LastParentImage"/>
+				</a>
+			</func>
+			<func name="Function3: Barcode" disabled="True">
+				<a name="rrSet" ns="rrunner">
+					<p name="varSource" v="0"/>
+					<p name="varTarget" v="@P.bp_tp"/>
+				</a>
+				<a name="rrSet" ns="rrunner" disabled="True">
+					<p name="varSource" v="0"/>
+					<p name="varTarget" v="@P.bp_or"/>
+				</a>
+				<a name="SetMinimumConfidenceBP" ns="Barcode_P" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="7" name="StrParam"/>
+				</a>
+				<a ns="Barcode_P" name="IdentifyByBarcodesBP" qi="">
+					<p name="barcodePageMappings" type="string" v=""/>
+					<p name="mappingsDelim" type="string" v=","/>
+					<p name="keyValueSep" type="string" v="="/>
+					<p name="caseSensitive" type="bool" v="False"/>
+				</a>
+				<a name="rrSet" ns="rrunner" disabled="True">
+					<p name="varSource" v="True"/>
+					<p name="varTarget" v="@B.SeparatorEncountered"/>
+				</a>
+			</func>
+			<func name="Function4a: Recog Full Setup" qi="" disabled="True">
+				<a name="SetFullPageRecogArea" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="1"/>
+				</a>
+				<a name="rrSet" ns="rrunner">
+					<p name="varSource" v="OCR/A"/>
+					<p name="varTarget" v="@P.OCR_Engine"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@VAR(hr_locale)"/>
+					<p name="object2" v="ja-JP"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@VAR(hr_locale)"/>
+					<p name="object2" v="he-IL"/>
+				</a>
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="@VAR(hr_locale)"/>
+					<p name="object2" v="nl-BE"/>
+				</a>
+				<a name="rrSet" ns="rrunner">
+					<p name="varSource" v="OCR/SR"/>
+					<p name="varTarget" v="@P.OCR_Engine"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function4b: Recog Execution - Rotate" disabled="True">
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RotateImageOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions=Datacap.Libraries.ScansoftR.Actions" qi=""/>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function5a: Fingerprint - AnalyzeImage" qi="" disabled="y">
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a name="AnalyzeImage" ns="Recog_Shared">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi=""/>
+			</func>
+			<func name="Function5b: Recog Execution - OCR/SR" qi="" disabled="True">
+				<a name="rrCompare" ns="rrunner">
+					<p name="object1" v="OCR/SR"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizePageOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions=Datacap.Libraries.ScansoftR.Actions" qi=""/>
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="@P.RecogStatus"/>
+					<p name="object2" v="0"/>
+				</a>
+				<a name="NormalizeCCO" ns="Cco2cco.rrx">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function5d: Recog Execution - OCR/A" qi="">
+				<a name="rrCompare" ns="rrunner" qi="" disabled="y">
+					<p name="object1" v="OCR/A"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChinesePRC+@CHR(43)+English,ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a name="RecognizePageOCR_A" ns="ocr_a" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="CreateTextFile" ns="Recog_Shared.dll" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi=""/>
+			</func>
+			<func name="Function6a: Recog Execution - OCR/SR" disabled="True" qi="">
+				<a name="rrCompare" ns="rrunner">
+					<p name="object1" v="OCR/SR"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizePageOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions=Datacap.Libraries.ScansoftR.Actions" qi=""/>
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="@P.RecogStatus"/>
+					<p name="object2" v="0"/>
+				</a>
+				<a name="NormalizeCCO" ns="Cco2cco.rrx">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function6c: Recog Execution - OCR/A" qi="">
+				<a name="rrCompare" ns="rrunner" qi="" disabled="y">
+					<p name="object1" v="OCR/A"/>
+					<p name="object2" v="@P.OCR_Engine"/>
+				</a>
+				<a name="SetFingerprintRecogPriority" ns="Recog_Shared" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a name="Recognize" ns="ocr_a.dll">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="AnalyzeLayout" ns="net:DocumentAnalytics.Actions"/>
+				<a name="CreateHTML" ns="net:DocumentAnalytics.Actions" qi=""/>
+				<a name="CreateCcoFromLayout" ns="net:SharedRecognitionTools.Actions" qi=""/>
+				<a name="CreateTextFile" ns="Recog_Shared.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a ns="net:DocumentAnalytics.Actions" name="ExtractTextLogEnable" qi="">
+					<p name="Target" type="string" qi="Smart parameter of the path and file name to log to." v="c:\datacap\extract.log"/>
+				</a>
+				<a ns="net:DocumentAnalytics.Actions" name="ExtractText" qi="">
+					<p name="extractors" type="string" qi="Smart parameter for a comma separated list of extractors to process." v="Date.Dates"/>
+				</a>
+				<a ns="net:DocumentAnalytics.Actions" name="FindExtractedText" qi="">
+					<p name="Target" type="string" qi="Smart parameter for the target object to save the value to.  If used on a field use '@F' to update the current field." v="@P.Date"/>
+					<p name="Scope" type="string" qi="Smart parameter first|Last|All - Populates the target using the match(es) using the specified entity type, search field and search expression.  If First is specified the first match is used.  If Last is specified the last match is used.  If All is specified a sub field will be created for all matches.  All is only supported when the target is DCO object and is not supported for variable." v="first"/>
+					<p name="Entity" type="string" qi="Smart parameter name of the entity to match.  For example: Address.Address for a result from the ExtractText action, or Person for a result from the ExtractTextAlchemyLanguage action.  The format of the entity name is Module.OutputView for the ExtractText action. The entity name can be at any level of the ExtractTextAlchemyLanguage action results." v="Date"/>
+					<p name="Source" type="string" qi="Smart parameter entity Name|Field Name - If the entity name is specified sub fields used on the target for each field in the entity.  If an entity field name is sepcified the entity field will be used to update the target." v="Dates"/>
+					<p name="SearchField" type="string" qi="Optional.  Smart parameter name of the entity field to match.  For example city. If specified matching will be limited to the specified field.  If the Entity parameter is set to Field this field's value will be used to update the target." v=""/>
+					<p name="SearchRegex" type="string" qi="Optional.  Smart parameter regular expression to search for.  To search for a word use '(SearchWord)'." v=""/>
+				</a>
+				<a name="RecognizePageOCR_A" ns="ocr_a" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner"/>
+			</func>
+			<func name="Function7: Locate" qi="" disabled="true">
+				<a name="AddKeyList" ns="Locate" qi="">
+					<p name="KeyName" v=""/>
+					<p name="KeyWord_01" v=""/>
+					<p name="KeyWord_02" v=""/>
+					<p name="KeyWord_03" v=""/>
+					<p name="KeyWord_04" v=""/>
+					<p name="KeyWord_05" v=""/>
+					<p name="KeyWord_06" v=""/>
+					<p name="KeyWord_07" v=""/>
+					<p name="KeyWord_08" v=""/>
+					<p name="KeyWord_09" v=""/>
+					<p name="KeyWord_10" v=""/>
+					<p name="KeyWord_11" v=""/>
+					<p name="KeyWord_12" v=""/>
+					<p name="KeyWord_13" v=""/>
+					<p name="KeyWord_14" v=""/>
+					<p name="KeyWord_15" v=""/>
+					<p name="KeyWord_16" v=""/>
+					<p name="KeyWord_17" v=""/>
+					<p name="KeyWord_18" v=""/>
+					<p name="KeyWord_19" v=""/>
+					<p name="KeyWord_20" v=""/>
+					<p name="KeyWord_21" v=""/>
+					<p name="KeyWord_22" v=""/>
+					<p name="KeyWord_23" v=""/>
+					<p name="KeyWord_24" v=""/>
+					<p name="KeyWord_25" v=""/>
+				</a>
+				<a name="FindKeyList" ns="Locate" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="" name="StrParam"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="MainPage" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function8: Content Classification" qi="" disabled="True">
+				<a name="FindFingerprintCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" qi=""/>
+				<a name="UpdateKnowledgeBaseCC" ns="com:Datacap.Libraries.CC.Actions=Datacap.Libraries.CC.Actions" disabled="True"/>
+			</func>
+			<func name="Function9: First Page" qi="" disabled="True">
+				<a name="IsFirstPageInBatch" ns="DCO"/>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function9: Default Until Separator" qi="" disabled="True">
+				<a name="rrCompareNot" ns="rrunner">
+					<p name="object1" v="True"/>
+					<p name="object2" v="@B.SeparatorEncountered"/>
+				</a>
+				<a name="SetPageType" ns="DCO">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Other" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Form Cover Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Form Cover Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="Unstructured Document Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Barcode Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Front Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Barcode Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Index Fields Cover Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="SAM Index Cover Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Account Checklist Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="SAM Index Fields Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Checklist Cover Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Account Checklist Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Account Checklist Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Checklist Page" qi="">
+				<a ns="rrunner" name="rrCompare" qi="">
+					<p name="object1" v="Account Checklist Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Account Checklist Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Review Form Cover Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Account Review Form Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Account Review Form Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Account Review Form Page" qi="">
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="Account Review Form Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Account Review Form Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Proposal Disbursement Memo Cover Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter"/>
+					<p type="bDebug"/>
+					<p type="strParam" v="Proposal Disbursement Memo"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Proposal Disbursement Memo Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: SAM Proposal Disbursement Memo Page" qi="">
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="Proposal Disbursement Memo Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter"/>
+					<p type="bDebug"/>
+					<p type="strParam" v="Proposal Disbursement Memo Page"/>
+				</a>
+			</func>
+			<func name="Function: Unstructured Documents" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Unstructured" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Unstructured Document Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+				<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="75" name="StrParam"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Barcode Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Page by Cover Page" qi="">
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Front Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrCompare">
+					<p name="object1" v="Resolution Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Trail Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="resolutions_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\-\s*([2-9])\s*\-" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Trail Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Resolution Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="resolutions_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Page" name="StrParam"/>
+				</a>
+				<a name="GoFirstWord" ns="Locate.dll" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+			</func>
+			<func name="Function: Minutes Trail Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="minutes_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\-\s*([2-9])\s*\-" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Minutes Trail Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Minutes Page by Keyword" qi="">
+				<a ns="Locate" name="FindRegExList" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="minutes_keyword" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="RESOLUTIONS" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Minutes Page" name="StrParam"/>
+				</a>
+				<a name="GoFirstWord" ns="Locate.dll" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="@B.BatchPageType"/>
+				</a>
+			</func>
+			<func name="Function: Unstructured Document Page" qi="">
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Resolution Front Page" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrCompare" qi="">
+					<p name="object1" v="Unstructured Document Page"/>
+					<p name="object2" v="@B.BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="Resolution Page"/>
+					<p name="varTarget" v="BatchPageType"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Coverpage"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Unstructured Document Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Return of Change of Company Secretary and Director" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Second Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Use Continuation Sheet B if more than 1 natural person is appointed as" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*2" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Second Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Third Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Appointment of Company Secretary\/Director \(Body Corporate\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Third Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Continuation Sheet A Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Cessation to Act as Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Section 2\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Continuation Sheet A Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Continuation Sheet B Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Appointment of Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\) \(Section 3\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Continuation Sheet B Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN6 Continuation Sheet C Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="([A]{1})([a-z]{10})+\sof\s([C]{1})([a-z]{6})\s([S]{1})([a-z]{8})" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\Director \(Body Corporate\) \(Section 4\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN6 Continuation Sheet C Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Return of Change in Particulars of" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Companies Registry Company Secretary and Director of" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Second Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\) \(cont d\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*2" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*2" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Second Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Third Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Change in Particulars of Company Secretary\/Director \(Body Corporate\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Third Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Continuation Sheet A Page" qi="">
+				<a ns="Locate" name="RegExFind" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="([C]{1})([a-z]{5})+\sin\s([P]{1})([a-z]{10})+\sof Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Natural Person\) \(Section 2\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Continuation Sheet A Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: NN7 Continuation Sheet B Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Change in Particulars of Company" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\/Director \(Body Corporate\) \(Section 3\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="NN7 Continuation Sheet B Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: Append Document Page" qi="" disabled="y">
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\Director \(Body Corporate\) \(Section 4\)" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Page\s*3" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Other"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Append Document Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function: ND2A Front Page" qi="">
+				<a ns="Locate" name="RegExFind">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Notice of Change of Company Secretary and" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFindNext">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="director or alternate director continue" name="StrParam"/>
+				</a>
+				<a ns="Locate" name="RegExFind" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="Keyword"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a ns="DCO" name="SetPageType" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="Form ND2A Front Page" name="StrParam"/>
+				</a>
+			</func>
+			<func name="Function5e: Find Fingerprint" qi="">
+				<a name="rrSet" ns="rrunner" qi="" disabled="True">
+					<p name="varSource" v="@TYPE"/>
+					<p name="varTarget" v="@P.PageTypeOriginal"/>
+				</a>
+				<a ns="autodoc" name="FindFingerprint" qi="" disabled="y">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="False" name="StrParam"/>
+				</a>
+				<a ns="autodoc" name="FindBlackFingerprint" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="False" name="StrParam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="Fingerprint"/>
+					<p name="varTarget" v="@P.Recognized_By"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="" disabled="True">
+					<p name="varSource" v="@P.PageTypeOriginal"/>
+					<p name="varTarget" v="@P.TYPE"/>
+				</a>
+				<a name="rrSet" ns="rrunner" qi="" disabled="True">
+					<p name="varSource" v="@P.PageTypeOriginal"/>
+					<p name="varTarget" v="@P.TYPE"/>
+				</a>
+				<a name="GoToNextFunction" ns="rrunner" qi="" disabled="y"/>
+			</func>
+		</rule>
+		<rule name="Batch Level (Close)" id="3" dcomap.close="B" disabled="true" qi="">
+			<func name="Function2: Release OCR/A Engine" disabled="True">
+				<a name="ReleaseEngineOCR_A" ns="ocr_a" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
 </archive>

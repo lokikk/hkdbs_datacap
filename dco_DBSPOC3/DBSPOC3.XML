@@ -20,6 +20,7 @@
 		<D type="Front Page Document" pos="0" min="0" max="0"/>
 		<D type="Account Checklist" pos="0" min="0" max="0"/>
 		<D type="Account Review Form" pos="0" min="0" max="0"/>
+		<D type="Proposal Disbursement Memo" pos="0" min="0" max="0"/>
 	</B>
 	<D type="Document">
 		<V n="ID">0</V>
@@ -98,9 +99,10 @@
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
 		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
-		<P type="Front Page" pos="0" min="0" max="0"/>
+		<P type="SAM Index Fields Page" pos="0" min="0" max="0"/>
 		<P type="SAM Acc Chk Front Page" pos="0" min="0" max="0"/>
 		<P type="SAM Acc Rev Front Page" pos="0" min="0" max="0"/>
+		<P type="SAM Doc Type Page" pos="0" min="0" max="0"/>
 	</D>
 	<D type="Account Checklist">
 		<V n="ID">0</V>
@@ -142,6 +144,16 @@
 		<V n="MAX_TYPES">0</V>
 		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
 		<P type="Account Review Form Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="Proposal Disbursement Memo">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<P type="Proposal Disbursement Memo Page" pos="0" min="0" max="0"/>
 	</D>
 	<P type="Other">
 		<V n="ID">0</V>
@@ -392,7 +404,7 @@
 		<F type="Append_Doc_ID" pos="0" min="0" max="0"/>
 		<F type="Append_Remarks" pos="0" min="0" max="0"/>
 	</P>
-	<P type="Front Page">
+	<P type="SAM Index Fields Page">
 		<V n="ID">0</V>
 		<V n="TYPE">Page</V>
 		<V n="STATUS">0</V>
@@ -402,8 +414,14 @@
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
 		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
-		<F type="BatchEntityName" pos="0" min="0" max="0"/>
-		<F type="BatchRemarks" pos="0" min="0" max="0"/>
+		<F type="Batch_SAM_Action_No" pos="0" min="0" max="0"/>
+		<F type="Batch_SAM_CIF_No" pos="0" min="0" max="0"/>
+		<F type="Batch_SAM_Group_Name" pos="0" min="0" max="0"/>
+		<F type="Batch_SAM_Borrower_Name" pos="0" min="0" max="0"/>
+		<F type="Batch_SAM_TIN_No" pos="0" min="0" max="0"/>
+		<F type="Batch_SAM_Sequence" pos="0" min="0" max="0"/>
+		<F type="Batch_SAM_Remarks" pos="0" min="0" max="0"/>
+		<F type="Batch_SAM_IsRescan" pos="0" min="0" max="0"/>
 	</P>
 	<P type="SAM Acc Chk Front Page">
 		<V n="ID">0</V>
@@ -610,6 +628,36 @@
 		<F type="Batch_SAM_Sequence" pos="0" min="0" max="0"/>
 		<F type="Batch_SAM_IsRescan" pos="0" min="0" max="0"/>
 		<F type="Batch_SAM_Action_No" pos="0" min="0" max="0"/>
+	</P>
+	<P type="SAM Doc Type Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</P>
+	<P type="Proposal Disbursement Memo Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;9&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="SAM_Rescan" pos="0" min="0" max="0"/>
+		<F type="SAM_Sequence" pos="0" min="0" max="0"/>
+		<F type="SAM_Borrower_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_TIN_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Action_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Group_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_CIF_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Remarks" pos="0" min="0" max="0"/>
 	</P>
 	<F type="NN6_Company_Name">
 		<V n="ID">0</V>
@@ -1268,28 +1316,6 @@
 		<V n="length"></V>
 		<V n="ReqConf">8</V>
 		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
-	</F>
-	<F type="BatchEntityName">
-		<V n="ID">0</V>
-		<V n="TYPE">Field</V>
-		<V n="STATUS">0</V>
-		<V n="Position">0,0,0,0</V>
-		<V n="MIN_TYPES">0</V>
-		<V n="MAX_TYPES">0</V>
-		<V n="length"></V>
-		<V n="ReqConf">8</V>
-		<V n="rules">&lt;in&gt;&lt;r id=&quot;7&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
-	</F>
-	<F type="BatchRemarks">
-		<V n="ID">0</V>
-		<V n="TYPE">Field</V>
-		<V n="STATUS">0</V>
-		<V n="Position">0,0,0,0</V>
-		<V n="MIN_TYPES">0</V>
-		<V n="MAX_TYPES">0</V>
-		<V n="length"></V>
-		<V n="ReqConf">8</V>
-		<V n="rules">&lt;in&gt;&lt;r id=&quot;8&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
 	</F>
 	<F type="SAM_Action_No">
 		<V n="ID">0</V>
@@ -2013,7 +2039,7 @@
 		<V n="MAX_TYPES">0</V>
 		<V n="length"></V>
 		<V n="ReqConf">8</V>
-		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;45&quot; rs=&quot;5&quot; /&gt;&lt;r id=&quot;3&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
 	</F>
 	<F type="SAM_Sequence">
 		<V n="ID">0</V>
@@ -2024,7 +2050,7 @@
 		<V n="MAX_TYPES">0</V>
 		<V n="length"></V>
 		<V n="ReqConf">8</V>
-		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;4&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
 	</F>
 	<DICT n="YesNo">
 		<W v="Y">Yes</W>

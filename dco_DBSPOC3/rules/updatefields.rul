@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ruleset id="16" name="UpdateFields" ver="10" modder="admin.1" qi="" dt="05/22/17 10:58:45.592 ">
+<ruleset id="16" name="UpdateFields" ver="12" modder="admin.1" qi="" dt="06/12/17 10:56:12.393 ">
 	<rule name="Batch SAM Action No" id="11" qi="">
 		<func name="Function2">
 			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
@@ -18,7 +18,7 @@
 	</rule>
 	<rule name="SAM Action No" id="12" qi="">
 		<func name="Function1" qi="">
-			<a ns="rrunner" name="rrSet" qi="">
+			<a ns="rrunner" name="rrSet" qi="" disabled="y">
 				<p name="varSource" v="@B.SAM_Action_No"/>
 				<p name="varTarget" v="@P\SAM_Action_No"/>
 			</a>
@@ -50,7 +50,7 @@
 	</rule>
 	<rule name="SAM CIF No" id="14" qi="">
 		<func name="Function1" qi="">
-			<a ns="rrunner" name="rrSet" qi="">
+			<a ns="rrunner" name="rrSet" qi="" disabled="y">
 				<p name="varSource" v="@B.SAM_CIF_No"/>
 				<p name="varTarget" v="@P\SAM_CIF_No"/>
 			</a>
@@ -78,7 +78,7 @@
 	</rule>
 	<rule name="SAM Group Name" id="16" qi="">
 		<func name="Function1" qi="">
-			<a ns="rrunner" name="rrSet" qi="">
+			<a ns="rrunner" name="rrSet" qi="" disabled="y">
 				<p name="varSource" v="@B.SAM_Group_Name"/>
 				<p name="varTarget" v="@P\SAM_Group_Name"/>
 			</a>
@@ -106,7 +106,7 @@
 	</rule>
 	<rule name="SAM Borrower Name" id="18" qi="">
 		<func name="Function1" qi="">
-			<a ns="rrunner" name="rrSet" qi="">
+			<a ns="rrunner" name="rrSet" qi="" disabled="y">
 				<p name="varSource" v="@B.SAM_Borrower_Name"/>
 				<p name="varTarget" v="@P\SAM_Borrower_Name"/>
 			</a>
@@ -134,13 +134,41 @@
 	</rule>
 	<rule name="SAM TIN No" id="20" qi="">
 		<func name="Function1" qi="">
-			<a ns="rrunner" name="rrSet" qi="">
+			<a ns="rrunner" name="rrSet" qi="" disabled="y">
 				<p name="varSource" v="@B.SAM_TIN_No"/>
 				<p name="varTarget" v="@P\SAM_TIN_No"/>
 			</a>
 			<a ns="rrunner" name="rrSet">
 				<p name="varSource" v="@B.SAM_TIN_No"/>
 				<p name="varTarget" v="@D.SAM_Document_TIN_No"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM Sequence" id="3" qi="">
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@P\Batch_SAM_Sequence"/>
+				<p name="varTarget" v="@B.SAM_Sequence"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="SAM Sequence" id="4" qi="">
+		<func name="Function1" qi="">
+			<a ns="rrunner" name="rrSet" qi="" disabled="y">
+				<p name="varSource" v="@B.SAM_Sequence"/>
+				<p name="varTarget" v="@P\SAM_Sequence"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@B.SAM_Sequence"/>
+				<p name="varTarget" v="@D.SAM_Document_Sequence"/>
 			</a>
 		</func>
 	</rule>
@@ -162,7 +190,7 @@
 	</rule>
 	<rule name="SAM Remarks" id="22" qi="">
 		<func name="Function1" qi="">
-			<a ns="rrunner" name="rrSet">
+			<a ns="rrunner" name="rrSet" disabled="y">
 				<p name="varSource" v="@B.SAM_Remarks"/>
 				<p name="varTarget" v="@P\SAM_Remarks"/>
 			</a>

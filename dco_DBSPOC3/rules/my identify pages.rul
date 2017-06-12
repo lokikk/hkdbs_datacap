@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ruleset id="4" name="My Identify Pages" ver="90" modder="admin.1" qi="" dt="06/09/17 10:27:51.153 ">
+<ruleset id="4" name="My Identify Pages" ver="94" modder="admin.1" qi="" dt="06/12/17 11:13:26.43 ">
 	<rule name="Batch Level (Open)" id="1" qi="" dcomap.open="B">
 		<func name="Function1: General Fingerprint Settings" qi="">
 			<a name="SetFingerprintDir" ns="autodoc" qi="Read-only">
@@ -487,11 +487,41 @@
 				<p type="strParam" v="Barcode Front Page" name="StrParam"/>
 			</a>
 		</func>
-		<func name="Function: SAM Account Checklist Front Page" qi="">
+		<func name="Function: SAM Index Fields Cover Page" qi="">
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="SAM Index Cover Page" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Keyword"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Account Checklist Page"/>
+				<p name="varTarget" v="@B.BatchPageType"/>
+			</a>
+			<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="75" name="StrParam"/>
+			</a>
+			<a ns="DCO" name="SetPageType" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="SAM Index Fields Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Account Checklist Cover Page" qi="">
 			<a ns="Locate" name="RegExFind">
-				<p type="bInter"/>
-				<p type="bDebug"/>
-				<p type="strParam" v="Account Checklist Front Page"/>
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Account Checklist Page" name="StrParam"/>
 			</a>
 			<a ns="Locate" name="RegExFind" qi="" disabled="y">
 				<p type="bInter" name="bInter"/>
@@ -511,17 +541,17 @@
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="75" name="StrParam"/>
 			</a>
-			<a ns="DCO" name="SetPageType" qi="">
-				<p type="bInter"/>
-				<p type="bDebug"/>
-				<p type="strParam" v="SAM Acc Chk Front Page"/>
-			</a>
-		</func>
-		<func name="Function: SAM Account Review Form Front Page" qi="">
-			<a ns="Locate" name="RegExFind" qi="">
+			<a ns="DCO" name="SetPageType">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
-				<p type="strParam" v="%Account Review Form Front Page%" name="StrParam"/>
+				<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Account Review Form Cover Page" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Account Review Form Page" name="StrParam"/>
 			</a>
 			<a ns="Locate" name="RegExFind" qi="" disabled="y">
 				<p type="bInter" name="bInter"/>
@@ -541,10 +571,85 @@
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="75" name="StrParam"/>
 			</a>
-			<a ns="DCO" name="SetPageType">
+			<a ns="DCO" name="SetPageType" qi="">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
-				<p type="strParam" v="SAM Acc Rev Front Page" name="StrParam"/>
+				<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Proposal Disbursement Memo Cover Page" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Proposal Disbursement Memo" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Keyword"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Proposal Disbursement Memo Page"/>
+				<p name="varTarget" v="@B.BatchPageType"/>
+			</a>
+			<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="75" name="StrParam"/>
+			</a>
+			<a ns="DCO" name="SetPageType" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Account Checklist Page" qi="">
+			<a ns="rrunner" name="rrCompare" qi="">
+				<p name="object1" v="Account Checklist Page"/>
+				<p name="object2" v="@B.BatchPageType"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Coverpage"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="DCO" name="SetPageType" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Account Checklist Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Account Review Form Page" qi="">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="Account Review Form Page"/>
+				<p name="object2" v="@B.BatchPageType"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Coverpage"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="DCO" name="SetPageType" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Account Review Form Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Proposal Disbursement Memo Page" qi="">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="Proposal Disbursement Memo Page"/>
+				<p name="object2" v="@B.BatchPageType"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Coverpage"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="DCO" name="SetPageType" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Proposal Disbursement Memo Page" name="StrParam"/>
 			</a>
 		</func>
 		<func name="Function: Unstructured Documents" qi="">
@@ -730,36 +835,6 @@
 			<a ns="rrunner" name="rrSet" disabled="y">
 				<p name="varSource" v="Resolution Page"/>
 				<p name="varTarget" v="@B.BatchPageType"/>
-			</a>
-		</func>
-		<func name="Function: SAM Account Checklist Page" qi="">
-			<a ns="rrunner" name="rrCompare" qi="">
-				<p name="object1" v="Account Checklist Page"/>
-				<p name="object2" v="@B.BatchPageType"/>
-			</a>
-			<a ns="rrunner" name="rrSet">
-				<p name="varSource" v="Coverpage"/>
-				<p name="varTarget" v="@P.Recognized_By"/>
-			</a>
-			<a ns="DCO" name="SetPageType" qi="">
-				<p type="bInter" name="bInter"/>
-				<p type="bDebug" name="bDebug"/>
-				<p type="strParam" v="Account Checklist Page" name="StrParam"/>
-			</a>
-		</func>
-		<func name="Function: SAM Account Review Form Page" qi="">
-			<a ns="rrunner" name="rrCompare">
-				<p name="object1" v="Account Review Form Page"/>
-				<p name="object2" v="@B.BatchPageType"/>
-			</a>
-			<a ns="rrunner" name="rrSet">
-				<p name="varSource" v="Coverpage"/>
-				<p name="varTarget" v="@P.Recognized_By"/>
-			</a>
-			<a ns="DCO" name="SetPageType" qi="">
-				<p type="bInter" name="bInter"/>
-				<p type="bDebug" name="bDebug"/>
-				<p type="strParam" v="Account Review Form Page" name="StrParam"/>
 			</a>
 		</func>
 		<func name="Function: Unstructured Document Page" qi="">
