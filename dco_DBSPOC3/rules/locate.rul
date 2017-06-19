@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ruleset id="5" name="Locate" ver="85" modder="admin.1" dt="06/12/17 10:55:25.894 " qi="">
+<ruleset id="5" name="Locate" ver="88" modder="admin.1" dt="06/16/17 14:53:51.72 " qi="">
 	<rule name="Company Name" id="1" qi="">
 		<func name="Function1">
 			<a ns="Locate" name="RegExFind">
@@ -25,10 +25,10 @@
 	</rule>
 	<rule name="Date of Cessation" id="2" qi="">
 		<func name="Function1" qi="">
-			<a ns="Locate" name="RegExFind">
-				<p type="bInter" name="bInter"/>
-				<p type="bDebug" name="bDebug"/>
-				<p type="strParam" v="Date of Cessation" name="StrParam"/>
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter"/>
+				<p type="bDebug"/>
+				<p type="strParam" v="of Cessation"/>
 			</a>
 			<a ns="Locate" name="GoRightWord" qi="">
 				<p type="bInter" name="bInter"/>
@@ -707,10 +707,10 @@
 	</rule>
 	<rule name="Date of Appointment" id="5" qi="">
 		<func name="Function1">
-			<a ns="Locate" name="RegExFind">
+			<a ns="Locate" name="RegExFind" qi="">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
-				<p type="strParam" v="Date of Appointment" name="StrParam"/>
+				<p type="strParam" v="日期" name="StrParam"/>
 			</a>
 			<a name="GoDownLine" ns="Locate.dll">
 				<p type="bInter" name="bInter"/>

@@ -6,11 +6,10 @@
 		<V n="STATUS">0</V>
 		<V n="MIN TYPES">0</V>
 		<V n="MAX TYPES">0</V>
-		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;4&quot; /&gt;&lt;r id=&quot;3&quot; rs=&quot;15&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;4&quot; /&gt;&lt;/out&gt;</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;4&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;4&quot; /&gt;&lt;/out&gt;</V>
 		<V n="OMRType">0</V>
 		<P type="Other" pos="0" min="0" max="0"/>
 		<D type="Document" pos="0" min="0" max="0"/>
-		<D type="UseOfInfoConsentForm" pos="0" min="0" max="0"/>
 		<D type="Form ND2A" pos="0" min="0" max="0"/>
 		<D type="Form NN6" pos="0" min="0" max="0"/>
 		<D type="Form NN7" pos="0" min="0" max="0"/>
@@ -21,6 +20,14 @@
 		<D type="Account Checklist" pos="0" min="0" max="0"/>
 		<D type="Account Review Form" pos="0" min="0" max="0"/>
 		<D type="Proposal Disbursement Memo" pos="0" min="0" max="0"/>
+		<D type="Security" pos="0" min="0" max="0"/>
+		<D type="Correspondence External" pos="0" min="0" max="0"/>
+		<D type="Correspondence Internal" pos="0" min="0" max="0"/>
+		<D type="Miscellaneous" pos="0" min="0" max="0"/>
+		<D type="Bankruptcy Record" pos="0" min="0" max="0"/>
+		<D type="HKMC" pos="0" min="0" max="0"/>
+		<D type="TID Claims" pos="0" min="0" max="0"/>
+		<D type="Others" pos="0" min="0" max="0"/>
 	</B>
 	<D type="Document">
 		<V n="ID">0</V>
@@ -38,7 +45,7 @@
 		<V n="DOC DATA">0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;5&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
 		<P type="NN6 Front Page" pos="0" min="0" max="1"/>
 		<P type="NN6 Second Page" pos="1" min="0" max="1"/>
 		<P type="NN6 Third Page" pos="2" min="0" max="1"/>
@@ -53,22 +60,12 @@
 		<V n="DOC DATA">0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;5&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
 		<P type="NN7 Front Page" pos="0" min="0" max="1"/>
 		<P type="NN7 Second Page" pos="1" min="0" max="1"/>
 		<P type="NN7 Third Page" pos="2" min="0" max="1"/>
 		<P type="NN7 Continuation Sheet A Page" pos="3" min="0" max="1"/>
 		<P type="NN7 Continuation Sheet B Page" pos="4" min="0" max="1"/>
-	</D>
-	<D type="UseOfInfoConsentForm">
-		<V n="ID">0</V>
-		<V n="TYPE">Document</V>
-		<V n="STATUS">0</V>
-		<V n="DOC DATA">0</V>
-		<V n="MIN_TYPES">0</V>
-		<V n="MAX_TYPES">0</V>
-		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
-		<P type="Use of Info Page" pos="0" min="0" max="0"/>
 	</D>
 	<D type="Resolution">
 		<V n="ID">0</V>
@@ -77,7 +74,7 @@
 		<V n="DOC DATA">0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;5&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
 		<P type="Resolution Page" pos="0" min="1" max="1"/>
 		<P type="Resolution Trail Page" pos="1" min="0" max="0"/>
 	</D>
@@ -111,7 +108,7 @@
 		<V n="DOC DATA">0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;5&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
 		<P type="Account Checklist Page" pos="0" min="0" max="0"/>
 	</D>
 	<D type="Form ND2A">
@@ -131,7 +128,7 @@
 		<V n="DOC DATA">0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;5&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
 		<P type="Minutes Page" pos="0" min="1" max="1"/>
 		<P type="Minutes Trail Page" pos="1" min="0" max="0"/>
 	</D>
@@ -142,7 +139,7 @@
 		<V n="DOC DATA">0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;5&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
 		<P type="Account Review Form Page" pos="0" min="0" max="0"/>
 	</D>
 	<D type="Proposal Disbursement Memo">
@@ -152,8 +149,90 @@
 		<V n="DOC DATA">0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;5&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<P type="Proposal Disbursement Memo Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="Security">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;5&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<P type="Security Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="Correspondence External">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;5&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<P type="Correspondence External Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="Correspondence Internal">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;5&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<P type="Correspondence Internal Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="Miscellaneous">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;5&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<P type="Miscellaneous Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="Bankruptcy Record">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;5&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<P type="Bankruptcy Record Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="HKMC">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;5&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<P type="HKMC Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="TID Claims">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;5&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<P type="TID Claims Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="Others">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
 		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
-		<P type="Proposal Disbursement Memo" pos="0" min="0" max="0"/>
+		<P type="Other 1" pos="0" min="0" max="0"/>
+		<P type="Other 2" pos="0" min="0" max="0"/>
+		<P type="Other 3" pos="0" min="0" max="0"/>
 	</D>
 	<P type="Other">
 		<V n="ID">0</V>
@@ -640,7 +719,7 @@
 		<V n="MAX_TYPES">0</V>
 		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
 	</P>
-	<P type="Proposal Disbursement Memo">
+	<P type="Proposal Disbursement Memo Page">
 		<V n="ID">0</V>
 		<V n="TYPE">Page</V>
 		<V n="STATUS">0</V>
@@ -659,6 +738,196 @@
 		<F type="SAM_CIF_No" pos="0" min="0" max="0"/>
 		<F type="SAM_Remarks" pos="0" min="0" max="0"/>
 	</P>
+	<P type="Security Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;9&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="SAM_Action_No" pos="0" min="0" max="0"/>
+		<F type="SAM_CIF_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Group_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_Remarks" pos="0" min="0" max="0"/>
+		<F type="SAM_Rescan" pos="0" min="0" max="0"/>
+		<F type="SAM_Sequence" pos="0" min="0" max="0"/>
+		<F type="SAM_TIN_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Borrower_Name" pos="0" min="0" max="0"/>
+	</P>
+	<P type="Correspondence External Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;9&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="SAM_Group_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_Borrower_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_Remarks" pos="0" min="0" max="0"/>
+		<F type="SAM_Rescan" pos="0" min="0" max="0"/>
+		<F type="SAM_Action_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Sequence" pos="0" min="0" max="0"/>
+		<F type="SAM_CIF_No" pos="0" min="0" max="0"/>
+		<F type="SAM_TIN_No" pos="0" min="0" max="0"/>
+	</P>
+	<P type="Correspondence Internal Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;9&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="SAM_Rescan" pos="0" min="0" max="0"/>
+		<F type="SAM_Action_No" pos="0" min="0" max="0"/>
+		<F type="SAM_CIF_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Borrower_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_Remarks" pos="0" min="0" max="0"/>
+		<F type="SAM_TIN_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Sequence" pos="0" min="0" max="0"/>
+		<F type="SAM_Group_Name" pos="0" min="0" max="0"/>
+	</P>
+	<P type="Miscellaneous Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;9&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="SAM_CIF_No" pos="0" min="0" max="0"/>
+		<F type="SAM_TIN_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Remarks" pos="0" min="0" max="0"/>
+		<F type="SAM_Rescan" pos="0" min="0" max="0"/>
+		<F type="SAM_Action_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Sequence" pos="0" min="0" max="0"/>
+		<F type="SAM_Group_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_Borrower_Name" pos="0" min="0" max="0"/>
+	</P>
+	<P type="Bankruptcy Record Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;9&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="SAM_CIF_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Borrower_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_TIN_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Group_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_Action_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Rescan" pos="0" min="0" max="0"/>
+		<F type="SAM_Sequence" pos="0" min="0" max="0"/>
+		<F type="SAM_Remarks" pos="0" min="0" max="0"/>
+	</P>
+	<P type="HKMC Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;9&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="SAM_CIF_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Borrower_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_TIN_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Group_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_Action_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Rescan" pos="0" min="0" max="0"/>
+		<F type="SAM_Sequence" pos="0" min="0" max="0"/>
+		<F type="SAM_Remarks" pos="0" min="0" max="0"/>
+	</P>
+	<P type="TID Claims Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;9&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="SAM_Remarks" pos="0" min="0" max="0"/>
+		<F type="SAM_Action_No" pos="0" min="0" max="0"/>
+		<F type="SAM_CIF_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Group_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_Rescan" pos="0" min="0" max="0"/>
+		<F type="SAM_Sequence" pos="0" min="0" max="0"/>
+		<F type="SAM_TIN_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Borrower_Name" pos="0" min="0" max="0"/>
+	</P>
+	<P type="Other 1">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;9&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="SAM_Action_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Remarks" pos="0" min="0" max="0"/>
+		<F type="SAM_Rescan" pos="0" min="0" max="0"/>
+		<F type="SAM_TIN_No" pos="0" min="0" max="0"/>
+		<F type="SAM_CIF_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Sequence" pos="0" min="0" max="0"/>
+		<F type="SAM_Group_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_Borrower_Name" pos="0" min="0" max="0"/>
+	</P>
+	<P type="Other 2">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;9&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="SAM_Action_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Remarks" pos="0" min="0" max="0"/>
+		<F type="SAM_Rescan" pos="0" min="0" max="0"/>
+		<F type="SAM_TIN_No" pos="0" min="0" max="0"/>
+		<F type="SAM_CIF_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Sequence" pos="0" min="0" max="0"/>
+		<F type="SAM_Group_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_Borrower_Name" pos="0" min="0" max="0"/>
+	</P>
+	<P type="Other 3">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;9&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="SAM_Action_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Remarks" pos="0" min="0" max="0"/>
+		<F type="SAM_Rescan" pos="0" min="0" max="0"/>
+		<F type="SAM_TIN_No" pos="0" min="0" max="0"/>
+		<F type="SAM_CIF_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Sequence" pos="0" min="0" max="0"/>
+		<F type="SAM_Group_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_Borrower_Name" pos="0" min="0" max="0"/>
+	</P>
 	<F type="NN6_Company_Name">
 		<V n="ID">0</V>
 		<V n="TYPE">Field</V>
@@ -666,7 +935,7 @@
 		<V n="Position">0,0,0,0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="length"></V>
+		<V n="length">150</V>
 		<V n="ReqConf">8</V>
 		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
 	</F>
@@ -677,7 +946,7 @@
 		<V n="Position">0,0,0,0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="length"></V>
+		<V n="length">150</V>
 		<V n="ReqConf">8</V>
 		<V n="rules">&lt;in&gt;&lt;r id=&quot;3&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
 	</F>
@@ -688,7 +957,7 @@
 		<V n="Position">0,0,0,0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="length"></V>
+		<V n="length">150</V>
 		<V n="ReqConf">8</V>
 		<V n="rules">&lt;in&gt;&lt;r id=&quot;4&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
 	</F>
@@ -721,9 +990,9 @@
 		<V n="Position">0,0,0,0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="length"></V>
+		<V n="length">150</V>
 		<V n="ReqConf">8</V>
-		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;6&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
 	</F>
 	<F type="IsRescan">
 		<V n="ID">0</V>
@@ -744,7 +1013,7 @@
 		<V n="Position">0,0,0,0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="length"></V>
+		<V n="length">150</V>
 		<V n="ReqConf">8</V>
 		<V n="rules">&lt;in&gt;&lt;r id=&quot;6&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
 		<V n="Default_Position">1826,176,2310,288</V>
@@ -757,7 +1026,7 @@
 		<V n="Position">0,0,0,0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="length"></V>
+		<V n="length">150</V>
 		<V n="ReqConf">8</V>
 		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
 		<V n="Default_Position">312,966,2321,1190</V>
@@ -771,7 +1040,7 @@
 		<V n="Position">0,0,0,0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="length"></V>
+		<V n="length">150</V>
 		<V n="ReqConf">8</V>
 		<V n="rules">&lt;in&gt;&lt;r id=&quot;3&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
 		<V n="Default_Position">330,948,1844,1060</V>
@@ -783,7 +1052,7 @@
 		<V n="Position">0,0,0,0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="length"></V>
+		<V n="length">150</V>
 		<V n="ReqConf">8</V>
 		<V n="rules">&lt;in&gt;&lt;r id=&quot;4&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
 		<V n="Default_Position">330,1119,1850,1220</V>
@@ -1292,7 +1561,7 @@
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
 		<V n="length"></V>
-		<V n="ReqConf">8</V>
+		<V n="ReqConf">7</V>
 		<V n="rules">&lt;in&gt;&lt;r id=&quot;39&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
 	</F>
 	<F type="Append_Doc_ID">
@@ -1445,7 +1714,7 @@
 		<V n="Position">0,0,0,0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="length"></V>
+		<V n="length">150</V>
 		<V n="ReqConf">8</V>
 		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
 	</F>
@@ -1720,7 +1989,7 @@
 		<V n="Position">0,0,0,0</V>
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
-		<V n="length"></V>
+		<V n="length">150</V>
 		<V n="ReqConf">8</V>
 		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
 	</F>
@@ -1950,7 +2219,7 @@
 		<V n="MIN_TYPES">0</V>
 		<V n="MAX_TYPES">0</V>
 		<V n="length"></V>
-		<V n="ReqConf">8</V>
+		<V n="ReqConf">7</V>
 		<V n="rules">&lt;in&gt;&lt;r id=&quot;38&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
 	</F>
 	<F type="Resolution_Subject">

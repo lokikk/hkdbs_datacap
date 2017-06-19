@@ -9,7 +9,6 @@
 		<ruleset id="3" name="My Image Enhancement"/>
 		<ruleset name.dll="IdentifyPages" id="IdentifyPages"/>
 		<ruleset id="4" name="My Identify Pages"/>
-		<ruleset id="15" name="Ruleset1"/>
 		<ruleset name.dll="CreateDocuments" id="CreateDocuments"/>
 		<ruleset name="Document Integrity" id="11"/>
 		<ruleset name.dll="RecognizePagesAndFields" id="RecognizePagesAndFields"/>

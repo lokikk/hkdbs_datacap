@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ruleset id="4" name="My Identify Pages" ver="94" modder="admin.1" qi="" dt="06/12/17 11:13:26.43 ">
+<ruleset id="4" name="My Identify Pages" ver="104" modder="admin.1" qi="" dt="06/16/17 15:49:08.235 ">
 	<rule name="Batch Level (Open)" id="1" qi="" dcomap.open="B">
 		<func name="Function1: General Fingerprint Settings" qi="">
 			<a name="SetFingerprintDir" ns="autodoc" qi="Read-only">
@@ -271,7 +271,7 @@
 			</a>
 			<a name="GoToNextFunction" ns="rrunner"/>
 		</func>
-		<func name="Function5d: Recog Execution - OCR/A" qi="">
+		<func name="Function5d: Recog Execution - OCR/A" qi="" disabled="y">
 			<a name="rrCompare" ns="rrunner" qi="" disabled="y">
 				<p name="object1" v="OCR/A"/>
 				<p name="object2" v="@P.OCR_Engine"/>
@@ -333,24 +333,32 @@
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="TRUE" name="StrParam"/>
 			</a>
+			<a ns="rrunner" name="rrSet" qi="">
+				<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+				<p name="varTarget" v="@X.y_lg"/>
+			</a>
+			<a ns="rrunner" name="rrSet" qi="" disabled="y">
+				<p name="varSource" v="ChineseTaiwan+@CHR(43)+English,ChinesePRC+@CHR(43)+English"/>
+				<p name="varTarget" v="@X.y_lg"/>
+			</a>
 			<a name="Recognize" ns="ocr_a.dll">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
 			</a>
 			<a name="AnalyzeLayout" ns="net:DocumentAnalytics.Actions"/>
-			<a name="CreateHTML" ns="net:DocumentAnalytics.Actions" qi=""/>
+			<a name="CreateHTML" ns="net:DocumentAnalytics.Actions" qi="" disabled="y"/>
 			<a name="CreateCcoFromLayout" ns="net:SharedRecognitionTools.Actions" qi=""/>
 			<a name="CreateTextFile" ns="Recog_Shared.dll" qi="">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
 			</a>
-			<a ns="net:DocumentAnalytics.Actions" name="ExtractTextLogEnable" qi="">
+			<a ns="net:DocumentAnalytics.Actions" name="ExtractTextLogEnable" qi="" disabled="y">
 				<p name="Target" type="string" qi="Smart parameter of the path and file name to log to." v="c:\datacap\extract.log"/>
 			</a>
-			<a ns="net:DocumentAnalytics.Actions" name="ExtractText" qi="">
+			<a ns="net:DocumentAnalytics.Actions" name="ExtractText" qi="" disabled="y">
 				<p name="extractors" type="string" qi="Smart parameter for a comma separated list of extractors to process." v="Date.Dates"/>
 			</a>
-			<a ns="net:DocumentAnalytics.Actions" name="FindExtractedText" qi="">
+			<a ns="net:DocumentAnalytics.Actions" name="FindExtractedText" qi="" disabled="y">
 				<p name="Target" type="string" qi="Smart parameter for the target object to save the value to.  If used on a field use '@F' to update the current field." v="@P.Date"/>
 				<p name="Scope" type="string" qi="Smart parameter first|Last|All - Populates the target using the match(es) using the specified entity type, search field and search expression.  If First is specified the first match is used.  If Last is specified the last match is used.  If All is specified a sub field will be created for all matches.  All is only supported when the target is DCO object and is not supported for variable." v="first"/>
 				<p name="Entity" type="string" qi="Smart parameter name of the entity to match.  For example: Address.Address for a result from the ExtractText action, or Person for a result from the ExtractTextAlchemyLanguage action.  The format of the entity name is Module.OutputView for the ExtractText action. The entity name can be at any level of the ExtractTextAlchemyLanguage action results." v="Date"/>
@@ -581,7 +589,7 @@
 			<a ns="Locate" name="RegExFind">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
-				<p type="strParam" v="Proposal Disbursement Memo" name="StrParam"/>
+				<p type="strParam" v="Proposal Disbursement Memo Page" name="StrParam"/>
 			</a>
 			<a ns="Locate" name="RegExFind" qi="" disabled="y">
 				<p type="bInter" name="bInter"/>
@@ -602,6 +610,286 @@
 				<p type="strParam" v="75" name="StrParam"/>
 			</a>
 			<a ns="DCO" name="SetPageType" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Security Cover Page" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%Security Page%" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Keyword"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Security Page"/>
+				<p name="varTarget" v="@B.BatchPageType"/>
+			</a>
+			<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="75" name="StrParam"/>
+			</a>
+			<a ns="DCO" name="SetPageType" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Correpondence External Cover Page" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Correspondence External Page" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Keyword"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Correspondence External Page"/>
+				<p name="varTarget" v="@B.BatchPageType"/>
+			</a>
+			<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="75" name="StrParam"/>
+			</a>
+			<a ns="DCO" name="SetPageType" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Correpondence Internal Cover Page" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Correspondence Internal Page" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Keyword"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Correspondence Internal Page"/>
+				<p name="varTarget" v="@B.BatchPageType"/>
+			</a>
+			<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="75" name="StrParam"/>
+			</a>
+			<a ns="DCO" name="SetPageType" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Miscellaneous Cover Page" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%Miscellaneous Page%" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Keyword"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Miscellaneous Page"/>
+				<p name="varTarget" v="@B.BatchPageType"/>
+			</a>
+			<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="75" name="StrParam"/>
+			</a>
+			<a ns="DCO" name="SetPageType" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Bankruptcy Record Cover Page" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%Bankruptcy Record Page%" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Keyword"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Bankruptcy Record Page"/>
+				<p name="varTarget" v="@B.BatchPageType"/>
+			</a>
+			<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="75" name="StrParam"/>
+			</a>
+			<a ns="DCO" name="SetPageType" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM HKMC Cover Page" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%HKMC Page%" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Keyword"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="HKMC Page"/>
+				<p name="varTarget" v="@B.BatchPageType"/>
+			</a>
+			<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="75" name="StrParam"/>
+			</a>
+			<a ns="DCO" name="SetPageType">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM TID Claims Cover Page" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%TID Claims Page%" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Keyword"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="TID Claims Page"/>
+				<p name="varTarget" v="@B.BatchPageType"/>
+			</a>
+			<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="75" name="StrParam"/>
+			</a>
+			<a ns="DCO" name="SetPageType">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Other 1 Cover Page" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%Other 1 Page%" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="\(Appointment\/Cessation\)" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Keyword"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Other 1 Page"/>
+				<p name="varTarget" v="@B.BatchPageType"/>
+			</a>
+			<a ns="DCO" name="SetDCOStatus" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="75" name="StrParam"/>
+			</a>
+			<a ns="DCO" name="SetPageType">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Other 2 Cover Page" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%Other 2 Page%" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Keyword"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Other 2 Page"/>
+				<p name="varTarget" v="@B.BatchPageType"/>
+			</a>
+			<a ns="DCO" name="SetPageType">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Other 3 Cover Page" qi="">
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%Other 3 Page%" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Keyword"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Other 3 Page"/>
+				<p name="varTarget" v="@B.BatchPageType"/>
+			</a>
+			<a ns="DCO" name="SetPageType">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="SAM Doc Type Page" name="StrParam"/>
@@ -650,6 +938,156 @@
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="Proposal Disbursement Memo Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Security Page" qi="">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="Security Page"/>
+				<p name="object2" v="@B.BatchPageType"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Coverpage"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="DCO" name="SetPageType" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Security Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Correspondence External Page" qi="">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="Correspondence External Page"/>
+				<p name="object2" v="@B.BatchPageType"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Coverpage"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="DCO" name="SetPageType" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Correspondence External Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Correspondence Internal Page" qi="">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="Correspondence Internal Page"/>
+				<p name="object2" v="@B.BatchPageType"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Coverpage"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="DCO" name="SetPageType">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Correspondence Internal Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Miscellaneous Page" qi="">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="Miscellaneous Page"/>
+				<p name="object2" v="@B.BatchPageType"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Coverpage"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="DCO" name="SetPageType">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Miscellaneous Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Bankruptcy Record Page" qi="">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="Bankruptcy Record Page"/>
+				<p name="object2" v="@B.BatchPageType"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Coverpage"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="DCO" name="SetPageType">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Bankruptcy Record Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM HKMC Page" qi="">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="HKMC Page"/>
+				<p name="object2" v="@B.BatchPageType"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Coverpage"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="DCO" name="SetPageType">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="HKMC Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM TID Claims Page" qi="">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="TID Claims Page"/>
+				<p name="object2" v="@B.BatchPageType"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Coverpage"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="DCO" name="SetPageType">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="TID Claims Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Other 1 Page" qi="">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="Other 1 Page"/>
+				<p name="object2" v="@B.BatchPageType"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Coverpage"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="DCO" name="SetPageType">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Other 1 Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Other 2 Page" qi="">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="Other 2 Page"/>
+				<p name="object2" v="@B.BatchPageType"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Coverpage"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="DCO" name="SetPageType">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Other 2 Page" name="StrParam"/>
+			</a>
+		</func>
+		<func name="Function: SAM Other 3 Page" qi="">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="Other 3 Page"/>
+				<p name="object2" v="@B.BatchPageType"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="Coverpage"/>
+				<p name="varTarget" v="@P.Recognized_By"/>
+			</a>
+			<a ns="DCO" name="SetPageType">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Other 3 Page" name="StrParam"/>
 			</a>
 		</func>
 		<func name="Function: Unstructured Documents" qi="">
@@ -881,6 +1319,9 @@
 				<p name="varSource" v="Keyword"/>
 				<p name="varTarget" v="@P.Recognized_By"/>
 			</a>
+			<a ns="rrunner" name="SetStationID" qi="">
+				<p name="StationID" v="2"/>
+			</a>
 			<a ns="DCO" name="SetPageType" qi="">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
@@ -888,7 +1329,12 @@
 			</a>
 		</func>
 		<func name="Function: NN6 Second Page" qi="">
-			<a ns="Locate" name="RegExFind">
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="NN6" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFind" disabled="y">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="\/Director \(Natural Person\)" name="StrParam"/>
@@ -896,14 +1342,9 @@
 			<a ns="Locate" name="RegExFindNext">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
-				<p type="strParam" v="Use Continuation Sheet B if more than 1 natural person is appointed as" name="StrParam"/>
-			</a>
-			<a ns="Locate" name="RegExFind">
-				<p type="bInter" name="bInter"/>
-				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="Page\s*2" name="StrParam"/>
 			</a>
-			<a ns="rrunner" name="rrSet">
+			<a ns="rrunner" name="rrSet" qi="">
 				<p name="varSource" v="Keyword"/>
 				<p name="varTarget" v="@P.Recognized_By"/>
 			</a>
@@ -914,12 +1355,22 @@
 			</a>
 		</func>
 		<func name="Function: NN6 Third Page" qi="">
-			<a ns="Locate" name="RegExFind">
+			<a ns="Locate" name="RegExFind" disabled="y">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="Appointment of Company Secretary\/Director \(Body Corporate\)" name="StrParam"/>
 			</a>
-			<a ns="Locate" name="RegExFind">
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="NN6" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFindNext">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Page\s*3" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFind" disabled="y">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="Page\s*3" name="StrParam"/>
@@ -938,12 +1389,17 @@
 			<a ns="Locate" name="RegExFind">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
-				<p type="strParam" v="Cessation to Act as Company" name="StrParam"/>
+				<p type="strParam" v="NN6" name="StrParam"/>
 			</a>
-			<a ns="Locate" name="RegExFindNext">
+			<a ns="Locate" name="RegExFind" disabled="y">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
-				<p type="strParam" v="\/Director \(Section 2\)" name="StrParam"/>
+				<p type="strParam" v="Cessation to Act as Company" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFindNext" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Continuation Company Sheet Number A" name="StrParam"/>
 			</a>
 			<a ns="Locate" name="RegExFind" disabled="y">
 				<p type="bInter" name="bInter"/>
@@ -1018,10 +1474,10 @@
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="Return of Change in Particulars of" name="StrParam"/>
 			</a>
-			<a ns="Locate" name="RegExFindNext">
+			<a ns="Locate" name="RegExFindNext" qi="">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
-				<p type="strParam" v="Companies Registry Company Secretary and Director of" name="StrParam"/>
+				<p type="strParam" v="NN7" name="StrParam"/>
 			</a>
 			<a ns="Locate" name="RegExFind" qi="" disabled="y">
 				<p type="bInter" name="bInter"/>
@@ -1042,14 +1498,19 @@
 			<a ns="Locate" name="RegExFind" qi="">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="NN7" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="\/Director \(Natural Person\) \(cont d\)" name="StrParam"/>
 			</a>
-			<a ns="Locate" name="RegExFindNext" qi="" disabled="y">
+			<a ns="Locate" name="RegExFindNext">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="Page\s*2" name="StrParam"/>
 			</a>
-			<a ns="Locate" name="RegExFind">
+			<a ns="Locate" name="RegExFind" disabled="y">
 				<p type="bInter" name="bInter"/>
 				<p type="bDebug" name="bDebug"/>
 				<p type="strParam" v="Page\s*2" name="StrParam"/>
