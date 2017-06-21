@@ -1,0 +1,1592 @@
+C:\Datacap\DStudio\WpfAppWiz.dll. AssemblyVersion: 9.1.0.0
+AssemblyFileVersion: 9.1.0.4.***************** Application Wizard Application Copy Logs *************************
+6/21/2017 12:41:44 AM    Source App Directory: C:\Datacap\DBSCS
+6/21/2017 12:41:44 AM    Source Datacap Directory: C:\Datacap
+6/21/2017 12:41:44 AM    Destination Application Folder: C:\Datacap\DBSCS
+6/21/2017 12:41:44 AM    Destination Datacap Folder: C:\Datacap
+6/21/2017 12:41:44 AM    Reading application data
+6/21/2017 12:41:44 AM    Parsing source admin database
+6/21/2017 12:41:44 AM    Admin database found: Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Datacap\DBSCS\DBSCSAdm.mdb;
+6/21/2017 12:41:44 AM    Parsing source engine database
+6/21/2017 12:41:44 AM    Engine database found: Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Datacap\DBSCS\DBSCSEng.mdb;
+6/21/2017 12:41:44 AM    Obtaining workflow data from admin database.
+6/21/2017 12:41:44 AM    1 workflows found
+6/21/2017 12:41:44 AM    Copying application files
+6/21/2017 12:41:44 AM    Destination folder C:\Datacap\DBSCOO
+6/21/2017 12:41:44 AM    Batches folder C:\Datacap\DBSCS\batches
+6/21/2017 12:41:44 AM    Source folder C:\Datacap\DBSCS
+6/21/2017 12:41:44 AM    Creating directory C:\Datacap\DBSCOO
+6/21/2017 12:41:44 AM    Created
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\appwiz_new.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\appwiz_new.log to C:\Datacap\DBSCOO\appwiz_new.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches, type: Directory
+6/21/2017 12:41:45 AM    Creating directory C:\Datacap\DBSCOO\batches
+6/21/2017 12:41:45 AM    Folder created
+6/21/2017 12:41:45 AM    Copying to directory C:\Datacap\DBSCOO\batches
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000, type: Directory
+6/21/2017 12:41:45 AM    Creating directory C:\Datacap\DBSCOO\batches\20170620.000000
+6/21/2017 12:41:45 AM    Folder created
+6/21/2017 12:41:45 AM    Copying to directory C:\Datacap\DBSCOO\batches\20170620.000000
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.01.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.01.pdf to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.01.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.01status.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.01status.xml to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.01status.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.01_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.01_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.01_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.02.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.02.pdf to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.02.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.02status.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.02status.xml to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.02status.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.02_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.02_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.02_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.03.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.03.pdf to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.03.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.03status.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.03status.xml to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.03status.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.03_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.03_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.03_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.04.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.04.pdf to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.04.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.04status.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.04status.xml to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.04status.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.04_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.04_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.04_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.05.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.05.pdf to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.05.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.05status.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.05status.xml to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.05status.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.05_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.05_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.05_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.06.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.06.pdf to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.06.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.06status.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.06status.xml to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.06status.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.06_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.06_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.06_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.07.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.07.pdf to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.07.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.07status.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.07status.xml to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.07status.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.07_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\20170620.000000.07_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\20170620.000000.07_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\createdocuments.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\createdocuments.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000000\createdocuments.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\Export.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\Export.script to C:\Datacap\DBSCOO\batches\20170620.000000\Export.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\Export.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\Export.xml to C:\Datacap\DBSCOO\batches\20170620.000000\Export.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\exporttocsv.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\exporttocsv.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000000\exporttocsv.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\export_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\export_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000000\export_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\importfiles.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\importfiles.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000000\importfiles.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\PageID.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\PageID.script to C:\Datacap\DBSCOO\batches\20170620.000000\PageID.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\PageID.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\PageID.xml to C:\Datacap\DBSCOO\batches\20170620.000000\PageID.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\pageid_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\pageid_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000000\pageid_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\Profiler.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\Profiler.script to C:\Datacap\DBSCOO\batches\20170620.000000\Profiler.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\Profiler.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\Profiler.xml to C:\Datacap\DBSCOO\batches\20170620.000000\Profiler.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\profiler_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\profiler_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000000\profiler_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\ScanFromDisk_SingleTIFFs.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\ScanFromDisk_SingleTIFFs.script to C:\Datacap\DBSCOO\batches\20170620.000000\ScanFromDisk_SingleTIFFs.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\scanfromdisk_singletiffs_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\scanfromdisk_singletiffs_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000000\scanfromdisk_singletiffs_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000001.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000001.pdf to C:\Datacap\DBSCOO\batches\20170620.000000\TM000001.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000002.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000002.pdf to C:\Datacap\DBSCOO\batches\20170620.000000\TM000002.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000003.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000003.pdf to C:\Datacap\DBSCOO\batches\20170620.000000\TM000003.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000004.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000004.cco to C:\Datacap\DBSCOO\batches\20170620.000000\TM000004.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000004.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000004.tif to C:\Datacap\DBSCOO\batches\20170620.000000\TM000004.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000004.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000004.tio to C:\Datacap\DBSCOO\batches\20170620.000000\TM000004.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000004.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000004.txt to C:\Datacap\DBSCOO\batches\20170620.000000\TM000004.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000004.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000004.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000004.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000004_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000004_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000004_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000005.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000005.cco to C:\Datacap\DBSCOO\batches\20170620.000000\TM000005.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000005.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000005.tif to C:\Datacap\DBSCOO\batches\20170620.000000\TM000005.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000005.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000005.tio to C:\Datacap\DBSCOO\batches\20170620.000000\TM000005.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000005.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000005.txt to C:\Datacap\DBSCOO\batches\20170620.000000\TM000005.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000005.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000005.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000005.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000005_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000005_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000005_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000006.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000006.cco to C:\Datacap\DBSCOO\batches\20170620.000000\TM000006.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000006.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000006.tif to C:\Datacap\DBSCOO\batches\20170620.000000\TM000006.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000006.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000006.tio to C:\Datacap\DBSCOO\batches\20170620.000000\TM000006.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000006.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000006.txt to C:\Datacap\DBSCOO\batches\20170620.000000\TM000006.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000006.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000006.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000006.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000006_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000006_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000006_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000007.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000007.cco to C:\Datacap\DBSCOO\batches\20170620.000000\TM000007.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000007.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000007.tif to C:\Datacap\DBSCOO\batches\20170620.000000\TM000007.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000007.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000007.tio to C:\Datacap\DBSCOO\batches\20170620.000000\TM000007.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000007.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000007.txt to C:\Datacap\DBSCOO\batches\20170620.000000\TM000007.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000007_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000007_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000007_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000008.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000008.cco to C:\Datacap\DBSCOO\batches\20170620.000000\TM000008.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000008.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000008.tif to C:\Datacap\DBSCOO\batches\20170620.000000\TM000008.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000008.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000008.tio to C:\Datacap\DBSCOO\batches\20170620.000000\TM000008.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000008.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000008.txt to C:\Datacap\DBSCOO\batches\20170620.000000\TM000008.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000008_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000008_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000008_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000009.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000009.cco to C:\Datacap\DBSCOO\batches\20170620.000000\TM000009.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000009.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000009.tif to C:\Datacap\DBSCOO\batches\20170620.000000\TM000009.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000009.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000009.tio to C:\Datacap\DBSCOO\batches\20170620.000000\TM000009.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000009.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000009.txt to C:\Datacap\DBSCOO\batches\20170620.000000\TM000009.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000009_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000009_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000009_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000010.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000010.cco to C:\Datacap\DBSCOO\batches\20170620.000000\TM000010.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000010.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000010.tif to C:\Datacap\DBSCOO\batches\20170620.000000\TM000010.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000010.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000010.tio to C:\Datacap\DBSCOO\batches\20170620.000000\TM000010.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000010.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000010.txt to C:\Datacap\DBSCOO\batches\20170620.000000\TM000010.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000010_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000010_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000010_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000011.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000011.cco to C:\Datacap\DBSCOO\batches\20170620.000000\TM000011.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000011.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000011.tif to C:\Datacap\DBSCOO\batches\20170620.000000\TM000011.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000011.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000011.tio to C:\Datacap\DBSCOO\batches\20170620.000000\TM000011.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000011.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000011.txt to C:\Datacap\DBSCOO\batches\20170620.000000\TM000011.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000011_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000011_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000011_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000012.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000012.cco to C:\Datacap\DBSCOO\batches\20170620.000000\TM000012.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000012.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000012.tif to C:\Datacap\DBSCOO\batches\20170620.000000\TM000012.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000012.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000012.tio to C:\Datacap\DBSCOO\batches\20170620.000000\TM000012.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000012.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000012.txt to C:\Datacap\DBSCOO\batches\20170620.000000\TM000012.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000012.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000012.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000012.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000012_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000012_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000012_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000013.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000013.cco to C:\Datacap\DBSCOO\batches\20170620.000000\TM000013.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000013.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000013.tif to C:\Datacap\DBSCOO\batches\20170620.000000\TM000013.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000013.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000013.tio to C:\Datacap\DBSCOO\batches\20170620.000000\TM000013.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000013.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000013.txt to C:\Datacap\DBSCOO\batches\20170620.000000\TM000013.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000013_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000013_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000013_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000014.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000014.cco to C:\Datacap\DBSCOO\batches\20170620.000000\TM000014.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000014.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000014.tif to C:\Datacap\DBSCOO\batches\20170620.000000\TM000014.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000014.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000014.tio to C:\Datacap\DBSCOO\batches\20170620.000000\TM000014.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000014.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000014.txt to C:\Datacap\DBSCOO\batches\20170620.000000\TM000014.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000014_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000014_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000014_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000015.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000015.cco to C:\Datacap\DBSCOO\batches\20170620.000000\TM000015.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000015.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000015.tif to C:\Datacap\DBSCOO\batches\20170620.000000\TM000015.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000015.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000015.tio to C:\Datacap\DBSCOO\batches\20170620.000000\TM000015.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000015.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000015.txt to C:\Datacap\DBSCOO\batches\20170620.000000\TM000015.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000015_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000015_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000015_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000016.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000016.cco to C:\Datacap\DBSCOO\batches\20170620.000000\TM000016.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000016.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000016.tif to C:\Datacap\DBSCOO\batches\20170620.000000\TM000016.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000016.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000016.tio to C:\Datacap\DBSCOO\batches\20170620.000000\TM000016.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000016.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000016.txt to C:\Datacap\DBSCOO\batches\20170620.000000\TM000016.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\TM000016_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\TM000016_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000000\TM000016_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\validatefields.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\validatefields.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000000\validatefields.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000000\VScan.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000000\VScan.xml to C:\Datacap\DBSCOO\batches\20170620.000000\VScan.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001, type: Directory
+6/21/2017 12:41:45 AM    Creating directory C:\Datacap\DBSCOO\batches\20170620.000001
+6/21/2017 12:41:45 AM    Folder created
+6/21/2017 12:41:45 AM    Copying to directory C:\Datacap\DBSCOO\batches\20170620.000001
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\20170620.000001.01.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\20170620.000001.01.pdf to C:\Datacap\DBSCOO\batches\20170620.000001\20170620.000001.01.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\20170620.000001.01status.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\20170620.000001.01status.xml to C:\Datacap\DBSCOO\batches\20170620.000001\20170620.000001.01status.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\20170620.000001.01_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\20170620.000001.01_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000001\20170620.000001.01_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\createdocuments.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\createdocuments.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000001\createdocuments.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\Export.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\Export.script to C:\Datacap\DBSCOO\batches\20170620.000001\Export.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\Export.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\Export.xml to C:\Datacap\DBSCOO\batches\20170620.000001\Export.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\exporttocsv.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\exporttocsv.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000001\exporttocsv.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\export_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\export_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000001\export_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\importfiles.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\importfiles.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000001\importfiles.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\PageID.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\PageID.script to C:\Datacap\DBSCOO\batches\20170620.000001\PageID.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\PageID.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\PageID.xml to C:\Datacap\DBSCOO\batches\20170620.000001\PageID.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\pageid_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\pageid_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000001\pageid_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\Profiler.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\Profiler.script to C:\Datacap\DBSCOO\batches\20170620.000001\Profiler.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\Profiler.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\Profiler.xml to C:\Datacap\DBSCOO\batches\20170620.000001\Profiler.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\profiler_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\profiler_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000001\profiler_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\ScanFromDisk_SingleTIFFs.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\ScanFromDisk_SingleTIFFs.script to C:\Datacap\DBSCOO\batches\20170620.000001\ScanFromDisk_SingleTIFFs.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\scanfromdisk_singletiffs_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\scanfromdisk_singletiffs_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000001\scanfromdisk_singletiffs_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\TM000001.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\TM000001.pdf to C:\Datacap\DBSCOO\batches\20170620.000001\TM000001.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\TM000002.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\TM000002.cco to C:\Datacap\DBSCOO\batches\20170620.000001\TM000002.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\TM000002.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\TM000002.tif to C:\Datacap\DBSCOO\batches\20170620.000001\TM000002.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\TM000002.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\TM000002.tio to C:\Datacap\DBSCOO\batches\20170620.000001\TM000002.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\TM000002.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\TM000002.txt to C:\Datacap\DBSCOO\batches\20170620.000001\TM000002.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\TM000002.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\TM000002.xml to C:\Datacap\DBSCOO\batches\20170620.000001\TM000002.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\TM000002_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\TM000002_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000001\TM000002_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\TM000003.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\TM000003.cco to C:\Datacap\DBSCOO\batches\20170620.000001\TM000003.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\TM000003.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\TM000003.tif to C:\Datacap\DBSCOO\batches\20170620.000001\TM000003.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\TM000003.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\TM000003.tio to C:\Datacap\DBSCOO\batches\20170620.000001\TM000003.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\TM000003.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\TM000003.txt to C:\Datacap\DBSCOO\batches\20170620.000001\TM000003.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\TM000003.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\TM000003.xml to C:\Datacap\DBSCOO\batches\20170620.000001\TM000003.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\TM000003_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\TM000003_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000001\TM000003_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\validatefields.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\validatefields.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000001\validatefields.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000001\VScan.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000001\VScan.xml to C:\Datacap\DBSCOO\batches\20170620.000001\VScan.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002, type: Directory
+6/21/2017 12:41:45 AM    Creating directory C:\Datacap\DBSCOO\batches\20170620.000002
+6/21/2017 12:41:45 AM    Folder created
+6/21/2017 12:41:45 AM    Copying to directory C:\Datacap\DBSCOO\batches\20170620.000002
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\20170620.000002.01.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\20170620.000002.01.pdf to C:\Datacap\DBSCOO\batches\20170620.000002\20170620.000002.01.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\20170620.000002.01status.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\20170620.000002.01status.xml to C:\Datacap\DBSCOO\batches\20170620.000002\20170620.000002.01status.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\20170620.000002.01_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\20170620.000002.01_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000002\20170620.000002.01_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\20170620.000002.02.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\20170620.000002.02.pdf to C:\Datacap\DBSCOO\batches\20170620.000002\20170620.000002.02.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\20170620.000002.02status.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\20170620.000002.02status.xml to C:\Datacap\DBSCOO\batches\20170620.000002\20170620.000002.02status.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\20170620.000002.02_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\20170620.000002.02_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000002\20170620.000002.02_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\createdocuments.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\createdocuments.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000002\createdocuments.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\Export.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\Export.script to C:\Datacap\DBSCOO\batches\20170620.000002\Export.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\Export.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\Export.xml to C:\Datacap\DBSCOO\batches\20170620.000002\Export.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\exporttocsv.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\exporttocsv.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000002\exporttocsv.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\export_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\export_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000002\export_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\importfiles.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\importfiles.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000002\importfiles.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\PageID.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\PageID.script to C:\Datacap\DBSCOO\batches\20170620.000002\PageID.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\PageID.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\PageID.xml to C:\Datacap\DBSCOO\batches\20170620.000002\PageID.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\pageid_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\pageid_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000002\pageid_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\Profiler.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\Profiler.script to C:\Datacap\DBSCOO\batches\20170620.000002\Profiler.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\Profiler.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\Profiler.xml to C:\Datacap\DBSCOO\batches\20170620.000002\Profiler.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\profiler_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\profiler_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000002\profiler_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\ScanFromDisk_SingleTIFFs.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\ScanFromDisk_SingleTIFFs.script to C:\Datacap\DBSCOO\batches\20170620.000002\ScanFromDisk_SingleTIFFs.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\scanfromdisk_singletiffs_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\scanfromdisk_singletiffs_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000002\scanfromdisk_singletiffs_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\TM000001.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\TM000001.pdf to C:\Datacap\DBSCOO\batches\20170620.000002\TM000001.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\TM000002.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\TM000002.cco to C:\Datacap\DBSCOO\batches\20170620.000002\TM000002.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\TM000002.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\TM000002.tif to C:\Datacap\DBSCOO\batches\20170620.000002\TM000002.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\TM000002.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\TM000002.tio to C:\Datacap\DBSCOO\batches\20170620.000002\TM000002.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\TM000002.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\TM000002.txt to C:\Datacap\DBSCOO\batches\20170620.000002\TM000002.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\TM000002.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\TM000002.xml to C:\Datacap\DBSCOO\batches\20170620.000002\TM000002.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\TM000002_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\TM000002_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000002\TM000002_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\TM000003.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\TM000003.cco to C:\Datacap\DBSCOO\batches\20170620.000002\TM000003.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\TM000003.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\TM000003.tif to C:\Datacap\DBSCOO\batches\20170620.000002\TM000003.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\TM000003.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\TM000003.tio to C:\Datacap\DBSCOO\batches\20170620.000002\TM000003.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\TM000003.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\TM000003.txt to C:\Datacap\DBSCOO\batches\20170620.000002\TM000003.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\TM000003.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\TM000003.xml to C:\Datacap\DBSCOO\batches\20170620.000002\TM000003.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\TM000003_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\TM000003_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000002\TM000003_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\validatefields.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\validatefields.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000002\validatefields.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000002\VScan.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000002\VScan.xml to C:\Datacap\DBSCOO\batches\20170620.000002\VScan.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003, type: Directory
+6/21/2017 12:41:45 AM    Creating directory C:\Datacap\DBSCOO\batches\20170620.000003
+6/21/2017 12:41:45 AM    Folder created
+6/21/2017 12:41:45 AM    Copying to directory C:\Datacap\DBSCOO\batches\20170620.000003
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\createdocuments.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\createdocuments.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000003\createdocuments.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\importfiles.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\importfiles.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000003\importfiles.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\PageID.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\PageID.script to C:\Datacap\DBSCOO\batches\20170620.000003\PageID.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\PageID.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\PageID.xml to C:\Datacap\DBSCOO\batches\20170620.000003\PageID.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\pageid_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\pageid_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000003\pageid_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\Profiler.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\Profiler.script to C:\Datacap\DBSCOO\batches\20170620.000003\Profiler.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\Profiler.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\Profiler.xml to C:\Datacap\DBSCOO\batches\20170620.000003\Profiler.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\profiler_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\profiler_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000003\profiler_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\ScanFromDisk_SingleTIFFs.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\ScanFromDisk_SingleTIFFs.script to C:\Datacap\DBSCOO\batches\20170620.000003\ScanFromDisk_SingleTIFFs.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\scanfromdisk_singletiffs_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\scanfromdisk_singletiffs_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000003\scanfromdisk_singletiffs_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\TM000001.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\TM000001.pdf to C:\Datacap\DBSCOO\batches\20170620.000003\TM000001.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\TM000002.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\TM000002.cco to C:\Datacap\DBSCOO\batches\20170620.000003\TM000002.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\TM000002.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\TM000002.tif to C:\Datacap\DBSCOO\batches\20170620.000003\TM000002.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\TM000002.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\TM000002.tio to C:\Datacap\DBSCOO\batches\20170620.000003\TM000002.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\tm000002.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\tm000002.txt to C:\Datacap\DBSCOO\batches\20170620.000003\tm000002.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\TM000002_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\TM000002_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000003\TM000002_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\TM000003.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\TM000003.cco to C:\Datacap\DBSCOO\batches\20170620.000003\TM000003.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\TM000003.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\TM000003.tif to C:\Datacap\DBSCOO\batches\20170620.000003\TM000003.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\TM000003.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\TM000003.tio to C:\Datacap\DBSCOO\batches\20170620.000003\TM000003.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\TM000003.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\TM000003.txt to C:\Datacap\DBSCOO\batches\20170620.000003\TM000003.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\TM000003.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\TM000003.xml to C:\Datacap\DBSCOO\batches\20170620.000003\TM000003.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\TM000003_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\TM000003_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000003\TM000003_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\validatefields.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\validatefields.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000003\validatefields.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000003\VScan.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000003\VScan.xml to C:\Datacap\DBSCOO\batches\20170620.000003\VScan.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004, type: Directory
+6/21/2017 12:41:45 AM    Creating directory C:\Datacap\DBSCOO\batches\20170620.000004
+6/21/2017 12:41:45 AM    Folder created
+6/21/2017 12:41:45 AM    Copying to directory C:\Datacap\DBSCOO\batches\20170620.000004
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\20170620.000004.01.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\20170620.000004.01.pdf to C:\Datacap\DBSCOO\batches\20170620.000004\20170620.000004.01.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\20170620.000004.01_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\20170620.000004.01_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000004\20170620.000004.01_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\20170620.000004.02.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\20170620.000004.02.pdf to C:\Datacap\DBSCOO\batches\20170620.000004\20170620.000004.02.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\20170620.000004.02status.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\20170620.000004.02status.xml to C:\Datacap\DBSCOO\batches\20170620.000004\20170620.000004.02status.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\20170620.000004.02_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\20170620.000004.02_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000004\20170620.000004.02_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\20170620_000004.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\20170620_000004.xml to C:\Datacap\DBSCOO\batches\20170620.000004\20170620_000004.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\20170620_000004_0.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\20170620_000004_0.xml to C:\Datacap\DBSCOO\batches\20170620.000004\20170620_000004_0.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\createdocuments.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\createdocuments.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000004\createdocuments.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\Export.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\Export.script to C:\Datacap\DBSCOO\batches\20170620.000004\Export.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\Export.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\Export.xml to C:\Datacap\DBSCOO\batches\20170620.000004\Export.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\exporttocsv.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\exporttocsv.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000004\exporttocsv.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\export_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\export_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000004\export_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\importfiles.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\importfiles.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000004\importfiles.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\PageID.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\PageID.script to C:\Datacap\DBSCOO\batches\20170620.000004\PageID.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\PageID.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\PageID.xml to C:\Datacap\DBSCOO\batches\20170620.000004\PageID.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\pageid_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\pageid_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000004\pageid_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\Profiler.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\Profiler.script to C:\Datacap\DBSCOO\batches\20170620.000004\Profiler.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\Profiler.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\Profiler.xml to C:\Datacap\DBSCOO\batches\20170620.000004\Profiler.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\profiler_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\profiler_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000004\profiler_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\ScanFromDisk_SingleTIFFs.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\ScanFromDisk_SingleTIFFs.script to C:\Datacap\DBSCOO\batches\20170620.000004\ScanFromDisk_SingleTIFFs.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\scanfromdisk_singletiffs_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\scanfromdisk_singletiffs_rrs.log to C:\Datacap\DBSCOO\batches\20170620.000004\scanfromdisk_singletiffs_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000001.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000001.pdf to C:\Datacap\DBSCOO\batches\20170620.000004\TM000001.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000002.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000002.cco to C:\Datacap\DBSCOO\batches\20170620.000004\TM000002.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000002.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000002.tif to C:\Datacap\DBSCOO\batches\20170620.000004\TM000002.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000002.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000002.tio to C:\Datacap\DBSCOO\batches\20170620.000004\TM000002.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\tm000002.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\tm000002.txt to C:\Datacap\DBSCOO\batches\20170620.000004\tm000002.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000002_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000002_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000004\TM000002_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000003.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000003.cco to C:\Datacap\DBSCOO\batches\20170620.000004\TM000003.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000003.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000003.tif to C:\Datacap\DBSCOO\batches\20170620.000004\TM000003.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000003.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000003.tio to C:\Datacap\DBSCOO\batches\20170620.000004\TM000003.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\tm000003.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\tm000003.txt to C:\Datacap\DBSCOO\batches\20170620.000004\tm000003.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000003_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000003_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000004\TM000003_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000004.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000004.cco to C:\Datacap\DBSCOO\batches\20170620.000004\TM000004.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000004.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000004.tif to C:\Datacap\DBSCOO\batches\20170620.000004\TM000004.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000004.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000004.tio to C:\Datacap\DBSCOO\batches\20170620.000004\TM000004.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000004.txt, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000004.txt to C:\Datacap\DBSCOO\batches\20170620.000004\TM000004.txt
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000004.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000004.xml to C:\Datacap\DBSCOO\batches\20170620.000004\TM000004.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\TM000004_layout.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\TM000004_layout.xml to C:\Datacap\DBSCOO\batches\20170620.000004\TM000004_layout.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\validatefields.rul.dll.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\validatefields.rul.dll.xml to C:\Datacap\DBSCOO\batches\20170620.000004\validatefields.rul.dll.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\batches\20170620.000004\VScan.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\batches\20170620.000004\VScan.xml to C:\Datacap\DBSCOO\batches\20170620.000004\VScan.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\DBSCS.app, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\DBSCS.app to C:\Datacap\DBSCOO\DBSCS.app
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\DBSCS.APP.BAK, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\DBSCS.APP.BAK to C:\Datacap\DBSCOO\DBSCS.APP.BAK
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\DBSCSAdm.ldb, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\DBSCSAdm.ldb to C:\Datacap\DBSCOO\DBSCSAdm.ldb
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\DBSCSAdm.mdb, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\DBSCSAdm.mdb to C:\Datacap\DBSCOO\DBSCSAdm.mdb
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\DBSCSEng.ldb, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\DBSCSEng.ldb to C:\Datacap\DBSCOO\DBSCSEng.ldb
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\DBSCSEng.mdb, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\DBSCSEng.mdb to C:\Datacap\DBSCOO\DBSCSEng.mdb
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\DBSCSFingerprint.mdb, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\DBSCSFingerprint.mdb to C:\Datacap\DBSCOO\DBSCSFingerprint.mdb
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\DBSCSLOOK.MDB, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\DBSCSLOOK.MDB to C:\Datacap\DBSCOO\DBSCSLOOK.MDB
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco.xsl, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco.xsl to C:\Datacap\DBSCOO\dco.xsl
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS, type: Directory
+6/21/2017 12:41:45 AM    Creating directory C:\Datacap\DBSCOO\dco_DBSCS
+6/21/2017 12:41:45 AM    Folder created
+6/21/2017 12:41:45 AM    Copying to directory C:\Datacap\DBSCOO\dco_DBSCS
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\blank.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\blank.tif to C:\Datacap\DBSCOO\dco_DBSCS\blank.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\Convert.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\Convert.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\Convert.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\DBSCS.INI, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\DBSCS.INI to C:\Datacap\DBSCOO\dco_DBSCS\DBSCS.INI
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\DBSCS.XMB, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\DBSCS.XMB to C:\Datacap\DBSCOO\dco_DBSCS\DBSCS.XMB
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\DBSCS.XML, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\DBSCS.XML to C:\Datacap\DBSCOO\dco_DBSCS\DBSCS.XML
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\Export.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\Export.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\Export.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\Fingerprint Maintenance Tool.exe, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\Fingerprint Maintenance Tool.exe to C:\Datacap\DBSCOO\dco_DBSCS\Fingerprint Maintenance Tool.exe
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\fixup.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\fixup.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\fixup.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\fixupBP.ini, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\fixupBP.ini to C:\Datacap\DBSCOO\dco_DBSCS\fixupBP.ini
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\FMT Backup, type: Directory
+6/21/2017 12:41:45 AM    Creating directory C:\Datacap\DBSCOO\dco_DBSCS\FMT Backup
+6/21/2017 12:41:45 AM    Folder created
+6/21/2017 12:41:45 AM    Copying to directory C:\Datacap\DBSCOO\dco_DBSCS\FMT Backup
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\FMT Backup\FMT.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\FMT Backup\FMT.log to C:\Datacap\DBSCOO\dco_DBSCS\FMT Backup\FMT.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\FMT Backup\SetupDCO.Backup.1.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\FMT Backup\SetupDCO.Backup.1.xml to C:\Datacap\DBSCOO\dco_DBSCS\FMT Backup\SetupDCO.Backup.1.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\FMTLogo.jpg, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\FMTLogo.jpg to C:\Datacap\DBSCOO\dco_DBSCS\FMTLogo.jpg
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\imagefix.ini, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\imagefix.ini to C:\Datacap\DBSCOO\dco_DBSCS\imagefix.ini
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\iVScan.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\iVScan.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\iVScan.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\minutes_keyword.key, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\minutes_keyword.key to C:\Datacap\DBSCOO\dco_DBSCS\minutes_keyword.key
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\nfixup.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\nfixup.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\nfixup.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\nscan.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\nscan.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\nscan.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\nupload.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\nupload.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\nupload.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\page classification.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\page classification.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\page classification.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\PageID.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\PageID.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\PageID.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\Profiler.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\Profiler.script to C:\Datacap\DBSCOO\dco_DBSCS\Profiler.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\profiler.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\profiler.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\profiler.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\resolutions_date.key, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\resolutions_date.key to C:\Datacap\DBSCOO\dco_DBSCS\resolutions_date.key
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\resolutions_keyword.key, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\resolutions_keyword.key to C:\Datacap\DBSCOO\dco_DBSCS\resolutions_keyword.key
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules, type: Directory
+6/21/2017 12:41:45 AM    Creating directory C:\Datacap\DBSCOO\dco_DBSCS\rules
+6/21/2017 12:41:45 AM    Folder created
+6/21/2017 12:41:45 AM    Copying to directory C:\Datacap\DBSCOO\dco_DBSCS\rules
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\collection.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\collection.xml to C:\Datacap\DBSCOO\dco_DBSCS\rules\collection.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\create pdf.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\create pdf.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\create pdf.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\create pdf.rul.bak, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\create pdf.rul.bak to C:\Datacap\DBSCOO\dco_DBSCS\rules\create pdf.rul.bak
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\CreateDocuments.Rul.dll, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\CreateDocuments.Rul.dll to C:\Datacap\DBSCOO\dco_DBSCS\rules\CreateDocuments.Rul.dll
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\CreateDocuments.Rul.dll.config, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\CreateDocuments.Rul.dll.config to C:\Datacap\DBSCOO\dco_DBSCS\rules\CreateDocuments.Rul.dll.config
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\dcKST.dll, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\dcKST.dll to C:\Datacap\DBSCOO\dco_DBSCS\rules\dcKST.dll
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\Document Integrity.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\Document Integrity.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\Document Integrity.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\dumpns.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\dumpns.xml to C:\Datacap\DBSCOO\dco_DBSCS\rules\dumpns.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\Export Statistics.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\Export Statistics.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\Export Statistics.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\Export.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\Export.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\Export.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\export2csv.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\export2csv.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\export2csv.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\export2csv.rul.bak, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\export2csv.rul.bak to C:\Datacap\DBSCOO\dco_DBSCS\rules\export2csv.rul.bak
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\export2pdf.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\export2pdf.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\export2pdf.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\export2xml.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\export2xml.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\export2xml.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\export2xml.rul.bak, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\export2xml.rul.bak to C:\Datacap\DBSCOO\dco_DBSCS\rules\export2xml.rul.bak
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\ExportToCSV.Rul.dll, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\ExportToCSV.Rul.dll to C:\Datacap\DBSCOO\dco_DBSCS\rules\ExportToCSV.Rul.dll
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\ExportToCSV.Rul.dll.config, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\ExportToCSV.Rul.dll.config to C:\Datacap\DBSCOO\dco_DBSCS\rules\ExportToCSV.Rul.dll.config
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\FingerprintAdd.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\FingerprintAdd.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\FingerprintAdd.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\IdentifyPages.Rul.dll, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\IdentifyPages.Rul.dll to C:\Datacap\DBSCOO\dco_DBSCS\rules\IdentifyPages.Rul.dll
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\IdentifyPages.Rul.dll.config, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\IdentifyPages.Rul.dll.config to C:\Datacap\DBSCOO\dco_DBSCS\rules\IdentifyPages.Rul.dll.config
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\ImageCreate.Rul.dll, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\ImageCreate.Rul.dll to C:\Datacap\DBSCOO\dco_DBSCS\rules\ImageCreate.Rul.dll
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\ImageCreate.Rul.dll.config, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\ImageCreate.Rul.dll.config to C:\Datacap\DBSCOO\dco_DBSCS\rules\ImageCreate.Rul.dll.config
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\ImageEnhancement.Rul.dll, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\ImageEnhancement.Rul.dll to C:\Datacap\DBSCOO\dco_DBSCS\rules\ImageEnhancement.Rul.dll
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\ImageEnhancement.Rul.dll.config, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\ImageEnhancement.Rul.dll.config to C:\Datacap\DBSCOO\dco_DBSCS\rules\ImageEnhancement.Rul.dll.config
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\Image_Convert.Rul.dll, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\Image_Convert.Rul.dll to C:\Datacap\DBSCOO\dco_DBSCS\rules\Image_Convert.Rul.dll
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\Image_Convert.Rul.dll.config, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\Image_Convert.Rul.dll.config to C:\Datacap\DBSCOO\dco_DBSCS\rules\Image_Convert.Rul.dll.config
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\import files - all.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\import files - all.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\import files - all.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\ImportFiles.Rul.dll, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\ImportFiles.Rul.dll to C:\Datacap\DBSCOO\dco_DBSCS\rules\ImportFiles.Rul.dll
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\ImportFiles.Rul.dll.config, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\ImportFiles.Rul.dll.config to C:\Datacap\DBSCOO\dco_DBSCS\rules\ImportFiles.Rul.dll.config
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\locate.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\locate.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\locate.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\locate.rul.bak, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\locate.rul.bak to C:\Datacap\DBSCOO\dco_DBSCS\rules\locate.rul.bak
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\my identify pages.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\my identify pages.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\my identify pages.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\my identify pages.rul.bak, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\my identify pages.rul.bak to C:\Datacap\DBSCOO\dco_DBSCS\rules\my identify pages.rul.bak
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\my image convert.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\my image convert.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\my image convert.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\my image enhancement.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\my image enhancement.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\my image enhancement.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\my image enhancement.rul.bak, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\my image enhancement.rul.bak to C:\Datacap\DBSCOO\dco_DBSCS\rules\my image enhancement.rul.bak
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\my recognize pages and fields.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\my recognize pages and fields.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\my recognize pages and fields.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\my recognize pages and fields.rul.bak, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\my recognize pages and fields.rul.bak to C:\Datacap\DBSCOO\dco_DBSCS\rules\my recognize pages and fields.rul.bak
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\myCustomLib.rrx, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\myCustomLib.rrx to C:\Datacap\DBSCOO\dco_DBSCS\rules\myCustomLib.rrx
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\Profile Statistics.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\Profile Statistics.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\Profile Statistics.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\RecognizePagesAndFields.Rul.dll, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\RecognizePagesAndFields.Rul.dll to C:\Datacap\DBSCOO\dco_DBSCS\rules\RecognizePagesAndFields.Rul.dll
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\RecognizePagesAndFields.Rul.dll.config, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\RecognizePagesAndFields.Rul.dll.config to C:\Datacap\DBSCOO\dco_DBSCS\rules\RecognizePagesAndFields.Rul.dll.config
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\Routing.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\Routing.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\Routing.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\Templates.rrx, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\Templates.rrx to C:\Datacap\DBSCOO\dco_DBSCS\rules\Templates.rrx
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\updatefields.rul, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\updatefields.rul to C:\Datacap\DBSCOO\dco_DBSCS\rules\updatefields.rul
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\updatefields.rul.bak, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\updatefields.rul.bak to C:\Datacap\DBSCOO\dco_DBSCS\rules\updatefields.rul.bak
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\ValidateFields.Rul.dll, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\ValidateFields.Rul.dll to C:\Datacap\DBSCOO\dco_DBSCS\rules\ValidateFields.Rul.dll
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\rules\ValidateFields.Rul.dll.config, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\rules\ValidateFields.Rul.dll.config to C:\Datacap\DBSCOO\dco_DBSCS\rules\ValidateFields.Rul.dll.config
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\scan.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\scan.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\scan.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\ScanFromDisk_SingleTIFFs.script, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\ScanFromDisk_SingleTIFFs.script to C:\Datacap\DBSCOO\dco_DBSCS\ScanFromDisk_SingleTIFFs.script
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\Settings.ini, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\Settings.ini to C:\Datacap\DBSCOO\dco_DBSCS\Settings.ini
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\Upload.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\Upload.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\Upload.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\Verify.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\Verify.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\Verify.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\vscan.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\vscan.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\vscan.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\dco_DBSCS\vscanmulti.set.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\dco_DBSCS\vscanmulti.set.xml to C:\Datacap\DBSCOO\dco_DBSCS\vscanmulti.set.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export, type: Directory
+6/21/2017 12:41:45 AM    Creating directory C:\Datacap\DBSCOO\export
+6/21/2017 12:41:45 AM    Folder created
+6/21/2017 12:41:45 AM    Copying to directory C:\Datacap\DBSCOO\export
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000000.01.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000000.01.pdf to C:\Datacap\DBSCOO\export\20170620.000000.01.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000000.01.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000000.01.xml to C:\Datacap\DBSCOO\export\20170620.000000.01.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000000.02.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000000.02.pdf to C:\Datacap\DBSCOO\export\20170620.000000.02.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000000.02.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000000.02.xml to C:\Datacap\DBSCOO\export\20170620.000000.02.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000000.03.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000000.03.pdf to C:\Datacap\DBSCOO\export\20170620.000000.03.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000000.03.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000000.03.xml to C:\Datacap\DBSCOO\export\20170620.000000.03.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000000.04.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000000.04.pdf to C:\Datacap\DBSCOO\export\20170620.000000.04.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000000.04.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000000.04.xml to C:\Datacap\DBSCOO\export\20170620.000000.04.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000000.05.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000000.05.pdf to C:\Datacap\DBSCOO\export\20170620.000000.05.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000000.05.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000000.05.xml to C:\Datacap\DBSCOO\export\20170620.000000.05.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000000.06.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000000.06.pdf to C:\Datacap\DBSCOO\export\20170620.000000.06.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000000.06.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000000.06.xml to C:\Datacap\DBSCOO\export\20170620.000000.06.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000000.07.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000000.07.pdf to C:\Datacap\DBSCOO\export\20170620.000000.07.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000000.07.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000000.07.xml to C:\Datacap\DBSCOO\export\20170620.000000.07.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000001.01.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000001.01.pdf to C:\Datacap\DBSCOO\export\20170620.000001.01.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000001.01.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000001.01.xml to C:\Datacap\DBSCOO\export\20170620.000001.01.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000002.01.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000002.01.pdf to C:\Datacap\DBSCOO\export\20170620.000002.01.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000002.01.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000002.01.xml to C:\Datacap\DBSCOO\export\20170620.000002.01.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000002.02.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000002.02.pdf to C:\Datacap\DBSCOO\export\20170620.000002.02.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000002.02.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000002.02.xml to C:\Datacap\DBSCOO\export\20170620.000002.02.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000004.02.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000004.02.pdf to C:\Datacap\DBSCOO\export\20170620.000004.02.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\export\20170620.000004.02.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\export\20170620.000004.02.xml to C:\Datacap\DBSCOO\export\20170620.000004.02.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint, type: Directory
+6/21/2017 12:41:45 AM    Creating directory C:\Datacap\DBSCOO\fingerprint
+6/21/2017 12:41:45 AM    Folder created
+6/21/2017 12:41:45 AM    Copying to directory C:\Datacap\DBSCOO\fingerprint
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\555.cco, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\555.cco to C:\Datacap\DBSCOO\fingerprint\555.cco
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\555.tif, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\555.tif to C:\Datacap\DBSCOO\fingerprint\555.tif
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\555.xml, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\555.xml to C:\Datacap\DBSCOO\fingerprint\555.xml
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\fingerprintadd_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\fingerprintadd_rrs.log to C:\Datacap\DBSCOO\fingerprint\fingerprintadd_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti1, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti1 to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.ti1
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti10, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti10 to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.ti10
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti11, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti11 to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.ti11
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti12, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti12 to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.ti12
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti13, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti13 to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.ti13
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti14, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti14 to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.ti14
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti2, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti2 to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.ti2
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti3, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti3 to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.ti3
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti4, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti4 to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.ti4
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti5, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti5 to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.ti5
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti6, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti6 to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.ti6
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti7, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti7 to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.ti7
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti8, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti8 to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.ti8
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti9, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.ti9 to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.ti9
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\FingerprintPage.tio, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\FingerprintPage.tio to C:\Datacap\DBSCOO\fingerprint\FingerprintPage.tio
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\fingerprint\_rrs.log, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\fingerprint\_rrs.log to C:\Datacap\DBSCOO\fingerprint\_rrs.log
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\images, type: Directory
+6/21/2017 12:41:45 AM    Creating directory C:\Datacap\DBSCOO\images
+6/21/2017 12:41:45 AM    Folder created
+6/21/2017 12:41:45 AM    Copying to directory C:\Datacap\DBSCOO\images
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\images\01_Resolution_Front_Page.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\images\01_Resolution_Front_Page.pdf to C:\Datacap\DBSCOO\images\01_Resolution_Front_Page.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\images\02_item 1.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\images\02_item 1.pdf to C:\Datacap\DBSCOO\images\02_item 1.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\images\04_item 4 - sample 1.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\images\04_item 4 - sample 1.pdf to C:\Datacap\DBSCOO\images\04_item 4 - sample 1.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\images\05_Resolution_Front_Page_2.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\images\05_Resolution_Front_Page_2.pdf to C:\Datacap\DBSCOO\images\05_Resolution_Front_Page_2.pdf
+6/21/2017 12:41:45 AM    File Copied.
+6/21/2017 12:41:45 AM    Processing item C:\Datacap\DBSCS\images\06_item 1.pdf, type: Archive
+6/21/2017 12:41:45 AM    Copying file C:\Datacap\DBSCS\images\06_item 1.pdf to C:\Datacap\DBSCOO\images\06_item 1.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\08_item 4 - sample 1.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\08_item 4 - sample 1.pdf to C:\Datacap\DBSCOO\images\08_item 4 - sample 1.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\09_item 4 - sample 1 - Copy.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\09_item 4 - sample 1 - Copy.pdf to C:\Datacap\DBSCOO\images\09_item 4 - sample 1 - Copy.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_MultiFormat, type: Directory
+6/21/2017 12:41:46 AM    Creating directory C:\Datacap\DBSCOO\images\Input_MultiFormat
+6/21/2017 12:41:46 AM    Folder created
+6/21/2017 12:41:46 AM    Copying to directory C:\Datacap\DBSCOO\images\Input_MultiFormat
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_MultiFormat\TM000002.tif, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_MultiFormat\TM000002.tif to C:\Datacap\DBSCOO\images\Input_MultiFormat\TM000002.tif
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_MultiFormat\TM000003.tif, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_MultiFormat\TM000003.tif to C:\Datacap\DBSCOO\images\Input_MultiFormat\TM000003.tif
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_MultiFormat\TM000004.tif, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_MultiFormat\TM000004.tif to C:\Datacap\DBSCOO\images\Input_MultiFormat\TM000004.tif
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_MultiFormat\TM000005.tif, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_MultiFormat\TM000005.tif to C:\Datacap\DBSCOO\images\Input_MultiFormat\TM000005.tif
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_MultiFormat\TM000006.tif, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_MultiFormat\TM000006.tif to C:\Datacap\DBSCOO\images\Input_MultiFormat\TM000006.tif
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_MultiFormat\TM000007.tif, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_MultiFormat\TM000007.tif to C:\Datacap\DBSCOO\images\Input_MultiFormat\TM000007.tif
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs, type: Directory
+6/21/2017 12:41:46 AM    Creating directory C:\Datacap\DBSCOO\images\Input_SingleTIFFs
+6/21/2017 12:41:46 AM    Folder created
+6/21/2017 12:41:46 AM    Copying to directory C:\Datacap\DBSCOO\images\Input_SingleTIFFs
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\Agreement_Cover_Page.pdf, type: Normal
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\Agreement_Cover_Page.pdf to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\Agreement_Cover_Page.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\bank_stmt1.tif, type: Normal
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\bank_stmt1.tif to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\bank_stmt1.tif
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\bank_stmt2.tif, type: Normal
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\bank_stmt2.tif to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\bank_stmt2.tif
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\new, type: Directory
+6/21/2017 12:41:46 AM    Creating directory C:\Datacap\DBSCOO\images\Input_SingleTIFFs\new
+6/21/2017 12:41:46 AM    Folder created
+6/21/2017 12:41:46 AM    Copying to directory C:\Datacap\DBSCOO\images\Input_SingleTIFFs\new
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\new\NN6_Form.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\new\NN6_Form.pdf to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\new\NN6_Form.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\new\NN7_Form.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\new\NN7_Form.pdf to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\new\NN7_Form.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\new\Resolution.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\new\Resolution.pdf to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\new\Resolution.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\Resolution, type: Directory
+6/21/2017 12:41:46 AM    Creating directory C:\Datacap\DBSCOO\images\Input_SingleTIFFs\Resolution
+6/21/2017 12:41:46 AM    Folder created
+6/21/2017 12:41:46 AM    Copying to directory C:\Datacap\DBSCOO\images\Input_SingleTIFFs\Resolution
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\Resolution\item 1.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\Resolution\item 1.pdf to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\Resolution\item 1.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\Resolution\SKMBT_C36017052914560.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\Resolution\SKMBT_C36017052914560.pdf to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\Resolution\SKMBT_C36017052914560.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\Resolution\SKMBT_C36017052914570.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\Resolution\SKMBT_C36017052914570.pdf to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\Resolution\SKMBT_C36017052914570.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\Resolution\SKMBT_C36017052915090.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\Resolution\SKMBT_C36017052915090.pdf to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\Resolution\SKMBT_C36017052915090.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\Resolution\SKMBT_C36017052915100.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\Resolution\SKMBT_C36017052915100.pdf to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\Resolution\SKMBT_C36017052915100.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\S.Chi, type: Directory
+6/21/2017 12:41:46 AM    Creating directory C:\Datacap\DBSCOO\images\Input_SingleTIFFs\S.Chi
+6/21/2017 12:41:46 AM    Folder created
+6/21/2017 12:41:46 AM    Copying to directory C:\Datacap\DBSCOO\images\Input_SingleTIFFs\S.Chi
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\S.Chi\221221he823oz3l44x96e3.jpeg, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\S.Chi\221221he823oz3l44x96e3.jpeg to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\S.Chi\221221he823oz3l44x96e3.jpeg
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\S.Chi\401.jpg, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\S.Chi\401.jpg to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\S.Chi\401.jpg
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\S.Chi\DFGirl__02.jpg, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\S.Chi\DFGirl__02.jpg to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\S.Chi\DFGirl__02.jpg
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\Input_SingleTIFFs\S.Chi\s.chi_font.jpg, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\Input_SingleTIFFs\S.Chi\s.chi_font.jpg to C:\Datacap\DBSCOO\images\Input_SingleTIFFs\S.Chi\s.chi_font.jpg
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\item 2 - sample 2.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\item 2 - sample 2.pdf to C:\Datacap\DBSCOO\images\item 2 - sample 2.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\ND2A_1.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\ND2A_1.pdf to C:\Datacap\DBSCOO\images\ND2A_1.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\NN6_Modified3.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\NN6_Modified3.pdf to C:\Datacap\DBSCOO\images\NN6_Modified3.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\NN6_Modified4.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\NN6_Modified4.pdf to C:\Datacap\DBSCOO\images\NN6_Modified4.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\images\NN7_Modified2.pdf, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\images\NN7_Modified2.pdf to C:\Datacap\DBSCOO\images\NN7_Modified2.pdf
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\navigatorpanel, type: Directory
+6/21/2017 12:41:46 AM    Creating directory C:\Datacap\DBSCOO\navigatorpanel
+6/21/2017 12:41:46 AM    Folder created
+6/21/2017 12:41:46 AM    Copying to directory C:\Datacap\DBSCOO\navigatorpanel
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\navigatorpanel\panels, type: Directory
+6/21/2017 12:41:46 AM    Creating directory C:\Datacap\DBSCOO\navigatorpanel\panels
+6/21/2017 12:41:46 AM    Folder created
+6/21/2017 12:41:46 AM    Copying to directory C:\Datacap\DBSCOO\navigatorpanel\panels
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\navigatorpanel\panels\acc_chk_page, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\navigatorpanel\panels\acc_chk_page to C:\Datacap\DBSCOO\navigatorpanel\panels\acc_chk_page
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\navigatorpanel\panels\bar_sam_acc_chk_page, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\navigatorpanel\panels\bar_sam_acc_chk_page to C:\Datacap\DBSCOO\navigatorpanel\panels\bar_sam_acc_chk_page
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\navigatorpanel\panels\nn6_front_page, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\navigatorpanel\panels\nn6_front_page to C:\Datacap\DBSCOO\navigatorpanel\panels\nn6_front_page
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\navigatorpanel\panels\use_of_info_page, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\navigatorpanel\panels\use_of_info_page to C:\Datacap\DBSCOO\navigatorpanel\panels\use_of_info_page
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\navigatorpanel\panels.xml, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\navigatorpanel\panels.xml to C:\Datacap\DBSCOO\navigatorpanel\panels.xml
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\output, type: Directory
+6/21/2017 12:41:46 AM    Creating directory C:\Datacap\DBSCOO\output
+6/21/2017 12:41:46 AM    Folder created
+6/21/2017 12:41:46 AM    Copying to directory C:\Datacap\DBSCOO\output
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\output\20170620.000000.01.zip, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\output\20170620.000000.01.zip to C:\Datacap\DBSCOO\output\20170620.000000.01.zip
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\output\20170620.000000.02.zip, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\output\20170620.000000.02.zip to C:\Datacap\DBSCOO\output\20170620.000000.02.zip
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\output\20170620.000000.03.zip, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\output\20170620.000000.03.zip to C:\Datacap\DBSCOO\output\20170620.000000.03.zip
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\output\20170620.000000.04.zip, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\output\20170620.000000.04.zip to C:\Datacap\DBSCOO\output\20170620.000000.04.zip
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\output\20170620.000000.05.zip, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\output\20170620.000000.05.zip to C:\Datacap\DBSCOO\output\20170620.000000.05.zip
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\output\20170620.000000.06.zip, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\output\20170620.000000.06.zip to C:\Datacap\DBSCOO\output\20170620.000000.06.zip
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\output\20170620.000000.07.zip, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\output\20170620.000000.07.zip to C:\Datacap\DBSCOO\output\20170620.000000.07.zip
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\output\20170620.000001.01.zip, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\output\20170620.000001.01.zip to C:\Datacap\DBSCOO\output\20170620.000001.01.zip
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\output\20170620.000002.01.zip, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\output\20170620.000002.01.zip to C:\Datacap\DBSCOO\output\20170620.000002.01.zip
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\output\20170620.000002.02.zip, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\output\20170620.000002.02.zip to C:\Datacap\DBSCOO\output\20170620.000002.02.zip
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\output\20170620.000004.02.zip, type: Archive
+6/21/2017 12:41:46 AM    Copying file C:\Datacap\DBSCS\output\20170620.000004.02.zip to C:\Datacap\DBSCOO\output\20170620.000004.02.zip
+6/21/2017 12:41:46 AM    File Copied.
+6/21/2017 12:41:46 AM    Processing item C:\Datacap\DBSCS\output\FailedCases, type: Directory
+6/21/2017 12:41:46 AM    Creating directory C:\Datacap\DBSCOO\output\FailedCases
+6/21/2017 12:41:46 AM    Folder created
+6/21/2017 12:41:46 AM    Copying to directory C:\Datacap\DBSCOO\output\FailedCases
+6/21/2017 12:41:46 AM    Done copying files
+6/21/2017 12:41:46 AM    Renaming dco folder
+6/21/2017 12:41:46 AM    Updating database paths
+6/21/2017 12:41:46 AM    ***** Original Admin Database Path *****
+Before: C:\Datacap\DBSCS\DBSCSAdm.mdb
+After: C:\Datacap\DBSCS\DBSCSAdm.mdb
+
+6/21/2017 12:41:46 AM    ***** Original Admin Database Path *****
+Before: C:\Datacap\DBSCS\DBSCSEng.mdb
+After: C:\Datacap\DBSCS\DBSCSEng.mdb
+
+6/21/2017 12:41:46 AM    ***** Original fingerprint Database Path *****
+Before: C:\Datacap\DBSCS\DBSCSFingerprint.mdb
+After: C:\Datacap\DBSCS\DBSCSFingerprint.mdb
+
+Admin Database: C:\Datacap\DBSCOO\DBSCOOAdm.mdb
+Engine Database: C:\Datacap\DBSCOO\DBSCOOEng.mdb
+Fingerprint Database: C:\Datacap\DBSCOO\DBSCOOFingerprint.mdb
+
+Activity log follows:
+6/21/2017 12:41:46 AM    Done
+6/21/2017 12:41:46 AM    Workflows 1
+6/21/2017 12:41:46 AM    Performing file name changes for workflow DBSCS
+6/21/2017 12:41:46 AM    Performing project file name changes in C:\Datacap\DBSCOO\dco_DBSCOO
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOO\dco_DBSCOOFolder Files *****
+Before: C:\Datacap\DBSCOO\dco_DBSCOO\DBSCS.INI
+After: C:\Datacap\DBSCOO\dco_DBSCOO\DBSCOO.INI
+
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOO\dco_DBSCOOFolder Files *****
+Before: C:\Datacap\DBSCOO\dco_DBSCOO\DBSCS.XMB
+After: C:\Datacap\DBSCOO\dco_DBSCOO\DBSCOO.XMB
+
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOO\dco_DBSCOOFolder Files *****
+Before: C:\Datacap\DBSCOO\dco_DBSCOO\DBSCS.XML
+After: C:\Datacap\DBSCOO\dco_DBSCOO\DBSCOO.XML
+
+6/21/2017 12:41:46 AM    Performing project file name changes in C:\Datacap\DBSCOO\dco_DBSCOO\verify
+6/21/2017 12:41:46 AM    Updating project file entries in C:\Datacap\DBSCOO\dco_DBSCOO
+6/21/2017 12:41:46 AM    DEBUGLOG: ModifyEntries - *.ini
+6/21/2017 12:41:46 AM    DEBUGLOG: Reading file C:\Datacap\DBSCOO\dco_DBSCOO\DBSCOO.INI
+6/21/2017 12:41:46 AM    DEBUGLOG: File read
+6/21/2017 12:41:46 AM    DEBUGLOG: File close
+6/21/2017 12:41:46 AM    DEBUGLOG: Reading file C:\Datacap\DBSCOO\dco_DBSCOO\fixupBP.ini
+6/21/2017 12:41:46 AM    DEBUGLOG: File read
+6/21/2017 12:41:46 AM    DEBUGLOG: File close
+6/21/2017 12:41:46 AM    DEBUGLOG: Reading file C:\Datacap\DBSCOO\dco_DBSCOO\imagefix.ini
+6/21/2017 12:41:46 AM    DEBUGLOG: File read
+6/21/2017 12:41:46 AM    DEBUGLOG: File close
+6/21/2017 12:41:46 AM    DEBUGLOG: Reading file C:\Datacap\DBSCOO\dco_DBSCOO\Settings.ini
+6/21/2017 12:41:46 AM    DEBUGLOG: File read
+6/21/2017 12:41:46 AM    DEBUGLOG: File close
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOO\dco_DBSCOO\Settings.ini <String Replacement> *****
+Before: TestVendorDSN=provider=microsoft.jet.oledb.4.0;data source=C:\Datacap\apt\aptlook.mdb;persist security info=false
+After: TestVendorDSN=provider=microsoft.jet.oledb.4.0;data source=C:\Datacap\apt\aptlook.mdb;persist security info=false
+
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOO\dco_DBSCOO\Settings.ini <String Replacement> *****
+Before: VendorDSN=provider=microsoft.jet.oledb.4.0;data source=C:\Datacap\apt\aptlook.mdb;persist security info=false
+After: VendorDSN=provider=microsoft.jet.oledb.4.0;data source=C:\Datacap\apt\aptlook.mdb;persist security info=false
+
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOO\dco_DBSCOO\Settings.ini <String Replacement> *****
+Before: FingerprintDatabase=provider=microsoft.jet.oledb.4.0;data source=C:\Datacap\DBSCS\DBSCSfingerprint.mdb;persist security info=false
+After: FingerprintDatabase=provider=microsoft.jet.oledb.4.0;data source=C:\Datacap\DBSCOO\DBSCOOfingerprint.mdb;persist security info=false
+
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOO\dco_DBSCOO\Settings.ini <String Replacement> *****
+Before: FingerprintDirectory=C:\Datacap\DBSCS\fingerprint
+After: FingerprintDirectory=C:\Datacap\DBSCOO\fingerprint
+
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOO\dco_DBSCOO\Settings.ini <String Replacement> *****
+Before: FingerprintBackupDirectory=C:\Datacap\DBSCS\fingerprint backup
+After: FingerprintBackupDirectory=C:\Datacap\DBSCOO\fingerprint backup
+
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOO\dco_DBSCOO\Settings.ini <String Replacement> *****
+Before: SetupDCO=C:\Datacap\DBSCS\dco_DBSCS\DBSCS.xml
+After: SetupDCO=C:\Datacap\DBSCOO\dco_DBSCOO\DBSCOO.xml
+
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOO\dco_DBSCOO\Settings.ini <String Replacement> *****
+Before: AddedImageSource=C:\Datacap\DBSCS\dco_DBSCS\blank.tif
+After: AddedImageSource=C:\Datacap\DBSCOO\dco_DBSCOO\blank.tif
+
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOO\dco_DBSCOO\Settings.ini <String Replacement> *****
+Before: InsertImage = C:\Datacap\DBSCS\dco_DBSCS\blank.tif
+After: InsertImage = C:\Datacap\DBSCOO\dco_DBSCOO\blank.tif
+
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\Convert.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\Convert.set.xml
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\Export.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\Export.set.xml
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\fixup.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\fixup.set.xml
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\iVScan.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\iVScan.set.xml
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\nfixup.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\nfixup.set.xml
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\nscan.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\nscan.set.xml
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\nupload.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\nupload.set.xml
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\page classification.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\page classification.set.xml
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\PageID.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\PageID.set.xml
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\profiler.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\profiler.set.xml
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\scan.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\scan.set.xml
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\Upload.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\Upload.set.xml
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\Verify.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\Verify.set.xml
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\vscan.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\vscan.set.xml
+6/21/2017 12:41:46 AM    Updating C:\Datacap\DBSCOO\dco_DBSCOO\vscanmulti.set.xml
+6/21/2017 12:41:46 AM    Finished updating settings. Saving...
+6/21/2017 12:41:46 AM    Finished saving to C:\Datacap\DBSCOO\dco_DBSCOO\vscanmulti.set.xml
+6/21/2017 12:41:46 AM    Updating rule file entries
+6/21/2017 12:41:46 AM    Updating dco paths in admin database
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOO\dco_DBSCOO\rules\collection.xml > rsapp.name *****
+Before: DBSCS
+After: DBSCOO
+
+6/21/2017 12:41:46 AM    Performing project file name changes in C:\Datacap\DBSCOO
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOOFolder Files *****
+Before: C:\Datacap\DBSCOO\DBSCS.app
+After: C:\Datacap\DBSCOO\DBSCOO.APP
+
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOOFolder Files *****
+Before: C:\Datacap\DBSCOO\DBSCS.APP.BAK
+After: C:\Datacap\DBSCOO\DBSCOO.APP.BAK
+
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOOFolder Files *****
+Before: C:\Datacap\DBSCOO\DBSCSAdm.ldb
+After: C:\Datacap\DBSCOO\DBSCOOADM.LDB
+
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOOFolder Files *****
+Before: C:\Datacap\DBSCOO\DBSCSEng.ldb
+After: C:\Datacap\DBSCOO\DBSCOOENG.LDB
+
+6/21/2017 12:41:46 AM    ***** C:\Datacap\DBSCOOFolder Files *****
+Before: C:\Datacap\DBSCOO\DBSCSLOOK.MDB
+After: C:\Datacap\DBSCOO\DBSCOOLOOK.MDB
+
+6/21/2017 12:41:46 AM    Updating other paths in admin database
+6/21/2017 12:41:46 AM    ***** Admin Database *****
+Update: All records deleted from AUDIT table
+
+6/21/2017 12:41:46 AM    ***** Admin Database *****
+Update: ADMINFO.db_apptitle updated to DBSCOO
+
+6/21/2017 12:41:46 AM    ***** Admin Database *****
+Update: ADMINFO.db_index updated to 284
+
+6/21/2017 12:41:46 AM    ***** Admin Database *****
+Update: DCO.dco_id updated to DBSCOO
+
+6/21/2017 12:41:46 AM    Updating other paths in engine database
+6/21/2017 12:41:46 AM    ***** Engine Database *****
+Update: ENGINFO.db_index updated to 284
+
+6/21/2017 12:41:46 AM    Updating other paths in fingerprint database
+6/21/2017 12:41:46 AM    ***** Fingerprint database TEMPLATE.tp_CCOPath *****
+Before: c:\datacap\dbscs\fingerprint\555.cco
+After: c:\datacap\dbscoo\fingerprint\555.cco
+
+6/21/2017 12:41:46 AM    ***** Fingerprint database TEMPLATE.tp_ImagePath *****
+Before: c:\datacap\dbscs\fingerprint\555.tif
+After: c:\datacap\dbscoo\fingerprint\555.tif
+
+6/21/2017 12:41:46 AM    Creating application in Datacap.xml
+6/21/2017 12:41:46 AM    Updating APP file
+6/21/2017 12:41:46 AM    ***** APP File *****
+Before: [secured]01c4dcecf1c44c032724daf0b5247f1b2eba98fae12ef27977ca2064ab6cd8096846fec5c21e27c0e8c23c181573bec2ff16956fd1845affef4f25df19629a6531ea17759ce795bd21d733dabc58343a6cea624cb33da8c2e5329fc80ccd82d5057eb25b1f151eab3cdefad1f7e325bc4d63565e4a4b84c88bb01fe54f6534f1ae188d731c122eddbbf95abe04ea4ad79e2db1cf877cec86dffa35540fe6ce153e6fdc168b43defecfdc45f56885455e70[/secured]
+After: [secured]015be9207ac7be709fc762467c2704a25e517eaecee8a0c03cf499ac1478c669bf5be97240a88f5db0cc3a9f977e0fd15017abe546b27b9aa2521c47ec759f30307788b63dd329742758b005483152ec6c04b78625f4b1a8d385795e3168a88d811ee9f1ee4fc6379aa8648f76d287c6de53cad902bc0395d588e2c1cabe1fad7b5607a2646667362f2dbb09e00b368840867c4f4b5adafca7aa7b524c60f7aef3141cf46b3c256a1b42cc1ce6cbbeedd0[/secured]
+
+6/21/2017 12:41:46 AM    ***** APP File *****
+Before: [secured]013c55bcc495de01f0c65a5f4b411ae23ca0110b32c2e5d81a99567bcf129ebeb427972e0135593696110d58feca74ee5c6435b5de3c5640bddaaeb37726cc7b48078dd7fd4ef16f1978d87869b39bbc63669014ef08701f2b6516f14517dc1b40d470edd05c8eac528e6fccc5e21ea43195e00ac9b02c6650290bfe73c868acc9dd40583a5778b87339ce165db4e74616c81aab30d43a8a5a539a90318754e6f3587bc585a90db87b91781a26a3ddbb36[/secured]
+After: [secured]0166ece20c1ce35446d28ce4fb5869775b5f70808c3ffee8615ab10d13c01b55896513eb6bc222954e8ed0338f458ba2141d1d7fccd993609b63b6ed958d9abd644ab60b3bbad72e603a97985afd43302102ab876344ba6771ab0d96c82d385d16c03a5f0f2b663c6e1fc4edb744b88f3c7c30d11a28c732e2fb50450796be21aa7f091defc12bff7545fe54acca117acabe7d490702119d154b0cdc0106a95279825eebdabaedcc5e6776ab5114bc39fa[/secured]
+
+6/21/2017 12:41:46 AM    ***** APP File *****
+Before: DBSCS.xml
+After: DBSCOO.xml
+
+6/21/2017 12:41:46 AM    ***** APP File *****
+Before: [secured]01588709dc5a20deb823d9626f69ad59f71ea8c0b445897c5b923d8063e23db88858184d9d2b418563c822d331c7aa864a547aaa0ec5ba290b962dbb6032f620a890afd9bedd5325c2361a7ee8e446501bb969db950f3a2d2930946cb29b2193041072358481b46c6fd8ebc73e2379ea1829f02952cafc18c1fbd23e709705136185c483f79641a6052a370bb6d949e747c285799ad4e7a6b4d6fad832b5d8e0f0b93b4bb5a6c8b87ad1276132d7fda500943ad73519d9c63125635d3f63da07ea[/secured]
+After: [secured]01fcf80b6a95ec6ffaba5507c98d68932348dda79d5013ee8588b89028eb51b32df9f5a8a373b5b820912b6036aadcf22bfa6f752ab0ef5a49143d8d78c521fc51a45d7f40ee8ac26cbb65d5f4685bed0e01fda59ba1256e40879ebede7bef48e13e2992d7948cca28d47dcf37ab24c08d18aafc592a73ffe513d10ddf358d7763740c25ecc36d84433354ce0ff81815bde75c510251a2aaf60d96731b210705cf89430278958d13c1a36a1f711178c8386e3e7d07dbd1b96fbbfe33891759b2ea[/secured]
+
+6/21/2017 12:41:46 AM    ***** APP File *****
+Before: C:\Datacap\DBSCS\images\Input_SingleTIFFs
+After: C:\Datacap\DBSCOO\images\Input_SingleTIFFs
+
+6/21/2017 12:41:46 AM    ***** APP File *****
+Before: C:\Datacap\DBSCS\images\Input_MultiFormat
+After: C:\Datacap\DBSCOO\images\Input_MultiFormat
+
+6/21/2017 12:41:46 AM    ***** APP File *****
+Before: C:\Datacap\DBSCS\images\Input_SingleTIFFs
+After: C:\Datacap\DBSCOO\images\Input_SingleTIFFs
+
+6/21/2017 12:41:46 AM    ***** APP File *****
+Before: C:\Datacap\DBSCS\dco_DBSCS\Settings.ini
+After: C:\Datacap\DBSCOO\dco_DBSCOO\Settings.ini
+
+6/21/2017 12:41:46 AM    Clearing contents of the batch folder
+6/21/2017 12:41:46 AM    Batches folder path is C:\Datacap\DBSCOO\batches
+6/21/2017 12:41:46 AM    Deleting folder C:\Datacap\DBSCOO\batches\20170620.000000
+6/21/2017 12:41:46 AM    Deleted
+6/21/2017 12:41:46 AM    Deleting folder C:\Datacap\DBSCOO\batches\20170620.000001
+6/21/2017 12:41:46 AM    Deleted
+6/21/2017 12:41:46 AM    Deleting folder C:\Datacap\DBSCOO\batches\20170620.000002
+6/21/2017 12:41:46 AM    Deleted
+6/21/2017 12:41:46 AM    Deleting folder C:\Datacap\DBSCOO\batches\20170620.000003
+6/21/2017 12:41:46 AM    Deleted
+6/21/2017 12:41:46 AM    Deleting folder C:\Datacap\DBSCOO\batches\20170620.000004
+6/21/2017 12:41:46 AM    Deleted
+6/21/2017 12:41:46 AM    Application Wizard is finished copying the DBSCS application.
+***************** End of Application Wizard Copy Logs *************************
