@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ruleset id="16" name="UpdateFields" ver="19" modder="admin.1" qi="" dt="06/21/17 00:16:45.539 ">
+	<rule name="Batch SAM Action No" id="11" qi="">
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@P\Action_Number"/>
+				<p name="varTarget" v="@B.SAM_Action_No"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM CIF No" id="13" qi="">
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@P\CIF_Number"/>
+				<p name="varTarget" v="@B.SAM_CIF_No"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM Group Name" id="15" qi="">
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@P\Group_Name"/>
+				<p name="varTarget" v="@B.SAM_Group_Name"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM Borrower Name" id="17" qi="">
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@P\Borrower_Name"/>
+				<p name="varTarget" v="@B.SAM_Borrower_Name"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM TIN No" id="19" qi="">
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@P\TIN_Number"/>
+				<p name="varTarget" v="@B.SAM_TIN_No"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM Sequence" id="3" qi="">
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@P\Sequence_Number"/>
+				<p name="varTarget" v="@B.SAM_Sequence"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM Remarks" id="21" qi="">
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@P\Batch_SAM_Remarks"/>
+				<p name="varTarget" v="@B.SAM_Remarks"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM IsRescan" id="1" qi="">
+		<func name="Function2">
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@P\Batch_SAM_IsRescan"/>
+				<p name="varTarget" v="@B.SAM_IsRescan"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Document Code Mapping" id="5" qi="">
+		<func name="Account Checklist">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="@DCO(Type)"/>
+				<p name="object2" v="SAM Account Checklist"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="SAM_AC"/>
+				<p name="varTarget" v="@D.DocCode"/>
+			</a>
+		</func>
+		<func name="Account Review Form">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="@DCO(Type)"/>
+				<p name="object2" v="SAM Account Review Form"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="SAM_ARF"/>
+				<p name="varTarget" v="@D.DocCode"/>
+			</a>
+		</func>
+		<func name="Proposal Disbursement Memo">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="@DCO(Type)"/>
+				<p name="object2" v="SAM Proposal Disbursement Memo"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="SAM_PDM"/>
+				<p name="varTarget" v="@D.DocCode"/>
+			</a>
+		</func>
+		<func name="Security" qi="">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="@DCO(Type)"/>
+				<p name="object2" v="Security Documents"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="SAM_SD"/>
+				<p name="varTarget" v="@D.DocCode"/>
+			</a>
+		</func>
+		<func name="Correspondence External">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="@DCO(Type)"/>
+				<p name="object2" v="SAM Correspondence External"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="SAM_CE"/>
+				<p name="varTarget" v="@D.DocCode"/>
+			</a>
+		</func>
+		<func name="Correspondence Internal">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="@DCO(Type)"/>
+				<p name="object2" v="SAM Correspondence Internal"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="SAM_CI"/>
+				<p name="varTarget" v="@D.DocCode"/>
+			</a>
+		</func>
+		<func name="Miscellaneous">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="@DCO(Type)"/>
+				<p name="object2" v="SAM Miscellaneous"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="SAM_MISC"/>
+				<p name="varTarget" v="@D.DocCode"/>
+			</a>
+		</func>
+		<func name="Bankruptcy Record">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="@DCO(Type)"/>
+				<p name="object2" v="SAM Bankruptcy Record"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="SAM_BR"/>
+				<p name="varTarget" v="@D.DocCode"/>
+			</a>
+		</func>
+		<func name="HKMC">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="@DCO(Type)"/>
+				<p name="object2" v="SAM HKMC Claims"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="SAM_HKMC"/>
+				<p name="varTarget" v="@D.DocCode"/>
+			</a>
+		</func>
+		<func name="TID Claims">
+			<a ns="rrunner" name="rrCompare" qi="">
+				<p name="object1" v="@DCO(Type)"/>
+				<p name="object2" v="SAM TID Claims"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="SAM_TIDC"/>
+				<p name="varTarget" v="@D.DocCode"/>
+			</a>
+		</func>
+		<func name="SAM Others">
+			<a ns="rrunner" name="rrCompare">
+				<p name="object1" v="@DCO(Type)"/>
+				<p name="object2" v="SAM Others"/>
+			</a>
+			<a ns="rrunner" name="rrSet" qi="">
+				<p name="varSource" v="SAM_OTHERS"/>
+				<p name="varTarget" v="@D.DocCode"/>
+			</a>
+		</func>
+	</rule>
+</ruleset>

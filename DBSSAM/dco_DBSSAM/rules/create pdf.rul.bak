@@ -1,0 +1,2010 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<archive>
+	<ruleset id="12" name="Create PDF" ver="1" modder="admin.1" qi="">
+		<rule name="Rule1" id="1">
+			<func name="Function1">
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="2" modder="admin.1" qi="" dt="05/08/17 11:48:50.13 ">
+		<rule name="Rule1" id="1">
+			<func name="Function1">
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan,English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="3" modder="admin.1" qi="" dt="05/08/17 11:50:13.353 ">
+		<rule name="Rule1" id="1">
+			<func name="Function1">
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="4" modder="admin.1" qi="" dt="05/08/17 11:51:21.704 ">
+		<rule name="Rule1" id="1">
+			<func name="Function1">
+				<a ns="rrunner" name="rrSet" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="5" modder="admin.1" qi="" dt="05/08/17 11:52:27.607 ">
+		<rule name="Rule1" id="1">
+			<func name="Function1">
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="6" modder="admin.1" qi="" dt="05/08/17 12:12:48.384 ">
+		<rule name="Rule1" id="1">
+			<func name="Function1">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChinesePRC+@CHR(43)+English,ChineseTaiwan"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="7" modder="admin.1" qi="" dt="05/08/17 12:14:00.255 ">
+		<rule name="Rule1" id="1">
+			<func name="Function1">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChinesePRC+@CHR(43)+English,ChineseTaiwan"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="8" modder="admin.1" qi="" dt="05/08/17 12:15:20.86 ">
+		<rule name="Rule1" id="1">
+			<func name="Function1">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="9" modder="admin.1" qi="" dt="05/11/17 16:13:49.739 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="False">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1">
+			<func name="Function1" disabled="y">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="121"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled.">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="False">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="False">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="10" modder="admin.1" qi="" dt="05/11/17 16:17:19.510 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="False">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="Function1" disabled="y">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="121"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled.">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="False">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="False">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="11" modder="admin.1" qi="" dt="05/11/17 16:18:40.149 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="Function1" disabled="y">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="121"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled.">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="False">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="False">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="12" modder="admin.1" qi="" dt="05/11/17 16:20:14.233 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="Function1" disabled="y">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="121"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="" disabled="y">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled." disabled="y">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="y">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="y">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="13" modder="admin.1" qi="" dt="05/11/17 16:21:05.463 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="Function1" disabled="y">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="" disabled="y">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled." disabled="y">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="y">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="y">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="14" modder="admin.1" qi="" dt="05/11/17 16:22:46.864 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="Function1" disabled="y">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="1"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="" disabled="y">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled." disabled="y">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="y">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="y">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="15" modder="admin.1" qi="" dt="05/11/17 16:23:45.236 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="Function1" disabled="y">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="121"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="" disabled="y">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled." disabled="y">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="y">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="y">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="16" modder="admin.1" qi="" dt="05/11/17 16:28:20.843 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="Function1" disabled="y">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="0"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="" disabled="y">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled." disabled="y">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="y">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="y">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="17" modder="admin.1" qi="" dt="05/11/17 16:31:49.325 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="Function1" disabled="y">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="" disabled="y">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled." disabled="y">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="y">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="y">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="18" modder="admin.1" qi="" dt="05/11/17 16:32:51.655 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="Function1" disabled="y">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="121"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="" disabled="y">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled." disabled="y">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="y">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="y">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="19" modder="admin.1" qi="" dt="05/11/17 16:34:13.810 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="Function1" disabled="y">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="120"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="" disabled="y">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled." disabled="y">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="y">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="y">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="20" modder="admin.1" qi="" dt="05/11/17 16:46:43.494 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="PDF_OCR_A">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="1"/>
+					<p name="varTarget" v="@D.y_PDFImageOnly"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="120"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="" disabled="y">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled." disabled="y">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="y">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="y">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="21" modder="admin.1" qi="" dt="05/11/17 16:47:54.301 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="PDF_OCR_A">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="1"/>
+					<p name="varTarget" v="@D.y_PDFImageOnly"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False" qi="">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="120"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="" disabled="y">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled." disabled="y">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="y">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="y">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="22" modder="admin.1" qi="" dt="05/11/17 18:25:07.859 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="PDF_OCR_A">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="y">
+					<p name="varSource" v="1"/>
+					<p name="varTarget" v="@D.y_PDFImageOnly"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False" qi="">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="120"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="" disabled="y">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled." disabled="y">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="y">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="y">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="23" modder="admin.1" qi="" dt="05/11/17 18:25:34.532 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="PDF_OCR_A">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="y">
+					<p name="varSource" v="1"/>
+					<p name="varTarget" v="@D.y_PDFImageOnly"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False" qi="">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="120"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="" disabled="y">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled." disabled="y">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="y">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="y">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="24" modder="admin.1" qi="" dt="05/11/17 18:27:20.466 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="PDF_OCR_A">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFImageOnly"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False" qi="">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="120"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="" disabled="y">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled." disabled="y">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="y">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="y">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+	<ruleset id="12" name="Create PDF" ver="25" modder="admin.1" qi="" dt="05/11/17 18:28:54.114 ">
+		<rule name="SourceFrom" id="2" dcomap.open="P" disabled="False" qi="">
+			<func name="Original" disabled="y">
+				<a name="rrCompareNot" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.OriginalImage"/>
+				</a>
+				<a name="SplitFileName" ns="com:Datacap.Libraries.FileIO.Actions">
+					<p name="inputFilename" type="string" v="@P.OriginalImage"/>
+					<p name="rootPathVariable" type="string" v=""/>
+					<p name="pathVariable" type="string" v=""/>
+					<p name="fileVariable" type="string" v=""/>
+					<p name="extVariable" type="string" v="@P.OriginalImageExt"/>
+				</a>
+				<a name="rrCompare" ns="rrunner.dll">
+					<p name="object1" v="@EMPTY"/>
+					<p name="object2" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.IMAGEFILE"/>
+					<p name="varTarget" v="@P.EnhancedImage"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll">
+					<p name="varSource" v="@P.OriginalImage"/>
+					<p name="varTarget" v="@P.IMAGEFILE"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Rule1" id="1" dcomap.close="D" qi="">
+			<func name="PDF_OCR_A">
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="ChineseTaiwan+@CHR(43)+English"/>
+					<p name="varTarget" v="@X.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v="ChineseTaiwan"/>
+					<p name="varTarget" v="@D.y_lg"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFImageOnly"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFTitle"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFAuthor"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFSubject"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFKeys"/>
+				</a>
+				<a ns="rrunner" name="rrSet">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.y_PDFProducer"/>
+				</a>
+				<a name="RecognizeToPDFOCR_A" ns="ocr_a.dll" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR" disabled="False" qi="">
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@D.typesToInclude"/>
+				</a>
+				<a name="rrSet" ns="rrunner.dll" disabled="True">
+					<p name="varSource" v="128,75"/>
+					<p name="varTarget" v="@D.statusToExclude"/>
+				</a>
+				<a ns="rrunner" name="rrSet" qi="" disabled="y">
+					<p name="varSource" v="120"/>
+					<p name="varTarget" v="@D.s_lg"/>
+				</a>
+				<a ns="com:Datacap.Libraries.ScansoftR.Actions" name="SetContinueOnFailureOCR_S" qi="" disabled="y">
+					<p name="ContinueOnFailure" type="bool" v="True"/>
+				</a>
+				<a ns="Recog_Shared" name="SetupAutomaticRetry" qi="Make sure automatic retry is enabled." disabled="y">
+					<p name="retryCount" v="1"/>
+					<p name="timeout" v="185"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="y">
+					<p name="OutputPDFType" type="int" v="1"/>
+				</a>
+				<a name="RecognizeToPDFOCR_S" ns="com:Datacap.Libraries.ScansoftR.Actions" disabled="True">
+					<p name="OutputPDFType" type="int" v="4"/>
+				</a>
+			</func>
+			<func name="PDF_OCR_SR Abort" disabled="y">
+				<a name="SetTaskStatus" ns="rrunner.dll" qi="Possible task status values are:&#xA;0 - Abort;&#xA;1 - Cancelled;&#xA;2 - Finished;&#xA;4 - Hold;&#xA;8 - Pending.">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" name="StrParam" v="0"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+</archive>

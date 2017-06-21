@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ruleset id="6" name="Export2XML" ver="54" modder="admin.1" dt="06/21/17 00:35:47.79 " qi="">
+	<rule name="ExportXML Open XML File" id="1">
+		<func name="Open XML">
+			<a ns="ExportXML" name="xml_SetExportPath">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="@APPPATH(export)" name="strParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetFileName">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="@ID" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Details,Documents" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="ScanDateTime,Details" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="ScanUser,Details" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="DocType,Details" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Rescan,Details" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Doc_Action_No,Details" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="DocLv_Action_No,Details" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="ScanDateTime,@DATE(yyyy-mm-dd)+@STRING(T)+@TIME(HH:MM:SS)" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="ScanUser,@OPERATOR" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="DocType, @D.DocCode" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="DocType, @DCO(Type)" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Doc_Action_No, @D.SAM_Document_Action_No" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="DocLv_Action_No, @D\SAM_Doc_Action_No" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="IsRescan,@P\IsRescan" name="StrParam"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="ExportXML Export SAM Open" id="10" qi="">
+		<func name="Export XML" qi="">
+			<a ns="ExportXML" name="xml_SetExportPath" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="@APPPATH(export)" name="strParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetFileName">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="@ID" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Details,Documents" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="ScanDateTime,Details" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="ScanUser,Details" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Page,Details" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="DocType,Details" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Rescan,Details" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="ScanDateTime,@DATE(yyyy-mm-dd)+@STRING(T)+@TIME(HH:MM:SS)" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="ScanUser,@OPERATOR" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="DocType,@D.DocCode" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="PageType,Page" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="DocumentFullText,Page" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Fields,Page" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="ActionNo,Fields" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="CIFNo,Fields" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="GroupName,Fields" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="BorrowerName,Fields" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="TINNo,Fields" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Remarks,Fields" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetAttributeValue" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Page,ID,@ID" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="PageType, @DCO(Type)" name="StrParam"/>
+			</a>
+			<a ns="myCustomLib" name="SetFullTextToXMLNode" disabled="y">
+				<p name="Parameter1" v="DocumentFullText"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="ActionNo,@D.SAM_Document_Action_No" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="CIFNo,@D.SAM_Document_CIF_No" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="GroupName,@D.SAM_Document_Group_Name" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="BorrowerName,@D.SAM_Document_Borrower_Name" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="TINNo,@D.SAM_Document_TIN_No" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Remarks,@D.SAM_Document_Remarks" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Rescan,N" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrCompare" disabled="y">
+				<p name="object1" v="@D.SAM_Document_IsRescan"/>
+				<p name="object2" v="Y"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Rescan,Y" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet" qi="">
+				<p name="varSource" v="N"/>
+				<p name="varTarget" v="@D.SAM_Document_Set"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="ExportXML Export SAM Content" id="9" qi="">
+		<func name="Export XML" qi="">
+			<a ns="ExportXML" name="xml_SetFileName" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="@ID" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Details,Documents" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="ScanDateTime,Details" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="ScanUser,Details" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="ScanDateTime,@DATE(yyyy-mm-dd)+@STRING(T)+@TIME(HH:MM:SS)" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="ScanUser,@OPERATOR" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Page,Details" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="PageType,Page" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="DocumentFullText,Page" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetAttributeValue" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Page,ID,@ID" name="StrParam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="PageType, @DCO(Type)" name="StrParam"/>
+			</a>
+			<a ns="myCustomLib" name="SetFullTextToXMLNode" qi="">
+				<p name="Parameter1" v="DocumentFullText"/>
+			</a>
+			<a ns="rrunner" name="rrCompareNot">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@D.SAM_Document_Set"/>
+			</a>
+			<a ns="rrunner" name="rrSet" qi="">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@D.SAM_Document_Set"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Fields,Page" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Action_Number,Fields" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="CIF_Number,Fields" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Group_Name,Fields" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Borrower_Name,Fields" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="TIN_Number,Fields" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Sequence_Number,Fields" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_NewNode" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Remarks,Fields" name="Strparam"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue">
+				<p type="bInter"/>
+				<p type="bDebug"/>
+				<p type="strParam" v="Action_Number,@B.SAM_Action_No"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue">
+				<p type="bInter"/>
+				<p type="bDebug"/>
+				<p type="strParam" v="CIF_Number,@B.SAM_CIF_No"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue">
+				<p type="bInter"/>
+				<p type="bDebug"/>
+				<p type="strParam" v="Group_Name,@B.SAM_Group_Name"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue">
+				<p type="bInter"/>
+				<p type="bDebug"/>
+				<p type="strParam" v="Borrower_Name,@B.SAM_Borrower_Name"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue">
+				<p type="bInter"/>
+				<p type="bDebug"/>
+				<p type="strParam" v="TIN_Number,@B.SAM_TIN_No"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue">
+				<p type="bInter"/>
+				<p type="bDebug"/>
+				<p type="strParam" v="Sequence_Number,@B.SAM_Sequence"/>
+			</a>
+			<a ns="ExportXML" name="xml_SetNodeValue" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Remarks,@P\SAM_Remarks" name="StrParam"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="ExportXML Close XML File" id="3" qi="">
+		<func name="Close XML">
+			<a ns="rrunner" name="rrSet" qi="">
+				<p name="varSource" v="N"/>
+				<p name="varTarget" v="@D.SAM_Document_Set"/>
+			</a>
+			<a name="xml_SaveFile" ns="ExportXML.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+</ruleset>
