@@ -1,0 +1,1554 @@
+<?xml-stylesheet type="text/xsl" href="..\..\dco.xsl"?>
+<S>
+	<B type="DBSPOC3">
+		<V n="ID">0</V>
+		<V n="TYPE">Batch</V>
+		<V n="STATUS">0</V>
+		<V n="MIN TYPES">0</V>
+		<V n="MAX TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;4&quot; /&gt;&lt;r id=&quot;3&quot; rs=&quot;15&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;4&quot; /&gt;&lt;/out&gt;</V>
+		<V n="OMRType">0</V>
+		<P type="Other" pos="0" min="0" max="0"/>
+		<D type="Document" pos="0" min="0" max="0"/>
+		<D type="Form NN6" pos="0" min="0" max="0"/>
+		<D type="Form NN7" pos="0" min="0" max="0"/>
+		<D type="UseOfInfoConsentForm" pos="0" min="0" max="0"/>
+		<D type="Resolution" pos="0" min="0" max="0"/>
+		<D type="Append Document" pos="0" min="0" max="0"/>
+		<D type="Barcode Document" pos="0" min="0" max="0"/>
+		<D type="Account Checklist" pos="0" min="0" max="0"/>
+	</B>
+	<D type="Document">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="MIN TYPES">0</V>
+		<V n="MAX TYPES">0</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<P type="Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="Form NN6">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<P type="NN6 Front Page" pos="0" min="0" max="0"/>
+		<P type="NN6 Second Page" pos="0" min="0" max="0"/>
+		<P type="NN6 Third Page" pos="0" min="0" max="0"/>
+		<P type="NN6 Continuation Sheet A Page" pos="0" min="0" max="0"/>
+		<P type="NN6 Continuation Sheet B Page" pos="0" min="0" max="0"/>
+		<P type="NN6 Continuation Sheet C Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="Form NN7">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<P type="NN7 Front Page" pos="0" min="0" max="0"/>
+		<P type="NN7 Second Page" pos="0" min="0" max="0"/>
+		<P type="NN7 Third Page" pos="0" min="0" max="0"/>
+		<P type="NN7 Continuation Sheet A Page" pos="0" min="0" max="0"/>
+		<P type="NN7 Continuation Sheet B Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="UseOfInfoConsentForm">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<P type="Use of Info Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="Resolution">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<P type="Resolution Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="Append Document">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<P type="Append Document Page" pos="0" min="0" max="1"/>
+	</D>
+	<D type="Barcode Document">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<P type="Barcode Front Page" pos="0" min="0" max="0"/>
+		<P type="Barcode SAM Acc Chk Front Page" pos="0" min="0" max="0"/>
+	</D>
+	<D type="Account Checklist">
+		<V n="ID">0</V>
+		<V n="TYPE">Document</V>
+		<V n="STATUS">0</V>
+		<V n="DOC DATA">0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;12&quot; /&gt;&lt;r id=&quot;10&quot; rs=&quot;6&quot; /&gt;&lt;r id=&quot;1&quot; rs=&quot;9&quot; /&gt;&lt;/in&gt;&lt;out&gt;&lt;r id=&quot;3&quot; rs=&quot;6&quot; /&gt;&lt;/out&gt;</V>
+		<P type="Account Checklist Page" pos="0" min="0" max="0"/>
+	</D>
+	<P type="Other">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN TYPES">0</V>
+		<V n="MAX TYPES">0</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</P>
+	<P type="Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN TYPES">0</V>
+		<V n="MAX TYPES">0</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</P>
+	<P type="NN6 Front Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;2&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="NN6_Company_Number" pos="0" min="0" max="0"/>
+		<F type="NN6_Company_Name" pos="0" min="0" max="0"/>
+		<F type="NN6_Surname" pos="0" min="0" max="0"/>
+		<F type="NN6_Othername" pos="0" min="0" max="0"/>
+		<F type="NN6_Cessation_Date" pos="0" min="0" max="0"/>
+		<F type="NN6_Remarks" pos="0" min="0" max="0"/>
+		<F type="IsRescan" pos="0" min="0" max="0"/>
+	</P>
+	<P type="NN6 Second Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;4&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="NN6_Surname_Appointment" pos="0" min="0" max="0"/>
+		<F type="NN6_Othername_Appointment" pos="0" min="0" max="0"/>
+		<F type="NN6_Appointment_Date" pos="0" min="0" max="0"/>
+	</P>
+	<P type="NN6 Third Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;5&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</P>
+	<P type="NN6 Continuation Sheet A Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;6&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="NN6_Company_Number_Section2" pos="0" min="0" max="0"/>
+		<F type="NN6_Surname_Section2" pos="0" min="0" max="0"/>
+		<F type="NN6_Othername_Section2" pos="0" min="0" max="0"/>
+		<F type="NN6_Cessation_Date_Section2" pos="0" min="0" max="0"/>
+	</P>
+	<P type="NN6 Continuation Sheet B Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;7&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="NN6_Company_Number_Section3" pos="0" min="0" max="0"/>
+		<F type="NN6_Surname_Section3" pos="0" min="0" max="0"/>
+		<F type="NN6_Othername_Section3" pos="0" min="0" max="0"/>
+		<F type="NN6_Appointment_Date_Section3" pos="0" min="0" max="0"/>
+	</P>
+	<P type="NN6 Continuation Sheet C Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;8&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</P>
+	<P type="NN7 Front Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;11&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="PAGE_WIDTH">2481</V>
+		<V n="PAGE_HEIGHT">3507</V>
+		<F type="NN7_Company_Number" pos="0" min="0" max="0"/>
+		<F type="NN7_Company_Name" pos="0" min="0" max="0"/>
+		<F type="NN7_Surname" pos="0" min="0" max="0"/>
+		<F type="NN7_Othername" pos="0" min="0" max="0"/>
+		<F type="NN7_Remarks" pos="0" min="0" max="0"/>
+		<F type="IsRescan" pos="0" min="0" max="0"/>
+	</P>
+	<P type="NN7 Second Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;12&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="PAGE_WIDTH">2481</V>
+		<V n="PAGE_HEIGHT">3507</V>
+		<F type="NN7_Surname_Changed" pos="0" min="0" max="0"/>
+		<F type="NN7_Othername_Changed" pos="0" min="0" max="0"/>
+		<F type="NN7_Effective_Date" pos="0" min="0" max="0"/>
+		<F type="NN7_Address" pos="0" min="0" max="0"/>
+		<F type="NN7_Email" pos="0" min="0" max="0"/>
+		<F type="NN7_HKID" pos="0" min="0" max="0"/>
+		<F type="NN7_Passport_Issuing_Country" pos="0" min="0" max="0"/>
+		<F type="NN7_Passport_Effective_Date" pos="0" min="0" max="0"/>
+		<F type="NN7_Passport_Number" pos="0" min="0" max="0"/>
+	</P>
+	<P type="NN7 Third Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;13&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</P>
+	<P type="NN7 Continuation Sheet A Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;14&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="NN7_Company_Number_Section2" pos="0" min="0" max="0"/>
+		<F type="NN7_Surname_Section2" pos="0" min="0" max="0"/>
+		<F type="NN7_Othername_Section2" pos="0" min="0" max="0"/>
+		<F type="NN7_Surname_Changed_Section2" pos="0" min="0" max="0"/>
+		<F type="NN7_Othername_Changed_Section2" pos="0" min="0" max="0"/>
+		<F type="NN7_Effective_Date_Section2" pos="0" min="0" max="0"/>
+		<F type="NN7_Address_Section2" pos="0" min="0" max="0"/>
+		<F type="NN7_Email_Section2" pos="0" min="0" max="0"/>
+		<F type="NN7_HKID_Section2" pos="0" min="0" max="0"/>
+		<F type="NN7_Passport_Issuing_Country_Section2" pos="0" min="0" max="0"/>
+		<F type="NN7_Passport_Effective_Date_Section2" pos="0" min="0" max="0"/>
+		<F type="NN7_Passport_Number_Section2" pos="0" min="0" max="0"/>
+	</P>
+	<P type="NN7 Continuation Sheet B Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;15&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</P>
+	<P type="Use of Info Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;8&quot; rs=&quot;13&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="PAGE_WIDTH">2550</V>
+		<V n="PAGE_HEIGHT">3501</V>
+		<F type="Name" pos="0" min="0" max="0"/>
+		<F type="Contact_No" pos="0" min="0" max="0"/>
+		<F type="ID_No" pos="0" min="0" max="0"/>
+		<F type="Staff_Name" pos="0" min="0" max="0"/>
+		<F type="Date" pos="0" min="0" max="0"/>
+		<F type="Br_Code" pos="0" min="0" max="0"/>
+		<F type="Staff_Phone_No" pos="0" min="0" max="0"/>
+		<F type="Officer_Name_Code" pos="0" min="0" max="0"/>
+		<F type="Checker" pos="0" min="0" max="0"/>
+		<F type="Recording_Start_Time" pos="0" min="0" max="0"/>
+		<F type="Ext_No" pos="0" min="0" max="0"/>
+		<F type="Request_For_Invest" pos="0" min="0" max="0"/>
+		<F type="Use_of_Deposit_Info" pos="0" min="0" max="0"/>
+		<F type="Direct_Marketing_Opt_In" pos="0" min="0" max="0"/>
+	</P>
+	<P type="Resolution Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<F type="EntityName" pos="0" min="0" max="0"/>
+		<F type="IsRescan" pos="0" min="0" max="0"/>
+	</P>
+	<P type="Append Document Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;16&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="Append_Doc_ID" pos="0" min="0" max="0"/>
+		<F type="Append_Remarks" pos="0" min="0" max="0"/>
+	</P>
+	<P type="Barcode Front Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<F type="BatchEntityName" pos="0" min="0" max="0"/>
+		<F type="BatchRemarks" pos="0" min="0" max="0"/>
+	</P>
+	<P type="Barcode SAM Acc Chk Front Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<F type="Batch_SAM_Action_No" pos="0" min="0" max="0"/>
+		<F type="Batch_SAM_CIF_No" pos="0" min="0" max="0"/>
+		<F type="Batch_SAM_Group_Name" pos="0" min="0" max="0"/>
+		<F type="Batch_SAM_Borrower_Name" pos="0" min="0" max="0"/>
+		<F type="Batch_SAM_TIN_No" pos="0" min="0" max="0"/>
+		<F type="Batch_SAM_Remarks" pos="0" min="0" max="0"/>
+		<F type="Batch_SAM_IsRescan" pos="0" min="0" max="0"/>
+	</P>
+	<P type="Account Checklist Page">
+		<V n="ID">0</V>
+		<V n="TYPE">Page</V>
+		<V n="STATUS">0</V>
+		<V n="IMAGEFILE"></V>
+		<V n="DATAFILE"></V>
+		<V n="TEMPLATE IMAGE"></V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;9&quot; rs=&quot;6&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<F type="SAM_Action_No" pos="0" min="0" max="0"/>
+		<F type="SAM_CIF_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Group_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_Borrower_Name" pos="0" min="0" max="0"/>
+		<F type="SAM_TIN_No" pos="0" min="0" max="0"/>
+		<F type="SAM_Rescan" pos="0" min="0" max="0"/>
+		<F type="SAM_Remarks" pos="0" min="0" max="0"/>
+	</P>
+	<F type="NN6_Company_Name">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Surname">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;3&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Othername">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;4&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Cessation_Date">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;2&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Appointment_Date">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;5&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Company_Number">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;6&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="IsRescan">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="DICT">YesNo</V>
+	</F>
+	<F type="NN7_Company_Number">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;6&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">1826,176,2310,288</V>
+		<V n="cnet_recogType">ICR Field</V>
+	</F>
+	<F type="NN7_Company_Name">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">312,966,2321,1190</V>
+		<V n="cnet_recogType">ICR Field</V>
+		<V n="hr_locale">zh-TW</V>
+	</F>
+	<F type="NN7_Surname">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;3&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">330,948,1844,1060</V>
+	</F>
+	<F type="NN7_Othername">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;4&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">330,1119,1850,1220</V>
+	</F>
+	<F type="NN7_Effective_Date">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">1885,948,2351,1055</V>
+	</F>
+	<F type="NN7_Address">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;32&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">330,1815,1862,2151</V>
+	</F>
+	<F type="NN7_Email">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;27&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">341,2357,1862,2487</V>
+	</F>
+	<F type="NN7_HKID">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;28&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">359,2587,1879,2711</V>
+	</F>
+	<F type="NN7_Passport_Issuing_Country">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;29&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">330,2799,1832,2905</V>
+	</F>
+	<F type="NN7_Passport_Effective_Date">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;33&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">1850,2805,2357,2905</V>
+	</F>
+	<F type="NN7_Passport_Number">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;30&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">335,2958,1820,3064</V>
+	</F>
+	<F type="Name">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;9&quot; rs=&quot;13&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">512,462,1794,586</V>
+	</F>
+	<F type="Contact_No">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">426,596,1048,686</V>
+	</F>
+	<F type="ID_No">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">1497,599,2160,709</V>
+	</F>
+	<F type="Staff_Name">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">1468,2471,1854,2668</V>
+	</F>
+	<F type="Date">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">2017,2465,2330,2678</V>
+	</F>
+	<F type="Br_Code">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">393,2764,722,2861</V>
+	</F>
+	<F type="Staff_Phone_No">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">1957,2751,2256,2894</V>
+	</F>
+	<F type="Officer_Name_Code">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">489,2874,1215,2968</V>
+	</F>
+	<F type="Checker">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">452,2988,998,3164</V>
+	</F>
+	<F type="Recording_Start_Time">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">1464,3018,1734,3131</V>
+	</F>
+	<F type="Ext_No">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">1947,3024,2236,3134</V>
+	</F>
+	<F type="Yes">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="Default_Position">266,1256,296,1286</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="No">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="Default_Position">270,1375,297,1407</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Request_For_Invest">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;10&quot; rs=&quot;13&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="RecogType">4</V>
+		<V n="Pos562">135,875,2134,1134</V>
+		<V n="Default_Position">135,875,2134,1134</V>
+		<V n="OMRType">0</V>
+		<V n="DICT">RequestForInvest</V>
+		<F type="All_Invest" pos="0" min="0" max="0"/>
+		<F type="All_Insurance" pos="0" min="0" max="0"/>
+		<F type="Market_Update" pos="0" min="0" max="0"/>
+		<F type="All" pos="0" min="0" max="0"/>
+		<F type="Request_For_Invest_OMR1" pos="0" min="0" max="0"/>
+		<F type="Request_For_Invest_OMR2" pos="0" min="0" max="0"/>
+		<F type="Request_For_Invest_OMR3" pos="0" min="0" max="0"/>
+		<F type="Request_For_Invest_OMR4" pos="0" min="0" max="0"/>
+	</F>
+	<F type="All_Invest">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Pos562">264,915,298,944</V>
+		<V n="Default_Position">264,915,298,944</V>
+	</F>
+	<F type="All_Insurance">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Pos562">271,968,302,997</V>
+		<V n="Default_Position">271,968,302,997</V>
+	</F>
+	<F type="Market_Update">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Pos562">268,1031,298,1053</V>
+		<V n="Default_Position">268,1031,298,1053</V>
+	</F>
+	<F type="All">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Pos562">268,1084,295,1109</V>
+		<V n="Default_Position">268,1084,295,1109</V>
+	</F>
+	<F type="Direct_Marketing_Opt_In">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="Default_Position">173,1769,401,2101</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;10&quot; rs=&quot;13&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="RecogType">4</V>
+		<V n="DICT">DirectMarketingOptIn</V>
+		<V n="Pos562">173,1769,401,2101</V>
+		<V n="OMRType">0</V>
+		<F type="I wish the Bank to use my personal data in direct marketing" pos="0" min="0" max="0"/>
+		<F type="I wish the Bank to provide my personal data to other persons" pos="0" min="0" max="0"/>
+		<F type="Direct_Marketing_Opt_In_OMR1" pos="0" min="0" max="0"/>
+		<F type="Direct_Marketing_Opt_In_OMR2" pos="0" min="0" max="0"/>
+	</F>
+	<F type="I wish the Bank to use my personal data in direct marketing">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="Default_Position">270,1820,302,1852</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Pos562">270,1820,302,1852</V>
+	</F>
+	<F type="I wish the Bank to provide my personal data to other persons">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="Default_Position">273,1983,307,2007</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Pos562">273,1983,307,2007</V>
+	</F>
+	<F type="Use_of_Deposit_Info">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;10&quot; rs=&quot;13&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">134,1214,347,1474</V>
+		<V n="OMRType">0</V>
+		<V n="Pos562">134,1214,347,1474</V>
+		<V n="RecogType">4</V>
+		<V n="DICT">UseDepositInfo</V>
+		<F type="I agree to allow the Bank to access" pos="0" min="0" max="0"/>
+		<F type="I do not wish for the bank to access" pos="0" min="0" max="0"/>
+		<F type="Use_of_Deposit_Info_OMR1" pos="0" min="0" max="0"/>
+		<F type="Use_of_Deposit_Info_OMR2" pos="0" min="0" max="0"/>
+	</F>
+	<F type="I agree to allow the Bank to access">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">271,1257,301,1294</V>
+		<V n="Pos562">271,1257,301,1294</V>
+	</F>
+	<F type="I do not wish for the bank to access">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+		<V n="Default_Position">271,1380,304,1417</V>
+		<V n="Pos562">271,1380,304,1417</V>
+	</F>
+	<F type="Request_For_Invest_OMR1">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Request_For_Invest_OMR2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Request_For_Invest_OMR3">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Request_For_Invest_OMR4">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Use_of_Deposit_Info_OMR1">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Use_of_Deposit_Info_OMR2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Direct_Marketing_Opt_In_OMR1">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Direct_Marketing_Opt_In_OMR2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="EntityName">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;9&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Append_Doc_ID">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Append_Remarks">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="BatchEntityName">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;7&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="BatchRemarks">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;8&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="SAM_Action_No">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;12&quot; rs=&quot;5&quot; /&gt;&lt;r id=&quot;12&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="SAM_CIF_No">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;14&quot; rs=&quot;5&quot; /&gt;&lt;r id=&quot;14&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="SAM_Group_Name">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;16&quot; rs=&quot;5&quot; /&gt;&lt;r id=&quot;16&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="SAM_Borrower_Name">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;18&quot; rs=&quot;5&quot; /&gt;&lt;r id=&quot;18&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="SAM_TIN_No">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;20&quot; rs=&quot;5&quot; /&gt;&lt;r id=&quot;20&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Batch_SAM_Action_No">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;11&quot; rs=&quot;5&quot; /&gt;&lt;r id=&quot;11&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Batch_SAM_CIF_No">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;13&quot; rs=&quot;5&quot; /&gt;&lt;r id=&quot;13&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Batch_SAM_Group_Name">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;15&quot; rs=&quot;5&quot; /&gt;&lt;r id=&quot;15&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Batch_SAM_Borrower_Name">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;17&quot; rs=&quot;5&quot; /&gt;&lt;r id=&quot;17&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Batch_SAM_TIN_No">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;19&quot; rs=&quot;5&quot; /&gt;&lt;r id=&quot;19&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Batch_SAM_Remarks">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;21&quot; rs=&quot;5&quot; /&gt;&lt;r id=&quot;21&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Remarks">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Surname_Appointment">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;3&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Othername_Appointment">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;4&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Company_Number_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;6&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Surname_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;3&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Othername_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;4&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Cessation_Date_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;2&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Company_Number_Section3">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;6&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Surname_Section3">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;3&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Othername_Section3">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;4&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN6_Appointment_Date_Section3">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;5&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_Surname_Changed">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;23&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_Othername_Changed">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;24&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_Company_Number_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_Surname_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;3&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_Othername_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;4&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_Surname_Changed_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;25&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_Othername_Changed_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;26&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_Effective_Date_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_Address_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;32&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_Email_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;27&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_HKID_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;31&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_Passport_Issuing_Country_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;29&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_Passport_Number_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;30&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_Passport_Effective_Date_Section2">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;33&quot; rs=&quot;5&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="NN7_Remarks">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Batch_SAM_IsRescan">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="DICT">YesNo</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;1&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="SAM_Rescan">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;2&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="Append_DocId">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in /&gt;&lt;out /&gt;</V>
+	</F>
+	<F type="SAM_Remarks">
+		<V n="ID">0</V>
+		<V n="TYPE">Field</V>
+		<V n="STATUS">0</V>
+		<V n="Position">0,0,0,0</V>
+		<V n="MIN_TYPES">0</V>
+		<V n="MAX_TYPES">0</V>
+		<V n="length"></V>
+		<V n="ReqConf">8</V>
+		<V n="rules">&lt;in&gt;&lt;r id=&quot;22&quot; rs=&quot;16&quot; /&gt;&lt;/in&gt;&lt;out /&gt;</V>
+	</F>
+	<DICT n="YesNo">
+		<W v="Y">Yes</W>
+		<W v="N">No</W>
+	</DICT>
+	<DICT n="RequestForInvest">
+		<W v="All Investment Products (including but not limited to Investment Funds, Securities Related Products, FX Products)">All Investment</W>
+		<W v="All Insurance Products (including but not limited to Life Insurance, General Insurance, Investment Linked Plans)">All Insurance</W>
+		<W v="Market Update">Market Update</W>
+		<W v="All of the above">All</W>
+	</DICT>
+	<DICT n="UseDepositInfo">
+		<W v="I agree to allow the Bank to access">I agree to allow the Bank to access</W>
+		<W v="I do not wish for the bank to access">I do not wish for the bank to access</W>
+	</DICT>
+	<DICT n="DirectMarketingOptIn">
+		<W v="I wish the Bank to use my personal data in direct marketing">I wish the Bank to use my personal data in direct marketing</W>
+		<W v="I wish the Bank to provide my personal data to other persons">I wish the Bank to provide my personal data to other persons</W>
+	</DICT>
+</S>

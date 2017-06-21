@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<archive>
+	<ruleset id="14" name="Export2CSV" ver="1" modder="admin.1">
+		<rule name="Batch Open Export CSV Ruleset DBSPOC3" id="1" dcomap.open="B:DBSPOC3,B=DBSPOC3" qi="">
+			<func name="Function File Settings">
+				<a ns="Export" name="SetExportPath">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="@PILOT(BATCHDIR)" name="strParam"/>
+				</a>
+				<a ns="Export" name="SetFileName">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="test" name="StrParam"/>
+				</a>
+				<a ns="Export" name="SetExtensionName">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="csv" name="StrParam"/>
+				</a>
+				<a ns="Export" name="SetCSV" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="TRUE" name="StrParam"/>
+				</a>
+				<a ns="Export" name="SetElementSeparator" disabled="false">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="," name="StrParam"/>
+				</a>
+				<a ns="Export" name="SetIgnoreFieldStatus" disabled="True">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="" name="Strparam"/>
+				</a>
+				<a ns="rrunner" name="rrSet" disabled="True" qi="Store in batch var so fields can check it">
+					<p name="varSource" v=""/>
+					<p name="varTarget" v="@B.IgnoreStatus"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Document Rule Open UseOfInfoConsentForm" id="3" dcomap.open="D:UseOfInfoConsentForm,D=UseOfInfoConsentForm" qi="">
+			<func name="Function Document Level Export"/>
+		</rule>
+		<rule name="Page Rule Open Use of Info Page" id="4" dcomap.open="P:Use of Info Page,P=Use of Info Page" qi="">
+			<func name="Function Page Level Export">
+				<a name="ExportAllFields" ns="Export.dll" disabled="False" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Field Rule Open IsRescan" id="5" dcomap.open="F:IsRescan,F=IsRescan" qi="">
+			<func name="Function Field Level Export" disabled="False">
+				<a ns="rrunner" name="rrCompareNot" disabled="False" qi="Do not export this field if the status matches the exclude status.">
+					<p name="object1" v="@X.STATUS"/>
+					<p name="object2" v="@B.IgnoreStatus"/>
+				</a>
+				<a name="ExportMYValue" ns="Export.dll" disabled="False" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+				<a ns="Export" name="ExportSmartParameter">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+					<p type="strParam" v="" name="StrParam"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Field Rule Open Name" id="6" dcomap.open="F:Name,F=Name" qi="">
+			<func name="Function Field Level Export" disabled="False">
+				<a ns="rrunner" name="rrCompareNot" disabled="False" qi="Do not export this field if the status matches the exclude status.">
+					<p name="object1" v="@X.STATUS"/>
+					<p name="object2" v="@B.IgnoreStatus"/>
+				</a>
+				<a name="ExportMYValue" ns="Export.dll" disabled="False" qi="">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+		<rule name="Batch Close Export CSV Ruleset DBSPOC3" id="2" dcomap.close="B:DBSPOC3,B=DBSPOC3" qi="">
+			<func name="Function Close Export File">
+				<a name="CloseExportFile" ns="Export.dll">
+					<p type="bInter" name="bInter"/>
+					<p type="bDebug" name="bDebug"/>
+				</a>
+			</func>
+		</rule>
+	</ruleset>
+</archive>
