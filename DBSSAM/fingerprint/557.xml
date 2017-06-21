@@ -1,0 +1,18 @@
+<S>
+  <P type="NN7 Front Page">
+    <V n="HostID">15</V>
+    <V n="HostName">NN7 Form</V>
+    <F type="NN7_Company_Number">
+      <V n="Position">1832,742,2321,860</V>
+    </F>
+    <F type="NN7_Company_Name">
+      <V n="Position">312,966,2321,1190</V>
+    </F>
+    <F type="NN7_Surname">
+      <V n="Position">1048,2039,2233,2174</V>
+    </F>
+    <F type="NN7_Othername">
+      <V n="Position">1054,2210,2245,2339</V>
+    </F>
+  </P>
+</S>

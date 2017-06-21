@@ -1,0 +1,75 @@
+<S>
+  <P type="Use of Info Page">
+    <V n="HostID">16</V>
+    <V n="HostName">Use of Info Form</V>
+    <F type="Name">
+      <V n="Position">512,462,1794,586</V>
+    </F>
+    <F type="Contact_No">
+      <V n="Position">426,596,1048,686</V>
+    </F>
+    <F type="ID_No">
+      <V n="Position">1497,599,2160,709</V>
+    </F>
+    <F type="Staff_Name">
+      <V n="Position">1468,2471,1854,2668</V>
+    </F>
+    <F type="Date">
+      <V n="Position">2017,2465,2330,2678</V>
+    </F>
+    <F type="Br_Code">
+      <V n="Position">393,2764,722,2861</V>
+    </F>
+    <F type="TIN_No">
+      <V n="Position">958,2771,1235,2854</V>
+    </F>
+    <F type="Staff_Phone_No">
+      <V n="Position">1957,2751,2256,2894</V>
+    </F>
+    <F type="Officer_Name_Code">
+      <V n="Position">489,2874,1215,2968</V>
+    </F>
+    <F type="Checker">
+      <V n="Position">452,2988,998,3164</V>
+    </F>
+    <F type="Recording_Start_Time">
+      <V n="Position">1464,3018,1734,3131</V>
+    </F>
+    <F type="Ext_No">
+      <V n="Position">1947,3024,2236,3134</V>
+    </F>
+    <F type="Request_For_Invest">
+      <V n="Position">135,875,2134,1134</V>
+    </F>
+    <F type="All_Invest">
+      <V n="Position">264,915,298,944</V>
+    </F>
+    <F type="All_Insurance">
+      <V n="Position">271,968,302,997</V>
+    </F>
+    <F type="Market_Update">
+      <V n="Position">268,1031,298,1053</V>
+    </F>
+    <F type="All">
+      <V n="Position">268,1084,295,1109</V>
+    </F>
+    <F type="Direct_Marketing_Opt_In">
+      <V n="Position">173,1769,401,2101</V>
+    </F>
+    <F type="I wish the Bank to use my personal data in direct marketing">
+      <V n="Position">270,1820,302,1852</V>
+    </F>
+    <F type="I wish the Bank to provide my personal data to other persons">
+      <V n="Position">273,1983,307,2007</V>
+    </F>
+    <F type="Use_of_Deposit_Info">
+      <V n="Position">134,1214,347,1474</V>
+    </F>
+    <F type="I agree to allow the Bank to access">
+      <V n="Position">271,1257,301,1294</V>
+    </F>
+    <F type="I do not wish for the bank to access">
+      <V n="Position">271,1380,304,1417</V>
+    </F>
+  </P>
+</S>
