@@ -1,0 +1,142 @@
+Log started Wed May 31 16:27:42 2017
+------------------------------------
+16:27:42.120 State xml: <s lib="DBSPOC3" wf="DBSPOC3" tprofile="FingerprintAdd"  log_time="y" log_timediff="n" log_threadproc="n" log_override="y" log_reflush="n" service_log="3" action_log_level="0" batch_log="y" script_reload="y" dco_reload="y"></s>
+16:27:42.120 Workflow "DBSPOC3" paths: runtime="C:\Datacap\DBSPOC3\batches\"; process="C:\Datacap\DBSPOC3\dco_DBSPOC3\"; setup dco="C:\Datacap\DBSPOC3\dco_DBSPOC3\DBSPOC3.xml"; runtime dco="C:\Datacap\DBSPOC3\fingerprint\570DBSPOC3.xml";
+16:27:42.120 ruleset:
+16:27:42.170    ruleset name="Image Enhancement" id="ImageEnhancement" target object="B" target id="CCO BATCH" target type="DBSPOC3"
+16:27:42.170    rule "Other Image Enhancement Rule"
+16:27:42.170       func "Enhance Image Function"
+16:27:42.170          action rrSet ("[OperationCollection name=|default|][Operation name=|Auto Rotate| enabled=|False| operationType=|AutoRotate| /][Operation name=|Deskew| enabled=|True| operationType=|Deskew| DeskewAngle=|0.2| DeskewMaintainOriginalSize=|False| DeskewMinimumConfidence=|50| DeskewMinimumCorrectableAngle=|0.2| DeskewQuality=|80| /][Operation name=|Remove Lines| enabled=|True| operationType=|RemoveLines| MaximumCharacterRepairSize=|20| MaximumGap=|1| MinimumAspectRatio=|10| MinimumLength=|50| MaximumThickness=|4| /][Operation name=|Border Removal| enabled=|True| operationType=|BorderRemoval| AmountToExpandPage=|0| BorderSpeckSize=|3| CropBorder=|True| DeskewBorder=|True| MaximumPageHeight=|0| MaximumPageWidth=|0| BBMinimumConfidence=|50| MinimumPageHeight=|0| MinimumPageWidth=|0| PageSpeckSize=|2| BBQuality=|80| ReplaceBorder=|False| /][Operation name=|Despeckle| enabled=|False| operationType=|Despeckle| SpeckHeight=|2| SpeckWidth=|2| /][Operation name=|Dilate| enabled=|False| operationType=|Dilate| DilateAmount=|1| DilateDirection=|15| DilateOnlyDiagonal=|False| /][Operation name=|Image Registration| enabled=|False| operationType=|Registration| HorizontalActive=|True| HorizontalAddOnly=|False| HorizontalCentralFocus=|False| HorizontalIgnoreHoles=|False| HorizontalMinimumActivity=|3| HorizontalMinimumBackground=|5| HorizontalMinimumForeground=|5| HorizontalResultantMargin=|150| HorizontalSkipActive=|False| HorizontalSkipDistance=|20| HorizontalToLineActive=|False| HorizontalToLineCheckThinLinesActive=|False| HorizontalToLineMaximumLineGap=|2| HorizontalToLineMaximumLineThickness=|22| HorizontalToLineMinimumLineLength=|300| VerticalActive=|True| VerticalAddOnly=|False| VerticalCentralFocus=|False| VerticalMinimumActivity=|3| VerticalMinimumBackground=|5| VerticalMinimumForeground=|5| VerticalResultantMargin=|150| VerticalSkipActive=|False| VerticalSkipDistance=|20| VerticalToLineCheckThinLinesActive=|False| VerticalToLineMaximumLineGap=|2| VerticalToLineMaximumLineThickness=|22| VerticalToLineMinimumLineLength=|300| /][Operation name=|Inverse Text Correction| enabled=|False| operationType=|InverseTextCorrection| ITMinimumAreaHeight=|50| ITMinimumAreaWidth=|300| MinimumBlankOnEdges=|10| /][Operation name=|Remove Blobs| enabled=|False| operationType=|BlobRemoval| BlobRemovalMaxPixCount=|10000| BlobRemovalMinDensity=|50| BlobRemovalMinPixCount=|300| /][Operation name=|Remove Combs| enabled=|False| operationType=|CombRemoval| CombHeight=|20| CombSpacing=|25| HorizontalLineThickness=|4| MinimumCombLength=|50| MinimumConfidence=|50| VerticalLineThickness=|4| /][Operation name=|Remove Dot Shading| enabled=|False| operationType=|DotShadingRemoval| DensityAdjustment=|0| HorizontalSizeAdjustment=|0| MaximumDotSize=|5| MinimumAreadWidth=|300| MinimumAreadHeight=|50| VerticalSizeAdjustment=|0| /][Operation name=|Remove Hole Punch| enabled=|False| operationType=|AutoRemoveHolePunch| /][/OperationCollection]","@P.processingSettings")
+16:27:42.200             load rrx code: "c:\datacap\rrs\rrunner.dll"
+16:27:42.210  Smartparameter Object created
+16:27:42.230  Datacap Global Strings Object created
+16:27:42.230  Datacap Global Dates Object created
+16:27:42.230  Datacap Global Currency Object created
+16:27:42.230  Datacap Global Locale Object created
+16:27:42.230  Datacap Global Bidi Object created
+16:27:42.230  rrunner: loading file v. 9.1.0.130
+16:27:42.240  Current Locale: '1033 (en-US)' English (United States)
+16:27:42.240  Global FileMgr Object created
+16:27:42.240  Global ImageCtrl Object created
+16:27:42.240  Global oConn Object created
+16:27:42.240  Global CCOCreator Object created
+16:27:42.240  Global CCO Object created
+16:27:42.240  Pilot XML:
+<B id="dc_z_cco"><P n="BatchDir">C:\Datacap\DBSPOC3\fingerprint</P><P n="AppName"></P><P n="Workflow"></P><P n="DCOFile">C:\Datacap\DBSPOC3\fingerprint\570DBSPOC3.xml</P><P n="Operator">admin</P><P n="Station">1</P><P n="JobName">Sample Job</P><P n="TaskName">Sample Task</P><P n="Priority">5</P><P n="PagesInBatch">1</P><P n="DocsInBatch">0</P><P n="ExpectedPages">0</P><P n="ExpectedDocs">0</P><P n="AdjustedPages">0</P><P n="AdjustedDocs">0</P><P n="ProjectPath"></P></B>
+
+
+16:27:42.240  Set DCLogX
+16:27:42.240  Retrieving locale setting from Application Service
+16:27:42.240  Looking for AppSvc Workflow Name key: '*/dco_DBSPOC3/locale'
+16:27:42.240  Looking for AppSvc Application Name key: '*/dco_DBSPOC3/locale'
+16:27:42.240  Looking for AppSvc General key: '*/locale'
+16:27:42.240  No locale setting found in the Application Service.
+16:27:42.240  Retrieving Fingerprint DB Connection string from Application Service
+16:27:42.240  Looking for AppSvc Workflow Name key: '*/dco_DBSPOC3/fingerprintconn:cs'
+16:27:42.240  AppSvc Workflow fingerprintconn found.
+16:27:42.240             /load
+16:27:42.240  Current Locale: '1033 (en-US)' English (United States)
+16:27:42.250 DCSmart Metaword sArgument: [OperationCollection name=|default|][Operation name=|Auto Rotate| enabled=|False| operationType=|AutoRotate| /][Operation name=|Deskew| enabled=|True| operationType=|Deskew| DeskewAngle=|0.2| DeskewMaintainOriginalSize=|False| DeskewMinimumConfidence=|50| DeskewMinimumCorrectableAngle=|0.2| DeskewQuality=|80| /][Operation name=|Remove Lines| enabled=|True| operationType=|RemoveLines| MaximumCharacterRepairSize=|20| MaximumGap=|1| MinimumAspectRatio=|10| MinimumLength=|50| MaximumThickness=|4| /][Operation name=|Border Removal| enabled=|True| operationType=|BorderRemoval| AmountToExpandPage=|0| BorderSpeckSize=|3| CropBorder=|True| DeskewBorder=|True| MaximumPageHeight=|0| MaximumPageWidth=|0| BBMinimumConfidence=|50| MinimumPageHeight=|0| MinimumPageWidth=|0| PageSpeckSize=|2| BBQuality=|80| ReplaceBorder=|False| /][Operation name=|Despeckle| enabled=|False| operationType=|Despeckle| SpeckHeight=|2| SpeckWidth=|2| /][Operation name=|Dilate| enabled=|False| operationType=|Dilate| DilateAmount=|1| DilateDirection=|15| DilateOnlyDiagonal=|False| /][Operation name=|Image Registration| enabled=|False| operationType=|Registration| HorizontalActive=|True| HorizontalAddOnly=|False| HorizontalCentralFocus=|False| HorizontalIgnoreHoles=|False| HorizontalMinimumActivity=|3| HorizontalMinimumBackground=|5| HorizontalMinimumForeground=|5| HorizontalResultantMargin=|150| HorizontalSkipActive=|False| HorizontalSkipDistance=|20| HorizontalToLineActive=|False| HorizontalToLineCheckThinLinesActive=|False| HorizontalToLineMaximumLineGap=|2| HorizontalToLineMaximumLineThickness=|22| HorizontalToLineMinimumLineLength=|300| VerticalActive=|True| VerticalAddOnly=|False| VerticalCentralFocus=|False| VerticalMinimumActivity=|3| VerticalMinimumBackground=|5| VerticalMinimumForeground=|5| VerticalResultantMargin=|150| VerticalSkipActive=|False| VerticalSkipDistance=|20| VerticalToLineCheckThinLinesActive=|False| VerticalToLineMaximumLineGap=|2| VerticalToLineMaximumLineThickness=|22| VerticalToLineMinimumLineLength=|300| /][Operation name=|Inverse Text Correction| enabled=|False| operationType=|InverseTextCorrection| ITMinimumAreaHeight=|50| ITMinimumAreaWidth=|300| MinimumBlankOnEdges=|10| /][Operation name=|Remove Blobs| enabled=|False| operationType=|BlobRemoval| BlobRemovalMaxPixCount=|10000| BlobRemovalMinDensity=|50| BlobRemovalMinPixCount=|300| /][Operation name=|Remove Combs| enabled=|False| operationType=|CombRemoval| CombHeight=|20| CombSpacing=|25| HorizontalLineThickness=|4| MinimumCombLength=|50| MinimumConfidence=|50| VerticalLineThickness=|4| /][Operation name=|Remove Dot Shading| enabled=|False| operationType=|DotShadingRemoval| DensityAdjustment=|0| HorizontalSizeAdjustment=|0| MaximumDotSize=|5| MinimumAreadWidth=|300| MinimumAreadHeight=|50| VerticalSizeAdjustment=|0| /][Operation name=|Remove Hole Punch| enabled=|False| operationType=|AutoRemoveHolePunch| /][/OperationCollection]
+16:27:42.250 Smart Parameter return value: ''
+16:27:42.250 DCOFindVar: looking for a variable in string: '@P.processingSettings'
+16:27:42.250 Detected a variable 'processingSettings' in the search node value.
+16:27:42.250 CurrentDCO Object ID: FingerprintPage
+16:27:42.250 Calling Object ID: FingerprintPage
+16:27:42.260 Eval Node '@P.processingSettings'
+16:27:42.260 A Variable value is in the node list! (Remove)
+16:27:42.260 New Node List:''
+16:27:42.260 DCONav returning node having ID of:'FingerprintPage'
+16:27:42.260 Setting 'FingerprintPage.processingSettings' value to '[OperationCollection name=|default|][Operation name=|Auto Rotate| enabled=|False| operationType=|AutoRotate| /][Operation name=|Deskew| enabled=|True| operationType=|Deskew| DeskewAngle=|0.2| DeskewMaintainOriginalSize=|False| DeskewMinimumConfidence=|50| DeskewMinimumCorrectableAngle=|0.2| DeskewQuality=|80| /][Operation name=|Remove Lines| enabled=|True| operationType=|RemoveLines| MaximumCharacterRepairSize=|20| MaximumGap=|1| MinimumAspectRatio=|10| MinimumLength=|50| MaximumThickness=|4| /][Operation name=|Border Removal| enabled=|True| operationType=|BorderRemoval| AmountToExpandPage=|0| BorderSpeckSize=|3| CropBorder=|True| DeskewBorder=|True| MaximumPageHeight=|0| MaximumPageWidth=|0| BBMinimumConfidence=|50| MinimumPageHeight=|0| MinimumPageWidth=|0| PageSpeckSize=|2| BBQuality=|80| ReplaceBorder=|False| /][Operation name=|Despeckle| enabled=|False| operationType=|Despeckle| SpeckHeight=|2| SpeckWidth=|2| /][Operation name=|Dilate| enabled=|False| operationType=|Dilate| DilateAmount=|1| DilateDirection=|15| DilateOnlyDiagonal=|False| /][Operation name=|Image Registration| enabled=|False| operationType=|Registration| HorizontalActive=|True| HorizontalAddOnly=|False| HorizontalCentralFocus=|False| HorizontalIgnoreHoles=|False| HorizontalMinimumActivity=|3| HorizontalMinimumBackground=|5| HorizontalMinimumForeground=|5| HorizontalResultantMargin=|150| HorizontalSkipActive=|False| HorizontalSkipDistance=|20| HorizontalToLineActive=|False| HorizontalToLineCheckThinLinesActive=|False| HorizontalToLineMaximumLineGap=|2| HorizontalToLineMaximumLineThickness=|22| HorizontalToLineMinimumLineLength=|300| VerticalActive=|True| VerticalAddOnly=|False| VerticalCentralFocus=|False| VerticalMinimumActivity=|3| VerticalMinimumBackground=|5| VerticalMinimumForeground=|5| VerticalResultantMargin=|150| VerticalSkipActive=|False| VerticalSkipDistance=|20| VerticalToLineCheckThinLinesActive=|False| VerticalToLineMaximumLineGap=|2| VerticalToLineMaximumLineThickness=|22| VerticalToLineMinimumLineLength=|300| /][Operation name=|Inverse Text Correction| enabled=|False| operationType=|InverseTextCorrection| ITMinimumAreaHeight=|50| ITMinimumAreaWidth=|300| MinimumBlankOnEdges=|10| /][Operation name=|Remove Blobs| enabled=|False| operationType=|BlobRemoval| BlobRemovalMaxPixCount=|10000| BlobRemovalMinDensity=|50| BlobRemovalMinPixCount=|300| /][Operation name=|Remove Combs| enabled=|False| operationType=|CombRemoval| CombHeight=|20| CombSpacing=|25| HorizontalLineThickness=|4| MinimumCombLength=|50| MinimumConfidence=|50| VerticalLineThickness=|4| /][Operation name=|Remove Dot Shading| enabled=|False| operationType=|DotShadingRemoval| DensityAdjustment=|0| HorizontalSizeAdjustment=|0| MaximumDotSize=|5| MinimumAreadWidth=|300| MinimumAreadHeight=|50| VerticalSizeAdjustment=|0| /][Operation name=|Remove Hole Punch| enabled=|False| operationType=|AutoRemoveHolePunch| /][/OperationCollection]'.
+16:27:42.260             action returned true
+16:27:42.260  Action esec='0.02344'
+16:27:42.260          /action
+16:27:42.260          action ImageEnhance ("")
+16:27:42.280             load rrx code: "c:\datacap\rrs\imagefix.dll"
+16:27:42.280  ImageFix version 9.1.0.28
+16:27:42.290  Datacap.Libraries.ImageFix.Actions Object created
+16:27:42.330 C:\Datacap\dcshared\NET\Datacap.Libraries.ImageFix.dll. AssemblyVersion: 9.0.0.0. AssemblyFileVersion: 9.0.1.37.
+16:27:42.370             /load
+16:27:42.380  Current Locale: '1033 (en-US)' English (United States)
+16:27:42.390 Creating backup file.
+16:27:42.390 Automatic file extension mode.
+16:27:42.390 Saving backup file as c:\datacap\dbspoc3\fingerprint\FingerprintPage.ti14
+16:27:42.390 Done.
+16:27:42.570 Settings XML:<OperationCollection name="default"><Operation name="Auto Rotate" enabled="False" operationType="AutoRotate" /><Operation name="Deskew" enabled="True" operationType="Deskew" DeskewAngle="0.2" DeskewMaintainOriginalSize="False" DeskewMinimumConfidence="50" DeskewMinimumCorrectableAngle="0.2" DeskewQuality="80" /><Operation name="Remove Lines" enabled="True" operationType="RemoveLines" MaximumCharacterRepairSize="20" MaximumGap="1" MinimumAspectRatio="10" MinimumLength="50" MaximumThickness="4" /><Operation name="Border Removal" enabled="True" operationType="BorderRemoval" AmountToExpandPage="0" BorderSpeckSize="3" CropBorder="True" DeskewBorder="True" MaximumPageHeight="0" MaximumPageWidth="0" BBMinimumConfidence="50" MinimumPageHeight="0" MinimumPageWidth="0" PageSpeckSize="2" BBQuality="80" ReplaceBorder="False" /><Operation name="Despeckle" enabled="False" operationType="Despeckle" SpeckHeight="2" SpeckWidth="2" /><Operation name="Dilate" enabled="False" operationType="Dilate" DilateAmount="1" DilateDirection="15" DilateOnlyDiagonal="False" /><Operation name="Image Registration" enabled="False" operationType="Registration" HorizontalActive="True" HorizontalAddOnly="False" HorizontalCentralFocus="False" HorizontalIgnoreHoles="False" HorizontalMinimumActivity="3" HorizontalMinimumBackground="5" HorizontalMinimumForeground="5" HorizontalResultantMargin="150" HorizontalSkipActive="False" HorizontalSkipDistance="20" HorizontalToLineActive="False" HorizontalToLineCheckThinLinesActive="False" HorizontalToLineMaximumLineGap="2" HorizontalToLineMaximumLineThickness="22" HorizontalToLineMinimumLineLength="300" VerticalActive="True" VerticalAddOnly="False" VerticalCentralFocus="False" VerticalMinimumActivity="3" VerticalMinimumBackground="5" VerticalMinimumForeground="5" VerticalResultantMargin="150" VerticalSkipActive="False" VerticalSkipDistance="20" VerticalToLineCheckThinLinesActive="False" VerticalToLineMaximumLineGap="2" VerticalToLineMaximumLineThickness="22" VerticalToLineMinimumLineLength="300" /><Operation name="Inverse Text Correction" enabled="False" operationType="InverseTextCorrection" ITMinimumAreaHeight="50" ITMinimumAreaWidth="300" MinimumBlankOnEdges="10" /><Operation name="Remove Blobs" enabled="False" operationType="BlobRemoval" BlobRemovalMaxPixCount="10000" BlobRemovalMinDensity="50" BlobRemovalMinPixCount="300" /><Operation name="Remove Combs" enabled="False" operationType="CombRemoval" CombHeight="20" CombSpacing="25" HorizontalLineThickness="4" MinimumCombLength="50" MinimumConfidence="50" VerticalLineThickness="4" /><Operation name="Remove Dot Shading" enabled="False" operationType="DotShadingRemoval" DensityAdjustment="0" HorizontalSizeAdjustment="0" MaximumDotSize="5" MinimumAreadWidth="300" MinimumAreadHeight="50" VerticalSizeAdjustment="0" /><Operation name="Remove Hole Punch" enabled="False" operationType="AutoRemoveHolePunch" /></OperationCollection>
+16:27:42.580 Number of operations to be performed: 12
+16:27:42.580 Performing operation: Deskew
+16:27:42.590 Performing operation: RemoveLines
+16:27:42.620 Performing operation: BorderRemoval
+16:27:42.740 Releasing original image...
+16:27:42.740 Obtaining enhanced image...
+16:27:42.740 Saving enhanced image...
+16:27:42.740 file extension : .tif
+16:27:42.740 Image will be saved with LZW compression
+16:27:42.750 Saving complete.
+16:27:42.750 Resources released.
+16:27:42.780             action returned true
+16:27:42.780  Action esec='0.40234'
+16:27:42.780          /action
+16:27:42.780          func result: "true"
+16:27:42.780  Function esec='0.54297'
+16:27:42.780       /func
+16:27:42.780  DocCount 0,  PageCount 1
+16:27:42.780  OVERRIDEABLE:True
+16:27:42.780  Rule esec='0.54297'
+16:27:42.780       rule result: "true"
+16:27:42.780    /rule
+16:27:42.780  RuleSet finished with TaskStatus '2'
+16:27:42.780  Total Ruleset Action   esec:'0.42578'
+16:27:42.780  Total Ruleset Function esec:'0.54297'
+16:27:42.780  Total Ruleset Rule     esec:'0.54297'
+16:27:42.780  OnRuleSetEnd Pilot XML:
+<B id="dc_z_cco"><P n="BatchDir">C:\Datacap\DBSPOC3\fingerprint</P><P n="AppName"></P><P n="Workflow"></P><P n="DCOFile">C:\Datacap\DBSPOC3\fingerprint\570DBSPOC3.xml</P><P n="Operator">admin</P><P n="Station">1</P><P n="JobName">Sample Job</P><P n="TaskName">Sample Task</P><P n="Priority">5</P><P n="PagesInBatch">1</P><P n="DocsInBatch">0</P><P n="ExpectedPages">0</P><P n="ExpectedDocs">0</P><P n="AdjustedPages">0</P><P n="AdjustedDocs">0</P><P n="ProjectPath">C:\Datacap\DBSPOC3\dco_DBSPOC3\Paths.ini</P></B>
+
+
+16:27:42.800 /ruleset
+16:27:42.800 ruleset:
+16:27:42.800  OnRuleSetStart Pilot XML:
+<B id="dc_z_cco"><P n="BatchDir">C:\Datacap\DBSPOC3\fingerprint</P><P n="AppName"></P><P n="Workflow"></P><P n="DCOFile">C:\Datacap\DBSPOC3\fingerprint\570DBSPOC3.xml</P><P n="Operator">admin</P><P n="Station">1</P><P n="JobName">Sample Job</P><P n="TaskName">Sample Task</P><P n="Priority">5</P><P n="PagesInBatch">1</P><P n="DocsInBatch">0</P><P n="ExpectedPages">0</P><P n="ExpectedDocs">0</P><P n="AdjustedPages">0</P><P n="AdjustedDocs">0</P><P n="ProjectPath">C:\Datacap\DBSPOC3\dco_DBSPOC3\Paths.ini</P></B>
+
+
+16:27:42.800    ruleset name="FingerprintAdd" id="8" target object="B" target id="CCO BATCH" target type="DBSPOC3"
+16:27:42.800    rule "FingerprintAdd"
+16:27:42.800  Set DCLogX
+16:27:42.800       func "FingeprintAdd: Other Function 1"
+16:27:42.800          action AnalyzeImage ()
+16:27:42.820             load rrx code: "c:\datacap\rrs\recog_shared.dll"
+16:27:42.850                load rrx code: "c:\datacap\rrs\cco2cco.dll"
+16:27:42.850  CCO to CCO version 9.1.0.34
+16:27:42.850                /load
+16:27:42.850  Recog_shared action library version 9.1.0.7
+16:27:42.850             /load
+16:27:42.850  Current Locale: '1033 (en-US)' English (United States)
+16:27:42.850  ----- Analysis of: c:\datacap\dbspoc3\fingerprint\570.tif -----
+16:27:42.850  Current DCOProcessor state: True
+16:27:43.326  DCOProcessor has been initialized.
+16:27:43.326  Updated DCOProcessor state: TRUE
+16:27:43.556  Analysis time: 0.7031
+16:27:43.556             action returned true
+16:27:43.556  Action esec='0.70313'
+16:27:43.556          /action
+16:27:43.556          func result: "true"
+16:27:43.556  Function esec='0.75391'
+16:27:43.556       /func
+16:27:43.556  DocCount 0,  PageCount 1
+16:27:43.556  OVERRIDEABLE:True
+16:27:43.556  Rule esec='0.75391'
+16:27:43.556       rule result: "true"
+16:27:43.556    /rule
+16:27:43.556  RuleSet finished with TaskStatus '2'
+16:27:43.556  Total Ruleset Action   esec:'0.70313'
+16:27:43.556  Total Ruleset Function esec:'0.75391'
+16:27:43.556  Total Ruleset Rule     esec:'0.75391'
+16:27:43.556  Total Profile Action   esec:'1.12891'
+16:27:43.556  Total Profile Function esec:'1.29688'
+16:27:43.556  Total Profile Rule     esec:'1.29688'
+16:27:43.556  OnRuleSetEnd Pilot XML:
+<B id="dc_z_cco"><P n="BatchDir">C:\Datacap\DBSPOC3\fingerprint</P><P n="AppName"></P><P n="Workflow"></P><P n="DCOFile">C:\Datacap\DBSPOC3\fingerprint\570DBSPOC3.xml</P><P n="Operator">admin</P><P n="Station">1</P><P n="JobName">Sample Job</P><P n="TaskName">Sample Task</P><P n="Priority">5</P><P n="PagesInBatch">1</P><P n="DocsInBatch">0</P><P n="ExpectedPages">0</P><P n="ExpectedDocs">0</P><P n="AdjustedPages">0</P><P n="AdjustedDocs">0</P><P n="ProjectPath">C:\Datacap\DBSPOC3\dco_DBSPOC3\Paths.ini</P></B>
+
+
+16:27:43.576 /ruleset
+16:27:43.726 c:\datacap\RRS\Logs\wrrs
+16:27:43.726 end log to batch

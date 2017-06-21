@@ -1,0 +1,26 @@
+Log started Tue Jun 20 21:06:32 2017
+------------------------------------
+21:06:32.864 (0)	State xml: <s lib='DBSCS' wf='DBSCS' tprofile='FingerprintRemove'></s>
+21:06:32.864 (0)	Error (385875990=hex:17000016). In CIState::SystemsCheck: ERROR: no rulesets provided.One of the following must be provided via State.XML:
+Ruleset list (was provided:"")
+Task profile (was provided:"")
+Task name or index along with aTM object for a task with settings containing ruleset list (was provided: task name: "" task index="")
+[Lib file: collection.xml in "C:\Datacap\DBSCS\dco_DBSCS\rules\"]; refer to state.XML log for more information [api source:]
+
+21:06:32.864 (0)	EXCEPTION: code="385875990" msg="ERROR: no rulesets provided.One of the following must be provided via State.XML:
+Ruleset list (was provided:"")
+Task profile (was provided:"")
+Task name or index along with aTM object for a task with settings containing ruleset list (was provided: task name: "" task index="")
+[Lib file: collection.xml in "C:\Datacap\DBSCS\dco_DBSCS\rules\"]; refer to state.XML log for more information" loc="CIState::SystemsCheck" API=""
+21:06:32.864 (0)	CIMainAlgorithm::Execute::finalize_after_process:
+21:06:32.864 (0)	execute statement On Process End
+21:06:32.864 (0)	   nothing to exec
+21:06:32.864 (0)	/execute statement On Process End
+21:06:32.864 (0)	CIMainAlgorithm::Execute::finalize_after_process:SaveDCO:
+21:06:32.867 (15)	unload script [m0x="803368c"]
+21:06:32.867 (0)	   skip unload: not even inited
+21:06:32.867 (0)	/unload
+21:06:32.867 (0)	unload COM m0x="803365c">
+21:06:32.867 (0)	/unload
+21:06:32.867 (0)	c:\datacap\RRS\Logs\wrrs
+21:06:32.867 (0)	end log to batch
