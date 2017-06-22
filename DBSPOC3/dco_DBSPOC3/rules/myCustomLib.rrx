@@ -1,0 +1,4210 @@
+<?xml version='1.0' ?>
+<rrx namespace="myCustomLib" v="9"><i ref="rrunner"/><i ref="Zones"/>
+<g>
+	<![CDATA[
+' **************************************************************************************************
+' * Datacap Inc.  an IBM Company
+' *
+' * Title : CustomLib
+' * These action are meant for Demo Purposes
+' * 
+' *  (C) Copyright IBM Canada Ltd., 2012.  All Rights Reserved.
+' *
+' * 
+' *  History:
+' *  Name               DDMMYYYY   Version   Action Name                    Description
+' *  ----               --------   --------  ---------------               ------------------
+' *  Tony Chiam         05072012    1.0       MyLog                        Create Log
+' *  Tony Chiam         05072012    1.0       GetPageCount                 Gets a count of the number of pages in a document
+' *  Tony Chiam         05072012    1.0       DoubleBlind              	   Setting up doubleblind variables
+' *  Tony Chiam         05072012    1.0       AddDecimalPlace              Formatting a field with decimal place
+' *  Tony Chiam         05072012    1.0       SplitImages                  This will split a booklet that is been scanned and reorder page accordingly
+' *  Tony Chiam         05072012    1.0       OrganizeDocs                 Reorganizes pages in a Document to correspond to order of input parameters.
+' *  Tony Chiam         05072012    1.0       RemovePagesByStatus          Removes any pages with the selected status from the batch
+' *  Tony Chiam         05072012    1.0       RemoveDocuments			   Removes any documents from the batch, leaving only pages
+' *  Tony Chiam         05072012    1.0       SplitField                   This SplitField action will split a field based on the separator and put the field in sequence under NameOfField
+' *  Tony Chiam         05072012    1.0       rrCompareRegEx               A smart parameter referencing a value or which is a reference to a value.
+' *  Tony Chiam         05072012    1.0       rrCompareNotRegEx            A smart parameter referencing a value or which is a reference to a value
+' *  Tony Chiam         05072012    1.0       CallWebService               Call a web service with 7 Smart Parameters
+' *  Tony Chiam         05072012    1.0       ZoneLastXLinesOnPage         Dynamically defines a zone for capture on a page
+' *  Tony Chiam         05072012    1.0       ReadXMLFile              	   Will be updating
+' *  Tony Chiam         05072012    1.0       UpdateXMLFile                Will be updating
+' *  Tony Chiam         05072012    1.0       FormatMyDate                 Still in progress
+' *  Tony Chiam         13112013    1.0       AddOverlay                   Will be updating
+
+' *
+'***************************************************************************************************
+
+	]]>
+</g>
+
+<f name="GetFldConf" access="public" qi="Removes any pages with the selected status from the batch">
+  <ap>
+    The status for deleted Fields.
+  </ap>
+  <h>
+    This action will get the confidence of the field
+    <e>
+      <b>GetFldConf()</b>
+    </e>
+  </h>
+  <lvl>Field level.</lvl>
+  <ret>
+    Always <b>True.</b>
+  </ret>
+<g><![CDATA[
+
+	Dim lConfChar
+	Dim nIndex
+	Dim oField
+	Dim oField_Conf
+	
+	On Error Resume Next
+
+	oField_Conf = 0
+	Set oField = CurrentObj
+	lConfStr = oField.ConfidenceString
+	
+	for i=1 to len(lConfStr)
+		lConfChar = Mid(lConfStr, i, 1)
+		oField_Conf = oField_Conf + cInt(lConfChar)
+	next	
+	
+	oField_Conf_Percentage = Round(((oField_Conf / (len(lConfStr)*9))*100),2)
+	
+	WriteLog("The confidence is :" & oField_Conf)
+	
+	ParamStr = "@P." & oField.ID & "_Conf"
+
+	Retn = rrSet(oField_Conf_Percentage,ParamStr)
+	
+	GetFldConf = True
+
+
+]]>
+  </g>
+</f>
+
+
+<f name="locate_address" access="public" qi="Sample logfile message">
+  <p name="TopField"/>
+  <p name="BottomField"/>
+  <ap>
+   Document your parameters here<br/>
+  </ap>
+  <h>
+         Explain the usage of your action here<br/>
+    <e>
+        Place an example action call<br/>
+    </e>
+  </h>
+  <lvl>
+      Place the level (Batch,Document,Page, or Field) that you need the action to be run from if there
+      is any dependency.
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+
+	Dim dTopField  
+  	Dim dBottomField
+	Dim oObj 	
+	Dim imgDepth
+	Dim L1
+	Dim T1
+	Dim R1
+	Dim B1
+	Dim L2
+	Dim T2
+	Dim R2
+	Dim B2
+	
+	dTopField = Split(MetaWord(TopField),",")
+	dBottomField = Split(MetaWord(BottomField),",")
+	
+	L1 = dTopField(0)
+	T1 = dTopField(1)
+	R1 = dTopField(2)
+	B1 = dTopField(3)
+	
+	L2 = dBottomField(0)
+	T2 = dBottomField(1)
+	R2 = dBottomField(2)
+	B2 = dBottomField(3)	
+	
+	if R1 > R2 then
+		R2 = CINT(R1) + 300
+	else
+		R2 = CINT(R2) + 300
+	end if
+		WriteLog(Space(5) & "dTopField:" & R2)
+	
+	newPosition = L1 & "," & B1 & "," & R2 & "," & T2
+	WriteLog(Space(5) & "newPosition:" & newPosition)
+	
+	CurrentObj.Variable("Position") = newPosition
+ 
+	locate_address = True
+ 
+  ]]>
+  </g>
+</f>
+
+<f name="FixLeftChar" access="public" qi="Sample logfile message">
+  <p name="Parameter1"/>
+  <ap>
+   Document your parameters here<br/>
+  </ap>
+  <h>
+      This action is meant to check if the first character is supposed to be Alpha. It will replace it with a Alpha if Numeric is found<br/>
+	  Sometimes the recognition may have thought that the entire field are numeric, S2345678 may be recognized as 52345678
+    <e>
+        If the field is 123456, it will be replaced as I23456<br/>
+        If the field is 523456, it will be replaced as S23456<br/>
+        If the field is 823456, it will be replaced as B23456<br/>
+    </e>
+  </h>
+  <lvl>
+      Place at Field level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+	
+	Dim validate_field
+	Dim length_validate_field
+	Dim CheckLeftChar
+	
+	validate_field = CurrentObj.Text
+	length_validate_field = Len(validate_field) - 1
+	WriteLog("Before Conversion " & validate_field)
+	
+	CheckLeftChar = Left(validate_field,1)
+	
+	If IsNumeric(CheckLeftChar) then
+		CheckLeftChar = Replace(CheckLeftChar,"5","S")
+		CheckLeftChar = Replace(CheckLeftChar,"9","S")
+		CheckLeftChar = Replace(CheckLeftChar,"8","B")
+		CheckLeftChar = Replace(CheckLeftChar,"7","T")
+		CheckLeftChar = Replace(CheckLeftChar,"6","G")
+		CheckLeftChar = Replace(CheckLeftChar,"3","S")
+		CheckLeftChar = Replace(CheckLeftChar,"1","I")
+		CheckLeftChar = Replace(CheckLeftChar,"0","O")
+		CheckLeftChar = Replace(CheckLeftChar,"4","Y")
+		validate_field = CheckLeftChar & Right(validate_field, length_validate_field)
+	End If	
+	
+	
+	WriteLog("After Conversion " & validate_field)
+	
+	CurrentObj.Text = validate_field
+	FixLeftChar = True
+ 
+  ]]>
+  </g>
+</f>
+
+
+<f name="AttachSignature" access="public" qi="Sample logfile message">
+  <ap>
+   Document your parameters here<br/>
+  </ap>
+  <h>
+         Explain the usage of your action here<br/>
+    <e>
+        Place an example action call<br/>
+    </e>
+  </h>
+  <lvl>
+      Place the level (Batch,Document,Page, or Field) that you need the action to be run from if there
+      is any dependency.
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+	Dim mAccountNo
+	Dim oPageID
+	Dim lNumOfChildren  'number line holding the word
+	Dim wNumOfChildren  'column word
+	
+	Dim nIndex
+	Dim oField
+	Dim cIndex
+	Dim wIndex
+	Dim theIndex
+	Dim tableIndex
+	Dim oPage 
+	Dim line_no
+ 	Dim Table_Col 'Table array 	
+	
+	
+	AttachSignature = True
+	
+	Set mCurrentPage = CurrentObj
+
+	
+	'mAccountNo = mCurrentPage.FindChild("AccountNumber").Text
+	'WriteLog("Account Number : " + mAccountNo)
+	
+	oPageID = "sample_TM000001"
+	
+	'CopyFile("C:\\Datacap\\CheckIMG\\images\\signatures\\150051\\150051.tif", "C:\\Datacap\\CheckIMG\\batches\\20160119.000001\\150051.tif", true) 
+
+	
+	'WriteLog("Folder : " + folder + "\\" + accountNo.Text+ "\\" + accountNo.Text + ".tif");
+	'WriteLog("Current Batch Folder : " + BatchPilot.BatchDir);
+	'WriteLog("New File : " + BatchPilot.BatchDir + "\\Sample_" + CurrentDCO.ID + ".tif");
+
+	'File.Copy(folder + "\\" + accountNo.Text + "\\" + accountNo.Text + ".tif", BatchPilot.BatchDir + "\\Sample_" + CurrentDCO.ID+ ".tif");
+
+
+	'TDCOLib.DCO newPage = CurrentDCO.Parent().AddChild(2, "Sample_" + CurrentDCO.ID,1);
+	'newPage.Type = "Sample";
+	'newPage.Variable["IMAGEFILE"] = BatchPilot.BatchDir + "\\Sample_" + CurrentDCO.ID + ".tif";	
+	
+	'Add to DCO XML
+	mCurrentPage.AddChild 2, oPageID, -1
+	Set oClipPage = DCO.FindChild(oPageID)
+	oClipPage.Variable("TYPE") = "Sample"
+	oClipPage.Variable("STATUS") = "49"
+	oClipPage.ImageName = "sample_TM000001.tif"
+	
+	
+  ]]>
+  </g>
+</f>
+
+
+
+<f name="CreateRows" access="public" qi="Sample logfile message">
+  <ap>
+   Document your parameters here<br/>
+  </ap>
+  <h>
+         Explain the usage of your action here<br/>
+    <e>
+        Place an example action call<br/>
+    </e>
+  </h>
+  <lvl>
+      Place the level (Batch,Document,Page, or Field) that you need the action to be run from if there
+      is any dependency.
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+	Dim nNumOfChildren
+	Dim fNumOfChildren
+	Dim lNumOfChildren  'number line holding the word
+	Dim wNumOfChildren  'column word
+	
+	Dim nIndex
+	Dim oField
+	Dim cIndex
+	Dim wIndex
+	Dim theIndex
+	Dim tableIndex
+	Dim oPage 
+	Dim line_no
+ 	Dim Table_Col 'Table array 	
+	
+	Dim oTable 'Main Table
+	
+	Dim oCol 'Table column
+	Dim oCol_Details  'Column details
+	Dim oCol_Indexes  'Column details
+		
+	Table_Col = Array("No","Kecamatan","Desa","Nama","No Hp","Kondisi","Lahan","Lumiah","Tanda","Keterangan")
+	
+	CreateRows = True
+	line_no = 0 'this is meant for copying the value to the new table
+	
+ 	CurrentObj.Text=""
+	nCount=CurrentObj.NumOfChildren()
+	
+	CurrentObj.CreateFields()
+	For i=0 To nCount
+		set oField = CurrentObj.GetChild(i)
+		oField.ID = "Row" & i+1
+	'	Writelog("Step 1 : ")
+		'set oField = CurrentObj.GetChild(i)
+	'	Writelog("Step 2 : " & oField.ID)
+		'oField.ID = "Row" & i
+	Next
+	
+  ]]>
+  </g>
+</f>
+
+<f name="HideAllField" access="public" qi="Setting up HideAllField variables">
+<p name="Except1"/>
+<p name="Except2"/>
+<p name="Except3"/>
+<p name="Except4"/>
+<p name="Except5"/>
+<p name="Except6"/>
+
+  <ap>
+    This HideAllField action will traverse down the Page, and hide all the field except the 2 exception field.
+  </ap>
+  <h>
+        Except_this = hello1<br/>
+        And_this = hello2<br/>
+    <e>
+        if the field name is hello1, only hello1 will be displayed in verification<br/>
+        if the field name is hello2, only hello2 will be displayed in verification<br/>
+    </e>
+  </h>
+  <lvl>
+      Place at the Page level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  'Your VBScript code goes here.
+    Dim Retn
+    Dim i
+	Dim c
+    Dim oField
+    Dim ParamStr
+	
+
+    HideAllField = TRUE       'Actions must always return a TRUE or FALSE.
+	
+	Except1 = Trim(Except1) 
+	Except2 = Trim(Except2) 
+	Except3 = Trim(Except3) 
+	Except4 = Trim(Except4) 
+	Except5 = Trim(Except5) 
+	Except6 = Trim(Except6) 
+	thePattern = "(" & Except1 & ")|(" & Except2 & ")|(" & Except3 & ")|(" & Except4 & ")|(" & Except5 & ")|(" & Except6 & ")"
+	
+	Set regEx = CreateObject("VBScript.RegExp")
+	regEx.IgnoreCase = True
+	regEx.Global = True		
+	regEx.Pattern = thePattern
+
+	Set oPage = CurrentObj
+	nNumOfChildren = oPage.NumOfChildren
+	
+	For i = nNumOfChildren - 1 to 0 Step - 1 'loop through fields except last field (Browse)
+		Set oField = oPage.GetChild(i)	
+		
+		if NOT regEx.Test(oField.ID) then
+			Writelog("Yeah Regx successful : " & oField.ID)
+			Call oPage.DeleteChild(i)	
+		end if		
+	next 'i  
+
+  ]]>
+  </g>
+</f>
+
+<f name="FixTable" access="public" qi="Sample logfile message">
+  <p name="Parameter1"/>
+  <ap>
+   Document your parameters here<br/>
+  </ap>
+  <h>
+         Explain the usage of your action here<br/>
+    <e>
+        Place an example action call<br/>
+    </e>
+  </h>
+  <lvl>
+      Place the level (Batch,Document,Page, or Field) that you need the action to be run from if there
+      is any dependency.
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+	Dim nNumOfChildren
+	Dim fNumOfChildren
+	Dim lNumOfChildren  'number line holding the word
+	Dim wNumOfChildren  'column word
+	
+	Dim nIndex
+	Dim oField
+	Dim cIndex
+	Dim wIndex
+	Dim theIndex
+	Dim oPage 
+ 	Dim Table_Col 'Table array 	
+	
+	Dim oTable 'Main Table
+	
+	Dim oCol 'Table column
+	Dim oCol_Details  'Column details
+	Dim oCol_Indexes  'Column details
+		
+	Table_Col = Array("No","Kecamatan","Desa","Nama","No Hp","Kondisi","Lahan","Lumiah","Tanda","Keterangan")
+	
+	FixTable = True
+	
+	Set regEx = CreateObject("VBScript.RegExp")
+	regEx.Pattern = "table[.]{0,}"
+	regEx.IgnoreCase = True
+	regEx.Global = True	
+	
+	Set oPage = CurrentObj
+	
+	aNumOfChildren = oPage.NumOfChildren
+	Writelog("I found aNumOfChildren: " & aNumOfChildren)	
+	
+	For aIndex = aNumOfChildren - 1 to 0 Step - 1
+
+		Set aField = oPage.GetChild(aIndex)	
+		Writelog("I found aField: " & aField.ID)	
+		
+		if regEx.Test(aField.ID) then
+			theIndex = aIndex
+			Writelog("I found it")
+			Exit For
+		end if
+	
+	Next 'nIndex	
+	
+	Set oTable = oPage.GetChild(theIndex)
+	
+	nNumOfChildren = oTable.NumOfChildren 'Getting the number of rows
+	oTable.ID = "Table"
+	
+	
+
+	For nIndex = 0 to nNumOfChildren - 1
+		Set oField = oTable.GetChild(nIndex)  
+		
+		'Getting the number of column in the rows
+		fNumOfChildren = oField.NumOfChildren 
+		Writelog("Number of column: " & fNumOfChildren)
+		
+		if fNumOfChildren = 10 then 
+			For cIndex = 0 to fNumOfChildren - 1
+				'initialize the column index
+				oCol_Indexes = "" 
+				Set oCol = oField.GetChild(cIndex)
+				'Getting the number of lines in the column
+				lNumOfChildren = oCol.NumOfChildren
+				'Writelog("Number of lines: " & lNumOfChildren)
+				
+				if lNumOfChildren = 1 then	
+					Set oCol_Details = oCol.GetChild(0)
+					'Getting the number of words in the line
+					
+					wNumOfChildren = oCol_Details.NumOfChildren
+					'Writelog("Number of Words is : " & wNumOfChildren)
+							
+					For wIndex = 0 to wNumOfChildren - 1
+						Set thisWord = oCol_Details.GetChild(wIndex)
+						
+						if wIndex = 0 then
+							'Writelog("Debug 1 : " & thisWord.Text)
+							oCol_Indexes = thisWord.Text
+						else
+							oCol_Indexes = oCol_Indexes & " " & thisWord.Text
+						end if
+						
+					Next	
+					Writelog("Multi Column Index is : " & oCol_Indexes)
+				elseif lNumOfChildren > 1 then	
+					For lIndex = 0 to lNumOfChildren - 1
+						Set oCol_Details = oCol.GetChild(cIndex)
+						
+						'Getting the number of words in the line
+						wNumOfChildren = oCol_Details.NumOfChildren
+						
+						For wIndex = 0 to wNumOfChildren - 1
+							Set thisWord = oCol_Details.GetChild(wIndex)
+							if wIndex = 0 then
+								oCol_Indexes = thisWord.Text
+							else
+								oCol_Indexes = oCol_Indexes & " " & thisWord.Text
+							end if
+						Next							
+					Next
+					
+				end if		
+				
+				Writelog("Column Index is : " & oCol_Indexes)
+				oCol.Text = oCol_Indexes
+				
+				'For lIndex = 0 to lNumOfChildren - 1
+				'	Call oCol.DeleteChild(lIndex)	
+				'Next
+			
+				oCol.ID = Table_Col(cIndex)
+				'Writelog("Number of col_id:" & oCol.ID)	
+				For lIndex = 0 to lNumOfChildren - 1
+					Call oCol.DeleteChild(lIndex)	
+				Next				
+			Next
+		end if
+		
+		
+		oField.ID = "Row_" & nIndex
+				
+	Next 'nIndex
+	
+ 
+  ]]>
+  </g>
+</f>
+
+<f name="RemoveFieldByStatus" access="public" qi="Removes any pages with the selected status from the batch">
+  <p name="strParam"/>
+  <ap>
+    The status for deleted Fields.
+  </ap>
+  <h>
+    This action will remove pages from the batch based on their status.
+    <e>
+      <b>RemoveFieldByStatus(79)</b>
+    </e>
+  </h>
+  <lvl>Batch level.</lvl>
+  <ret>
+    Always <b>True.</b>
+  </ret>
+<g><![CDATA[
+
+	Dim nNumOfChildren
+	Dim nIndex
+	Dim oField
+	Dim oPage
+	
+	On Error Resume Next
+
+	RemoveFieldByStatus = True
+	
+	Set regEx = CreateObject("VBScript.RegExp")
+	regEx.Pattern = "table."
+	regEx.IgnoreCase = True
+	regEx.Global = True	
+	
+	Set oPage = CurrentObj
+	
+	RemoveFieldByStatus = True
+	
+	nNumOfChildren = oPage.NumOfChildren
+
+	For nIndex = nNumOfChildren - 1 to 0 Step - 1
+		Set oField = oPage.GetChild(nIndex)	
+		Writelog("Child Objects to Delete:" & nNumOfChildren)	
+		Writelog("my id is : " & oField.ID)
+		
+		if NOT regEx.Test(oField.ID) then
+			Writelog("Yeah Regx successful : " & oField.ID)
+			Call oPage.DeleteChild(nIndex)	
+		end if
+		
+		Writelog("my id is : " & oPage.GetChild(nIndex-1))
+		
+	Next 'nIndex
+
+]]>
+  </g>
+</f>
+
+<f name="RemoveFieldByName" access="public" qi="Removes all fields except tables">
+  <p name="strParam"/>
+  <ap>
+    The status for deleted Fields.
+  </ap>
+  <h>
+    This action will remove pages from the batch based on their status.
+    <e>
+      <b>RemoveFieldByName(79)</b>
+    </e>
+  </h>
+  <lvl>Batch level.</lvl>
+  <ret>
+    Always <b>True.</b>
+  </ret>
+<g><![CDATA[
+
+	Dim nNumOfChildren
+	Dim nIndex
+	Dim oField
+	Dim oPage
+	
+	On Error Resume Next
+
+	RemoveFieldByName = True
+	
+	Set regEx = CreateObject("VBScript.RegExp")
+	regEx.Pattern = "(table.)|(CPF.)"
+	regEx.IgnoreCase = True
+	regEx.Global = True	
+	
+	Set oPage = CurrentObj
+	
+	RemoveFieldByName = True
+	
+	nNumOfChildren = oPage.NumOfChildren
+
+	For nIndex = nNumOfChildren - 1 to 0 Step - 1
+		Set oField = oPage.GetChild(nIndex)	
+		Writelog("Child Objects to Delete:" & nNumOfChildren)	
+		Writelog("my id is : " & oField.ID)
+		
+		if NOT regEx.Test(oField.ID) then
+			Writelog("Yeah Regx successful : " & oField.ID)
+			Call oPage.DeleteChild(nIndex)	
+		end if
+		
+		Writelog("my id is : " & oPage.GetChild(nIndex-1))
+		
+	Next 'nIndex
+
+]]>
+  </g>
+</f>
+
+
+<f name="oGetConfidence" access="public" qi="Sample logfile message">
+  <p name="Parameter1"/>
+  <p name="Parameter2"/>
+  <ap>
+   Document your parameters here<br/>
+  </ap>
+  <h>
+         Explain the usage of your action here<br/>
+    <e>
+        Place an example action call<br/>
+    </e>
+  </h>
+  <lvl>
+      Place the level (Batch,Document,Page, or Field) that you need the action to be run from if there
+      is any dependency.
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  
+	Dim CurrentPage
+	Dim CurrentField
+	Dim Total_Confidence
+	Dim Total_Confidence_Percentage
+  
+	ConfidenceField = CurrentObj.Text
+	
+	WriteLog("MyLog:" & ConfidenceField)
+	Total_Confidence = 0
+	
+    for i = 0 to Len(ConfidenceField) - 1    'loop through fields except last field (Browse)
+       Total_Confidence = CINT(Mid(ConfidenceField,i+1,1)) + Total_Confidence
+	next 'i    
+	
+	'Total_Confidence_Percentage = Total_Confidence/Len(ConfidenceField)
+	WriteLog("MyLog:" & Total_Confidence)
+	'ParamStr = "@P.Account_No_Confi"
+	'Retn = rrSet(Total_Confidence_Percentage,ParamStr)
+	
+	oGetConfidence = True
+ 
+  ]]>
+  </g>
+</f>
+
+
+<f name="SimpleAddition" access="public" qi="Sample logfile message">
+  <p name="Parameter1"/>
+  <p name="Parameter2"/>
+  <ap>
+   Document your parameters here<br/>
+  </ap>
+  <h>
+         Explain the usage of your action here<br/>
+    <e>
+        Place an example action call<br/>
+    </e>
+  </h>
+  <lvl>
+      Place the level (Batch,Document,Page, or Field) that you need the action to be run from if there
+      is any dependency.
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  
+	Dim oTotal
+	Dim oParameter1
+	Dim oParameter2
+	Dim ParamStr
+  
+	oParameter1 = MetaWord(Parameter1)
+	oParameter2 = MetaWord(Parameter2)
+	
+	oTotal = cInt(oParameter1) + 1
+	ParamStr = Parameter2
+	Retn = rrSet(oTotal,ParamStr)
+	
+	WriteLog(Space(5) & "MyLog:" & StrParam)
+	
+	SimpleAddition = True
+ 
+  ]]>
+  </g>
+</f>
+
+<f name="MyLog" access="public" qi="Sample logfile message">
+  <p name="Parameter1"/>
+  <ap>
+   Document your parameters here<br/>
+  </ap>
+  <h>
+         Explain the usage of your action here<br/>
+    <e>
+        Place an example action call<br/>
+    </e>
+  </h>
+  <lvl>
+      Place the level (Batch,Document,Page, or Field) that you need the action to be run from if there
+      is any dependency.
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  
+	WriteLog(Space(5) & "MyLog:" & StrParam)
+	
+	MyLog = True
+ 
+  ]]>
+  </g>
+</f>
+
+<f name="GetPageCount" access="public" bInter="bInter" bDebug="bDebug" qi="Demo code - Get a count of the number of pages in a document">
+ <p name="PageCountVariableName"/>  
+
+
+<h>
+
+Demo code - Gets a count of the number of pages in a document. Stores in the document level variable specified in the parameter.
+    <e>
+      <b>GetPageCount(PageCountVariableName)</b>
+    </e>
+  </h>
+  <lvl>Page level.</lvl>
+  <ret>
+    <b>True</b> Returns false if not called on a document.
+  </ret>
+<g><![CDATA[
+
+	Dim oMainPage
+	Dim CurrentPage
+	Dim CurrentField
+	Dim oDoc
+
+
+	GetPageCount = true
+
+
+	writelog("")
+	Writelog("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ")
+	Writelog("------------------------------------------------------------------------------")
+	Writelog("- Custom code                                                                -")
+	Writelog("-                                                                            -")
+	Writelog("- Begin code execution                                                       -")
+	Writelog("------------------------------------------------------------------------------")
+	Writelog("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ")
+	writelog("")
+
+	' First ensure rule is run at a document level
+	if CurrentObj.ObjectType <> 1 then
+      		WRitelog("Expecting to be on a document object.  Exiting")
+		SetPageCount  = false
+      		Exit Function
+  	end if
+
+
+	Set oDoc = CurrentObj
+	numOfPages = oDoc.NumOfChildren()
+		
+	writelog("number of pages under the document = " & numOfPages)
+	oDoc.Variable(PageCountVariableName) = numOfPages
+	
+		
+	Writelog("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ")
+	Writelog("------------------------------------------------------------------------------")
+	Writelog("- End custom code execution                                                  -")
+	Writelog("------------------------------------------------------------------------------")
+	Writelog("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ")
+
+
+]]></g>
+</f>
+
+<f name="DoubleBlind" access="public" qi="Setting up doubleblind variables">
+<p name="theStep"/>
+  <ap>
+    This DoubleBlind action will traverse down the Document, copy all the fields and append it with a new name.
+  </ap>
+  <h>
+        theStep = 1<br/>
+    <e>
+        if the field name is tony, it will create a new field call tony_1<br/>
+    </e>
+  </h>
+  <lvl>
+      Place at the Document level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  'Your VBScript code goes here.
+    Dim Retn
+    Dim i
+    Dim oField
+    Dim ParamStr
+
+    DoubleBlind = TRUE       'Actions must always return a TRUE or FALSE.
+
+    for i = 0 to CurrentObj.NumOfChildren - 1    'loop through fields except last field (Browse)
+       Set oField = CurrentObj.GetChild(i)
+	   ParamStr = "@P." & oField.ID & "_" & theStep
+	   Retn = rrSet(oField.Text,ParamStr)
+	next 'i    
+
+  ]]>
+  </g>
+</f>
+
+<f name="CopyVariable" access="public" qi="Setting up doubleblind variables">
+<p name="theStep"/>
+  <ap>
+    This CopyVariable action will traverse down the Document, copy all the fields and append it with a new name.
+  </ap>
+  <h>
+        theStep = 1<br/>
+    <e>
+        if the field name is tony, it will create a new field call tony_1<br/>
+    </e>
+  </h>
+  <lvl>
+      Place at the Document level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  'Your VBScript code goes here.
+    Dim Retn
+    Dim i
+    Dim oField
+    Dim ParamStr
+
+    CopyVariable = TRUE       'Actions must always return a TRUE or FALSE.
+
+    for i = 0 to CurrentObj.NumOfChildren - 1    'loop through fields except last field (Browse)
+       Set oField = CurrentObj.GetChild(i)
+	   ParamStr = "@D." & oField.ID
+	   Retn = rrSet(oField.Text,ParamStr)
+	next 'i    
+
+  ]]>
+  </g>
+</f>
+
+<f name="AddDecimalPlace" access="public" qi="Formatting a field with decimal place">
+<p name="numberOfDecimalPlace"/>
+  <ap>
+    This AddDecimalPlace action will format the Field with the decimal place defined.
+  </ap>
+  <h>
+        numberOfDecimalPlace = 3<br/>
+    <e>
+        If the field value is 1234567, setting a decimal place of 3 will format the field to 1234.567<br/>
+    </e>
+  </h>
+  <lvl>
+      Place at the Field level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  'Your VBScript code goes here.
+    Dim Retn
+    Dim i
+    Dim oField
+    Dim ParamStr
+
+    AddDecimalPlace = TRUE       'Actions must always return a TRUE or FALSE.
+	
+	oField = CurrentObj.Text
+	if Len(oField) > 0 Then
+		CurrentObj.Text = Left(oField, Len(oField)-Cint(numberOfDecimalPlace)) & "." & Right(oField, numberOfDecimalPlace)
+	end if
+  ]]>
+  </g>
+</f>
+
+<f name="SplitImages" access="public" qi="for splitting an A3 booklet to individual A4">
+		<ap>
+			This will split a booklet that is been scanned and reorder page accordingly<br/>
+		</ap>
+		<h>
+	This action will only work for 1 booklet per batch. It will split the booklet and rearrange the pages<br/>
+	You need to scanned with page 1 and last page first<br/>
+
+    <b>Note</b><br/>So far, this action will detect if the booklet is portrait or landscape and split accordingly<br/><br/>
+    <br/><br/>
+			<e>
+					SplitImages()<br/>
+			</e>
+		</h>
+		<lvl>
+					Batch Level Only.
+		</lvl>
+		<ret>
+					Always TRUE <br/>
+					
+		</ret>
+		<see>
+				<br/>
+					<scr>EqualizeUnbalancedImage</scr>
+		</see>
+	<g>
+  <![CDATA[
+  	
+	SplitImages = TRUE	
+	
+	Dim numOfPages
+	Dim oFilename
+	Dim oPageID
+	Dim oPageIDB
+	Dim halfPageX
+	Dim halfPageY
+	Dim theRightNumber
+	Dim myFilePath
+	Dim oSplitImageName
+	Dim oSplitImageNameB
+	Dim oPageIndex
+	Set oBatch = CurrentObj
+	'write a function to check batch level
+	
+	Set l_oDCImage = CreateObject("DCIMAGE.DcimageCtrl.1")
+	
+	'Get filepath
+	Set oObj = CurrentObj.GetChild(0)
+	
+	theRightNumber = Len(oObj.ImageName) - InStrRev(oObj.ImageName,"\")
+	myFilePath = Left(oObj.ImageName, Len(oObj.ImageName)-theRightNumber) 	
+	
+	numOfPages = oBatch.NumOfChildren()
+	numOfSplitPages = numOfPages * 2
+	
+	'Create child for the split pages
+	for i = 0 to numOfPages - 1    'loop through fields except last field (Browse)
+		Set oObj = CurrentObj.GetChild(i)
+		oFilename = oObj.ID
+		
+		l_oDCImage.FileName = oObj.ImageName
+		Call l_oDCImage.GetImageInfo(imgWidth, imgHeight, imgDepth)
+		
+		halfPageX = imgWidth/2
+		halfPageY = imgHeight/2
+			
+		oPageID = oFilename & "_"
+		
+		firstPage = (cInt(i) + 1)
+		secondPage = (cInt(numOfSplitPages) - i)
+		Writelog("Check firstPage : " & firstPage)
+		Writelog("Check secondPage : " & secondPage)
+		
+		if cInt(secondPage) < 10 then
+			oPageIDB = oPageID & 0 & cInt(secondPage)
+			Writelog("Check oPageIDB : " & oPageIDB)
+		else
+			oPageIDB = oPageID & cInt(secondPage)
+			Writelog("Check oPageIDB Bigger than 10 : " & oPageIDB)
+		end if
+					
+		if cInt(firstPage) < 10 then
+			oPageID = oPageID & 0 & (cInt(i) + 1)
+		else	
+			oPageID = oPageID & (cInt(i) + 1)
+		end if
+		
+		oSplitImageName = myFilePath & oPageID & ".tif"
+		oSplitImageNameB = myFilePath & oPageIDB & ".tif"
+		
+		'Split the image
+		if cInt(imgWidth) > cInt(imgHeight) Then
+			if i = 0 then
+				call l_oDCImage.SaveZone (0, 0, halfPageX, imgHeight, oSplitImageNameB)
+				call l_oDCImage.SaveZone (halfPageX, 0, halfPageX, imgHeight, oSplitImageName)
+			else
+				call l_oDCImage.SaveZone (0, 0, halfPageX, imgHeight, oSplitImageName)
+				call l_oDCImage.SaveZone (halfPageX, 0, halfPageX, imgHeight, oSplitImageNameB)
+			end if
+		else
+			call l_oDCImage.SaveZone (0, 0, imgWidth, halfPageY, oSplitImageName)	
+			call l_oDCImage.SaveZone (0, halfPageY, imgWidth, halfPageY, oSplitImageNameB)
+		end if
+		
+		'Add to DCO XML
+		DCO.AddChild 2, oPageID, -1
+		Set oClipPage = DCO.FindChild(oPageID)
+		oClipPage.Variable("TYPE") = "Other"
+		oClipPage.Variable("STATUS") = "49"
+		oClipPage.ImageName = oSplitImageName
+				
+'		if cInt(imgWidth) > cInt(imgHeight) Then
+'		else
+'		end if
+		
+		DCO.AddChild 2, oPageIDB, -1
+		Set oClipPage = DCO.FindChild(oPageIDB)
+		oClipPage.Variable("TYPE") = "Other"
+		oClipPage.Variable("STATUS") = "49"
+		oClipPage.ImageName = oSplitImageNameB
+		
+		oObj.Type = "Original"
+		
+	next 'i
+	
+	'Algorithm to move images to right position
+	oTotalPages = cInt(numOfPages) + cInt(numOfPages) * 2
+	oLastPage = oTotalPages - 1
+	oIteration =  cInt(numOfPages) - 1
+	
+	for y = 1 to oIteration
+		DCO.MoveChild (cInt(oLastPage) - y * 2) , cInt(oLastPage)	
+	next
+
+	Set l_oDCImage = Nothing		
+		
+  ]]>
+  </g>
+</f>
+
+<f name="OrganizeDocs" access="public" qi="Reorganizes pages in a Document to correspond to order of input parameters.">
+  <p name="PageType1"/>
+  <p name="PageType2"/>
+  <p name="PageType3"/>
+  <p name="PageType4"/>
+  <p name="PageType5"/>
+  <p name="PageType6"/>
+  <p name="PageType7"/>
+  <p name="PageType8"/>
+  		<ap>
+					Custom function for reordering pages in document.  Parameter sequence determines order.<br/>
+		</ap>
+		<h>
+					<br/>
+			<e>
+					OrganizeDocs <br/>
+			</e>
+		</h>
+		<lvl>
+					Document
+		</lvl>
+		<ret>
+					Always TRUE <br/>
+					
+		</ret>
+		<see>
+					Reference other related actions here <br/>
+					<scr>RelatedFunctionName</scr>
+		</see>
+	<g>
+  <![CDATA[
+  
+	Dim PType1Index
+	Dim PType2Index
+	Dim PType3Index
+	Dim PType4Index
+	Dim PType5Index
+	Dim PType6Index
+	Dim PType7Index
+	Dim PType8Index
+	Dim PType1
+	Dim PType2
+	Dim PType3
+	Dim PType4
+	Dim PType5
+	Dim PType6
+	Dim PType7
+	Dim PType8
+	Dim oDoc
+	Dim oPage
+  
+	OrganizeDocs = FALSE
+	
+	WriteLog ("trying to OrganizeDocs...")
+	If CurrentObj.ObjectType <> 1 then
+       Writelog("This action MUST run on Document Level")
+       Exit Function
+	End if
+    
+	Writelog ("PageType1 is : " & PageType1)
+	
+	Writelog ("PageType2 is : " & PageType2)
+	Writelog ("PageType3 is : " & PageType3)
+	Writelog ("PageType4 is : " & PageType4)
+	Writelog ("PageType5 is : " & PageType5)
+	Writelog ("PageType6 is : " & PageType6)
+	Writelog ("PageType7 is : " & PageType7)
+	Writelog ("PageType8 is : " & PageType8)
+	
+	Set oDoc = CurrentObj
+  
+	' Search for Page Type 1
+	
+	'Set oPage = oDoc.FindChild(PType1)
+	
+	WriteLog ("Number of pages: " & oDoc.NumOfChildren)
+
+	For i = 0 to oDoc.NumOfChildren-1
+		set oPage = oDoc.GetChild(i)
+		if oPage is Nothing Then
+			WriteLog ("Could not set page object!!")
+		End if
+		WriteLog ("Found page type " & oPage.Type & " with ID " & oPage.ID)
+		
+			If oPage.Type = PageType1 then 
+				PType1 = oPage.ID
+				WriteLog ("PType1 set to " & PType1)
+			ElseIf oPage.Type = PageType2 Then 
+				PType2 = oPage.ID
+				WriteLog ("PType2 set to " & PType2)
+			ElseIf oPage.Type = PageType3 Then 
+				PType3 = oPage.ID
+				WriteLog ("PType3 set to " & PType3)
+			ElseIf oPage.Type = PageType4 Then 
+				PType4 = oPage.ID
+				WriteLog ("PType4 set to " & PType4)
+			ElseIf oPage.Type = PageType5 Then 
+				PType5 = oPage.ID
+				WriteLog ("PType5 set to " & PType5)
+			ElseIf oPage.Type = PageType6 Then 
+				PType6 = oPage.ID
+				WriteLog ("PType6 set to " & PType6)
+			ElseIf oPage.Type = PageType7 Then 
+				PType7 = oPage.ID
+				WriteLog ("PType7 set to " & PType7)				
+			ElseIf oPage.Type = PageType8 Then 
+				PType8 = oPage.ID
+				WriteLog ("PType8 set to " & PType8)			
+			End If
+		Next
+		
+	'we're done with oPage, the other calls all use parent oDoc
+	Set oPage = Nothing
+
+	' Search for Page Type 1:
+	
+	PType1Index = oDoc.FindChildIndex(PType1)
+	Writelog("Index of " & PType1 & " is : " & PType1Index)
+
+	If pType1Index <> 0 then
+		If (oDoc.MoveChild(PType1Index,0)= True) Then
+			WriteLog("Successfully moved " & PType1 & " to position 0")
+		else
+			WriteLog("Could not move " & PType1 & " to position 0")
+			Set oDoc = Nothing
+			Exit Function
+		End If
+	Else
+		WriteLog ("Skipping to " & PType2)
+	End if
+	
+
+	
+	' Search for Page Type 2:
+	
+	PType2Index = oDoc.FindChildIndex(PType2)
+	Writelog("Index of " & PType2 & " is : " & PType2Index)
+
+	If pType2Index <> 1 then
+		If (oDoc.MoveChild(PType2Index,1)=True) Then
+			WriteLog("Successfully moved " & PType2 & " to position 1")
+		else
+			WriteLog("Could not move " & PType2 & " to position 1")
+			Set oDoc = Nothing
+			Exit Function
+		End If
+	Else
+		WriteLog ("Skipping to " & PType3)
+	End if
+	
+	' Search for Page Type 3:
+	
+	PType3Index = oDoc.FindChildIndex(PType3)
+	Writelog("Index of " & PType3 & " is : " & PType3Index)
+
+	If pType3Index <> 2 then
+		If (oDoc.MoveChild(PType3Index,2)=True) Then
+			WriteLog("Successfully moved " & PType3 & " to position 2")
+		else
+			WriteLog("Could not move " & PType2 & " to position 2")
+			Set oDoc = Nothing
+			Exit Function
+		End If
+	Else
+		WriteLog ("Skipping to " & PType4)
+	End if
+		
+	' Search for Page Type 4:
+	
+	PType4Index = oDoc.FindChildIndex(PType4)
+	Writelog("Index of " & PType4 & " is : " & PType4Index)
+
+	If pType4Index <> 3 then
+		If (oDoc.MoveChild(PType4Index,3)=True) Then
+			WriteLog("Successfully moved " & PType4 & " to position 3")
+		else
+			WriteLog("Could not move " & PType4 & " to position 3")
+			Set oDoc = Nothing
+			Exit Function
+		End If
+	Else
+		WriteLog ("Skipping to " & PType5)
+	End if
+		
+	
+	' Search for Page Type 5:
+	
+	PType5Index = oDoc.FindChildIndex(PType5)
+	Writelog("Index of " & PType5 & " is : " & PType5Index)
+
+	If pType5Index <> 4 then
+		If (oDoc.MoveChild(PType5Index,4)=True) Then
+			WriteLog("Successfully moved " & PType5 & " to position 4")
+		else
+			WriteLog("Could not move " & PType5 & " to position 4")
+			Set oDoc = Nothing
+			Exit Function
+		End If
+	Else
+		WriteLog ("Skipping to " & PType6)
+	End if
+		
+		' Search for Page Type 6:
+	
+	PType6Index = oDoc.FindChildIndex(PType6)
+	Writelog("Index of " & PType6 & " is : " & PType6Index)
+
+	If pType6Index <> 5 then
+		If (oDoc.MoveChild(PType6Index,5)=True) Then
+			WriteLog("Successfully moved " & PType6 & " to position 5")
+		else
+			WriteLog("Could not move " & PType6 & " to position 5")
+			Set oDoc = Nothing
+			Exit Function
+		End If
+	Else
+		WriteLog ("Skipping to " & PType7)
+	End if
+		
+			' Search for Page Type 7:
+	
+	PType7Index = oDoc.FindChildIndex(PType7)
+	Writelog("Index of " & PType7 & " is : " & PType7Index)
+
+	If pType7Index <> 6 then
+		If (oDoc.MoveChild(PType7Index,6)=True) Then
+			WriteLog("Successfully moved " & PType7 & " to position 6")
+		else
+			WriteLog("Could not move " & PType7 & " to position 6")
+			Set oDoc = Nothing
+			Exit Function
+		End If
+	Else
+		WriteLog ("Skipping to " & PType8)
+	End if
+	
+			' Search for Page Type 8:
+	
+	PType8Index = oDoc.FindChildIndex(PType8)
+	Writelog("Index of " & PType8 & " is : " & PType8Index)
+
+	If pType8Index <> 7 then
+		If (oDoc.MoveChild(PType8Index,7)=True) Then
+			WriteLog("Successfully moved " & PType8 & " to position 7")
+		else
+			WriteLog("Could not move " & PType8 & " to position 7")
+			Set oDoc = Nothing
+			Exit Function
+		End If
+	Else
+		WriteLog ("Doc not found")
+	End if
+	
+	
+	OrganizeDoc = TRUE
+ 
+  ]]>
+  </g>
+</f>
+
+
+
+<f name="RemovePagesByStatus" access="public" qi="Removes any pages with the selected status from the batch">
+  <p name="strParam"/>
+  <ap>
+    The status for deleted pages.
+  </ap>
+  <h>
+    This action will remove pages from the batch based on their status.
+    <e>
+      <b>RemovePagesByStatus(79)</b>
+    </e>
+  </h>
+  <lvl>Batch level.</lvl>
+  <ret>
+    Always <b>True.</b>
+  </ret>
+<g><![CDATA[
+Dim oDoc
+
+    RemovePagesByStatus = TRUE
+
+     For i = DCO.NumOfChildren - 1 to 0 Step - 1 ' loop through nodes in the batch from end to start
+	    if DCO.GetChild(i).ObjectType = 1 then    'found a document
+            Set oDoc = DCO.GetChild(i)
+			For j = oDoc.NumOfChildren - 1 to 0 Step -1 ' loop through nodes in doc from end to start
+				if oDoc.GetChild(j).ObjectType = 2 and oDoc.GetChild(j).Status = CInt(strParam) then 	' page in doc to be deleted?
+					oDoc.DeleteChild(j)
+				end if
+            Next ' j
+        else
+			if DCO.GetChild(i).ObjectType = 2 	and DCO.GetChild(i).Status = CInt(strParam) then		' page in batch to be deleted?
+				DCO.DeleteChild(i)
+			end if
+		end if
+    Next ' i
+]]>
+  </g>
+</f>
+
+<f name="RemoveDocuments" access="public" qi="Removes any documents from the batch, leaving only pages.">
+  <ap>
+    None.
+  </ap>
+  <h>
+    This action will flatten the document - page hierarchy from the batch.  If the batch consists of multiple documents,
+    each with a set of pages, the document level is removed and all of the pages become a flat structure.
+    Once complete, there is no distinction of sets of pages within a document.
+    <e>
+      <b>RemoveDocuments()</b>
+    </e>
+  </h>
+  <lvl>Batch level.</lvl>
+  <ret>
+    Always <b>True.</b>
+  </ret>
+<g><![CDATA[
+Dim oDoc
+
+    RemoveDocumentStructure = TRUE
+
+    For i = 0 to DCO.NumOfChildren - 1        'loop through the objects that are children of the batch	
+        if DCO.GetChild(i).ObjectType = 1 then    'found a document
+            Set oDoc = DCO.GetChild(i)
+            While oDoc.NumOfChildren > 0
+                Call oDoc.GetChild(0).MoveIn(DCO,-1)
+            Wend
+        end if
+    next 'i
+
+	'remove the documents
+	
+	For i = DCO.NumOfChildren - 1   to 0 Step - 1
+	   if DCO.GetChild(i).ObjectType = 1 then
+	      Call DCO.DeleteChild(i)
+	   end if
+    Next 'i  	   
+    Writelog("Structure removed")
+]]>
+  </g>
+</f>
+
+<f name="SplitField" access="public" qi="Split variables">
+<p name="Separator"/>
+<p name="IndexOfField"/>
+<p name="SmartPara"/>
+  <ap>
+    This SplitField action will split a field based on the separator and put the field in sequence under NameOfField
+  </ap>
+  <h>
+        Separator = | <br/>
+    <e>
+        If the field to split is How|to|split|field, it will create a new field call tony_1<br/>
+    </e>
+  </h>
+  <lvl>
+      Place at the Field level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  'Your VBScript code goes here.
+    Dim Retn
+    Dim i
+    Dim oField
+    Dim aStrParam
+    Dim sValue
+
+    SplitField = TRUE       'Actions must always return a TRUE or FALSE.
+	
+	oField = MetaWord(SmartPara)
+	'oField = CurrentObj.Text
+	aStrParam = Split(oField,Separator)
+	
+	if UBound(aStrParam) >=  Cint(IndexOfField) then
+	
+		WriteLog("Writing Index : " & aStrParam(IndexOfField))
+		CurrentObj.Text = aStrParam(IndexOfField)
+	else
+	
+		WriteLog("Index too big  " & UBound(aStrParam))
+		CurrentObj.Text = ""
+	end if
+  ]]>
+  </g>
+</f>
+
+<f name="rrCompareRegEx" access="public" >
+  <p name="object1"/>
+  <p name="object2"/>
+  <ap>
+    Smart parameter and Regular Expression<br/><br/>
+
+    <b>1.</b> A smart parameter referencing a value or which is a reference to a value.<br/><br/>
+
+    <b>2.</b> Regular Expression<br/><br/>
+
+    <b>Note:</b> The reference can specify a variable of the calling
+    object (the bound object of the Document Hierarchy.) Alternatively, the reference can
+    identify a variable of an object that is a parent or child of the calling object.<br/><br/>
+	
+	The second parameter is there for Regular Expression.
+  </ap>
+  <h>
+    Uses the Smart Parameter and Regular Expression that you enter as the parameter to locate and
+    match the variable value to Regular Expression.
+    <e>
+      rrCompareRegEx("@P\Expected_Pages","^\d{5}")<br/><br/>
+
+      This example shows how a value is solicited from the field <i>Expected_Pages</i>
+      off of the actual page and matches it using Regular Expression and finding if it has
+	  five digits at the beginnig.
+    </e>
+  </h>
+  <lvl>All.</lvl>
+  <ret>
+    <b>False</b> if the value do not match Regular Expression. Otherwise, <b>True.</b>
+  </ret>
+<g>
+  <![CDATA[
+  ' rrCompareRegEx
+  
+    Dim aStrParam
+	Dim sSourceA
+	Dim sSourceB
+	Dim sValueA
+	Dim sValueB
+	Dim Match
+	Dim Matches
+	Dim bFound
+	
+	On Error Resume Next
+	
+	rrCompareRegEx = False
+		
+	sSourceA = Trim(object1)
+	sSourceB = Trim(object2)
+	
+	If len(sSourceA) = 0 Then sSourceA = DCONavType()
+		
+	sValueA = MetaWord(sSourceA)
+	sValueB = MetaWord(sSourceB)
+
+	bFound = False
+
+	Writelog("Looking for value '" & sValueB & "' in string: '" & sValueA & "'")		
+
+	Set regEx = CreateObject("VBScript.RegExp")
+	
+	regEx.Pattern = sValueB
+	regEx.IgnoreCase = True
+	regEx.Global = True
+
+	Set Matches = regEx.Execute(sValueA)
+		
+  'Check for RegEx Error - usually due to invalid Pattern syntax
+  If Err.number<>0 then 
+     Writelog(Space(3) & "Invalid Pattern '" & sDeleteString & "'")
+     Err.Clear
+     Exit Function
+  End if  
+    
+	For Each Match In Matches
+		WriteLog("Matched value:'" & CStr(Match.value) & "'")
+		bFound = True
+	Next
+	
+	Set regEx = Nothing
+
+ ' Use dcglobal dotNet regex engine:
+ ' If DCGlobalStrings.RegExIsMatch(sValue,StrParam) Then
+ '   WriteLog("Match Found")
+ '	 bFound = True
+ ' End if
+
+	If bFound = True Then
+		rrCompareRegEx = True
+		Exit Function
+	End If
+	
+	Call ErrorHandler("rrCompareRegEx") 
+  ]]>
+</g>  
+</f> 
+
+<f name="rrCompareNotRegEx" access="public" >
+  <p name="object1"/>
+  <p name="object2"/>
+  <ap>
+    Smart parameter and Regular Expression<br/><br/>
+
+    <b>1.</b> A smart parameter referencing a value or which is a reference to a value.<br/><br/>
+
+    <b>2.</b> Regular Expression<br/><br/>
+
+    <b>Note:</b> The reference can specify a variable of the calling
+    object (the bound object of the Document Hierarchy.) Alternatively, the reference can
+    identify a variable of an object that is a parent or child of the calling object.<br/><br/>
+	
+	The second parameter is there for Regular Expression.
+  </ap>
+  <h>
+    Uses the Smart Parameter and Regular Expression that you enter as the parameter to locate and
+    match the variable value to Regular Expression.
+    <e>
+      rrCompareNotRegEx("@P\Expected_Pages","^\d{5}")<br/><br/>
+
+      This example shows how a value is solicited from the field <i>Expected_Pages</i>
+      off of the actual page and matches it using Regular Expression and finding if it has
+	  five digits at the beginnig.
+    </e>
+  </h>
+  <lvl>All.</lvl>
+  <ret>
+    <b>False</b> if the value does match Regular Expression. Otherwise, <b>True.</b>
+  </ret>
+<g>
+  <![CDATA[
+
+    On Error Resume Next
+	
+	if rrCompareRegEx(object1, object2) Then
+     rrCompareNotRegEx = False
+	Else
+     rrCompareNotRegEx = True
+	End if
+		
+	Call ErrorHandler("rrCompareNotRegEx") 
+  ]]>
+</g>  
+</f> 
+
+<f name="ExtCompareRegEx" access="public" >
+  <p name="object1"/>
+  <p name="object2"/>
+  <ap>
+    Smart parameter and Regular Expression<br/><br/>
+
+    <b>1.</b> A smart parameter referencing a value or which is a reference to a value.<br/><br/>
+
+    <b>2.</b> Regular Expression<br/><br/>
+
+    <b>Note:</b> The reference can specify a variable of the calling
+    object (the bound object of the Document Hierarchy.) Alternatively, the reference can
+    identify a variable of an object that is a parent or child of the calling object.<br/><br/>
+	
+	The second parameter is there for Regular Expression.
+  </ap>
+  <h>
+    Uses the Smart Parameter and Regular Expression that you enter as the parameter to locate and
+    match the variable value to Regular Expression.
+    <e>
+      rrCompareNotRegEx("@P\Expected_Pages","^\d{5}")<br/><br/>
+
+      This example shows how a value is solicited from the field <i>Expected_Pages</i>
+      off of the actual page and matches it using Regular Expression and finding if it has
+	  five digits at the beginnig.
+    </e>
+  </h>
+  <lvl>All.</lvl>
+  <ret>
+    <b>False</b> if the value does match Regular Expression. Otherwise, <b>True.</b>
+  </ret>
+<g>
+  <![CDATA[
+
+    On Error Resume Next
+	
+	object2 = MetaWord(object2)
+	
+	Writelog("the object2 is "& object2)	
+
+	object2 = Right(object2, 3)
+	Writelog("the source file extension is "& object2)	
+	
+	if rrCompareRegEx(object1, object2) Then
+     ExtCompareRegEx = True
+	Else
+     ExtCompareRegEx = False
+	End if
+		
+	Call ErrorHandler("ExtCompareRegEx") 
+  ]]>
+</g>  
+</f> 
+
+
+<f name="ExtCompareNotRegEx" access="public" >
+  <p name="extension"/>
+  <p name="FieldCompare"/>
+  <ap>
+    Smart parameter and Regular Expression<br/><br/>
+
+    <b>1.</b> A smart parameter referencing a value or which is a reference to a value.<br/><br/>
+
+    <b>2.</b> Regular Expression<br/><br/>
+
+    <b>Note:</b> The reference can specify a variable of the calling
+    object (the bound object of the Document Hierarchy.) Alternatively, the reference can
+    identify a variable of an object that is a parent or child of the calling object.<br/><br/>
+	
+	The second parameter is there for Regular Expression.
+  </ap>
+  <h>
+    Uses the Smart Parameter and Regular Expression that you enter as the parameter to locate and
+    match the variable value to Regular Expression.
+    <e>
+      rrCompareNotRegEx("@P\Expected_Pages","^\d{5}")<br/><br/>
+
+      This example shows how a value is solicited from the field <i>Expected_Pages</i>
+      off of the actual page and matches it using Regular Expression and finding if it has
+	  five digits at the beginnig.
+    </e>
+  </h>
+  <lvl>All.</lvl>
+  <ret>
+    <b>False</b> if the value does match Regular Expression. Otherwise, <b>True.</b>
+  </ret>
+<g>
+  <![CDATA[
+
+    On Error Resume Next
+		
+	sSourceA = Trim(extension)
+	sSourceB = Trim(FieldCompare)
+			
+	sValueA = MetaWord(sSourceA)
+	sValueB = MetaWord(sSourceB)
+	
+	object2 = Right(sValueB, 3)
+	Writelog("the source file extension is "& object2)
+	
+	if rrCompareRegEx(sValueA, object2) Then
+     rrCompareNotRegEx = True
+	Else
+     rrCompareNotRegEx = False
+	End if
+		
+	Call ErrorHandler("ExtCompareNotRegEx") 
+  ]]>
+</g>  
+</f> 
+
+
+<f name="CallWebService" access="public" bInter="bInter" bDebug="bDebug" qi="Call a webservice">
+  <p name="URL"/>
+  <p name="postUrl"/>
+  <p name="method"/>
+  <p name="paramKey"/>
+  <p name="paramValue"/>
+  <p name="param2Key"/>
+  <p name="param2Value"/>
+  <p name="param3Key"/>
+  <p name="param3Value"/>
+  <p name="returnNode"/>
+  <p name="returnVar"/>
+  <ap>
+    7 Smart Parameters:<br/><br/>
+    <b>1.</b> A reference to webservice URL<br/>
+    <b>2.</b> A reference to webservice namespace URL<br/>
+    <b>3.</b> A reference to webservice method<br/>
+    <b>4.</b> A reference to webservice parameter 1 Name<br/>
+    <b>5.</b> A reference to webservice parameter 1 Value<br/>
+    <b>4.</b> A reference to webservice parameter 2 Name<br/>
+    <b>5.</b> A reference to webservice parameter 2 Value<br/>
+    <b>4.</b> A reference to webservice parameter 3 Name<br/>
+    <b>5.</b> A reference to webservice parameter 3 Value<br/>
+    <b>6.</b> A reference to webservice return XML Node<br/>
+    <b>7.</b> A reference to var/field to return webservice result<br/>
+    
+    All parameters required. 
+  </ap>
+  <h>
+    Calling a simple webservice
+  </h>
+  <lvl>All level.</lvl>
+  <ret>
+    <b>True</b> Always
+  </ret>
+  <see>
+  </see>
+
+  <g><![CDATA[
+    Dim sRequest
+    Dim oXml
+    Dim result
+    Dim parsedResult
+    Dim strPath
+    Dim oNode
+    Dim sSourceA
+    
+    Writelog("Calling Webservice...")
+	CallWebService = True
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(URL)
+  	
+	If sSmartParam<>"" Then 
+    		URL=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & URL & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(nsUrl)
+  	
+	If sSmartParam<>"" Then 
+    		nsUrl=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & nsUrl & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(method)
+  	
+	If sSmartParam<>"" Then 
+    		method=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & method & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(paramKey)
+  	
+	If sSmartParam<>"" Then 
+    		paramKey=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & paramKey & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(paramValue)
+  	
+	If sSmartParam<>"" Then 
+    		paramValue=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & paramValue & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(param2Key)
+  	
+	If sSmartParam<>"" Then 
+    		param2Key=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & param2Key & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(param2Value)
+  	
+	If sSmartParam<>"" Then 
+    		param2Value=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & param2Value & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(param3Key)
+  	
+	If sSmartParam<>"" Then 
+    		param3Key=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & param3Key & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(param3Value)
+  	
+	If sSmartParam<>"" Then 
+    		param3Value=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & param3Value & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(returnNode)
+  	
+	If sSmartParam<>"" Then 
+    		returnNode=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & returnNode & "'") 
+  	End if 
+    
+    sRequest = "<soapenv:Envelope xmlns:soapenv=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:ws=""" + URL + """><soapenv:Header /><soapenv:Body>"
+    sRequest = sRequest + "<ws:" + method + ">"
+    sRequest = sRequest + "<" + paramKey + ">" + paramValue + "</" + paramKey + ">"
+    sRequest = sRequest + "<" + param2Key + ">" + param2Value + "</" + param2Key + ">"
+    sRequest = sRequest + "<" + param3Key + ">" + param3Value + "</" + param3Key + ">"
+    sRequest = sRequest + "</ws:" + method + ">"
+    sRequest = sRequest + "</soapenv:Body></soapenv:Envelope>"
+
+    Set oHttp = CreateObject("Msxml2.XMLHTTP")
+    oHttp.open "POST", PostUrl, false
+    oHttp.setRequestHeader "Content-Type", "text/xml;charset=""utf-8"""
+    oHttp.setRequestHeader "SOAPAction", PostUrl
+    oHttp.send sRequest
+    result = oHttp.responseText
+
+    Set oXml = CreateObject("Msxml2.DOMDocument")
+    oXml.Async = true
+    oXml.LoadXml result
+    strPath = "/*/*/*/" + returnNode
+    Set oNode = oXml.documentElement.SelectSingleNode(strPath)
+    parsedResult = oNode.Text
+    
+    sSourceA = Trim(field)
+    If len(sSourceA) = 0 Then sSourceA = DCONavType()
+    DCONavSetValue sSourceA,parsedResult
+  ]]></g>
+</f>
+
+<f name="myWebService" access="public" bInter="bInter" bDebug="bDebug" qi="Call a webservice">
+  <p name="URL"/>
+  <p name="postUrl"/>
+  <p name="method"/>
+  <p name="paramKey"/>
+  <p name="paramValue"/>
+  <p name="param2Key"/>
+  <p name="param2Value"/>
+  <p name="param3Key"/>
+  <p name="param3Value"/>
+  <p name="returnNode"/>
+  <p name="returnVar"/>
+  <ap>
+    7 Smart Parameters:<br/><br/>
+    <b>1.</b> A reference to webservice URL<br/>
+    <b>2.</b> A reference to webservice namespace URL<br/>
+    <b>3.</b> A reference to webservice method<br/>
+    <b>4.</b> A reference to webservice parameter 1 Name<br/>
+    <b>5.</b> A reference to webservice parameter 1 Value<br/>
+    <b>4.</b> A reference to webservice parameter 2 Name<br/>
+    <b>5.</b> A reference to webservice parameter 2 Value<br/>
+    <b>4.</b> A reference to webservice parameter 3 Name<br/>
+    <b>5.</b> A reference to webservice parameter 3 Value<br/>
+    <b>6.</b> A reference to webservice return XML Node<br/>
+    <b>7.</b> A reference to var/field to return webservice result<br/>
+    
+    All parameters required. 
+  </ap>
+  <h>
+    Calling a simple webservice
+  </h>
+  <lvl>All level.</lvl>
+  <ret>
+    <b>True</b> Always
+  </ret>
+  <see>
+  </see>
+
+  <g><![CDATA[
+    Dim sRequest
+    Dim oXml
+    Dim result
+    Dim parsedResult
+    Dim strPath
+    Dim oNode
+    Dim sSourceA
+    
+    Writelog("Calling Webservice...")
+	myWebService = True
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(URL)
+  	
+	If sSmartParam<>"" Then 
+    		URL=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & URL & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(nsUrl)
+  	
+	If sSmartParam<>"" Then 
+    		nsUrl=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & nsUrl & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(method)
+  	
+	If sSmartParam<>"" Then 
+    		method=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & method & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(paramKey)
+  	
+	If sSmartParam<>"" Then 
+    		paramKey=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & paramKey & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(paramValue)
+  	
+	If sSmartParam<>"" Then 
+    		paramValue=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & paramValue & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(param2Key)
+  	
+	If sSmartParam<>"" Then 
+    		param2Key=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & param2Key & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(param2Value)
+  	
+	If sSmartParam<>"" Then 
+    		param2Value=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & param2Value & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(param3Key)
+  	
+	If sSmartParam<>"" Then 
+    		param3Key=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & param3Key & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(param3Value)
+  	
+	If sSmartParam<>"" Then 
+    		param3Value=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & param3Value & "'") 
+  	End if 
+    
+    'Added support for Smart Parameters
+  	sSmartParam=MetaWord(returnNode)
+  	
+	If sSmartParam<>"" Then 
+    		returnNode=sSmartParam  
+  	Else
+    		Writelog("No result from Smart Parameter parsing. Using original parameter '" & returnNode & "'") 
+  	End if 
+    
+    sRequest = "<soapenv:Envelope xmlns:soapenv=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:ws=""" + URL + """><soapenv:Header /><soapenv:Body>"
+    sRequest = sRequest + "<ws:" + method + ">"
+    sRequest = sRequest + "<" + paramKey + ">" + paramValue + "</" + paramKey + ">"
+    sRequest = sRequest + "<" + param2Key + ">" + param2Value + "</" + param2Key + ">"
+    sRequest = sRequest + "<" + param3Key + ">" + param3Value + "</" + param3Key + ">"
+    sRequest = sRequest + "</ws:" + method + ">"
+    sRequest = sRequest + "</soapenv:Body></soapenv:Envelope>"
+
+    Set oHttp = CreateObject("Msxml2.XMLHTTP")
+    oHttp.open "POST", PostUrl, false
+    oHttp.setRequestHeader "Content-Type", "text/xml;charset=""utf-8"""
+    oHttp.setRequestHeader "SOAPAction", PostUrl
+    oHttp.send sRequest
+    result = oHttp.responseText
+
+    Set oXml = CreateObject("Msxml2.DOMDocument")
+    oXml.Async = true
+    oXml.LoadXml result
+    strPath = "/*/*/*/" + returnNode
+    Set oNode = oXml.documentElement.SelectSingleNode(strPath)
+    parsedResult = oNode.Text
+    
+    sSourceA = Trim(field)
+    If len(sSourceA) = 0 Then sSourceA = DCONavType()
+    DCONavSetValue sSourceA,parsedResult
+	
+	
+  ]]></g>
+</f>
+
+
+<f name="ReadXMLFile" access="public" qi="To read data from a XML file and populate it to the rest of the indexes">
+  <p name="FileName"/>
+  <ap>
+   Enter Field name for the value to populate<br/>
+  </ap>
+  <h>
+       To read a XML file and populate it to the rest of the indexes<br/>
+    <e>
+       <br/>
+    </e>
+  </h>
+  <lvl>
+      Page level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  
+	Dim colNodes, objNode
+ 	Set xmlDoc = CreateObject("Microsoft.XMLDOM") 
+	
+	'Using Smart Param
+	XMLFileName = MetaWord(Trim(FileName))	
+	
+	'getting the xml file base on the metadata
+	mXML_File = "C:\Demo_Images\Batch_Separator\xml\" & XMLFileName & ".xml"
+	xmlDoc.load(mXML_File)
+
+	'We will have to dictate or at least know the xml structure
+	Set colNodes = xmlDoc.selectNodes ("/PatientRecord/*")
+
+	For Each objNode in colNodes		
+		'For node "PatientName"
+		'if (objNode.nodename = "PatientName") then
+		
+         'writelog("XML_Patient_Name " & objNode.Text)
+		'	CurrentObj.FindChild("Patient_Name").Text = objNode.Text			
+		'For node "PatientAge"			
+		if (objNode.nodename = "PatientAge") then	
+         'writelog("XML_PatientAge " & objNode.Text)
+			CurrentObj.FindChild("Patient_Age").Text = objNode.Text
+		'For node "PatientSickness"			
+		elseif (objNode.nodename = "PatientSickness") then	
+         'writelog("XML_PatientSickness " & objNode.Text)
+			CurrentObj.FindChild("Patient_Sickness").Text = objNode.Text
+		end if		
+	Next
+	
+	ReadXMLFile = True
+	
+  ]]>
+  </g>
+</f>
+
+
+<f name="UpdateXMLFile" access="public" qi="To read data from a XML file and populate it to the rest of the indexes">
+  <p name="FileName"/>
+  <p name="FieldName"/>
+  <ap>
+   Enter Field name for the value to populate<br/>
+  </ap>
+  <h>
+       To read a XML file and populate it to the rest of the indexes<br/>
+    <e>
+       <br/>
+    </e>
+  </h>
+  <lvl>
+      Page level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  
+	Dim colNodes, objNode
+	Dim XMLFileName, myFieldName
+	
+ 	Set xmlDoc = CreateObject("Microsoft.XMLDOM") 
+	
+	'Using Smart Param
+	XMLFileName = MetaWord(Trim(FileName))	
+	'myFieldName = MetaWord(Trim(FieldName))
+	
+	
+	'getting the xml file base on the metadata
+	mXML_File = "C:\Demo_Images\Batch_Separator\xml\" & XMLFileName & ".xml"
+	xmlDoc.load(mXML_File)
+	
+	
+
+	'We will have to dictate or at least know the xml structure
+	Set colNodes = xmlDoc.selectNodes ("/PatientRecord/*")
+
+	For Each objNode in colNodes		
+		'For node "PatientName"
+		if (objNode.nodename = "PatientName") then
+writelog("Current Patient Name is " & CurrentObj.FindChild(FieldName).Text)			
+			objNode.Text = CurrentObj.FindChild(FieldName).Text
+
+         writelog("updating xml files with " & objNode.Text)
+
+		end if		
+	Next
+	
+	xmlDoc.Save(mXML_File)
+	
+	UpdateXMLFile = True
+	
+  ]]>
+  </g>
+</f>
+
+
+<f name="FormatMyDate" access="public" qi="To format the date">
+  <p name="Current_Date_Format"/>
+  <p name="New_Date_Format"/>
+  <p name="Separator"/>
+  <ap>
+   Enter Field name for the value to populate<br/>
+  </ap>  
+  <h>
+         Enter Current Date in the following format<br/>
+         DDMMYYYY<br/>
+         MMDDYYYY<br/>
+         YYYYMMDD<br/>
+  </h>
+  <lvl>
+      Place the level (Batch,Document,Page, or Field) that you need the action to be run from if there
+      is any dependency.
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+  </see>
+  <g>
+  <![CDATA[
+  
+    Dim Retn
+    Dim i
+    Dim oField
+    Dim ParamStr
+
+    FormatMyDate = TRUE       'Actions must always return a TRUE or FALSE.
+	
+	Current_Date_Format = Trim(Current_Date_Format)
+	Current_Date_Format = UCase(Current_Date_Format)
+	oField = CurrentObj.Text
+	
+
+	WriteLog("My oField is " & oField)	
+		
+    Select Case Current_Date_Format
+      Case "DDMMYYYY"
+	    sDay = Left(oField, 2)
+		sMth = Mid(oField, 3,2)
+		sYear = Right(oField, 4)
+		WriteLog("My current sDay is " & sDay)
+		WriteLog("My sMth is " & sMth)	
+		WriteLog("I am inside case " & sYear)
+      Case "MMDDYYYY"
+	    sMth = Left(oField, 2)
+		sDay = Mid(oField, 3,2)
+		sYear = Right(oField, 4)
+      Case "YYYYMMDD"
+	    sDay = Right(oField, 2)
+		sMth = Mid(oField, 3,2) 
+		sYear = Left(oField, 4) 
+      Case "YYYYDDMM"
+	    sDay = Mid(oField, 3,2)
+		sMth = Right(oField, 2) 
+		sYear = Left(oField, 4) 
+      Case "DDMMYY"
+	    sDay = Left(oField, 2)
+		sMth = Mid(oField, 3,2)
+		sYear = Right(oField, 2)
+      Case "MMDDYY"
+	    sMth = Left(oField, 2)
+		sDay = Mid(oField, 3,2)
+		sYear = Right(oField, 2)
+      Case "YYMMDD"
+	    sDay = Right(oField, 2)
+		sMth = Mid(oField, 3,2) 
+		sYear = Left(oField, 2) 
+      Case "YYDDMM"
+	    sDay = Mid(oField, 3,2)
+		sMth = Right(oField, 2) 
+		sYear = Left(oField, 2) 
+      Case Else
+        formatDate = Replace(sFormat, "/", "-")
+    End Select	
+
+	
+  Select Case New_Date_Format
+      Case "DDMMYYYY"
+        formatDate = sDay & Separator & sMth & Separator & sYear
+      Case "MMDDYYYY"
+        formatDate = sMth & Separator & sDay & Separator & sYear
+      Case "YYYYMMDD"
+        formatDate = sDay & Separator & sMth & Separator & sDay 
+      Case "YYYYDDMM"
+        formatDate = sDay & Separator & sDay & Separator & sMth
+      Case "DDMMYY"
+        formatDate = sDay & Separator & sMth & Separator & sYear
+      Case "MMDDYY"
+        formatDate = sMth & Separator & sDay & Separator & sYear
+      Case "YYMMDD"
+        formatDate = sDay & Separator & sMth & Separator & sDay
+      Case "YYDDMM"
+        formatDate = sDay & Separator & sDay & Separator & sMth
+      Case Else
+        formatDate = Replace(sFormat, "/", "-")
+    End Select	
+ 
+	CurrentObj.Text = formatDate
+ 
+  ]]>
+  </g>
+</f>
+
+
+<f name="ZoneLastXLinesOnPage" access="public" bInter="bInter" bDebug="bDebug" qi="Dynamically defines a zone for capture on a page">
+  <p name="NoOfLines"/>
+  <h>
+Based upon fullpage OCR results, builds a field level zone to encompass the top left first word and the last bottom right word that reside within the last X number of lines you define.
+<br/>
+Smart Parameters supported
+<br/>
+
+
+    <e>
+	<b>ZoneLastXLinesOnPage("3")</b>
+	<br/>
+      <b>PadZone("10")</b>
+    </e>
+  </h>
+  <lvl>Field level.</lvl>
+  <ret>
+    <b>True</b> if the bound to <b>Field</b> object and no errors
+  </ret>
+<g><![CDATA[
+
+	
+	ZoneLastXLinesOnPage = false
+
+	Writelog("------------------------------------------------------------------------------")
+	Writelog("- Custom code - DEMO CODE - ZoneLastXLinesOnPage                             -")
+	Writelog("- Please ensure you fully test before deployment                             -")
+	Writelog("------------------------------------------------------------------------------")
+ 
+	NoOfLines = MetaWord(NoOfLines)
+
+	
+	On Error Resume Next
+	If Not IsAlive(CCO)=True then 
+		Writelog("No CCO is loaded. Exiting function")
+		ZoneLastXLinesOnPage = false
+		Exit Function
+	else
+		Writelog("CCO is loaded. . . ")
+	End if
+   
+	If CCO.Count=0 then
+		Writelog("Empty CCO is loaded. Exiting function")
+		ZoneLastXLinesOnPage = false
+		Exit Function
+	else
+		writelog("CCO with words loaded. No of lines = " & CCO.Count)
+	End if  
+
+
+	if NoOfLines >= CCO.Count then
+
+		Set topLine=CCO.Item(CCO.Count-(NoOfLines-1))
+		Set bottomLine=CCO.Item(CCO.Count)
+
+
+		tl=topLine.Left
+		tt=topLine.Top
+		br=bottomLine.Right
+		bb=bottomLine.Bottom
+
+		writelog("tl=" & tl & "  tt=" & tt & "  br=" & br & "  bb=" & bb)
+
+		CurrentObj.Variable("Position") = tl & "," & tt & "," & br & "," & bb
+		
+
+		ZoneLastXLinesOnPage = true
+	else
+		
+		writelog("No of lines in CCO is les than the number to zone . . . exiting this action")
+		ZoneLastXLinesOnPage = false
+		Exit Function
+	end if
+		
+	
+
+]]></g>
+</f>
+<f name="AddOverlay" access="public" qi="To put an overlay on the image">
+  <p name="Overlay_Location"/>
+  
+  <ap>
+   Enter the overlay location<br/>
+  </ap>
+  <h>
+       To put an overlay on the image<br/>
+    <e>
+       <br/>
+    </e>
+  </h>
+  <lvl>
+      Page level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  
+   <![CDATA[
+  'Your VBScript code goes here.
+  
+   Dim nLeft
+   Dim nTop
+   Dim nRght
+   Dim nBot
+   Dim dcim
+   Dim fso
+   Dim currentFileName
+   
+	the_overlay = MetaWord(Trim(Overlay_Location))	
+	
+   Writelog("Enter Function AddOverlay")
+   
+   AddOverlay = TRUE					' assume a true return value
+
+   Set dcim = CreateObject("DCImage.DCImageCtrl.1")	' VB function CreateObj - creates and returns a reference to a COM object
+   Writelog("Image control created")
+   dcim.OverlayOffsetXYString = "0,0"
+   Writelog("dcim.OverlayOffsetXYString = " & dcim.OverlayOffsetXYString)
+   dcim.SetOverlayType(1)
+   dcim.OverlayFileName = the_overlay
+   
+   dcim.FileName = ""
+   dcim.FileName = CurrentObj.Variable("IMAGEFILE")
+  ' Writelog("dcim.FileName = " & dcim.FileName)
+   
+   Set fso = CreateObject("Scripting.FileSystemObject")
+   Writelog("FileSystemObject created")
+   
+   Call fso.DeleteFile(dcim.FileName, True)
+   Writelog("old image file deleted")
+      
+   dcim.Save(dcim.FileName)			' save the new image file with the redacted field - DCImage method
+   Writelog("new image file saved")
+   
+   Set fso = Nothing		' terminate filesystemobject instance
+   Set dcim = Nothing		' terminate DCImageCtrl object instance
+
+   Writelog("Leave Function AddOverlay")
+
+   ]]>
+   </g>
+</f>
+
+<f name="GetLastPageType" access="public" >
+  <p name="OutputVariableName"/>
+  <ap>
+    Variable name where the value of last page type will be saved.  
+	If empty, saved in LastPageType variable.<br/><br/>
+  </ap>
+  <h>
+    Gets the Page Type of the previous page and sets the variable listed in the parameter.  
+	If the current page is the first page in a batch or document, or an orphan page preceeded by a document, then the output value is set to first-page.
+	If the parameter is not specified, then the value is stored in the variable LastPageType. 
+    <e>
+		br/><br/>
+
+    </e>
+  </h>
+  <lvl>Page</lvl>
+  <ret>
+    <b>False if not executed on a page</b>
+  </ret>
+<g>
+  <![CDATA[
+	Dim oParent
+	Dim nCurIndex
+	Dim oPrevObj
+	Dim strDCOtype
+	
+	On Error Resume Next
+	OutputVariableName = Trim(OutputVariableName)
+	If OutputVariableName = "" Then 
+		OutputVariableName = "LastPageType" 
+	End if
+	
+	GetLastDCOType = False
+	If CurrentObj.ObjectType <> 2 then 
+		Writelog("Calling object was not a page.  This action must be used on a page.")
+		Exit Function
+	End if
+	
+	Set oParent = CurrentObj.Parent()
+	strDCOType = oParent.Type
+	Writelog("Parent Type is: '" & strDCOtype & "'.")
+	
+	nCurrIndex = oParent.FindChildIndex(CurrentObj.ID)
+	If nCurrIndex>0 Then 'if not the first object 
+		Set oPrevObj = oParent.GetChild(nCurrIndex-1)
+		If Not(oPrevObj is Nothing) then
+			
+			If oPrevObj.OjbectType = 2 then  'is the previous object is a page object?
+				strDCOtype = oPrevObj.Type	
+				'Writelog("Prev Object Type is: '" & strDCOtype & "'.")
+			Else
+				'The previous object is not a page object - orphan page preceeded by a document or preceded by a field.
+				str.DCOtype = "first-page"
+			End If
+		Else
+			'Previous object was null - should not happen. 
+			strDCOtype = "first-page"	
+		End if 
+	Else
+		'Current page is the first object 
+		strDCOtype = "first-page"		
+	End if
+	
+	CurrentObj.Variable(OutputVariableName)= strDCOtype	
+	WriteLog("Set " & OutputVariableName & " to " & strDCOType)		
+	GetLastDCOType = True
+	
+	Set oParent = Nothing
+	Set oPrevObj = Nothing ]]>
+	
+    </g>
+ </f>
+
+ <f name="myLeftTruncate" access="public" qi="Truncate a field by locating a character plus the number of space">
+<p name="numberOfSpace"/>
+<p name="dCharacter"/>
+  <ap>
+    Truncate a field by locating a character plus the number of space
+  </ap>
+  <h>
+        numberOfSpace = 2<br/>
+		dCharacter = /<br/>
+    <e>
+        If the field value is 12345/67/890/123, setting numberOfSpace to 3 and dCharecter to / will format the field to 345/67/890/123<br/>
+    </e>
+  </h>
+  <lvl>
+      Place at the Field level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  'Your VBScript code goes here.
+    Dim Retn
+    Dim i
+    Dim oField
+    Dim ParamStr
+	Dim dCharacterPos
+	Dim NumberOfCharacterFromRight
+	
+    myLeftTruncate = TRUE       'Actions must always return a TRUE or FALSE.
+	
+	oField = CurrentObj.Text
+	
+	if Len(oField) > 0 Then	
+		dCharacterPos = InStr(oField,dCharacter)
+		if ((Cint(numberOfSpace) + 1) <> Cint(dCharacterPos)) Then
+			NumberOfCharacterFromRight = Len(oField) - Cint(dCharacterPos) + (Cint(numberOfSpace) + 1)
+			CurrentObj.Text = Right(oField, NumberOfCharacterFromRight)
+		end if
+	end if
+	
+  ]]>
+  </g>
+</f>
+
+
+<f name="ClassifyByZoneConfig" access="public" qi="Set the Page Type page by recognizing and/or searching particualar zone on the page">
+  <p name="SearchZone"/>
+  <p name="RecogEngine"/>
+  <p name="ConfigFile"/>
+  <p name="FingerprintCreate"/>
+  <p name="LC_ConfidenceTresh"/>
+  <p name="AssignPageType"/>
+		<ap>
+						Six Parametars.  Smart parameters are supported:<br/>
+						<br/>
+						<b>1.</b> Search Zone - coordinates or a smart parameter referencing coordinates value.
+						This defines the location on the page to search for matching text.  
+						It can be a box, a strip across the entire page width, or the entire image.<br/>
+						Specify a comma-delimited list of positions.<br/>
+						If the zone is a box, enter 4 values. The format is Left, Top, Right, Bottom - measured in pixels. The position is measured in pixels<br/>
+						If zone is a strip, enter 2 values. The format is Top, Bottom. The position is measured in pixels or percent of the page height
+						Percentage is indicated by a number folled by p or %.  For example 10p is 10 percent.
+						If the parameter contains "All" the zone is the entire page.						
+						<br/><br/>
+						<b>2.</b> Recognition Engine - smart params supported  (OPTIONAL)<br/>
+						1 = OCR/S, 2 = ICR/C, 3 = OCR/A, 0 or empty = Use existing OCR results do not run OCR
+						<b>3.</b> Classify Configuration File. (MANDATORY) - smar params supported<br/> 
+						The file must be in the DCO folder and has a file extension of .key
+						The file contains a list of keywords or regular expressions and the matching page types.
+							"Regular Expression" = page type
+						<b>4.</b> Create fingerprint and assign page type  - smart params supported  (OPTIONAL, IF NOT PROVIDED OR "0" ACTION WILL NOT CREATE NEW FINGERPRINT<br/>
+						<br/>
+						
+						Search Zone
+						the calling object.  If the calling object is a field, it will use the field value.
+						For batch, document and page objects, it will use a variable called "Text", creating
+						the variable if it does not exist.
+					
+						This action will get the text for the specified zone and then perform keyword searches using keywords
+						in the configuration file.  When the first match is encountered, the corresponding page type is returned from the 
+						list. If called from a field, the field zone is set to match the specified zone. If called form a batch, document, or page
+						then the "Text" variable us set to the coordinates of the zone.
+		</ap>
+		<h>
+					br/>
+			<e>
+					ClassifyByZoneConfig (0,0,3300,950,1,PageConfigFile,0.95,1)<br/>
+			</e>
+		</h>
+		<lvl>
+					Page level only.
+		</lvl>
+		<ret>
+					List your return conditions. <br/>
+					<b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+		</ret>
+		<see>
+					Reference other related actions here <br/>
+					<scr>RelatedFunctionName</scr>
+		</see>
+	<g>
+  <![CDATA[
+  
+	Dim sPositionAr
+	Dim sRecogEng
+	Dim sCharSet
+	Dim sConfigFile
+	Dim sPageType
+	Dim oChildNode
+	Dim sDestination
+	Dim TempCurrentObj
+	Dim sPosition
+	Dim bResult
+	Dim sStartTime
+	Dim sEndTime
+	Dim sFingerprint
+        Dim sParamPageType
+	Dim sASCIIChars
+	Dim sAllowChars
+	Dim l_oDCImage
+	Dim imgWidth
+	Dim imgHeight
+	Dim imgDPI
+	Dim imgDepth
+        Dim fso
+        Const forReading = 1
+        Dim objTextFile
+        Dim arrFields
+        Dim sNextLine
+        
+        'the following variable are used when searching for a regular expression in the forms.
+        Dim sFind
+        Dim sForm
+        Dim blnContine
+		
+	Dim KeyList
+	Dim aKeys,strKey,Found,Kx
+	Dim sAssignPageType
+
+	sStartTime = Time
+	'Writelog ("StartTime : " & sStartTime)
+	
+	ClassifyByZoneConfig = TRUE
+  
+       ' Check if the action is placed on the page level
+	If CurrentObj.ObjectType <> 2 Then
+		Writelog ("CF_LOG : This action must operate on a PAGE Object.  Exiting")
+		Exit Function
+	End If
+	
+			
+	' ****************************************************************************************************************************************************	
+	Writelog ("CF_LOG : ******************* Checking SearchZone Param	 *******************")
+	
+	sPosition = Trim (SearchZone)
+	
+	If sPosition = "" then
+		sPosition = "ALL"
+		SearchZone = "ALL"
+	End If
+	
+	If InStr(1,SearchZone,"@") = 1 then
+		sPosition = MetaWord(SearchZone)
+	End if
+	
+	If UCase(sPosition) = "ALL" then
+			
+			' Set Zone to Complete Image
+			
+			Set l_oDCImage = CreateObject("DCIMAGE.DcimageCtrl.1")
+	
+			If(CurrentObj.ImageName="") Then
+				Writelog("CF_LOG : Warning: Current object is not assosciated with an image.")
+				Exit function
+			Else
+				l_oDCImage.FileName = CurrentObj.ImageName
+				Writelog("CF_LOG : Current Image Name: " & l_oDCImage.FileName )
+			End If
+					
+			Call l_oDCImage.GetImageInfo(imgWidth, imgHeight, imgDepth)
+				'Writelog("Image width: " & imgWidth & ", Height: " & imgHeight & ", Depth: " & imgDepth)
+			sPosition = "0,0," & imgWidth & "," & imgHeight
+			sPositionAr = Split (sPosition,",")
+			Writelog ("CF_LOG : Search Zone is : " & sPositionAr(0) & "," & sPositionAr(1) & "," & sPositionAr(2) & "," & sPositionAr(3) )
+			Set l_oDCImage = Nothing
+		
+	Else
+	
+		sPositionAr = Split (sPosition,",")
+		
+		If UBound(sPositionAr) = 3 Then
+				Writelog ("CF_LOG : Search field position - > 4 arguments")
+				Writelog ("CF_LOG : Arguments values are : " & sPositionAr(0) & "," & sPositionAr(1)& "," & sPositionAr(2) & "," & sPositionAr(3))
+		End If
+			
+		If UBound(sPositionAr) = 0 or UBound(sPositionAr) > 3 Then
+				Writelog ("CF_LOG : Search field position - > Wrong number of parameters.  Exiting")
+				Exit function
+		End If
+		
+		If UBound(sPositionAr) = 1 Then
+				Writelog ("CF_LOG : Search field position - > 2 arguments")
+				Writelog ("CF_LOG : Arguments values are : " & sPositionAr(0) & "," & sPositionAr(1))
+				
+			Dim strTop
+			Dim strBottom
+  
+			matchStart = Trim(sPositionAr(0))
+			matchEnd = Trim(sPositionAr(1))
+		
+			If (Len(matchStart) = 0) Then 
+				WriteLog("CF_LOG : Parameter matchStart must be specified."):
+				Exit Function		
+			End If
+			
+			If (Len(matchEnd) = 0) Then
+			' Only one parameter was passed in.  Use it as the amount to match starting from the top.
+				strTop = 0
+				strBottom = matchStart
+			Else
+			' Two parameters were passed.  Use them as start and end.
+				strTop = matchStart 
+				strBottom = matchEnd  
+			End if
+  
+			'look for percentage or millimeter flags
+			'look for p or m; p - percent, m - millimeter
+        
+			If Instr(strTop,"p")>0 or Instr(strTop,"%")>0 then
+				strTop = Replace(strTop,"p","")
+				strTop = Replace(strTop,"%","")
+		      	strTop = strTop/100
+			End If
+			
+			If Instr(strTop,"m")>0 then
+				strTop = Replace(strTop,"m","")
+			End If
+			
+			If len(strTop)<=2 then 
+				strTop = "0" & strTop
+			End If
+    	
+			If Instr(strBottom,"p")>0 or Instr(strBottom,"%")>0 then
+				strBottom = Replace(strBottom,"p","")
+				strBottom = Replace(strBottom,"%","")
+				strBottom = strBottom/100
+			End If
+			
+			If Instr(strBottom,"m")>0 then
+				strBottom = Replace(strBottom,"m","")
+			End If
+			
+			If len(strBottom)<=2 then 
+				strBottom = "0" & strBottom
+			End If
+  
+			'normalize number - pass as string
+			strTop=DCGlobalCurrency.NormalizeNumber(strTop)
+			strBottom=DCGlobalCurrency.NormalizeNumber(strBottom)
+			
+			'++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+			
+			Dim nTop, nBottom
+			
+			nTop = strTop * 100
+			nBottom = strBottom * 100
+			WriteLog("Top Search : '" & nTop & "' Bottom Search: '" & nBottom & "'.")
+			
+			Set l_oDCImage = CreateObject("DCIMAGE.DcimageCtrl.1")
+	
+			If(CurrentObj.ImageName="") Then
+				Writelog("CF_LOG : Warning: Current object is not assosciated with an image.")
+				Exit function
+			Else
+				l_oDCImage.FileName = CurrentObj.ImageName
+				Writelog("CF_LOG : Current Image Name: " & l_oDCImage.FileName )
+			End If
+					
+			Call l_oDCImage.GetImageInfo(imgWidth, imgHeight, imgDPI)
+				'Writelog("Image width: " & imgWidth & ", Height: " & imgHeight & ", Depth: " & imgDepth)
+				nBottom =  imgHeight / 100 * nBottom
+				nTop = imgHeight / 100 * nTop
+				WriteLog("Setting bottom to: " & nBottom & "Setting top to: " & nTop)
+				sPosition = "0," & nTop & "," & imgWidth & "," & nBottom
+			sPositionAr = Split (sPosition,",")
+			Writelog ("CF_LOG : Search Zone is : " & sPositionAr(0) & "," & sPositionAr(1) & "," & sPositionAr(2) & "," & sPositionAr(3) )
+			Set l_oDCImage = Nothing
+						
+
+		End If
+	End If
+		
+	' ****************************************************************************************************************************************************	
+	Writelog ("CF_LOG : ******************* Checking RecogEngine Param	 *******************")	
+	
+	If InStr(1,RecogEngine,"@") = 1 then
+		sRecogEng = MetaWord(RecogEngine)
+	Else
+		sRecogEng = Trim (RecogEngine)
+	End if
+	
+	If sRecogEng = "" Then
+		sRecogEng = "0"
+		Writelog ("CF_LOG : Recognition Engine Parametar is empty, action will not run recognition")
+	End If
+			
+	If Not IsNumeric(sRecogEng) Then
+			Writelog ("CF_LOG : Value specified in Smart Parametar for Recognition Engine MUST be numeric.  Exiting")
+		Exit Function
+	End If
+	
+	If sRecogEng < 0 or sRecogEng > 3 Then
+			Writelog ("CF_LOG : Recognition Engine Parametar was not specified or value is not in range of 1 - 3.  Exiting")
+		Exit Function
+	End If
+	
+	Writelog("RecogEngine Param is :" & sRecogEng)
+	
+	' ****************************************************************************************************************************************************	
+	Writelog ("CF_LOG : ******************* Checking Fingerprint Create Param	 *******************")		
+	
+	If InStr(1,FingerprintCreate,"@") = 1 then
+		sFingerprint = MetaWord(FingerprintCreate)
+	Else
+		sFingerprint = Trim (FingerprintCreate)
+	End if
+	
+	If sFingerprint = "" Then
+		sFingerprint = "0" 		'do not create fingerprint
+	End If
+	
+	If Not IsNumeric(sFingerprint) Then
+			Writelog ("CF_LOG : Fingerprint Parametar value must be numeric.  Exiting")
+		Exit Function
+	End If
+	
+	If sFingerprint < 0 or sFingerprint > 1 Then
+			Writelog ("CF_LOG : Fingerprint Parametar value must be 0 or 1.  Exiting")
+		Exit Function
+	End If
+	
+	Writelog("FingerprintCreate Param is :" & sFingerprint)
+		
+	' ****************************************************************************************************************************************************	
+	Writelog ("CF_LOG : ******************* Checking ConfigFile Param	 *******************")		
+		
+	If InStr(1,ConfigFile,"@") = 1 then
+		sConfigFile = MetaWord(ConfigFile)
+		sConfigFile = MetaWord("@PROCESSDIR") & "\" & sConfigFile & ".key"
+		Writelog ("CF_LOG : ConfigFile is : " & sConfigFile)
+	Else
+		sConfigFile = Trim (ConfigFile)
+		sConfigFile = MetaWord("@PROCESSDIR") & "\" & sConfigFile & ".key"
+		Writelog ("CF_LOG : ConfigFile is : " & sConfigFile)
+	End if
+	
+	If ConfigFile = "" Then                        
+			Writelog ("CF_LOG : ConfigFile is not specified.  Exiting")
+		Exit Function
+	End If
+	
+	Writelog("CF_LOG : ConfigFile Param is :" & sConfigFile)
+	
+	' ****************************************************************************************************************************************************	
+	Writelog ("CF_LOG : ******************* Checking AssignPageType Param	 *******************")	
+	If InStr(1,AssignPageType,"@") = 1 then
+		sAssignPageType = MetaWord(AssignPageType)
+		If Not IsNumeric(sAssignPageType) Then
+			sAssignPageType = "0"
+			Writelog ("CF_LOG : AssignPageType was not numeric value. Action WILL NOT set the page type for this image")
+		End If
+	End if
+	
+	If Not IsNumeric(AssignPageType) Then
+		sAssignPageType = "0"
+		Writelog ("CF_LOG : AssignPageType was not numeric value. Action WILL NOT set the page type for this image")
+	End If		
+		
+	If  AssignPageType = "" Then
+		sAssignPageType = "0"
+		Writelog ("CF_LOG : AssignPageType param was not specified. Action WILL NOT set the page type for this image")
+	End If
+	
+	If AssignPageType < 0 or AssignPageType > 1 Then
+			Writelog ("CF_LOG : AssignPageType param specified does not have acceptable value. Valid values are 0 or 1. Action WILL NOT set the page type for this image")
+		    sAssignPageType = "0"
+	Else
+		    sAssignPageType = AssignPageType
+	End If
+	
+	' ****************************************************************************************************************************************************		
+	Writelog ("CF_LOG : ++++++++++  ALL PARAMETERS OK  ++++++++++")	
+	' ****************************************************************************************************************************************************	
+	Writelog ("CF_LOG : ******************* Check if sPosition (SearchZone param) is ALL and sRecogEng (RecogEngine param) > 0, If yes, run FULL PAGE RECOGNITION	 *******************")
+	Writelog ("CF_LOG : sPosition value is: " & sPosition & " Search Zone param is: " & SearchZone &  "sRecogEng value is: " & sRecogEng & " RecogEngine param is : " & RecogEngine)
+	
+	If UCase(SearchZone) = "ALL" and RecogEngine > 0 then
+				
+		If IsAlive(CCO) = True then 
+			Writelog("CF_LOG : CCO does not exist")
+			
+			If sRecogEng = "1" then
+				Call RecognizePageOCR_S(false,false)
+				Writelog("CF_LOG : Performing RecognizePageOCR_S")
+				Call CreateTextFile(false,false)
+			End If 
+		
+			If sRecogEng = "2" then
+				Call RecognizePageICR_C(false,false)
+				Writelog("CF_LOG : Performing RecognizePageICR_C")
+				Call CreateTextFile(false,false)
+			End If 
+	
+			If sRecogEng = "3" then
+				Call RecognizePageOCR_A(false,false)
+				Writelog("CF_LOG : Performing RecognizePageOCR_A")
+				Call CreateTextFile(false,false)
+			End If 
+			
+			sRecogEng = 0 ' this will trigger bypass zonal recognition and run SnapCCOtoDCO
+		Else
+			sRecogEng = 0
+		End if
+	End If
+	
+	' ****************************************************************************************************************************************************
+	Writelog ("CF_LOG : ******************* Add a FIELD object to the THIS page	 *******************")
+	
+	' Add a FIELD object to the THIS page 
+	' Note: You can ONLY add a child that is at the same or a lower level than this object in the hierarchy.
+	
+	' Save current object to oPage object
+	Set oPage = CurrentObj
+	
+	Dim bFldResult
+	Set bFldResult = CurrentObj.FindChild("ClassifyByZone")
+	If  (bFldResult Is Nothing) Then
+		Set oNewField = oPage.AddChild(3,"ClassifyByZone", -1)
+		oNewField.Variable("Position") = sPosition
+		oNewField.Variable("STATUS") = -1
+		Set CurrentObj = oNewField
+		Writelog ("CF_LOG : Created new field")
+	Else
+		Set oNewField = bFldResult
+		Set CurrentObj = oNewField
+		oNewField.Variable("Position") = sPosition
+		oNewField.Variable("STATUS") = -1
+		Writelog ("CF_LOG : Using existing field")
+	End If
+	
+	' ****************************************************************************************************************************************************	
+	Writelog ("CF_LOG : ******************* Run Field recognition using ONE OF the recognition engines according to sRecogEng value *******************")
+	
+	' 0 = NO RECOG
+	' 1 = OCR_S
+	' 2 = ICR_C
+	' 3 = OCR_A
+	
+	If sRecogEng = "0" then
+		Writelog ("CF_LOG : sRecogEng is 0 Field Recognition engine will not run")
+	End If 
+
+	If sRecogEng = "1" then
+		Call RecognizeFieldOCR_S(false,false) 
+		Writelog ("CF_LOG : Running RecognizeFieldOCR_S")
+
+	End If 
+		
+	If sRecogEng = "2" then
+		Call RecognizeFieldICR_C(false,false)
+		Writelog ("CF_LOG : Running RecognizeFieldICR_C")
+
+	End If 
+	
+	If sRecogEng = "3" then
+		Call RecognizeFieldOCR_A(false,false)
+		Writelog ("CF_LOG : Running RecognizeFieldOCR_A")
+
+	End If 
+
+	' ****************************************************************************************************************************************************
+	'Writelog ("CF_LOG : **********  Filter characters ***************")
+
+	
+	' TESTING REGULAR EXPRESSION
+	
+		'Set objRegEx = CreateObject("VBScript.RegExp")
+		'objRegEx.Global = True
+		'objRegEx.Pattern = "[\x4A-\x55]" 
+		'Dim strSearchString
+		'Dim strNewString
+		'strSearchString = "AaBbCcDdEFGHIJKLJMNOPRSTUVZWYQ1234567890"
+		'strNewString = objRegEx.Replace (strSearchString,"")
+		'Writelog("CF_LOG:(554) Filtered Value from AaBbCcDdEFGHIJKLJMNOPRSTUVZWYQ1234567890 is NOW : " & strNewString)
+		
+	' ****************************************************************************************************************************************************
+	Writelog ("CF_LOG : ********** SnapCCOtoDCO or SnapDCOtoCCO **************")
+
+	If sRecogEng = "0" then
+		Set CurrentObj = oNewField
+		Call SnapCCOtoDCO(false,false)
+		Writelog ("CF_LOG : Running SnapCCOtoDCO ")
+	Else
+		Set CurrentObj = oPage
+		Call SnapDCOtoCCO(false,false)
+		Writelog ("CF_LOG : Running SnapDCOtoCCO ")
+	End If
+
+	' ****************************************************************************************************************************************************
+	Writelog ("CF_LOG : ********** Load the Keyword File (specified in sConfigFile paramater) *****************")
+	
+        'open the delimeted file for reading.	
+        Set objFSO = CreateObject("Scripting.FileSystemObject")
+		' Check Locate for Dictionary cache
+        Set objTextFile = objFSO.OpenTextFile (sConfigFile, ForReading)
+		
+        'loop through the file and determine whether the regular expression is found.
+        Do Until objTextFile.AtEndOfStream
+		
+			'ensure the variables are blank and blnContinue is set to true.			
+				
+             	blnContinue = TRUE
+
+				'read a line from the file.
+				sNextLine = objTextFile.Readline   
+          
+				'find the last instance of an equals sign in the line.  If there is no equals sign,
+				'an error will be written to the log file and it will not continue.
+            If InStrRev(sNextLine, "=") > 0 Then
+					'parse the file.  
+				If len(sNextLine) > InStrRev(sNextLine, "=") then
+                    sFind =  Mid(sNextLine, 1, InStrRev(sNextLine, "=") - 1)
+                    sForm =  Mid(sNextLine, InStrRev(sNextLine, "=") + 1)
+				Else
+                    blnContinue = FALSE
+                    Writelog ("CF_ERROR : Equal Sign is at the end of the line: " & sNextLine)
+				End If
+                 
+			Else 
+                   blnContinue = FALSE
+                   Writelog ("CF_ERROR : Unable to parse line sNextLine.  Equal is missing: " & sNextLine)
+			End If
+			  
+				Writelog ("CF_LOG : Check to see if the field should get updated.")
+			If blnContinue = TRUE then
+                   
+				'set the new field to the current object.  
+                Set CurrentObj = oNewField
+				Writelog ("CF_LOG : RegEXFind_InZone : " & sFind)
+                  
+                'attempt to find out whether the field is in the zone.
+                bResult = RegExFind_InZone (false,false,sFind)
+				'bResult = IsValue_RegEx(false,false,sFind) 
+                Writelog ("CF_LOG : RegEXFind_InZone returned : " & bResult)
+
+                'if the regular expression was found, then 
+                If bResult = True then
+
+					Call Writelog ("CF_LOG : RegEXFind_InZone set Values : " & sForm)
+					If sAssignPageType = "1" then
+						sDestination = DCONavSetValue("@P.TYPE",sForm)
+					End If
+					sDestination = DCONavSetValue("@P.ClassificationMethod","ClassifyByZone")
+					sDestination = DCONavSetValue("@P.ClassificationConf","10")
+					sDestination = DCONavSetValue("@P.ClassifyByZone","TRUE")
+				    
+ 	                ClassifyByZoneConfig = TRUE
+					
+					Exit Do
+				End If 
+			End If
+		Loop 'Do
+   
+        		
+	If ClassifyByZoneConfig = FALSE Then
+	
+		Writelog ("CF_LOG : FindRegExList_InZone returned : " & bResult)
+		ClassifyByZoneConfig = FALSE
+		sDestination = DCONavSetValue("@P.ClassifyByZone","FALSE")
+		
+	End If
+	
+	Set oNewField= Nothing
+    Set CurrentObj = oPage
+	
+	' ****************************************************************************************************************************************************
+	Writelog ("CF_LOG : ********** Check if Fingerprint needs to be created *******************")
+	Dim sLC_ConfidenceTresh
+	Dim sTemplateFnd
+	
+	sTemplateFnd = "0"
+	sLC_ConfidenceTresh = LC_ConfidenceTresh
+	
+	Dim sLC_Confidence
+	Dim sLC_TemplateID
+	Dim sTemplateID
+	
+	sLC_Confidence = CurrentObj.Variable("LC_Confidence")
+	sLC_TemplateID = CurrentObj.Variable("LC_TemplateID")
+	sTemplateID = CurrentObj.Variable("TemplateID")
+	
+	Writelog ("CF_LOG : Fingerprint LC_Confidence is: " & sLC_Confidence & " LC_TemplateID is: " & sLC_TemplateID & " TemplateID is: " & sTemplateID)
+	
+	If sLC_Confidence >= sLC_ConfidenceTresh and sTemplateID = "555" then
+		sTemplateFnd = "1"
+		'writelog ("treshold reached")
+		sDestination = DCONavSetValue("@P.TemplateID",sLC_TemplateID)
+	End If
+	
+	If sFingerprint = "1"  and  ClassifyByZoneConfig = TRUE and sTemplateFnd = "0" Then
+				
+		Call SetFingerprintDir(false,false,"@APPPATH(fingerprint)")
+		Call CreateFingerprint(false,false)
+		Call Writelog ("CF_LOG : Fingerprint Created and assigned pagetype : " & sForm )
+		
+	Else	
+		Call Writelog ("CF_LOG : Fingerprint Not Created")		
+	End If
+
+	'************************************************	
+	sEndTime = Time
+	'Writelog ("EndTime : " & sEndTime)
+	
+		]]>
+	</g>
+</f>
+
+<af name="myFNP8_CreateFolder" access="public" bInter="bInter" bDebug="bDebug" strParam="StrParam" qi="Creates a subfolder on a specified target class and object.">
+  <ap>
+    A string value or a predefined Smart Parameter variable which specifies the name of the folder to 
+    create.<br/><br/>
+    The allowed predefined variables are: @BATCHID, @ID, @STATUS, @TYPE, @VALUE, 
+    @JOBID, @JOBNAME, @OPERATOR, @STATION, @TASKID, @TASKNAME and @name.  Please refer to
+    the documentation for more information on these values.
+  </ap>
+  <h>
+    This action creates a subfolder on a specified target class and object.  Like the 
+    Upload actions, this action must be preceded by SetURL, Login and SetTargetClassID actions.
+    <e>
+      FNP8_SetDestinationFolder("\1040EZ\Export\")<br/>
+      <b>FNP8_CreateFolder("@BATCHID")</b><br/><br/>
+      This example will create a subfolder under the \1040EZ\Export\ folder and change 
+      the destination folder to the newly created folder.
+      If the folder is created successfully, the action adds a variable “Folder_ID” 
+      to the current DCO with the folder ID returned from FileNet Web Service.
+    </e>
+  </h>
+  <lvl>All levels.</lvl>
+  <ret>
+    <b>False</b> if the parameter cannot be parsed, the set up information is invalid,
+    or the folder cannot be created.  Otherwise, <b>True.</b><br/><br/>
+    Note: If the action returns False, the action directs the Rulerunner task to finish
+    with a status of “Aborted”.
+  </ret>
+
+<![CDATA[
+
+  On Error Resume Next
+  
+    FNP8_CreateFolder = False
+  
+    strFolder = MetaWord(StrParam)
+    If len(Trim(StrFolder))=0 Then strFolder = gFileNetP8.GetSpecialVariable(StrParam, CurrentObj)
+
+	  WriteLog("Destination folder: " & gFileNetP8.m_oP8Server.GetDestinationFolder())
+	
+    strId = gFileNetP8.m_oP8Server.CreateFolder(strFolder)
+
+    If (strId = "") Then
+		  WriteLog("The results do not contain a folder ID...")
+	  Else
+		  CurrentObj.Variable("Folder_ID") = strId
+		  WriteLog("Successfully created and ID is: " & strId & "; Destination folder is changed to: " & gFileNetP8.m_oP8Server.GetDestinationFolder())
+	  End If
+
+	  If Err.Number = -2146233087 Then 'Ignore not unique folder name for rollback capability support
+		  If InStr(err.description,"A uniqueness requirement has been violated") <> 0 Then
+			  WriteLog("Error " & err.Number & " '" & err.Description & " '" & "has been cleared...")
+			  Err.clear
+			  gFileNetP8.m_oP8Server.SetDestinationFolder gFileNetP8.m_oP8Server.GetDestinationFolder & strFolder & "\"
+			  Writelog("Folder " & gFileNetP8.m_oP8Server.GetDestinationFolder & " already exists." & " Uploading to folder specified")
+		  End If
+	  End If
+
+	  gFileNetP8.m_oP8Server.ClearProperties
+	  'FNP8_CreateFolder = gFileNetP8.ErrorHandler()
+    
+]]></af>
+
+<f name="FormatNRIC" access="public" qi="Setting up FormatNRIC variables">
+  <ap>
+    This FormatNRIC action will format 578231235 to S7823123S<br/>
+  </ap>
+  <h>
+        578231235 to S7823123S<br/>
+        57B231231 to S7823123I<br/>
+    <e>
+        To format NRIC to it's right format<br/>
+    </e>
+  </h>
+  <lvl>
+      Place at the Field level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  'Your VBScript code goes here.
+    Dim Retn
+    Dim myNRIC
+    Dim CheckLeftChar
+    Dim CheckRightChar
+
+    FormatNRIC = TRUE       'Actions must always return a TRUE or FALSE.
+	
+	myNRIC = CurrentObj.Text
+	WriteLog("Before Conversion " & myNRIC)
+	
+	myNRIC = Replace(myNRIC," ","")
+	myNRIC = Replace(myNRIC,"&","8")
+	myNRIC = Replace(myNRIC,"B","8")
+	myNRIC = Replace(myNRIC,"b","6")
+	myNRIC = Replace(myNRIC,"Z","2")
+	myNRIC = Replace(myNRIC,"z","2")
+	myNRIC = Replace(myNRIC,"S","5")
+	myNRIC = Replace(myNRIC,"s","5")
+	myNRIC = Replace(myNRIC,"o","0")
+	myNRIC = Replace(myNRIC,"O","0")
+	myNRIC = Replace(myNRIC,"i","1")
+	myNRIC = Replace(myNRIC,"|","1")
+	myNRIC = Replace(myNRIC,"l","1")
+	myNRIC = Replace(myNRIC,"T","7")
+	myNRIC = Replace(myNRIC,"\","1")
+	myNRIC = Replace(myNRIC,"/","1")
+	myNRIC = Replace(myNRIC,"G","6")
+	
+	If  Len(myNRIC) > 9 Then
+		myNRIC = Left(myNRIC, 9)
+	End If
+	
+	CheckLeftChar = Left(myNRIC,1)
+	
+	If IsNumeric(CheckLeftChar) then
+		CheckLeftChar = Replace(CheckLeftChar,"2","S")
+		CheckLeftChar = Replace(CheckLeftChar,"5","S")
+		CheckLeftChar = Replace(CheckLeftChar,"9","S")
+		CheckLeftChar = Replace(CheckLeftChar,"8","S")
+		CheckLeftChar = Replace(CheckLeftChar,"7","T")
+		CheckLeftChar = Replace(CheckLeftChar,"6","G")
+		CheckLeftChar = Replace(CheckLeftChar,"3","S")
+		myNRIC = CheckLeftChar & Right(myNRIC, 8)
+	End If
+	WriteLog("After left Conversion " & myNRIC)
+	
+	CheckRightChar = Right(myNRIC,1)
+	
+	If IsNumeric(CheckRightChar) then
+		CheckRightChar = Replace(CheckRightChar,"5","S")
+		CheckRightChar = Replace(CheckRightChar,"8","B")
+		CheckRightChar = Replace(CheckRightChar,"3","B")
+		CheckRightChar = Replace(CheckRightChar,"7","T")
+		CheckRightChar = Replace(CheckRightChar,"6","G")
+		CheckRightChar = Replace(CheckRightChar,"1","I")
+		CheckRightChar = Replace(CheckRightChar,"2","A")
+		myNRIC = Left(myNRIC, 8) & CheckRightChar
+	End If
+	
+	WriteLog("After Right Conversion " & myNRIC)
+	
+	CurrentObj.Text = myNRIC
+ 
+  ]]>
+  </g>
+</f>
+
+<f name="FindMailAttachment_Filename" access="public" qi="Find Mail Attachment Filename">
+<p name="InputFilename"/>
+<p name="AttachmentName"/>
+  <ap>
+    This FormatNRIC action will format 578231235 to S7823123S<br/>
+  </ap>
+  <h>
+        578231235 to S7823123S<br/>
+    <e>
+        To format NRIC to it's right format<br/>
+    </e>
+  </h>
+  <lvl>
+      Place at the Field level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  'Your VBScript code goes here.
+    Dim SmartInputFilename
+    Dim ColonPosition
+    Dim Attachment_Name
+    Dim ProcessAttachment
+    Dim Retn
+
+	
+    FindMailAttachment_Filename = TRUE       'Actions must always return a TRUE or FALSE.
+	
+	SmartInputFilename = MetaWord(InputFilename)
+	WriteLog("Smart Input Filename " & SmartInputFilename)
+	ColonPosition = InStr(SmartInputFilename,":")
+	WriteLog("Colon Position " & ColonPosition)
+	Attachment_Name = Right(SmartInputFilename, Len(SmartInputFilename)-Cint(ColonPosition))
+	WriteLog("Attachment Name " & Attachment_Name)
+	Retn = rrSet(Attachment_Name,AttachmentName)
+	
+	DotPosition = InStr(Attachment_Name,".")
+	FileExt = Right(Attachment_Name, Len(Attachment_Name)-Cint(DotPosition))
+	
+	File_Ext = "@P.FileExt"
+	Retn = rrSet(FileExt,File_Ext)
+
+  ]]>
+  </g>
+</f>
+
+<f name="GetInputFilename" access="public" qi="Find Mail Attachment Filename">
+<p name="InputFilename"/>
+<p name="Variable_For_Filename"/>
+  <ap>
+    <b>InputFilename</b> = @P.IMAGEFILE<br/>
+	<b>Variable_For_Filename</b> = @P.ImageFileName
+  </ap>
+  <h>
+    @P.IMAGEFILE = "C:\Datacap\ImageToPdf\images\This_is_a_PDF_File.pdf"<br/>
+
+    <e>
+	You get @P.ImageFileName = This_is_a_PDF_File <br/>
+	You will get your file extension on @P.FileExt = pdf <br/>
+	
+	This 2 variables will be attached to your page
+	
+    </e>
+  </h>
+  <lvl>
+      Place at the Page level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE</b> It will always return TRUE.
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  'Your VBScript code goes here.
+    Dim SmartInputFilename
+    Dim ColonPosition
+    Dim Attachment_Name
+    Dim ProcessAttachment
+    Dim Retn
+
+	
+    GetInputFilename = TRUE       'Actions must always return a TRUE or FALSE.
+	
+	SmartInputFilename = MetaWord(InputFilename)
+	WriteLog("Smart Input Filename " & SmartInputFilename)
+	ColonPosition = InStrRev(SmartInputFilename,"\")
+	WriteLog("Colon Position " & ColonPosition)
+	Attachment_Name = Right(SmartInputFilename, Len(SmartInputFilename)-Cint(ColonPosition))
+	WriteLog("Attachment Name " & Attachment_Name)
+	Retn = rrSet(Attachment_Name,Variable_For_Filename)
+	
+	DotPosition = InStrRev(Attachment_Name,".")
+	FileExt = Right(Attachment_Name, Len(Attachment_Name)-Cint(DotPosition))
+	
+	JustAttachmentName = Left(Attachment_Name, Cint(DotPosition)-1)
+	Just_Attachment_Name = "@P.Just_Attachment_Name"
+	
+	File_Ext = "@P.FileExt"
+	Retn = rrSet(JustAttachmentName,Just_Attachment_Name)
+	Retn = rrSet(FileExt,File_Ext)
+
+  ]]>
+  </g>
+</f>
+
+<f name="OpenExportFile" access="public">	
+<g>
+      <![CDATA[
+	
+	writelog("OPENING EXPORT FILE")
+
+  If gbRRX=true then bInter=gbInter:bDebug=gbDebug
+  
+	If Not IsObject(g_ExportFile) Then
+		WriteLog("Building Path and File Name...")
+		If (cbool(bDebug)=cbool(True) Or cbool(bInter)=cbool(True)) AND len(Trim(Pilot.BatchDir))=0 Then
+			If Len(Trim(g_ExportPath)) = 0 Then Call SetExportPath(bInter,  bDeBug, "C:\Datacap\Export")
+			If Len(Trim(g_ExportName)) = 0 Then g_ExportName = "Export"
+			If Len(Trim(g_ExportExtn)) = 0 Then g_ExportExtn = ".txt"
+	
+			writelog(Space(7) & "Default is " & g_ExportPath & "\" & g_ExportName & g_ExportExtn)
+
+		Else
+			If Len(Trim(g_ExportPath)) = 0 Then Call SetExportPath(bInter, bDebug, Pilot.BatchDir)
+			If Len(Trim(g_ExportName)) = 0 Then g_ExportName = Replace(Pilot.BatchId,".","_")
+			If Len(Trim(g_ExportExtn)) = 0 Then g_ExportExtn = ".txt"
+	
+			WriteLog(Space(7) & "Full Path is " & g_ExportPath & "\" & g_ExportName & g_ExportExtn)
+			
+		End If
+			
+		WriteLog("Open/Create File... ")
+		Set g_ExportFile = FileMgr.OpenTextFile(g_ExportPath & "\" & g_ExportName & g_ExportExtn, 8, True, 0)
+		If IsAlive(g_ExportFile) and Err.number=0 then 
+      WriteLog(Space(5) & "EXPORT File Open/Create Success.")
+      OpenExportFile = True
+    Else
+      WriteLog(Space(5) & "EXPORT File Open/Create Error! " & Err.number & ":" & Err.description)
+    End if
+    g_LastExportValue = ""
+	
+	Else
+		writelog("Export File is Already Open")
+		OpenExportFile = True
+	End If	
+
+	Call ErrorHandler("Function OpenExportFile")
+]]></g>
+</f>
+
+<f name="MergeLineItemField" access="public" qi="Sample logfile message">
+  <p name="FieldToMerge"/>
+  <p name="ComparisonParam"/>  
+  <ap>
+   Document your parameters here<br/>
+  </ap>
+  <h>
+         Explain the usage of your action here<br/>
+    <e>
+        Place an example action call<br/>
+    </e>
+  </h>
+  <lvl>
+      Place on the Grid level 
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  
+	MergeLineItemField = True	
+  
+	Dim NumChildren
+	Dim oSuperField
+	Dim MainMergeField
+	Dim MergeField
+	Dim Mainobj
+	Dim MainLine
+	Dim MainDescription
+	Dim eString
+	
+	On Error Resume Next  
+	
+	MainDescription = ""
+	
+	For i = 0 To CurrentObj.NumOfChildren -1
+		Set oSuperField = CurrentObj.GetChild(i)
+		If Not (oSuperField Is Nothing) Then
+		
+			Set Mainobj = oSuperField.FindChild(TRIM(ComparisonParam))
+			Set MergeField = oSuperField.FindChild(TRIM(FieldToMerge))
+			
+			If Mainobj.Text <> "" Then
+				If i = 0 Then
+					'Set a main reference field
+					Set MainMergeField = CurrentObj.GetChild(i)
+					'Set a field MainDescription for appending
+					MainDescription = MergeField.Text
+					MainLine = 0
+					
+				ElseIf i > MainLine Then
+					Set MergingField = MainMergeField.FindChild(TRIM(FieldToMerge))
+					MergingField.Text = MainDescription
+					
+					'Reset pointer MainMergeField
+					Set MainMergeField = CurrentObj.GetChild(i)					
+					MainDescription = MergeField.Text	
+				 Writelog("Test MergeLineFields: " & MainDescription)  
+				End If
+			ElseIf i = (CurrentObj.NumOfChildren -1) Then
+				Set MergingField = MainMergeField.FindChild(TRIM(FieldToMerge))
+				MergingField.Text = MainDescription			
+				
+			'This condition will add all the merge field together
+			Else
+				If MergeField.Text <> "" Then
+					MainDescription = MainDescription & " " & MergeField.Text 
+					Writelog("Appended MergeLineFields: " & " " & MainDescription)  
+				End If
+			End If			
+		End If
+	Next 'i
+	
+ 
+  ]]>
+  </g>
+</f>
+
+<f name="GetImageRes" access="public" qi="for finding out the image resolution">
+  <p name="Resolution_Variables"/>
+		<ap>
+			To Check the resolution of the page<br/>
+		</ap>
+		<h>
+			Give a variable name to store the resolution data. eg @P.ImageResolution<br/>
+			<e>
+					@P.ImageResolution<br/>
+			</e>
+		</h>
+		<lvl>
+					Page Level Only.
+		</lvl>
+		<ret>
+					Always TRUE <br/>
+					
+		</ret>
+		<see>
+				<br/>
+					<scr>GetRes</scr>
+		</see>
+	<g>
+  <![CDATA[
+  	
+	Dim nX
+	Dim nY
+	Dim ImgRes
+	
+	GetImageRes = TRUE	
+	Set l_oDCImage = CreateObject("DCIMAGE.DcimageCtrl.1")
+	
+	Set oObj = CurrentObj
+	
+	l_oDCImage.FileName = oObj.ImageName
+	Call l_oDCImage.GetRes(imgWidth, imgHeight)
+	Call l_oDCImage.Save("c:\Img1.tif", 10)
+	
+	'Set nX = oObj.FindChild(TRIM(X_Resolution))
+	'Set nY = oObj.FindChild(TRIM(Y_Resolution))
+	'WriteLog("image width:" & imgWidth)
+
+	'ImgRes = "@P.ImageResolution"
+	Retn = rrSet(imgWidth,Resolution_Variables)
+
+
+	Set l_oDCImage = Nothing		
+		
+  ]]>
+  </g>
+</f>
+
+
+<f name="FindSubDirectory" access="public" qi="Find Sub Directory">
+  <ap>
+    This FormatNRIC action will format 578231235 to S7823123S<br/>
+  </ap>
+  <h>
+        578231235 to S7823123S<br/>
+    <e>
+        To format NRIC to it's right format<br/>
+    </e>
+  </h>
+  <lvl>
+      Place at the Field level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  'Your VBScript code goes here.
+    Dim SmartInputFilename
+    Dim numSlash
+    Dim Attachment_Name
+    Dim ProcessAttachment
+    Dim Retn
+
+	
+    FindSubDirectory = TRUE       'Actions must always return a TRUE or FALSE.
+	
+	ImportDirectory = UCase(MetaWord("@APPPATH(vscanimagedir)"))
+	ImportDirectory = Replace(ImportDirectory, "\", "\\")
+	
+	ScanSrcPath = UCase(MetaWord("@P.ScanSrcPath"))
+	ScanSrcPath = Replace(ScanSrcPath, "\", "\\")
+	
+	SubDirectory = Replace(ScanSrcPath, ImportDirectory, "")
+
+	SecondPos = 0
+	FirstPos = InStr(SubDirectory,"\\")
+	
+	WriteLog(" This is FirstPos " & FirstPos)
+	SecondPos = InStr(FirstPos+1,SubDirectory,"\\")
+
+	WriteLog(" This is SecondPos " & SecondPos)
+	
+	If cInt(SecondPos) > 0 Then 
+
+		WriteLog(SubDirectory & " This is SubDirectory")
+		
+		'LastSlashPosition = Len(SubDirectory) - LastSlashPosition
+		LastSlashPosition = InStr(2,SubDirectory,"\\")
+		
+		'SubDirectoryName = Right(SubDirectory, LastSlashPosition)
+		SubDirectoryName = Left(SubDirectory, LastSlashPosition-1)
+		SubDirectoryName = Replace(SubDirectoryName, "\\", "")
+		
+		sSubDirectoryName = "@P.SubDirectoryName"
+		Retn = rrSet(SubDirectoryName,sSubDirectoryName)
+	Else 
+		sSubDirectoryName = "@P.SubDirectoryName"
+		Retn = rrSet("ROOT",sSubDirectoryName)
+	End If
+	
+  ]]>
+  </g>
+</f>
+
+
+
+<f name="SetImageRes" access="public" qi="set image resolution">
+  <p name="Resolution_Variables"/>
+		<ap>
+			To set the resolution of the page<br/>
+		</ap>
+		<h>
+			Give a variable name to store the resolution data. eg @P.ImageResolution<br/>
+			<e>
+					@P.ImageResolution<br/>
+			</e>
+		</h>
+		<lvl>
+					Page Level Only.
+		</lvl>
+		<ret>
+					Always TRUE <br/>
+					
+		</ret>
+		<see>
+				<br/>
+					<scr>GetRes</scr>
+		</see>
+	<g>
+  <![CDATA[
+  	
+	Dim nX
+	Dim nY
+	Dim ImgRes
+	
+	'SetImageRes = TRUE	
+	Set l_oDCImage = CreateObject("DCIMAGE.DcimageCtrl.1")	
+	Set oObj = CurrentObj
+	
+	l_oDCImage.FileName = oObj.ImageName
+	Call l_oDCImage.SetRes(Resolution_Variables, Resolution_Variables)
+
+
+
+	Set l_oDCImage = Nothing		
+		
+  ]]>
+  </g>
+</f>
+
+<f name="FindSourceFile" access="public" qi="Find Sub Directory">
+  <ap>
+    This FormatNRIC action will format 578231235 to S7823123S<br/>
+  </ap>
+  <h>
+        578231235 to S7823123S<br/>
+    <e>
+        To format NRIC to it's right format<br/>
+    </e>
+  </h>
+  <lvl>
+      Place at the Field level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  'Your VBScript code goes here.
+    Dim ScanSrcPath
+    Dim aStrParam
+    Dim oField
+    Dim Retn
+
+
+    FindSourceFile = TRUE       'Actions must always return a TRUE or FALSE.
+	
+	ScanSrcPath = UCase(MetaWord("@P.ScanSrcPath"))
+	
+	aStrParam = Split(ScanSrcPath,"\")
+	
+	oField = aStrParam(UBound(aStrParam))
+	oField = Left(oField, Len(oField)-4)
+	
+
+	SourceFilename = "@P.SourceFilename"
+	Retn = rrSet(oField,SourceFilename)
+	
+  ]]>
+  </g>
+</f>
+
+<f name="FindChequeInformation" access="public" qi="Split variables">
+<p name="MICR_Field"/>
+<p name="ChequeNo"/>
+<p name="BankCode"/>
+<p name="BranchCode"/>
+<p name="AccountNumber"/>
+  <ap>
+    This FindCheque action will work with Abbyy recognize field action that return MICR in this format
+	A0C150051C7171D174A771166736C
+  </ap>
+  <h>
+        Separator = | <br/>
+    <e>
+        If the field to split is How|to|split|field, it will create a new field call tony_1<br/>
+    </e>
+  </h>
+  <lvl>
+      Place at the Page level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  'Your VBScript code goes here.
+    Dim Retn
+    Dim i
+    Dim myMICR_Field
+    Dim aStrParam
+    Dim bStrParam
+    Dim cStrParam
+    Dim sValue
+	Dim dSeparator
+
+    FindChequeInformation = TRUE       'Actions must always return a TRUE or FALSE.
+	
+	myMICR_Field = MetaWord(MICR_Field)
+	WriteLog("The cheque information: " & myMICR_Field)
+	
+	dSeparator = "C"
+	aStrParam = Split(myMICR_Field, dSeparator)
+	CurrentObj.FindChild(ChequeNo).Text = aStrParam(1)
+    for i = 0 to UBound(aStrParam) - 1    'loop through fields except last field (Browse)
+   	WriteLog("Split cheque information: " & aStrParam(i))
+	next 'i   
+	
+	bStrParam = Split(aStrParam(2), "D")
+	CurrentObj.FindChild(BankCode).Text = bStrParam(0)
+	
+	cStrParam = Split(bStrParam(1), "A")
+	CurrentObj.FindChild(BranchCode).Text = cStrParam(0)
+	CurrentObj.FindChild(AccountNumber).Text = cStrParam(1)
+	
+
+  ]]>
+  </g>
+</f>
+
+<f name="SetImageDPI_ByWidth" access="public" >
+  <p name="PageWidth"/>
+  <p name="Rescale"/>  
+  <ap>
+   <br/><br/>
+
+    <b>1.</b> Physical width of the page in inches. If not specified will set to 8.5 inches.<br/><br/>
+
+    <b>2.</b> Rescale the page?  True - rescale to 300 dpi, False - do not rescale<br/><br/>
+
+	</ap>
+
+  <h>
+    <e>
+      <b>  </b>
+    </e>
+  </h>
+  <lvl>Page level only, and the page must refer to a valid single page image file</lvl>
+  <ret>
+    <b>True</b> if the operation is successful, else <b>False</b> if any error occurred.
+  </ret>
+<g>
+<![CDATA[
+	Dim percent
+	Dim nWidth, nHeight, nBits
+	Dim physWidthInches, physHeightInches, newBits, RescaleFlag
+	Dim nX,nY
+	Dim newDPIX, newDPIY, newPixelX, newPixelY
+	Dim m_Image
+	Dim m_ProcessedImage,m_EmergCopy
+	SetImageDPI_ByWidth = false
+
+	If(CurrentObj.ObjectType <> DCO_PAGE) Then
+	   Writelog("This action must be called at the page level. Returning false.")
+	   exit function
+	End If
+
+	physWidthInches = MetaWord(PageWidth)
+	RescaleFlag = Trim(Rescale)
+	RescaleFlag = MetaWord(RescaleFlag)
+	
+	if physWidthInches = "" Then
+		physWidthInches = "8.5"
+	end if
+	
+	if(Not IsNumeric(physWidthInches)) Then 
+		Writelog ("Invalid parameter passed. The action expects an integer parameter. Returning false.")
+		exit function
+	end if
+
+	if(CurrentObj.ImageName="") Then
+	   Writelog("Warning: Current object is not associated with an image.")
+	   exit function
+	end if
+
+	Set m_Image=CreateObject("DCImage.DCImageCtrl.1")
+	m_ProcessedImage = CurrentObj.ImageName
+	m_Image.FileName = m_ProcessedImage
+
+	if(m_Image.FileName <> m_ProcessedImage) Then
+		writelog("Error reading image file: " & m_Image.GetLastError())
+		Set m_Image = Nothing
+		exit function
+	end if
+
+	Call m_Image.GetImageInfo(nWidth, nHeight, nBits)
+	Call m_Image.GetRes(nX, nY)
+	strInfo = "Image width: " & nWidth & "height: " & nHeight & "bit depth: " & nbits & Vbcrlf &_
+	  "DPI X: " & nX & "DPI Y: " & nY
+
+	WriteLog (strInfo)
+
+	newDPIX = CInt((nWidth + .5)/ physWidthInches)
+	newDPIY = newDPIX
+	'Call m_Image.SetRes(newDPIX, newDPIY)
+	Call m_Image.SetRes(300, 300)
+	newPixelX = CINT((nwidth+.5) * (300/newDPIX))
+	newPixelY = CINT((nHeight+.5) * (300/newDPIY))
+	
+	if UCase(RescaleFlag) = "TRUE" Then
+		Call m_Image.ResizeImage(newPixelX, newPixelY)
+	end if
+	
+	WriteLog ("New DPI X: " & newDPIX & " DPI Y: " & newDPIY)
+	' save image
+	' create emergency copy
+	m_EmergCopy = Mid(m_ProcessedImage,len(m_ProcessedImage)-1) & "0"
+	Call FileMgr.CopyFile(m_ProcessedImage, m_EmergCopy)
+	Call FileMgr.DeleteFile(m_ProcessedImage, True)
+	
+	if(Not m_Image.Save(m_ProcessedImage)) Then 
+		writelog("Unable to save: " & m_Image.GetLastError())
+		' restore file from emergency copy
+		Call FileMgr.MoveFile(m_EmergCopy,m_ProcessedImage)
+	else
+		Call FileMgr.DeleteFile(m_EmergCopy, True)
+		SetImageDPI_ByWidth = true
+	end if
+   
+   Set m_Image = Nothing
+   
+]]></g>
+</f>
+
+<f name="SetFullTextToXMLNode" access="public" qi="Put all recognized full text into XML Node">
+  <p name="Parameter1"/>
+  <ap>
+   The NodeID (Ref to xml_SetNodeValue first parameter)<br/>
+  </ap>
+  <h>
+      This action is a combination of CreateTextFile and xml_SetNodeValue<br/>
+	  It triggers full text recognition by OCR_A and put all recognized text into XML Node<br/>
+    <e>
+	xml_NewNode("DocumentFullText,Details")<br/>
+	<b>SetFullTextToXMLNode("DocumentFullText")</b>
+    </e>
+  </h>
+  <lvl>
+      Place at Field level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>xml_SetNodeValue</scr>
+  </see>
+  <g>
+  <![CDATA[
+	
+	Dim aStrParam
+	Dim sNodeID
+	Dim sFindValue
+	Dim sNodeValue
+	
+	Writelog("myCustomLib SetFullTextToXMLNode Start")
+	
+	Writelog("myCustomLib Parameter1= "& Parameter1)
+	
+	On Error Resume Next
+
+	'aStrParam = split(strparam & "," & CurrentObj.Type ,",")
+	'Writelog("myCustomLib aStrParam= "& aStrParam)
+	sNodeID = Trim(Parameter1)
+	sFindValue = Trim(aStrParam(1))
+	
+	Writelog("myCustomLib sNodeID= "& sNodeID)
+
+  sNodeValue = MetaWord(sFindValue)
+  
+  If (CurrentObj.ObjectType<>2) Then Exit Function	'must be a page
+
+	Dim oFile
+	Dim oCCO
+
+	If Not(FileMgr.FileExists(CurrentObj.ImageName)) Then 
+		WriteLog("CreateTextFile skipping. Image file doesn't exist")
+		Exit Function
+	End If
+	WriteLog("----- CreateTextFile for: "&CurrentObj.ImageName&" -----")
+
+	Dim strCCOFile
+	strCCOFile = Left(CurrentObj.ImageName, Len(CurrentObj.ImageName)-3)&"cco"
+	If Not(FileMgr.FileExists(strCCOFile)) Then 
+		WriteLog("CreateTextFile skipping. CCO file doesn't exist")
+		Exit Function
+	End If
+	
+	Set oCCO = CCOCreator.Load(strCCOFile )
+
+	Set l_sStreamUTF8 = CreateObject("ADODB.Stream")
+	With l_sStreamUTF8
+    .Open        
+		.Type = 2 'text
+    .LineSeparator = -1 'crlf
+		.CharSet = "UTF-8"        
+	
+	  'Recog results	
+	  Dim Line, i, j, Content
+	  For i=1 To oCCO.count
+		  For j=1 To oCCO.item(i).count
+			  Line = Line & oCCO.item(i).item(j).value & " " 
+		  Next
+		  Content = Content & " " & Line
+		  .WriteText Line,1 'append line separator at end of string
+		  Line = ""
+	  Next
+	  
+	  Writelog("myCustomLib Content= "& Content)
+	  xml_SetNodeValue=XMLExport.SetNodeValue(metaword(sNodeID), Content)
+		
+	  '.SaveToFile Left(CurrentObj.ImageName, Len(CurrentObj.ImageName)-3) & "txt", 2 ' save to file create/overwrite existing
+	  .Close  
+
+
+	End With
+
+	Set l_sStreamUTF8 = Nothing
+	Set oCCO = Nothing
+
+	
+	SetFullTextToXMLNode = True
+	
+	Writelog("myCustomLib SetFullTextToXMLNode End")
+ 
+  ]]>
+  </g>
+</f>
+
+<f name="xml_SaveFileInUTF8" access="public" qi="Put all recognized full text into XML Node">
+  <p name="Parameter1"/>
+  <ap>
+   
+  </ap>
+  <h>
+      This action is a combination of CreateTextFile and xml_SetNodeValue<br/>
+	  It triggers full text recognition by OCR_A and put all recognized text into XML Node<br/>
+    <e>
+	xml_NewNode("DocumentFullText,Details")<br/>
+	<b>SetFullTextToXMLNode("DocumentFullText")</b>
+    </e>
+  </h>
+  <lvl>
+      Place at Field level
+  </lvl>
+  <ret>
+    List your return conditions. <br/>
+    <b>TRUE or FALSE</b> If you want to affect the rules order execution for some reason, or if this is a validation
+    action, you may want to conditionally return <b>FALSE.</b>  Otherwise, <b>TRUE.</b>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>xml_SetNodeValue</scr>
+  </see>
+  <g>
+  <![CDATA[
+	
+		Dim Mxx
+		Dim Sax
+		Dim Outfile
+		Dim sOutPath
+		Dim sRootID
+		Dim Counter
+	
+	Writelog("myCustomLib xml_SaveFileInUTF8 Start")
+	
+	Call XMLExport.CommitNodes()
+		
+								
+			xml_SaveFileInUTF8 = False					
+								
+			If Len(Trim(ExportXML.ExportPath)) = 0 Then Call SetExportPath(Pilot.BatchDir)
+			
+	
+	Writelog("myCustomLib xml_SaveFileInUTF8 End")
+ 
+  ]]>
+  </g>
+</f>
+</rrx>

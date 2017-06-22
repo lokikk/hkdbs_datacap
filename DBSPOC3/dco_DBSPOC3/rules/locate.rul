@@ -1,0 +1,1543 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ruleset id="5" name="Locate" ver="88" modder="admin.1" dt="06/16/17 14:53:51.72 " qi="">
+	<rule name="Company Name" id="1" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Company Name" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Date of Cessation" id="2" qi="">
+		<func name="Function1" qi="">
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter"/>
+				<p type="bDebug"/>
+				<p type="strParam" v="of Cessation"/>
+			</a>
+			<a ns="Locate" name="GoRightWord" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="MergeNextWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="IsNumber">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="50" name="StrParam"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi=""/>
+		</func>
+		<func name="Function2" disabled="y">
+			<a ns="rrunner" name="rrSet" qi="">
+				<p name="varSource" v="@P.NN6_Cessation_Date"/>
+				<p name="varTarget" v="@B.NN6_Cessation_Date"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi="" disabled="y"/>
+		</func>
+		<func name="Function3" disabled="y">
+			<a ns="Locate" name="RegExFind" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Date of Cessation" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="MergeNextWord" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="IsNumber">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="50" name="StrParam"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi=""/>
+		</func>
+		<func name="Function4" disabled="y">
+			<a ns="rrunner" name="rrAppend">
+				<p name="varSource" v="-"/>
+				<p name="varTarget" v="@B.NN6_Cessation_Date"/>
+			</a>
+			<a ns="rrunner" name="rrAppend">
+				<p name="varSource" v="@P\NN6_Cessation_Date"/>
+				<p name="varTarget" v="@B.NN6_Cessation_Date"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi=""/>
+		</func>
+		<func name="Function5" qi="" disabled="y">
+			<a ns="Locate" name="RegExFind" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Date of Cessation" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="MergeNextWord" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="IsNumber">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="50" name="StrParam"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi=""/>
+		</func>
+		<func name="Function6" disabled="y">
+			<a ns="rrunner" name="rrAppend">
+				<p name="varSource" v="-"/>
+				<p name="varTarget" v="@B.NN6_Cessation_Date"/>
+			</a>
+			<a ns="rrunner" name="rrAppend">
+				<p name="varSource" v="@P\NN6_Cessation_Date"/>
+				<p name="varTarget" v="@B.NN6_Cessation_Date"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi=""/>
+		</func>
+		<func name="Function7" disabled="y" qi="">
+			<a ns="rrunner" name="rrSet" qi="">
+				<p name="varSource" v="@B.NN6_Cessation_Date"/>
+				<p name="varTarget" v="@P\NN6_Cessation_Date"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Surname" id="3" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Surname" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a ns="Locate" name="IsValue_RegEx">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="[^姓氏]" name="strParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="True"/>
+				<p name="varTarget" v="@P.Surname_Found"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot">
+				<p name="object1" v="True"/>
+				<p name="object2" v="@P.Surname_Found"/>
+			</a>
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="姓氏" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="True"/>
+				<p name="varTarget" v="@P.Surname_Found"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+		<func name="Function3">
+			<a ns="rrunner" name="rrCompareNot">
+				<p name="object1" v="True"/>
+				<p name="object2" v="@P.Surname_Found"/>
+			</a>
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="姓氏" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Surname_Changed" id="23" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Surname" name="StrParam"/>
+			</a>
+			<a name="GoUpLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="2" name="nSpaces"/>
+			</a>
+			<a ns="Locate" name="IsValue_RegEx" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="[^姓氏]" name="strParam"/>
+			</a>
+			<a ns="Locate" name="FilterIt">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="0123456789" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y" qi="">
+				<p name="varSource" v="True"/>
+				<p name="varTarget" v="@P.Surname_Found"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+		<func name="Function2" disabled="y">
+			<a ns="rrunner" name="rrCompareNot">
+				<p name="object1" v="True"/>
+				<p name="object2" v="@P.Surname_Found"/>
+			</a>
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="姓氏" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="True"/>
+				<p name="varTarget" v="@P.Surname_Found"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+		<func name="Function3" disabled="y">
+			<a ns="rrunner" name="rrCompareNot">
+				<p name="object1" v="True"/>
+				<p name="object2" v="@P.Surname_Found"/>
+			</a>
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="姓氏" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Surname_Changed_Section2" id="25" qi="">
+		<func name="Function1" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Surname" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFindNext" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Surname" name="StrParam"/>
+			</a>
+			<a name="GoUpLine" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="2" name="nSpaces"/>
+			</a>
+			<a ns="Locate" name="IsValue_RegEx" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="[^姓氏]" name="strParam"/>
+			</a>
+			<a ns="Locate" name="FilterIt">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="0123456789" name="StrParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y" qi="">
+				<p name="varSource" v="True"/>
+				<p name="varTarget" v="@P.Surname_Found"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+		<func name="Function2" disabled="y">
+			<a ns="rrunner" name="rrCompareNot">
+				<p name="object1" v="True"/>
+				<p name="object2" v="@P.Surname_Found"/>
+			</a>
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="姓氏" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="True"/>
+				<p name="varTarget" v="@P.Surname_Found"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+		<func name="Function3" disabled="y">
+			<a ns="rrunner" name="rrCompareNot">
+				<p name="object1" v="True"/>
+				<p name="object2" v="@P.Surname_Found"/>
+			</a>
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="姓氏" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Other Name" id="4" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Other Names" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a ns="Locate" name="IsValue_RegEx">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="[^名字]" name="strParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="True"/>
+				<p name="varTarget" v="@P.Othername_Found"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot">
+				<p name="object1" v="True"/>
+				<p name="object2" v="@P.Othername_Found"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="名字" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Other Name_Change" id="24" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Other Names" name="StrParam"/>
+			</a>
+			<a name="GoUpLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a ns="Locate" name="IsValue_RegEx" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="[^名字]" name="strParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="True"/>
+				<p name="varTarget" v="@P.Othername_Found"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+		<func name="Function2" disabled="y">
+			<a ns="rrunner" name="rrCompareNot">
+				<p name="object1" v="True"/>
+				<p name="object2" v="@P.Othername_Found"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="名字" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="ND2A Company Number" id="34" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Company Number" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="ND2A Company Name" id="35" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Company Name" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="ND2A Surname" id="36" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Surname" name="StrParam"/>
+			</a>
+			<a name="GoUpLine" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a name="GoLastWord" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a ns="Locate" name="GroupWords" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="ND2A Othername" id="37" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Other Names" name="StrParam"/>
+			</a>
+			<a name="GoLastWord" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a ns="Locate" name="GroupWords" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Other Name_Change_Section2" id="26" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Other Names" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFindNext" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Other Names" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoUpLine">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a ns="Locate" name="IsValue_RegEx" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="[^名字]" name="strParam"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="True"/>
+				<p name="varTarget" v="@P.Othername_Found"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+		<func name="Function2" disabled="y">
+			<a ns="rrunner" name="rrCompareNot">
+				<p name="object1" v="True"/>
+				<p name="object2" v="@P.Othername_Found"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="名字" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Date of Appointment" id="5" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="日期" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GoRightWord" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="MergeNextWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="IsNumber" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="50" name="StrParam"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Company Number" id="6" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Company Number" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a name="GoLastWord" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a ns="Locate" name="GroupWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="3" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="True"/>
+				<p name="varTarget" v="@P.Company_Number_Found"/>
+			</a>
+		</func>
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="">
+				<p name="object1" v="True"/>
+				<p name="object2" v="@P.Company_Number_Found"/>
+			</a>
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Company Sheet Number" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a name="GoLastWord" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a ns="Locate" name="GroupWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="3" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Email" id="27" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Email Address" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="HKID" id="28" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Hong Kong Identity Card Number" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFindNext">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="\)" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupPreviousWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="100" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="HKID_Section2" id="31" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="FindLastRegEx">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Hong Kong Identity Card Number" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFind" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Hong Kong Identity Card Number" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="RegExFindNext" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="\)" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupPreviousWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="100" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Passport Issuing County" id="29" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Issuing Country" name="StrParam"/>
+			</a>
+			<a name="GoUpLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="4" name="nSpaces"/>
+			</a>
+			<a ns="Locate" name="FilterIt" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="012456789" name="StrParam"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Passport Effective Date" id="33" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Issuing Country" name="StrParam"/>
+			</a>
+			<a name="GoUpLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a name="GoLastWord" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a ns="Locate" name="GroupPreviousWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a ns="Locate" name="GroupWords" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="4" name="nSpaces"/>
+			</a>
+			<a ns="Locate" name="FilterIt" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="012456789" name="StrParam"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Passport Number" id="30" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Issuing Country" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="4" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Address" id="32" qi="">
+		<func name="Function1">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Address" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="8" name="nSpaces"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="8" name="nSpaces"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll" qi="" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="8" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Entity Name" id="7" qi="">
+		<func name="Function1">
+			<a ns="rrunner" name="rrCompare" disabled="y" qi="">
+				<p name="object1" v=""/>
+				<p name="object2" v="@B.EntityName"/>
+			</a>
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%Entity Name%" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoNextWord" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a ns="rrunner" name="rrSet" qi="" disabled="y">
+				<p name="varSource" v=""/>
+				<p name="varTarget" v="@B.EntityName"/>
+			</a>
+			<a ns="rrunner" name="rrSet" qi="" disabled="y">
+				<p name="varSource" v="@P.EntityName"/>
+				<p name="varTarget" v="@B.EntityName"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi=""/>
+		</func>
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet" qi="">
+				<p name="varSource" v="@P\BatchEntityName"/>
+				<p name="varTarget" v="@B.EntityName"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Remarks" id="8" qi="">
+		<func name="Function1" qi="">
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%Remarks%" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoNextWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi=""/>
+		</func>
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@P\BatchRemarks"/>
+				<p name="varTarget" v="@B.Remarks"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Resolution Remarks" id="10" qi="">
+		<func name="Function1" qi="">
+			<a ns="rrunner" name="rrSet" qi="">
+				<p name="varSource" v="@B.Remarks"/>
+				<p name="varTarget" v="@P\Remarks"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Resolution DocId" id="38" qi="">
+		<func name="Function1" qi="">
+			<a ns="Locate" name="RegExFind" disabled="y">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Email Address" name="StrParam"/>
+			</a>
+			<a name="GoFirstLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a ns="Locate" name="GroupWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Resolution EntityName" id="39" qi="">
+		<func name="Function1" qi="">
+			<a name="GoFirstLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Resolution Date" id="9" qi="">
+		<func name="Function1" qi="">
+			<a ns="Locate" name="FindRegExList" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="resolutions_date" name="StrParam"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Resolution Subject" id="40" qi="">
+		<func name="Function1" qi="">
+			<a ns="Locate" name="FindRegExList" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="resolutions_date" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Minutes DocId" id="41" qi="">
+		<func name="Function1" qi="">
+			<a name="GoFirstLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a ns="Locate" name="IsNumber">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GroupWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Minutes EntityName" id="42" qi="">
+		<func name="Function1" qi="">
+			<a name="GoFirstLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a ns="Locate" name="IsNumber">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="StrParam"/>
+			</a>
+			<a name="GoDownLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupWords" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="True"/>
+				<p name="varTarget" v="@P.EntityName_Found"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+		<func name="Function2" qi="">
+			<a ns="rrunner" name="rrCompareNot" qi="">
+				<p name="object1" v="True"/>
+				<p name="object2" v="@P.EntityName_Found"/>
+			</a>
+			<a name="GoFirstLine" ns="Locate.dll">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a ns="Locate" name="GroupWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Minutes Date" id="43" qi="">
+		<func name="Function1" qi="">
+			<a ns="Locate" name="FindRegExList" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="resolutions_date" name="StrParam"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM Action No" id="11" qi="">
+		<func name="Function1" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%Action No%" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoNextWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi=""/>
+		</func>
+		<func name="Function2" qi="">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet" qi="">
+				<p name="varSource" v="@P\Batch_SAM_Action_No"/>
+				<p name="varTarget" v="@B.SAM_Action_No"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM CIF No" id="13" qi="">
+		<func name="Function1" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%CIF No%" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoNextWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi=""/>
+		</func>
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@P\Batch_SAM_CIF_No"/>
+				<p name="varTarget" v="@B.SAM_CIF_No"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM Group Name" id="15" qi="">
+		<func name="Function1" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%Group Name%" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoNextWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi=""/>
+		</func>
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@P\Batch_SAM_Group_Name"/>
+				<p name="varTarget" v="@B.SAM_Group_Name"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM Borrower Name" id="17" qi="">
+		<func name="Function1" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%Borrower Name%" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoNextWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi=""/>
+		</func>
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet" qi="">
+				<p name="varSource" v="@P\Batch_SAM_Borrower_Name"/>
+				<p name="varTarget" v="@B.SAM_Borrower_Name"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM TIN No" id="19" qi="">
+		<func name="Function1" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%TIN No%" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoNextWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi=""/>
+		</func>
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@P\Batch_SAM_TIN_No"/>
+				<p name="varTarget" v="@B.SAM_TIN_No"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM Sequence" id="45" qi="">
+		<func name="Function1" qi="">
+			<a ns="Locate" name="RegExFind" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Sequence" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoNextWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi="" disabled="y"/>
+		</func>
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y" qi="">
+				<p name="varSource" v="@P\Batch_SAM_Sequence"/>
+				<p name="varTarget" v="@B.SAM_Sequence"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+	<rule name="Batch SAM Remarks" id="21" qi="">
+		<func name="Function1" qi="">
+			<a ns="Locate" name="RegExFind">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="%Remarks%" name="StrParam"/>
+			</a>
+			<a ns="Locate" name="GoNextWord">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="1" name="strParam"/>
+			</a>
+			<a ns="Locate" name="GroupNextWords">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="10" name="nSpaces"/>
+			</a>
+			<a name="UpdateField" ns="Locate.dll" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+			</a>
+			<a name="GoToNextFunction" ns="rrunner.dll" qi=""/>
+		</func>
+		<func name="Function2">
+			<a ns="rrunner" name="rrCompareNot" qi="" disabled="y">
+				<p name="object1" v="Y"/>
+				<p name="object2" v="@B.EntityNameFound"/>
+			</a>
+			<a ns="rrunner" name="rrSet">
+				<p name="varSource" v="@P\Batch_SAM_Remarks"/>
+				<p name="varTarget" v="@B.SAM_Remarks"/>
+			</a>
+			<a ns="rrunner" name="rrSet" disabled="y">
+				<p name="varSource" v="Y"/>
+				<p name="varTarget" v="@B.EntityNameFound"/>
+			</a>
+		</func>
+	</rule>
+</ruleset>

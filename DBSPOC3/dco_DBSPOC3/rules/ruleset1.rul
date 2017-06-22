@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ruleset id="15" name="Ruleset1" ver="1" modder="admin.1" qi="">
+	<rule name="Batch Level (Delete)" id="3" qi="">
+		<func name="Function1">
+			<a ns="Validations" name="DeleteChildType" qi="">
+				<p type="bInter" name="bInter"/>
+				<p type="bDebug" name="bDebug"/>
+				<p type="strParam" v="Barcode Front Page" name="StrParam"/>
+			</a>
+			<a ns="Validations" name="DeleteChildType" qi="">
+				<p type="bInter"/>
+				<p type="bDebug"/>
+				<p type="strParam" v="Barcode Document"/>
+			</a>
+		</func>
+	</rule>
+</ruleset>
