@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rrx namespace="GetRetentionDay" v="8.1.0.4">
+<i ref="rrunner" />
+<![CDATA[
+
+'
+' Licensed Materials - Property of IBM
+' 5725-C15
+'
+' (c) Copyright IBM Corp. 2012,2014 All Rights Reserved
+'
+' US Government Users Restricted Rights - Use, duplication or
+' disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+'
+' Sample utility actions for use with Datacap
+
+'
+]]>
+
+<f name="GetRetentionDay" access="public" qi=" to the rest of the indexe">
+ <h>
+       To read SystemXMLConfig.xml and put the value of RetentionDay into Datacap field.<br/>
+	A batch field named "RetentionDay" storing "the value of RetentionDay in SystemXMLConfig.xml" plus 3 months in second unit.
+    <e>
+       <br/>
+    </e>
+  </h>
+  <lvl>
+      Page level
+  </lvl>
+  <ret>
+    Always <b>TRUE.</b> <br/>
+  </ret>
+  <see>
+    Reference other related actions here <br/>
+    <scr>RelatedFunctionName</scr>
+  </see>
+  <g>
+  <![CDATA[
+  
+    Dim colNodes, objNode
+    Set xmlDoc = CreateObject("Microsoft.XMLDOM")
+    
+    'getting the xml file base on the metadata
+    mXML_File = "C:\Datacap\Connector\SystemXMLConfig.xml"
+    xmlDoc.Load (mXML_File)
+
+    'We will have to dictate or at least know the xml structure
+    Set colNodes = xmlDoc.SelectNodes("//Configuration/*")
+
+    For Each objNode In colNodes
+    
+        'For node "PatientAge"
+        If (objNode.nodename = "RetentionDay") Then
+           	 WriteLog ("RetentionDay" & objNode.Text)
+            	Call CurrentObj.AddVariable("RetentionDay",(CInt(objNode.Text)+90)*3600*24)
+		'factor = CurrentObj.Variable("RetentionDay")
+        End If
+    Next
+
+
+	GetRetentionDay = True
+	
+  ]]>
+  </g>
+</f>
+
+</rrx>
+
+
